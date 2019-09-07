@@ -1,0 +1,94 @@
+# Addon Name: htpc247
+# Addon id: plugin.video.htpc247
+# Addon Provider: htpc247
+msgid ""
+msgstr ""
+
+
+msgctxt "#32404"
+msgid "Time elapsed: %s seconds"
+msgstr ""
+
+msgctxt "#32405"
+msgid "%s seconds"
+msgstr ""
+
+msgctxt "#32406"
+msgid "Remaining providers: %s"
+msgstr ""
+
+msgctxt "#32500"
+msgid "[I]Next Page[/I]"
+msgstr ""
+
+msgctxt "#32501"
+msgid "Start from beginning"
+msgstr ""
+
+msgctxt "#32502"
+msgid "Resume from %s"
+msgstr ""
+
+msgctxt "#32503"
+msgid "Resume"
+msgstr ""
+
+msgctxt "#32601"
+msgid "Are you sure?"
+msgstr ""
+
+msgctxt "#32602"
+msgid "Process Complete"
+msgstr ""
+
+msgctxt "#32702"
+msgid "Search"
+msgstr ""
+
+msgctxt "#32703"
+msgid "Clear History"
+msgstr ""
+
+msgctxt "#32705"
+msgid "Unplayable stream"
+msgstr ""
+
+msgctxt "#32707"
+msgid "Trailer"
+msgstr ""
+
+msgctxt "#32708"
+msgid "Information"
+msgstr ""
+
+msgctxt "#32711"
+msgid "Set Movies view"
+msgstr ""
+
+msgctxt "#32712"
+msgid "Set TV Shows view"
+msgstr ""
+
+msgctxt "#32713"
+msgid "Set Seasons view"
+msgstr ""
+
+msgctxt "#32714"
+msgid "Set Episodes view"
+msgstr ""
+
+msgctxt "#32722"
+msgid "Download item"
+msgstr ""
+
+msgctxt "#32723"
+msgid "Queue item"
+msgstr ""
+
+msgctxt "#32726"
+msgid "Opening stream"
+msgstr ""
+
+msgctxt "#32731"
+msgid "Please wait..."
+msgstr ""

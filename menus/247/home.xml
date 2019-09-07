@@ -1,0 +1,45 @@
+<xml>
+
+<dir>
+<name>24-7 Comedy TV Shows</name>
+<link>https://raw.githubusercontent.com/judaea/project/master/menus/247/comedy.xml</link>
+<thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/247/247.png</thumbnail>
+<fanart>https://raw.githubusercontent.com/judaea/project/master/menus/247/fanart.jpg</fanart>
+</dir>
+
+<dir>
+<name>24-7 Drama TV Shows</name>
+<link>https://raw.githubusercontent.com/judaea/project/master/menus/247/drama.xml</link>
+<thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/247/247.png</thumbnail>
+<fanart>https://raw.githubusercontent.com/judaea/project/master/menus/247/fanart.jpg</fanart>
+</dir>
+
+<dir>
+<name>24-7 Reality TV Shows</name>
+<link>https://raw.githubusercontent.com/judaea/project/master/menus/247/reality.xml</link>
+<thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/247/247.png</thumbnail>
+<fanart>https://raw.githubusercontent.com/judaea/project/master/menus/247/fanart.jpg</fanart>
+</dir>
+
+<dir>
+<name>24-7 Classic TV Shows</name>
+<link>https://raw.githubusercontent.com/judaea/project/master/menus/247/classics.xml</link>
+<thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/247/247.png</thumbnail>
+<fanart>https://raw.githubusercontent.com/judaea/project/master/menus/247/fanart.jpg</fanart>
+</dir>
+
+<dir>
+<name>24-7 Kids TV Shows </name>
+<link>https://raw.githubusercontent.com/judaea/project/master/menus/247/kids.xml</link>
+<thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/247/247.png</thumbnail>
+<fanart>https://raw.githubusercontent.com/judaea/project/master/menus/247/fanart.jpg</fanart>
+</dir>
+
+<dir>
+<name>24-7 Animated TV Shows </name>
+<link>https://raw.githubusercontent.com/judaea/project/master/menus/247/animated.xml</link>
+<thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/247/247.png</thumbnail>
+<fanart>https://raw.githubusercontent.com/judaea/project/master/menus/247/fanart.jpg</fanart>
+</dir>
+  
+</xml>

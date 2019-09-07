@@ -1,0 +1,44 @@
+[B]Updates[/B]
+
+[B]June 4, 2019[/B]
+[B]Version 1.0.2[/B]
+- Added Radio
+- Added Kids TV
+- Added Documentaries
+- Removed Library Support
+- Fixed Movie Certifications
+- Fixed TV Show Certifications
+
+[B]June 4, 2019[/B]
+[B]Version 1.0.1[/B]
+- Added IPTV
+- Added Music
+- Removed 24/7 TV Shows to stand alone Addon
+
+[B]May 31, 2019[/B]
+[B]Version 1.0.0[/B]
+- Added OpenScrapers Support
+- RealDebrid Recommended
+- VPN Recommended
+
+[B]Trakt Information:[/B]
+- Automatically Track TV Shows and Movies You're Watching
+- Sign up for free at https://trakt.tv/auth/join
+- Authorize your Trakt Account in Settings - Accounts
+
+[B]TMDb Information:[/B]
+- Personal API keys provide quicker API responses
+- Sign up for free at https://www.themoviedb.org/account/signup
+- Enter your TMDb API Key in Settings - Accounts
+
+[B]IMDb Information:[/B]
+- Stream Movies and TV Shows from your Personal IMDb Lists
+- Sign up for free at https://www.imdb.com/registration/signin
+- Enter your UR######## in Settings - Accounts
+
+[B]RealDebrid Information:[/B]
+- RealDebrid is a premium subscription service
+- Sign up at https://www.real-debrid.com
+- Open ResolveURL Settings in Settings - Accounts
+- Under the Universal Resolvers Tab change Priority to 90
+- Under the Universal Resolvers Tab click (Re)Authorize My Acoount

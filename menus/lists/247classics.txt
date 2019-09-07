@@ -1,0 +1,211 @@
+<xml>
+
+<item>
+<title>The Addams Family</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0101272</imdb>
+<tvdb>77137</tvdb>
+<tvshowtitle>American Pickers</tvshowtitle>
+<year>1964</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/77137-2.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/77137-1.jpg</fanart>
+</item>
+
+<item>
+<title>All in the Family</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0066626</imdb>
+<tvdb>72741</tvdb>
+<tvshowtitle>All in the Family</tvshowtitle>
+<year>1971</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/72741-5.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/72741-1.jpg</fanart>
+</item>
+
+<item>
+<title>The Andy Griffith Show</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0053479</imdb>
+<tvdb>77754</tvdb>
+<tvshowtitle>The Andy Griffith Show</tvshowtitle>
+<year>1960</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/77754-2.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/77754-1.jpg</fanart>
+</item>
+
+<item>
+<title>The Beverly Hillbillies</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0055662</imdb>
+<tvdb>71471</tvdb>
+<tvshowtitle>The Beverly Hillbillies</tvshowtitle>
+<year>1962</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/71471-7.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/71471-1.jpg</fanart>
+</item>
+
+<item>
+<title>Bewitched</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0057733</imdb>
+<tvdb>71528</tvdb>
+<tvshowtitle>Bewitched</tvshowtitle>
+<year>1964</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/71528-10.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/71528-1.jpg</fanart>
+</item>
+
+<item>
+<title>The Brady Bunch</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0063878</imdb>
+<tvdb>77010</tvdb>
+<tvshowtitle>The Brady Bunch</tvshowtitle>
+<year>1969</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/77010-1.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/77010-1.jpg</fanart>
+</item>
+
+<item>
+<title>The Dick Van Dyke Show</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0054533</imdb>
+<tvdb>77041</tvdb>
+<tvshowtitle>The Dick Van Dyke Show</tvshowtitle>
+<year>1961</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/77041-7.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/77041-1.jpg</fanart>
+</item>
+
+<item>
+<title>Gilligan's Island</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0057751</imdb>
+<tvdb>77345</tvdb>
+<tvshowtitle>Gilligan's Island</tvshowtitle>
+<year>2012</year>
+</meta>
+<thumbnail>https://thetvdb.com/banners/_cache/posters/77345-1.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/77345-1.jpg</fanart>
+</item>
+
+<item>
+<title>The Golden Girls</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0088526</imdb>
+<tvdb>71292</tvdb>
+<tvshowtitle>Golden Girls</tvshowtitle>
+<year>1985</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/71292-2.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/71292-1.jpg</fanart>
+</item>
+
+<item>
+<title>Happy Days</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0070992</imdb>
+<tvdb>74475</tvdb>
+<tvshowtitle>Happy Days</tvshowtitle>
+<year>1974</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/74475-3.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/74475-1.jpg</fanart>
+</item>
+
+<item>
+<title>The Honeymooners</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0042114</imdb>
+<tvdb>73923</tvdb>
+<tvshowtitle>The Honeymooners</tvshowtitle>
+<year>1955</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/73923-1.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/73923-1.jpg</fanart>
+</item>
+
+<item>
+<title>I Dream of Jeannie</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0058815</imdb>
+<tvdb>77388</tvdb>
+<tvshowtitle>I Dream of Jeannie</tvshowtitle>
+<year>1965</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/77388-5.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/77388-1.jpg</fanart>
+</item>
+
+<item>
+<title>I Love Lucy</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0043208</imdb>
+<tvdb>70584</tvdb>
+<tvshowtitle>I Love Lucy</tvshowtitle>
+<year>1951</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/70584-3.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/70584-1.jpg</fanart>
+</item>
+
+<item>
+<title>Laverne & Shirley</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0074016</imdb>
+<tvdb>78017</tvdb>
+<tvshowtitle>Laverne & Shirley</tvshowtitle>
+<year>1976</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/78017-1.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/78017-1.jpg</fanart>
+</item>
+
+<item>
+<title>The Munsters</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0057773</imdb>
+<tvdb>77280</tvdb>
+<tvshowtitle>The Munsters</tvshowtitle>
+<year>1964</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/77280-3.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/77280-1.jpg</fanart>
+</item>
+
+<item>
+<title>My Three Sons</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0053525</imdb>
+<tvdb>71404</tvdb>
+<tvshowtitle>My Three Sons</tvshowtitle>
+<year>1960</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/71404-4.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/71404-1.jpg</fanart>
+</item>
+  
+</xml>

@@ -1,0 +1,39 @@
+<xml>
+
+<dir>
+<title>24-7 Comedy TV Shows</title>
+<link>https://raw.githubusercontent.com/judaea/project/master/menus/lists/247comedy.txt</link>
+<thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/247.png</thumbnail>
+</dir>
+
+<dir>
+<title>24-7 Drama TV Shows</title>
+<link>https://raw.githubusercontent.com/judaea/project/master/menus/lists/247drama.txt</link>
+<thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/247.png</thumbnail>
+</dir>
+
+<dir>
+<title>24-7 Reality TV Shows</title>
+<link>https://raw.githubusercontent.com/judaea/project/master/menus/lists/247reality.txt</link>
+<thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/247.png</thumbnail>
+</dir>
+
+<dir>
+<title>24-7 Classic TV Shows</title>
+<link>https://raw.githubusercontent.com/judaea/project/master/menus/lists/247classics.txt</link>
+<thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/247.png</thumbnail>
+</dir>
+
+<dir>
+<title>24-7 Kids TV Shows </title>
+<link>https://raw.githubusercontent.com/judaea/project/master/menus/lists/247kids.txt</link>
+<thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/247.png</thumbnail>
+</dir>
+
+<dir>
+<title>24-7 Animated TV Shows </title>
+<link>https://raw.githubusercontent.com/judaea/project/master/menus/lists/247animated.txt</link>
+<thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/247.png</thumbnail>
+</dir>
+  
+</xml>

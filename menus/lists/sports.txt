@@ -1,0 +1,39 @@
+#EXTM3U
+
+** SPORTS CHANNELS
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/1rYbXzR.png" group-title="USA",SEC Network (New!)
+http://espn.tmedia.me/cache/sec.m3u8
+
+#EXTINF:-1 tvg-logo="http://www.stickpng.com/assets/images/5847f1b0cef1014c0b5e485d.png" group-title="USA",ESPN*
+http://80.80.160.168/live/6/live.m3u8
+
+#EXTINF:-1 tvg-logo="http://www.stickpng.com/assets/images/5847f1b0cef1014c0b5e485d.png" group-title="USA",ESPN (SD)
+http://espn.tmedia.me/cache/espn1_540.m3u8?fluxustv.m3u8
+
+#EXTINF:-1 tvg-logo="http://www.stickpng.com/assets/images/5847f1b0cef1014c0b5e485d.png" group-title="USA",ESPN (HD)
+http://espn.clinicalkey.icu/cache/espn1.m3u8?fluxustv.m3u8
+ 
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/ESPN2_logo.svg/2000px-ESPN2_logo.svg.png" group-title="USA",ESPN 2
+http://161.0.157.8/PLTV/88888888/224/3221226881/index.m3u8?fluxustv.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/ESPN2_logo.svg/2000px-ESPN2_logo.svg.png" group-title="USA",ESPN 2 (SD)
+http://espn.tmedia.me/cache/espn2_540.m3u8?fluxustv.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/ESPN2_logo.svg/2000px-ESPN2_logo.svg.png" group-title="USA",ESPN 2 (HD)
+http://espn.clinicalkey.icu/cache/espn2.m3u8?fluxustv.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/ESPNews.svg/1280px-ESPNews.svg.png" group-title="USA",ESPN News
+http://espn.clinicalkey.icu/cache/espnews.m3u8?fluxustv.m3u8
+ 
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/ESPN_U_logo.svg/1024px-ESPN_U_logo.svg.png" group-title="USA",ESPNU
+http://espn.clinicalkey.icu/cache/espnu.m3u8?fluxustv.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/2/2a/Fox_Sports_Racing.jpg.png" group-title="USA",Fox Sports Racing
+http://161.0.157.8/PLTV/88888888/224/3221226181/index.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Fox_Sports_Logo.svg/1200px-Fox_Sports_Logo.svg.png" group-title="24/7 PLUTO TV",Fox Sports
+http://stitcher.pluto.tv/stitch/hls/channel/5a74b8e1e22a61737979c6bf/master.m3u8?deviceType=&deviceMake=&deviceModel=&sid=2&deviceId=&deviceVersion=&appVersion=&deviceDNT=&userId=&advertisingId=&deviceLat=&deviceLon=-&app_name=&appName=&appStoreUrl=&profileLimit=high
+
+#EXTINF:-1 tvg-logo="https://i.imgur.com/bO6iyBk.png" group-title="USA",NBC Golf
+http://161.0.157.9/PLTV/88888888/224/3221226812/index.m3u8?fluxustv.m3u8

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.htpctv" version="4.1.38" name=" htpcTV" provider-name="HTMC">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="plugin.video.youtube" version="6.4.0" />
+		<import addon="script.extendedinfo" version="5.6.0" />
+		<import addon="script.htmc.artwork" version="1.0.1" />
+		<import addon="script.htmc.metadata" version="1.0.7" />
+		<import addon="script.module.resolveurl" />
+		<import addon="script.module.metahandler" version="2.9.0" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="htpctv.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">htpcTV</summary>
+		<description lang="en">htpcTV with Library Integration, 24-7 TV Shows, Movies, TV Shows, Movie Collection and TRAKT Support! Kindly note that htpcTV is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<platform>all</platform>
+		<website></website>
+		<source></source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>- RealDebrid Recommended
+- Update Code
+- Fixed Movie Certifications
+- Fixed TV Show Certifications
+- Update 2/47 Code
+- Fix Movie and TV Show Trailers for Leia
+- Add RealDdebrid Torrent Support
+- Revert Trailer fix under Information Tab. The Leia fix crashes Krypton. For now Trailer on Context Menu works in Leia...
+- Fix Movie Trailers
+- Added Trailers to Movie, TV Show and Episodes Context Menu
+- Fix Trakt control settings for Leia
+- Fix Trakt authorization for Leia - htpcTV Add-on will need to be reauthorized
+- Changed unaired default to false
+- Fix In Theaters
+- Fix TV and Movie Search
+- Fix TV and Movie People Search
+- Revert back tm.user
+- Change to Civitas Scrapers
+- Update Artwork
+- Add MetaQ Player Support
+- Update 24/7
+- Updated Resolver
+- Fixed TV Show Actor Search
+- Fixed TV Show Search
+- Fixed TV Show Networks
+- Fixed Movie Actor Search
+- Fixed Movie Search
+- Fixed Movie People, Most Popular Males, Most Popular Females
+- Added Trailers to Movies, TV Shows and Collections
+- Update Sources
+</news>
+	</extension>
+</addon>

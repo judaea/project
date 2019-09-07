@@ -1,0 +1,45 @@
+<xml>
+
+<dir>
+    <title>News</title>
+    <link>https://raw.githubusercontent.com/judaea/project/master/menus/lists/news.txt</link>
+    <thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/channels.png</thumbnail>
+</dir>
+
+<dir>
+    <title>Networks</title>
+    <link>https://raw.githubusercontent.com/judaea/project/master/menus/lists/networks.txt</link>
+    <thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/channels.png</thumbnail>
+</dir>
+
+<dir>
+    <title>Entertainment</title>
+    <link>https://raw.githubusercontent.com/judaea/project/master/menus/lists/entertainment.txt</link>
+    <thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/channels.png</thumbnail>
+</dir>
+
+<dir>
+    <title>Sports</title>
+    <link>https://raw.githubusercontent.com/judaea/project/master/menus/lists/sports.txt</link>
+    <thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/channels.png</thumbnail>
+</dir>
+
+<dir>
+    <title>Stratus TV</title>
+    <link>https://pastebin.com/raw/4cQ9mj8X</link>
+    <thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/channels.png</thumbnail>
+</dir>
+
+<dir>
+    <title>Fluxus IPTV</title>
+    <link>https://pastebin.com/raw/ZzGTySZE</link>
+    <thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/channels.png</thumbnail>
+</dir>
+
+<dir>
+    <title>Fluxus Radio</title>
+    <link>https://pastebin.com/raw/d5cb3Wxw</link>
+    <thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/music.png</thumbnail>
+</dir>
+
+</xml>

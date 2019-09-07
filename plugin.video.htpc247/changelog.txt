@@ -1,0 +1,32 @@
+
+[B]1.0.9[/B]
+- Added OpenScrapers Support
+
+[B]1.0.8[/B]
+- Update providers
+
+[B]1.0.7[/B]
+- Update XML Link
+
+[B]1.0.6[/B]
+- Update Resolver
+
+[B]1.0.5[/B]
+- Update providers
+
+[B]1.0.4[/B]
+- Removed Modules2
+- Update providers
+
+[B]1.0.3[/B]
+- Update providers
+
+[B]1.0.2[/B]
+- Update providers
+
+[B]1.0.1[/B]
+- Moved Repo to GitHub
+
+[B]1.0.0[/B]
+- Continuous 24-7 TV Shows
+- Initial version

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.htmc.artwork" version="1.0.4" name="HTMC Artwork" provider-name="HTMC">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for HTMC Addons</summary>
+		<description>Themes for HTMC Addons are maintained separately to make distribution of the addon itself easier/faster.</description>
+		<platform>all</platform>
+	</extension>
+</addon>

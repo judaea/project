@@ -1,0 +1,31 @@
+#EXTM3U
+
+** NEWS CHANNELS
+
+#EXTINF:-1 tvg-id="605" tvg-logo="https://static.iptv-epg.com/us/FoxNews.us.png" group-title="USA",Fox News
+https://1259541102.rsc.cdn77.org/LS-ATL-54548-4/index.m3u8?fluxustv.m3u8
+
+#EXTINF:-1 tvg-id="609" tvg-logo="https://static.iptv-epg.com/us/FoxBusiness.us.png" group-title="USA",Fox Business
+https://1329918864.rsc.cdn77.org/ls-54548-1/index.m3u8?fluxustv.m3u8
+
+#EXTINF:0 tvg-logo="http://crntalk.com/wp-content/uploads/2017/05/fox-news-radio-266x250.jpg" group-title="USA",Fox News Radio
+http://fnurtmp-f.akamaihd.net/i/FNRADIO_1@92141/master.m3u8
+
+#EXTINF:-1 tvg-id="603" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/800px-CNN.svg.png" group-title="USA",CNN
+https://1259541102.rsc.cdn77.org/LS-ATL-54548-9/index.m3u8?fluxustv.m3u8
+
+#EXTINF:-1 tvg-id="606" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/CNBC_logo.svg/2000px-CNBC_logo.svg.png" group-title="USA",CNBC
+https://1674331492.rsc.cdn77.org/LS-ATL-54548-14/index.m3u8?fluxustv.m3u8
+
+#EXTINF:-1 tvg-id="602" tvg-logo="https://static.iptv-epg.com/us/MSNBC.us.png" group-title="USA",MSNBC
+https://1259541102.rsc.cdn77.org/LS-ATL-54548-15/index.m3u8?fluxustv.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i.imgur.com/Wd4xnGt.png" group-title="USA",C-SPAN
+https://skystreams-lh.akamaihd.net/i/SkyC1_1@500806/master.m3u8?fluxustv.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i.imgur.com/ltcivXp.png" group-title="USA",C-SPAN 2
+https://skystreams-lh.akamaihd.net/i/SkyC2_1@500807/master.m3u8?fluxustv.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i.imgur.com/cyU21ML.png" group-title="USA",C-SPAN 3
+https://skystreams-lh.akamaihd.net/i/SkyC3_1@500808/master.m3u8?fluxustv.m3u8
+

@@ -1,0 +1,160 @@
+
+[B]4.1.38[/B]
+- Revert to v 4.1.36
+
+[B]4.1.37[/B]
+- Update 24-7 Code
+- Fixed Movie Certifications
+- Fixed TV Show Certifications
+
+[B]4.1.36[/B]
+- Update Code
+- Fixed Movie Certifications
+- Fixed TV Show Certifications
+
+[B]4.1.35[/B]
+- Update 2/47 Code
+
+[B]4.1.34[/B]
+- Fix Movie and TV Show Trailers for Leia
+- Add RealDebrid Torrent Support
+
+[B]4.1.33[/B]
+- Code cleanup
+
+[B]4.1.32[/B]
+- Revert Trailer fix under Information Tab. The Leia fix crashes Krypton. For now Trailer on Context Menu works in Leia...
+
+[B]4.1.31[/B]
+- Code cleanup
+
+[B]4.1.30[/B]
+- Fix Movie Trailers
+- Added Trailers to Movie, TV Show and Episodes Context Menu
+- Fix Trakt control settings for Leia
+- Fix Trakt authorization for Leia - htpcTV Add-on will need to be reauthorized
+- Changed unaired default to false
+- Fix In Theaters
+- Fix TV and Movie Search
+- Fix TV and Movie People Search
+- Revert back tm.user
+- Change to Civitas Scrapers
+- Update Artwork
+
+[B]4.1.29[/B]
+- Code cleanup for Leia
+
+[B]4.1.28[/B]
+- Code cleanup
+
+[B]4.1.27[/B]
+- Fix tm.user to work with Aftermath Wizard
+
+[B]4.1.26[/B]
+- Fix Trakt Authorization
+
+[B]4.1.25[/B]
+- Fix Theaters
+
+[B]4.1.24[/B]
+- Update Sources
+
+[B]4.1.23[/B]
+- Update Sources
+
+[B]4.1.22[/B]
+- Update Sources
+
+[B]4.1.21[/B]
+- Update Sources
+
+[B]4.1.20[/B]
+- Remove Alluc
+
+[B]4.1.19[/B]
+- Bump Artwork
+
+[B]4.1.18[/B]
+- Update Artwork
+
+[B]4.1.17[/B]
+- Add MetaQ Player Support
+
+[B]4.1.16[/B]
+- Update 24/7
+
+[B]4.1.15[/B]
+- Fixed Movies - Years
+
+[B]4.1.14[/B]
+- Fixed TV Show Actor Search
+- Fixed TV Show Search
+- Fixed TV Show Networks
+- Fixed Movie Actor Search
+- Fixed Movie Search
+- Fixed Movie People, Most Popular Males, Most Popular Females
+- Added Trailers to Movies, TV Shows and Collections
+- Update Sources
+
+[B]4.1.13[/B]
+- Update Sources
+
+[B]4.1.12[/B]
+- Rework artwork
+
+[B]4.1.11[/B]
+- Fixed Collection Links
+
+[B]4.1.10[/B]
+- Update providers
+
+[B]4.1.9[/B]
+- Update providers
+
+[B]4.1.8[/B]
+- Update providers 26
+- Added Movie Most Popular Males, Females
+
+[B]4.1.7[/B]
+- Removed modules2
+- Update providers
+
+[B]4.1.6[/B]
+- Fix Library
+- Update providers
+
+[B]4.1.5[/B]
+- Added TMDb Movie Collections
+- Removed XML Movie Collections
+
+[B]4.1.4[/B]
+- Update providers
+
+[B]4.1.3[/B]
+- Update providers
+
+[B]4.1.2[/B]
+- https://api.github.com/repos/htpctv/verified-metalliq-players/zipball
+- Added htpcTV and Verified MetalliQ Players to git
+- Moved repo to Github
+- 7-5-2017
+
+[B]1.0.7[/B]
+- Updated sources
+- Fixed Trakt support
+- Removed IPTV
+- 7-1-2017
+
+[B]1.0.6[/B]
+- Updated sources
+- Removed Favourites Support
+- Added IPTV
+- Added 24-7 Continuous Play TV Shows
+- Added XML Movie Collections
+- 6-1-2017
+
+[B]1.0.5[/B]
+- Updated sources
+- Added Favourites Support
+- Added Library Support
+- Initial version - 1.0.5 9-26-16 - htpcTV... fork of Exodus

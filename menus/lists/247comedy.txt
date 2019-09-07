@@ -1,0 +1,523 @@
+<xml>
+
+<item>
+<title>According to Jim</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0285351</imdb>
+<tvdb>75926</tvdb>
+<tvshowtitle>According to Jim</tvshowtitle>
+<year>2001</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/75926-1.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/75926-12.jpg</fanart>
+</item>
+
+<item>
+<title>The Big Bang Theory</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0898266</imdb>
+<tvdb>80379</tvdb>
+<tvshowtitle>The Big Bang Theory</tvshowtitle>
+<year>2007</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/80379-43.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/80379-34.jpg</fanart>
+</item>
+
+<item>
+<title>Everybody Loves Raymond</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0115167</imdb>
+<tvdb>73663</tvdb>
+<tvshowtitle>Everybody Loves Raymond</tvshowtitle>
+<year>1996</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/73663-4.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/73663-9.jpg</fanart>
+</item>
+
+<item>
+<title>The King of Queens</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0165581</imdb>
+<tvdb>73641</tvdb>
+<tvshowtitle>The King of Queens</tvshowtitle>
+<year>1998</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/73641-4.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/73641-8.jpg</fanart>
+</item>
+
+<item>
+<title>Last Man Standing</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt1828327</imdb>
+<tvdb>248834</tvdb>
+<tvshowtitle>Last Man Standing</tvshowtitle>
+<year>2011</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/248834-8.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/248834-10.jpg</fanart>
+</item>
+
+<item>
+<title>Mom</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt2660806</imdb>
+<tvdb>266967</tvdb>
+<tvshowtitle>Mom</tvshowtitle>
+<year>2013</year>
+</meta>
+<thumbnail>https://www.thetvdb.com/banners/_cache/posters/266967-1.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/266967-9.jpg</fanart>
+</item>
+
+<item>
+<title>Two and Half Men</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0369179</imdb>
+<tvdb>72227</tvdb>
+<tvshowtitle>Two and a Half Men</tvshowtitle>
+<year>2003</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/72227-17.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/72227-1.jpg</fanart>
+</item>
+
+<item>
+<title>2 Broke Girls</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt1845307</imdb>
+<tvdb>248741</tvdb>
+<tvshowtitle>2 Broke Girls</tvshowtitle>
+<year>2011</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/248741-8.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/248741-1.jpg</fanart>
+</item>
+
+<item>
+<title>10 Things I Hate About You</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt1561755</imdb>
+<tvdb>95761</tvdb>
+<tvshowtitle>10 Things I Hate About You</tvshowtitle>
+<year>2009</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/95761-3.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/95761-3.jpg</fanart>
+</item>
+
+<item>
+<title>30 Rock</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0496424</imdb>
+<tvdb>79488</tvdb>
+<tvshowtitle>30 Rock</tvshowtitle>
+<year>2006</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/79488-12.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/79488-11.jpg</fanart>
+</item>
+
+<item>
+<title>According to Jim</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0285351</imdb>
+<tvdb>75926</tvdb>
+<tvshowtitle>According to Jim</tvshowtitle>
+<year>2001</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/75926-1.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/75926-12.jpg</fanart>
+</item>
+
+<item>
+<title>Anger Management</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt1986770</imdb>
+<tvdb>253350</tvdb>
+<tvshowtitle>Anger Management</tvshowtitle>
+<year>2012</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/253350-4.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/253350-3.jpg</fanart>
+</item>
+
+<item>
+<title>Arrested Development</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0367279</imdb>
+<tvdb>72173</tvdb>
+<tvshowtitle>Arrested Development</tvshowtitle>
+<year>2003</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/72173-6.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/72173-2.jpg</fanart>
+</item>
+
+<item>
+<title>The Big Bang Theory</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0898266</imdb>
+<tvdb>80379</tvdb>
+<tvshowtitle>The Big Bang Theory</tvshowtitle>
+<year>2007</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/80379-43.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/80379-34.jpg</fanart>
+</item>
+
+<item>
+<title>Cheers</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0083399</imdb>
+<tvdb>77623</tvdb>
+<tvshowtitle>Cheers</tvshowtitle>
+<year>1982</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/77623-6.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/77623-9.jpg</fanart>
+</item>
+
+<item>
+<title>Coach</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0096560</imdb>
+<tvdb>76905</tvdb>
+<tvshowtitle>Cheers</tvshowtitle>
+<year>1989</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/76905-1.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/76905-2.jpg</fanart>
+</item>
+
+<item>
+<title>Everybody Loves Raymond</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0115167</imdb>
+<tvdb>73663</tvdb>
+<tvshowtitle>Everybody Loves Raymond</tvshowtitle>
+<year>1996</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/73663-4.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/73663-9.jpg</fanart>
+</item>
+
+<item>
+<title>The Fresh Prince of Bel-Air</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0098800</imdb>
+<tvdb>76738</tvdb>
+<tvshowtitle>The Fresh Prince of Bel-Air</tvshowtitle>
+<year>1990</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/76738-1.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/76738-10.jpg</fanart>
+</item>
+
+<item>
+<title>Friends</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0108778</imdb>
+<tvdb>79168</tvdb>
+<tvshowtitle>Friends</tvshowtitle>
+<year>1994</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/79168-3.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/79168-6.jpg</fanart>
+</item>
+
+<item>
+<title>Home Improvement</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0101120</imdb>
+<tvdb>77537</tvdb>
+<tvshowtitle>Home Improvement</tvshowtitle>
+<year>1991</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/77537-5.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/77537-13.jpg</fanart>
+</item>
+
+<item>
+<title>How I Met Your Mother</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0460649</imdb>
+<tvdb>75760</tvdb>
+<tvshowtitle>How I Met Your Mother</tvshowtitle>
+<year>2005</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/75760-29.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/75760-59.jpg</fanart>
+</item>
+
+<item>
+<title>Kevin Can Wait</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt5462720</imdb>
+<tvdb>311944</tvdb>
+<tvshowtitle>Kevin Can Wait</tvshowtitle>
+<year>2016</year>
+</meta>
+<thumbnail>https://thetvdb.com/banners/_cache/posters/311944-1.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/311944-5.jpg</fanart>
+</item>
+
+<item>
+<title>The King of Queens</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0165581</imdb>
+<tvdb>73641</tvdb>
+<tvshowtitle>The King of Queens</tvshowtitle>
+<year>1998</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/73641-4.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/73641-8.jpg</fanart>
+</item>
+
+<item>
+<title>The Kominsky Method</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt7255502</imdb>
+<tvdb>350869</tvdb>
+<tvshowtitle>The Kominsky Method</tvshowtitle>
+<year>2018</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/5bd494cbe8203.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/5b80431481d4d.jpg</fanart>
+</item>
+
+<item>
+<title>Last Man Standing</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt1828327</imdb>
+<tvdb>248834</tvdb>
+<tvshowtitle>Last Man Standing</tvshowtitle>
+<year>2011</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/248834-8.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/248834-10.jpg</fanart>
+</item>
+
+<item>
+<title>Man With A Plan</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt5536400</imdb>
+<tvdb>311946</tvdb>
+<tvshowtitle>Man With A Plan</tvshowtitle>
+<year>2016</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/311946-4.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/311946-5.jpg</fanart>
+</item>
+
+<item>
+<title>Married With Children</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0092400</imdb>
+<tvdb>76385</tvdb>
+<tvshowtitle>Married with Children</tvshowtitle>
+<year>1987</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/76385-11.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/76385-6.jpg</fanart>
+</item>
+
+<item>
+<title>Modern Family</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt1442437</imdb>
+<tvdb>95011</tvdb>
+<tvshowtitle>Modern Family</tvshowtitle>
+<year>2009</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/95011-21.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/95011-42.jpg</fanart>
+</item>
+
+<item>
+<title>Mom</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt2660806</imdb>
+<tvdb>266967</tvdb>
+<tvshowtitle>Mom</tvshowtitle>
+<year>2013</year>
+</meta>
+<thumbnail>https://www.thetvdb.com/banners/_cache/posters/266967-1.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/266967-9.jpg</fanart>
+</item>
+
+<item>
+<title>New Girl</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt1826940</imdb>
+<tvdb>248682</tvdb>
+<tvshowtitle>New Girl</tvshowtitle>
+<year>2011</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/248682-8.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/248682-43.jpg</fanart>
+</item>
+
+<item>
+<title>The Ranch</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt4998212</imdb>
+<tvdb>305165</tvdb>
+<tvshowtitle>The Ranch</tvshowtitle>
+<year>2016</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/305165-2.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/305165-8.jpg</fanart>
+</item>
+
+<item>
+<title>Roseanne</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0094540</imdb>
+<tvdb>77068</tvdb>
+<tvshowtitle>Roseanne</tvshowtitle>
+<year>1988</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/77068-3.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/77068-5.jpg</fanart>
+</item>
+
+<item>
+<title>Seinfeld</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0098904</imdb>
+<tvdb>79169</tvdb>
+<tvshowtitle>Seinfeld</tvshowtitle>
+<year>1989</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/79169-5.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/79169-2.jpg</fanart>
+</item>
+
+<item>
+<title>Spin City</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0115369</imdb>
+<tvdb>73153</tvdb>
+<tvshowtitle>Spin City</tvshowtitle>
+<year>1996</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/73153-2.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/73153-2.jpg</fanart>
+</item>
+
+<item>
+<title>That '70s Show</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0165598</imdb>
+<tvdb>73787</tvdb>
+<tvshowtitle>That '70s Show</tvshowtitle>
+<year>1998</year>
+</meta>
+<thumbnail>https://thetvdb.com/banners/_cache/posters/73787-11.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/73787-10.jpg</fanart>
+</item>
+
+<item>
+<title>Two and Half Men</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0369179</imdb>
+<tvdb>72227</tvdb>
+<tvshowtitle>Two and a Half Men</tvshowtitle>
+<year>2003</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/72227-17.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/72227-1.jpg</fanart>
+</item>
+
+<item>
+<title>Who's the Boss</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0086827</imdb>
+<tvdb>76587</tvdb>
+<tvshowtitle>Who's the Boss</tvshowtitle>
+<year>1984</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/76587-1.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/76587-1.jpg</fanart>
+</item>
+
+<item>
+<title>Will & Grace</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0157246</imdb>
+<tvdb>71814</tvdb>
+<tvshowtitle>Will & Grace</tvshowtitle>
+<year>1998</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/71814-5.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/71814-5.jpg</fanart>
+</item>
+
+<item>
+<title>Yes Dear</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0165598</imdb>
+<tvdb>73787</tvdb>
+<tvshowtitle>Yes Dear</tvshowtitle>
+<year>2000</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/72367-1.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/72367-6.jpg</fanart>
+</item>
+
+<item>
+<title>Young Sheldon</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt6226232</imdb>
+<tvdb>328724</tvdb>
+<tvshowtitle>Young Sheldon</tvshowtitle>
+<year>2017</year>
+</meta>
+<thumbnail>https://www.thetvdb.com/banners/_cache/posters/328724-2.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/328724-2.jpg</fanart>
+</item>
+  
+</xml>

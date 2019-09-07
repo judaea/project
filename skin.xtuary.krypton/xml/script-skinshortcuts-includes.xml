@@ -1,0 +1,481 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<includes>
+	<include name="skinshortcuts-mainmenu">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<label>LibreELEC</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/extras/icons/libreelec.png</icon>
+			<thumb />
+			<property name="labelID">libreelec</property>
+			<property name="defaultID">libreelec</property>
+			<visible>System.HasAddon(service.libreelec.settings)</visible>
+			<onclick>RunAddon(service.libreelec.settings)</onclick>
+			<property name="path">RunAddon(service.libreelec.settings)</property>
+			<property name="list">RunAddon(service.libreelec.settings)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">libreelec</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<label>OpenELEC</label>
+			<label2>Common Shortcut</label2>
+			<icon>special://skin/extras/icons/openelec.png</icon>
+			<thumb />
+			<property name="labelID">openelec</property>
+			<property name="defaultID">openelec</property>
+			<visible>System.HasAddon(service.openelec.settings)</visible>
+			<onclick>RunAddon(service.openelec.settings)</onclick>
+			<property name="path">RunAddon(service.openelec.settings)</property>
+			<property name="list">RunAddon(service.openelec.settings)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">openelec</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<label>Random Playlists</label>
+			<label2>Custom item</label2>
+			<icon>special://skin/extras/icons/addtile.png</icon>
+			<thumb>special://home/addons/plugin.video.specto/icon.png</thumb>
+			<property name="labelID">randomplaylists</property>
+			<property name="defaultID" />
+			<property name="widget.personalposter1">Playlist</property>
+			<property name="widgetName.personalposter1">Random Episodes - Sitcoms</property>
+			<property name="widgetType.personalposter1">episodes</property>
+			<property name="widgetTarget.personalposter1">videos</property>
+			<property name="widgetPath.personalposter1">special://profile/playlists/video/Random Sitcom Playlist.xsp</property>
+			<property name="widget.personalposter2">Playlist</property>
+			<property name="widgetName.personalposter2">Random Episodes - Kids</property>
+			<property name="widgetType.personalposter2">episodes</property>
+			<property name="widgetTarget.personalposter2">videos</property>
+			<property name="widgetPath.personalposter2">special://profile/playlists/video/Random Kids Playlist.xsp</property>
+			<onclick>noop</onclick>
+			<property name="path">noop</property>
+			<property name="list">noop</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">randomplaylists</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<label>Exodus - TV Shows</label>
+			<label2>Video Add-On</label2>
+			<icon>special://skin/extras/icons/addtile.png</icon>
+			<thumb>special://home/addons/script.exodus.artwork/resources/media/exodus/mytvshows.png</thumb>
+			<property name="labelID">exodus-tvshows</property>
+			<property name="defaultID" />
+			<property name="translatedPath">ActivateWindow(Videos,"plugin://plugin.video.exodus/?action=tvNavigator",return)</property>
+			<property name="widget.personalposter1">Addon</property>
+			<property name="widgetName.personalposter1">Exodus - TV Progress</property>
+			<property name="widgetType.personalposter1">videos</property>
+			<property name="widgetTarget.personalposter1">videos</property>
+			<property name="widgetPath.personalposter1">plugin://plugin.video.exodus/?action=calendar&amp;url=progress&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widget.personalposter2">Addon</property>
+			<property name="widgetName.personalposter2">Exodus - TV Collection</property>
+			<property name="widgetType.personalposter2">videos</property>
+			<property name="widgetTarget.personalposter2">videos</property>
+			<property name="widgetPath.personalposter2">plugin://plugin.video.exodus/?action=tvshows&amp;url=traktcollection&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<onclick>ActivateWindow(Videos,"plugin://plugin.video.exodus/?action=tvNavigator",return)</onclick>
+			<property name="path">ActivateWindow(Videos,"plugin://plugin.video.exodus/?action=tvNavigator",return)</property>
+			<property name="list">plugin://plugin.video.exodus/?action=tvNavigator</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">exodus-tvshows</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<label>Exodus - Movies</label>
+			<label2>Video Add-On</label2>
+			<icon>special://skin/extras/icons/addtile.png</icon>
+			<thumb>special://home/addons/script.exodus.artwork/resources/media/exodus/movies.png</thumb>
+			<property name="labelID">plugin.video.exodus</property>
+			<property name="defaultID">plugin.video.exodus</property>
+			<property name="translatedPath">ActivateWindow(Videos,"plugin://plugin.video.exodus",return)</property>
+			<property name="widget.personalposter1">Addon</property>
+			<property name="widgetName.personalposter1">Exodus - In Theaters</property>
+			<property name="widgetType.personalposter1">movies</property>
+			<property name="widgetTarget.personalposter1">videos</property>
+			<property name="widgetPath.personalposter1">plugin://plugin.video.exodus/?action=movies&amp;url=theaters&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widget.personalposter2">Addon</property>
+			<property name="widgetName.personalposter2">Exodus - Genres</property>
+			<property name="widgetType.personalposter2">videos</property>
+			<property name="widgetTarget.personalposter2">videos</property>
+			<property name="widgetPath.personalposter2">plugin://plugin.video.exodus/?action=movieGenres&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<onclick>ActivateWindow(Videos,"plugin://plugin.video.exodus",return)</onclick>
+			<property name="path">ActivateWindow(Videos,"plugin://plugin.video.exodus",return)</property>
+			<property name="list">plugin://plugin.video.exodus</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">plugin-video-exodus</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUMBER[6]</property>
+			<label>Zen - Kids</label>
+			<label2>Video Add-On</label2>
+			<icon>special://skin/extras/icons/addtile.png</icon>
+			<thumb>special://home/addons/script.zen.artwork/resources/media/zen/disney.png</thumb>
+			<property name="labelID">zen-kids</property>
+			<property name="defaultID" />
+			<property name="translatedPath">ActivateWindow(Videos,"plugin://plugin.video.zen/?action=tvNavigator",return)</property>
+			<property name="widget.personalposter1">Addon</property>
+			<property name="widgetName.personalposter1"> Zen - Kids TV Shows</property>
+			<property name="widgetType.personalposter1">videos</property>
+			<property name="widgetTarget.personalposter1">videos</property>
+			<property name="widgetPath.personalposter1">plugin://plugin.video.zen/?action=tvshows&amp;url=http%3A%2F%2Fapi.themoviedb.org%2F3%2Fdiscover%2Ftv%3Fapi_key%3Df2be2f0e2e5187946294ed9350bfbb7a%26with_genres%3D10762%26primary_release_date.gte%3Ddate%26page%3D1&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widget.personalposter3">Addon</property>
+			<property name="widgetName.personalposter3"> Zen - Disney Collection</property>
+			<property name="widgetType.personalposter3">movies</property>
+			<property name="widgetTarget.personalposter3">videos</property>
+			<property name="widgetPath.personalposter3">plugin://plugin.video.zen/?action=movies&amp;url=tmdbdisney&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widget.personalposter4">Addon</property>
+			<property name="widgetName.personalposter4"> Zen - Marvel Universe</property>
+			<property name="widgetType.personalposter4">movies</property>
+			<property name="widgetTarget.personalposter4">videos</property>
+			<property name="widgetPath.personalposter4">plugin://plugin.video.zen/?action=movies&amp;url=tmdbmarvel&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widget.personalposter2">Addon</property>
+			<property name="widgetName.personalposter2">Zen - TV Networks</property>
+			<property name="widgetType.personalposter2">program</property>
+			<property name="widgetTarget.personalposter2">programs</property>
+			<property name="widgetPath.personalposter2">plugin://plugin.program.super.favourites/?label=Networks+Zen&amp;mode=400&amp;path=special%3A%2F%2Fprofile%2Faddon_data%2Fplugin.program.super.favourites%2FSuper+Favourites%2FKids%2FNetworks+Zen&amp;image=%2FUsers%2Fdavid%2FLibrary%2FApplication+Support%2FKodi%2Faddons%2Fscript.zen.artwork%2Fresources%2Fmedia%2Fzen%2Fnetworks.png&amp;fanart=%2FUsers%2Fdavid%2FLibrary%2FApplication+Support%2FKodi%2Faddons%2Fplugin.program.super.favourites%2Ffanart.jpg&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<onclick>ActivateWindow(Videos,"plugin://plugin.video.zen/?action=tvNavigator",return)</onclick>
+			<property name="path">ActivateWindow(Videos,"plugin://plugin.video.zen/?action=tvNavigator",return)</property>
+			<property name="list">plugin://plugin.video.zen/?action=tvNavigator</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">zen-kids</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUMBER[7]</property>
+			<label>htpc[COLOR ff0084ff]TV[/COLOR] Wizard</label>
+			<label2>Program</label2>
+			<icon>special://skin/extras/icons/addtile.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/icon.png</thumb>
+			<property name="labelID">plugin.program.htpctvwizard</property>
+			<property name="defaultID">plugin.program.htpctvwizard</property>
+			<property name="translatedPath">ActivateWindow(Programs,"plugin://plugin.program.htpctvwizard",return)</property>
+			<property name="widget.personalposter1">Addon</property>
+			<property name="widgetName.personalposter1">htpc[COLOR ff0084ff]TV[/COLOR] Wizard - [COLOR lime]Maintenance[/COLOR]</property>
+			<property name="widgetType.personalposter1">program</property>
+			<property name="widgetTarget.personalposter1">programs</property>
+			<property name="widgetPath.personalposter1">plugin://plugin.program.htpctvwizard/?mode=maint&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<property name="widget.personalposter2">Addon</property>
+			<property name="widgetName.personalposter2">htpc[COLOR ff0084ff]TV[/COLOR] Wizard - [COLOR dodgerblue]htpcTV Builds[/COLOR]</property>
+			<property name="widgetType.personalposter2">program</property>
+			<property name="widgetTarget.personalposter2">programs</property>
+			<property name="widgetPath.personalposter2">plugin://plugin.program.htpctvwizard/?mode=builds&amp;reload=$INFO[Window(Home).Property(widgetreload)]</property>
+			<onclick>ActivateWindow(Programs,"plugin://plugin.program.htpctvwizard",return)</onclick>
+			<property name="path">ActivateWindow(Programs,"plugin://plugin.program.htpctvwizard",return)</property>
+			<property name="list">plugin://plugin.program.htpctvwizard</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">plugin-program-htpctvwizard</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">True</property>
+		</item>
+	</include>
+	<include />
+	<include name="skinshortcuts-submenu">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]Reload Skin[/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-reloadskin-color</property>
+			<property name="defaultID">colorlime-reloadskin-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceskin",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceskin",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceskin",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=forceskin,return)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),plugin-program-htpctvwizard)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]Clear Packages: [COLOR lime][B]0.00 B[/B][/COLOR][/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-clearpackages-colorlime-b-0-00b-b-color-color</property>
+			<property name="defaultID">colorlime-clearpackages-colorlime-b-0-00b-b-color-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=clearpackages",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=clearpackages",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=clearpackages",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=clearpackages,return)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),plugin-program-htpctvwizard)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]Clean &amp; Quit [COLOR lime][B]18.41 MB[/B][/COLOR][/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-clean-quit-colorlime-b-18-41mb-b-color-color</property>
+			<property name="defaultID">colorlime-totalcleanup-colorlime-b-18-41mb-b-color-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=fullclean",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=fullclean",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=fullclean",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=fullclean,return)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),plugin-program-htpctvwizard)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]Force Update Addons[/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-forceupdateaddons-color</property>
+			<property name="defaultID">colorlime-forceupdateaddons-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceupdate",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceupdate",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceupdate",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=forceupdate,return)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),plugin-program-htpctvwizard)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]View Log File[/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-viewlogfile-color</property>
+			<property name="defaultID">colorlime-viewlogfile-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=viewlog",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=viewlog",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=viewlog",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=viewlog,return)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),plugin-program-htpctvwizard)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-libreelec">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-alt-libreelec">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-openelec">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-alt-openelec">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-randomplaylists">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-alt-randomplaylists">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-exodus-tvshows">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-alt-exodus-tvshows">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-plugin-video-exodus">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-alt-plugin-video-exodus">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-zen-kids">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-alt-zen-kids">
+		<description>No items</description>
+	</include>
+	<include name="skinshortcuts-group-plugin-program-htpctvwizard">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]Reload Skin[/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-reloadskin-color</property>
+			<property name="defaultID">colorlime-reloadskin-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceskin",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceskin",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceskin",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=forceskin,return)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]Clear Packages: [COLOR lime][B]0.00 B[/B][/COLOR][/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-clearpackages-colorlime-b-0-00b-b-color-color</property>
+			<property name="defaultID">colorlime-clearpackages-colorlime-b-0-00b-b-color-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=clearpackages",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=clearpackages",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=clearpackages",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=clearpackages,return)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]Clean &amp; Quit [COLOR lime][B]18.41 MB[/B][/COLOR][/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-clean-quit-colorlime-b-18-41mb-b-color-color</property>
+			<property name="defaultID">colorlime-totalcleanup-colorlime-b-18-41mb-b-color-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=fullclean",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=fullclean",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=fullclean",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=fullclean,return)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]Force Update Addons[/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-forceupdateaddons-color</property>
+			<property name="defaultID">colorlime-forceupdateaddons-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceupdate",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceupdate",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceupdate",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=forceupdate,return)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]View Log File[/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-viewlogfile-color</property>
+			<property name="defaultID">colorlime-viewlogfile-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=viewlog",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=viewlog",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=viewlog",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=viewlog,return)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+	<include name="skinshortcuts-group-alt-plugin-program-htpctvwizard">
+		<item id="1">
+			<property name="id">$NUMBER[1]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]Reload Skin[/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-reloadskin-color</property>
+			<property name="defaultID">colorlime-reloadskin-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceskin",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceskin",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceskin",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=forceskin,return)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-program-htpctvwizard)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUMBER[2]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]Clear Packages: [COLOR lime][B]0.00 B[/B][/COLOR][/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-clearpackages-colorlime-b-0-00b-b-color-color</property>
+			<property name="defaultID">colorlime-clearpackages-colorlime-b-0-00b-b-color-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=clearpackages",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=clearpackages",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=clearpackages",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=clearpackages,return)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-program-htpctvwizard)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUMBER[3]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]Clean &amp; Quit [COLOR lime][B]18.41 MB[/B][/COLOR][/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-clean-quit-colorlime-b-18-41mb-b-color-color</property>
+			<property name="defaultID">colorlime-totalcleanup-colorlime-b-18-41mb-b-color-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=fullclean",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=fullclean",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=fullclean",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=fullclean,return)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-program-htpctvwizard)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUMBER[4]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]Force Update Addons[/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-forceupdateaddons-color</property>
+			<property name="defaultID">colorlime-forceupdateaddons-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceupdate",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceupdate",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=forceupdate",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=forceupdate,return)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-program-htpctvwizard)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUMBER[5]</property>
+			<property name="mainmenuid">7</property>
+			<label>[COLOR lime]View Log File[/COLOR]</label>
+			<label2>Favourite</label2>
+			<icon>special://skin/extras/icons/files.png</icon>
+			<thumb>http://htpctv.com/repoD/builds/art/icons/tools.png</thumb>
+			<property name="labelID">colorlime-viewlogfile-color</property>
+			<property name="defaultID">colorlime-viewlogfile-color</property>
+			<property name="translatedPath">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=viewlog",return)</property>
+			<onclick>PlayMedia("plugin://plugin.program.htpctvwizard/?mode=viewlog",return)</onclick>
+			<property name="path">PlayMedia("plugin://plugin.program.htpctvwizard/?mode=viewlog",return)</property>
+			<property name="list">PlayMedia(plugin://plugin.program.htpctvwizard/?mode=viewlog,return)</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),plugin-program-htpctvwizard)</visible>
+			<property name="group">plugin.program.htpctvwizard</property>
+			<property name="isSubmenu">True</property>
+		</item>
+	</include>
+</includes>
