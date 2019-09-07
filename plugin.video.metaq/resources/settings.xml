@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+    <category label="Setup Players">
+		<setting label="Setup Players" type="lsep"/>
+		<setting label="Players URL" id="players_update_url" type="text" default="https://api.github.com/repos/judaea/players/zipball"/>
+		<setting label="Enter Custom URL Above or Click to install default MetaQ players" type="action" subsetting="true" option="close" enable="!eq(-1,)" action="RunPlugin(plugin://plugin.video.metaq/update_players)"/>
+		<setting label="Rerun MetaQ Default Total Setup" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/setup/total)"/>
+		<setting label="Total setup Done" id="total_setup_done" type="bool" default="false" visible="false"/>
+        <setting label="30013" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/settings/players/all)"/>
+    </category>
+    <category label="Library Options">
+		<setting label="Library Options" type="lsep"/>
+        <setting label="30824" id="library_updates" type="bool" default="true" />
+        <setting label="Setup Library Source Folders" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/setup/sources)" visible="eq(-4,true)"/>
+        <setting label="30303" type="action" action="RunPlugin(plugin://plugin.video.metaq/update_library)" visible="eq(-1,true)" />
+        <setting label="30305" type="bool" id="library_set_date" default="false"/>
+        <setting label="30902" id="library_sync_collection" type="bool" default="false" />
+        <setting label="30903" id="library_sync_watchlist" type="bool" default="false" />
+        <setting label="Library update interval" id="update_library_interval" type="slider" range="4,4,48" default="8" option="int" />
+        <setting label="Include episode with unknown air-date?" id="aired_unknown" type="bool" default="false"/>
+        <setting label="Add tags to filenames" id="library_tags" type="text" default="" />
+        <setting label="Episode-aired-offset in days (airdate = today - offset)" id="airdate_offset" type="slider" range="-2,1,2" default="0" option="int" />
+        <setting label="Include specials" id="include_specials" type="bool" default="false"/>
+    </category>
+    <category label="Trakt Settings">
+        <setting label="Automatically Track Playlists, TV Shows and Movies You're Watching" type="lsep"/>
+        <setting label = "30417" type="action" action="RunPlugin(plugin://plugin.video.metaq/authenticate_trakt)" />
+        <setting option="close" label="Clear Trakt account settings" type="action" action="RunPlugin(plugin://plugin.video.metaq/cleartrakt)"/>
+        <setting label="trakt access token" id="trakt_access_token" type="text" visible="false" />
+        <setting label="trakt refresh token" id="trakt_refresh_token" type="text" visible="false" />
+        <setting label="trakt refresh token" id="trakt_expires_at" type="text" visible="false" />
+    </category>
+	<category label="API keys">
+		<setting label="Trakt" type="lsep"/>
+        <setting label="Client id" id="trakt_api_client_id" type="text" default=""/>
+        <setting label="Client secret" id="trakt_api_client_secret" type="text" default=""/>
+		<setting label="TMDB" type="lsep"/>
+        <setting label="API key" id="tmdb_api" type="text" default=""/>
+		<setting label="TVDB" type="lsep"/>
+        <setting label="API key" id="tvdb_api" type="text" default=""/>
+	</category>
+    <category label="30100">
+        <setting label="30101" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/settings/players/movies)"/>
+        <setting subsetting="true" visible="false" enable="false" type="text" id="movies_enabled_players" default='[&quot;default_main&quot;, &quot;default_library&quot;, &quot;default_context&quot;, &quot;direct.alluc.q&quot;, &quot;direct.elysium.q&quot;, &quot;direct.exodus.q&quot;, &quot;direct.istream.q&quot;, &quot;direct.phoenix.q&quot;, &quot;direct.quasar.q&quot;, &quot;direct.saltshdlite.q&quot;, &quot;direct.saltsrdlite.q&quot;, &quot;direct.specto.q&quot;, &quot;direct.theroyalwe.q&quot;, &quot;direct.torrenter.t&quot;, &quot;direct.ump_imtvdb.q&quot;, &quot;direct.velocity.q&quot;, &quot;direct.whatthefurk.q&quot;, &quot;explore.salts.q&quot;, &quot;explore.movieflix.q&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.icefilms.q&quot;, &quot;explore.kissanime_d.q&quot;, &quot;explore.kissanime_s.q&quot;, &quot;explore.kisscartoon.q&quot;, &quot;explore.pftvso.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.tromachannel.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.lihattv.q&quot;, &quot;navigate.projectcypher.q&quot;, &quot;navigate.ukturk.q&quot;, &quot;search.123movies.m&quot;, &quot;search.1channel.m&quot;, &quot;search.afdah.q&quot;, &quot;search.cartoons8.q&quot;, &quot;search.freemovies.q&quot;, &quot;search.genvideos.q&quot;, &quot;search.hdbox.q&quot;, &quot;search.imperialstreams.q&quot;, &quot;search.m4u.m&quot;, &quot;search.niter.q&quot;, &quot;search.ororotv.k&quot;, &quot;search.pubfilm.q&quot;, &quot;search.scenepeeper.m&quot;, &quot;search.watch32hd.q&quot;, &quot;search.wewatchwrestling.q&quot;]' />
+        <setting label="30110" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/settings/default_player/movies)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="movies_default_player" default="default_main" />
+        <setting label="30111" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/settings/default_player_fromlib/movies)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="movies_default_player_from_library" default="default_library" />
+        <setting label="30112" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/settings/default_player_fromcontext/movies)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="movies_default_player_from_context" default="default_context" />
+        <setting label="30302" id="movies_library_folder" type="folder" default="special://profile/addon_data/plugin.video.metaq/Movies/" visible="true" />
+        <setting label="30312" id="movies_playlist_folder" type="folder" default="special://profile/playlists/video/Movies/" visible="false" />
+        <setting label="30834" id="movies_default_auto_add" type="bool" default="true"/>
+        <setting label="30820" id="movies_played_by_add" type="bool" default="false" />
+        <setting label="Movies Batch Add File Path" id="movies_batch_add_file_path" type="text" default="special://profile/addon_data/plugin.video.metaq/movies_to_add.txt" visible= "false"/>
+    </category>
+    <category label="30200">
+        <setting label="30201" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/settings/players/tvshows)"/>
+        <setting subsetting="true" visible="false" enable="false" type="text" id="tv_enabled_players" default='[&quot;default_main&quot;,&quot;default_library&quot;,&quot;default_context&quot;,&quot;direct.alluc.q&quot;, &quot;direct.elysium.q&quot;, &quot;direct.exodus.q&quot;, &quot;direct.istream.q&quot;, &quot;direct.phoenix.q&quot;, &quot;direct.quasar.q&quot;, &quot;direct.saltshdlite.q&quot;, &quot;direct.saltsrdlite.q&quot;, &quot;direct.specto.q&quot;, &quot;direct.theroyalwe.q&quot;, &quot;direct.torrenter.t&quot;, &quot;direct.ump_imtvdb.q&quot;, &quot;direct.velocity.q&quot;, &quot;direct.whatthefurk.q&quot;, &quot;explore.salts.q&quot;, &quot;explore.movieflix.q&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.icefilms.q&quot;, &quot;explore.kissanime_d.q&quot;, &quot;explore.kissanime_s.q&quot;, &quot;explore.kisscartoon.q&quot;, &quot;explore.pftvso.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.teevee.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.iplayerwww.m&quot;, &quot;navigate.ukturk.q&quot;, &quot;search.123movies.m&quot;, &quot;search.1channel.m&quot;, &quot;search.cartoons8.q&quot;, &quot;search.dizibox.q&quot;, &quot;search.freemovies.q&quot;, &quot;search.imperialstreams.q&quot;, &quot;search.m4u.m&quot;, &quot;search.ororotv.k&quot;, &quot;search.pubfilm.q&quot;, &quot;search.watch32hd.q&quot;]'/>
+        <setting label="30210" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/settings/default_player/tvshows)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="tv_default_player" default="default_main" />
+        <setting label="30211" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/settings/default_player_fromlib/tvshows)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="tv_default_player_from_library" default="default_library" />
+        <setting label="30212" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/settings/default_player_fromcontext/tvshows)"/>
+        <setting subsetting="true" visible="!eq(0,)" enable="false" type="text" id="tv_default_player_from_context" default="default_context" />
+        <setting label="30302" id="tv_library_folder" type="folder" default="special://profile/addon_data/plugin.video.metaq/TVShows/" visible="false" />
+        <setting label="30312" id="tv_playlist_folder" type="folder" default="special://profile/playlists/video/TVShows" visible="false" />
+        <setting label="30818" id="tv_default_auto_add" type="bool" default="true"/>
+        <setting label="30821" id="tv_played_by_add" type="bool" default="false" />
+        <setting label="TV Shows Batch Add File Path" id="tv_batch_add_file_path" type="text" default="special://profile/addon_data/plugin.video.metaq/shows_to_add.txt" visible= "false"/>
+    </category>
+    <category label="30400">
+        <setting label="30401" type="action" action="RunPlugin(plugin://plugin.video.metaq/clear_cache)"/>
+        <setting label="Export MetaQ movie and tvshow libraries as list" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/export)" />
+        <setting label="Batch Add lists" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/movies/batch_add_to_library)" />
+        <setting label="Toggle context toggle" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/toggle/preferred_toggle)" />
+        <setting label="Toggle context player" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/toggle/context_player)" />
+        <setting label="Preferred toggle" type="select" values="acceleration|skin" id="preferred_toggle" default="skin"/>
+        <setting label="Primary skin" type="text" id="primary_skin" />
+        <setting label="Alternate skin" type="text" id="alternate_skin" />
+        <setting label="30901" id="random_pages" type="number" default="1"/>
+        <setting label="30402" type="bool" id="use_simple_selector" default="false"/>
+        <setting label="30410" type="bool" id="auto_hide_dialogs" default="true" enable="eq(-1,false)"/>
+        <setting subsetting="true" label="30411" type="bool" id="auto_hide_dialogs_progress" default="true" enable="eq(-1,true)"/>
+        <setting subsetting="true" label="30412" type="bool" id="auto_hide_dialogs_info" default="true" enable="eq(-2,true)"/>
+        <setting subsetting="true" label="30413" type="bool" id="auto_hide_dialogs_keyboard" default="true" enable="eq(-3,true)"/>
+        <setting label="30404" type="slider" id="pool_size" default="10" range="1,20" option="int" />
+    </category>
+    <category label="30825">
+        <setting label="30005" id="style" type="select" values="Default" default="Default" />
+        <setting label="30016" id="style_custom_folder" type="folder" default="https://raw.githubusercontent.com/judaea/style/master/MetaQ/default/" visible="eq(-1,Custom)" />
+        <setting label="30015" id="background" type="select" values="Default" default="Default" />
+        <setting label="30017" id="background_custom_folder" type="folder" default="https://raw.githubusercontent.com/judaea/style/master/MetaQ/default/" visible="eq(-1,Custom)" />
+        <setting label="30827" type="select" values="system|bg|cs|da|de|el|en|es|fi|fr|he|hr|hu|it|ja|ko|nl|no|pl|pt|ru|sl|sv|tr|zh" id="language_id" default="system"/>
+        <setting label="30720" id="trakt_period" type="select" values="weekly|monthly|yearly|all" default="monthly"/>
+        <setting label="30721" id="items_per_page" type="slider" range="20,20,200" default="20" option="int" />
+        <!--<setting label="30722" id="trakt_days" type="slider" range="1,31" default="1" option="int" />-->
+        <setting label="30826" type="lsep"/>
+        <setting label="30828" id="force_view" type="bool" default="false" />
+        <setting label="30000" id="main_view" type="number" default="50" visible="eq(-1,true)" />
+        <setting label="30100" id="movies_view" type="number" default="50" visible="eq(-2,true)" />
+        <setting label="30200" id="tvshows_view" type="number" default="50" visible="eq(-3,true)" />
+        <setting label="Seasons" id="seasons_view" type="number" default="50" visible="eq(-4,true)" />
+        <setting label="Episodes" id="episodes_view" type="number" default="50" visible="eq(-5,true)" />
+        <setting label="30815" id="list_view" type="number" default="50" visible="eq(-8,true)" />
+        <setting label="Guide channelers" type="lsep" visible="false" />
+        <setting subsetting="true" enable="false" type="text" id="movies_enabled_channelers" default='[&quot;direct.alluc.q&quot;, &quot;direct.istream.q&quot;, &quot;direct.phoenix.q&quot;, &quot;direct.quasar.q&quot;, &quot;direct.saltshdlite.q&quot;, &quot;direct.saltsrdlite.q&quot;, &quot;direct.specto.q&quot;, &quot;direct.theroyalwe.q&quot;, &quot;direct.torrenter.t&quot;, &quot;direct.ump_imtvdb.q&quot;, &quot;direct.velocity.q&quot;, &quot;direct.whatthefurk.q&quot;, &quot;explore.salts.q&quot;, &quot;explore.movieflix.q&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.icefilms.q&quot;, &quot;explore.kissanime_d.q&quot;, &quot;explore.kissanime_s.q&quot;, &quot;explore.kisscartoon.q&quot;, &quot;explore.pftvso.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.tromachannel.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.lihattv.q&quot;, &quot;navigate.projectcypher.q&quot;, &quot;navigate.ukturk.q&quot;, &quot;search.123movies.m&quot;, &quot;search.1channel.m&quot;, &quot;search.afdah.q&quot;, &quot;search.cartoons8.q&quot;, &quot;search.freemovies.q&quot;, &quot;search.genvideos.q&quot;, &quot;search.hdbox.q&quot;, &quot;search.imperialstreams.q&quot;, &quot;search.m4u.m&quot;, &quot;search.niter.q&quot;, &quot;search.ororotv.k&quot;, &quot;search.pubfilm.q&quot;, &quot;search.scenepeeper.m&quot;, &quot;search.watch32hd.q&quot;, &quot;search.wewatchwrestling.q&quot;]' visible="false" />
+        <setting subsetting="true" type="text" id="movies_default_channeler" default="default_guide" visible="false" />
+        <setting subsetting="true" type="text" id="tv_enabled_channelers" default='[&quot;direct.alluc.q&quot;, &quot;direct.istream.q&quot;, &quot;direct.phoenix.q&quot;, &quot;direct.quasar.q&quot;, &quot;direct.saltshdlite.q&quot;, &quot;direct.saltsrdlite.q&quot;, &quot;direct.specto.q&quot;, &quot;direct.theroyalwe.q&quot;, &quot;direct.torrenter.t&quot;, &quot;direct.ump_imtvdb.q&quot;, &quot;direct.velocity.q&quot;, &quot;direct.whatthefurk.q&quot;, &quot;explore.salts.q&quot;, &quot;explore.movieflix.q&quot;, &quot;explore.extendedinfo_youtube_nl.q&quot;, &quot;explore.qlickplay_youtube_nl.q&quot;, &quot;explore.youtube_nl.q&quot;, &quot;explore.extendedinfo_youtube.q&quot;, &quot;explore.icefilms.q&quot;, &quot;explore.kissanime_d.q&quot;, &quot;explore.kissanime_s.q&quot;, &quot;explore.kisscartoon.q&quot;, &quot;explore.pftvso.q&quot;, &quot;explore.qlickplay_youtube.q&quot;, &quot;explore.teevee.q&quot;, &quot;explore.youtube.q&quot;, &quot;navigate.iplayerwww.m&quot;, &quot;navigate.ukturk.q&quot;, &quot;search.123movies.m&quot;, &quot;search.1channel.m&quot;, &quot;search.cartoons8.q&quot;, &quot;search.dizibox.q&quot;, &quot;search.freemovies.q&quot;, &quot;search.imperialstreams.q&quot;, &quot;search.m4u.m&quot;, &quot;search.ororotv.k&quot;, &quot;search.pubfilm.q&quot;, &quot;search.watch32hd.q&quot;]' visible="false" />
+        <setting subsetting="true" type="text" id="tv_default_channeler" default="default_guide" visible="false" />
+        <setting label="Library: Use titles instead of IDs" id="library_titles" type="bool" default="true" hidden="true" visible="false"/>
+        <setting label="Sync Folder" id="sync_folder" type="folder" default="special://profile/addon_data/plugin.video.metaq/Sync/" visible="false" />
+    </category>
+    <category label="$LOCALIZE[636]">
+        <setting label="$LOCALIZE[14061] patch [LOWERCASE]$LOCALIZE[24001][/LOWERCASE]" id="autopatch" type="bool" default="false" />
+        <setting label="$LOCALIZE[636] patches" id="autopatches" type="text" default="[[], [], [], []]" />
+        <setting label="Patch" option="close" type="action" action="RunPlugin(plugin://plugin.video.metaq/patch/all)"/>
+    </category>
+</settings>

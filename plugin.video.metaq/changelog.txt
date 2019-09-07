@@ -1,0 +1,12 @@
+
+
+- Temporary Leia error workaround - Run Settings, General, Enable all players
+
+v1.0.2
+- Cleanup code
+
+v1.0.1
+- Remove music and live
+
+v1.0.0
+- MetaQ Initial version 1.0.0 fork of MetalliQ...
