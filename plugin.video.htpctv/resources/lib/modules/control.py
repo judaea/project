@@ -251,16 +251,50 @@ def cdnImport(uri, name):
     return m
 
 
+# def openSettings(query=None, id=addonInfo('id')):
+#     try:
+#         idle()
+#         execute('Addon.OpenSettings(%s)' % id)
+#         if query == None: raise Exception()
+#         c, f = query.split('.')
+#         execute('SetFocus(%i)' % (int(c) + 100))
+#         execute('SetFocus(%i)' % (int(f) + 200))
+#     except:
+#         return
+
+
 def openSettings(query=None, id=addonInfo('id')):
     try:
         idle()
         execute('Addon.OpenSettings(%s)' % id)
         if query == None: raise Exception()
         c, f = query.split('.')
-        execute('SetFocus(%i)' % (int(c) + 100))
-        execute('SetFocus(%i)' % (int(f) + 200))
+        if int(getKodiVersion()) >= 18:
+            execute('SetFocus(%i)' % (int(c) - 100))
+            execute('SetFocus(%i)' % (int(f) - 80))
+        else:
+            execute('SetFocus(%i)' % (int(c) + 100))
+            execute('SetFocus(%i)' % (int(f) + 200))
     except:
         return
+
+
+def getKodiVersion():
+    return xbmc.getInfoLabel("System.BuildVersion").split(".")[0]
+
+
+def busy():
+    if int(getKodiVersion()) >= 18:
+        return execute('ActivateWindow(busydialognocancel)')
+    else:
+        return execute('ActivateWindow(busydialog)')
+
+
+def idle():
+    if int(getKodiVersion()) >= 18:
+        return execute('Dialog.Close(busydialognocancel)')
+    else:
+        return execute('Dialog.Close(busydialog)')
 
 
 def getCurrentViewId():

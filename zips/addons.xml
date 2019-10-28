@@ -136,7 +136,7 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.htpctv" version="4.1.38" name=" htpcTV" provider-name="HTMC">
+<addon id="plugin.video.htpctv" version="4.1.40" name=" htpcTV" provider-name="HTMC">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="plugin.video.youtube" version="6.4.0" />
@@ -178,7 +178,6 @@
 - Fix TV and Movie Search
 - Fix TV and Movie People Search
 - Revert back tm.user
-- Change to Civitas Scrapers
 - Update Artwork
 - Add MetaQ Player Support
 - Update 24/7

@@ -270,20 +270,25 @@ class navigator:
 
 
     def tools(self):
-        self.addDirectoryItem('[B]htpcTV[/B] : Settings', 'openSettings', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]Settings[/B] : General', 'openSettings&query=0.0', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]Settings[/B] : Navigation', 'openSettings&query=1.0', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]Settings[/B] : Playback', 'openSettings&query=2.0', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]Settings[/B] : Free Accounts', 'openSettings&query=4.0', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]Settings[/B] : Premium Accounts', 'openSettings&query=5.0', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem('[B]htpcTV[/B] : Library', 'libtoolNavigator', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem('[B]htpcTV[/B] : Viewtypes', 'viewsNavigator', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem('[B]htpcTV[/B] : Clear Cache', 'clearCache', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem('[B]htpcTV[/B] : Clear Search History', 'clearCacheSearch', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem('[B]htpcTV[/B] : Clear Provider Sources', 'clearSources', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem('[B]htpcTV[/B] : News, Updates & Information', 'newsNavigator', 'tools.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem('[B]Trakt[/B] : Authorize htpcTV', 'authTrakt', 'trakt.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem('[B]Configure RealDebrid[/B] : ResolveURL Settings', 'smuSettings', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]Trakt[/B] : Authorize htpcTV With Trakt', 'authTrakt', 'trakt.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]ResolveURL[/B] : Configure ResolveURL Settings', 'smuSettings', 'tools.png', 'DefaultAddonProgram.png')
 
         self.endDirectory()
 
 
     def library(self):
+        self.addDirectoryItem('[B]Library[/B] : Settings', 'openSettings&query=8.0', 'tools.png', 'DefaultAddonProgram.png', isFolder=False)
         self.addDirectoryItem('[B]htpcTV[/B] : Movies Folder', control.setting('movie_library'), 'movies.png', 'DefaultMovies.png', isAction=False)
         self.addDirectoryItem('[B]htpcTV[/B] : TV Shows Folder', control.setting('tv_library'), 'tvshows.png', 'DefaultTVShows.png', isAction=False)
         self.addDirectoryItem('[B]htpcTV[/B] : Update Libraries', 'updateLibrary&query=tool', 'library_update.png', 'DefaultAddonProgram.png')
