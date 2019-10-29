@@ -1,9 +1,24 @@
 <xml>
 
 <item>
-	<title>A & E </title>
+	<title>A&E </title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=216</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/59347e8ace05e_a&e.jpg</thumbnail>
+	<thumbnail>https://www.arconaitv.us/uploads/streams/5d92cb52ac2b2_a&e.jpg</thumbnail>
+	<fanart></fanart>
+</item>
+
+<item>
+	<title>AMC </title>
+	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=6</link>
+	<thumbnail>https://www.arconaitv.us/uploads/streams/59347f6143ba9_amc-logo-2016.jpg</thumbnail>
+	<fanart></fanart>
+</item>
+
+
+<item>
+	<title>Fox News </title>
+	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=44</link>
+	<thumbnail>https://www.arconaitv.us/uploads/streams/593484deaa5b2_foxnews.jpg</thumbnail>
 	<fanart></fanart>
 </item>
 
