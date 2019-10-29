@@ -12,7 +12,7 @@
 <item>
 	<title>A & E </title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=216</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/592c15b2bce8b_adultswim2.jpg</thumbnail>
+	<thumbnail>https://www.arconaitv.us/uploads/streams/59347e8ace05e_a&e.jpg</thumbnail>
 	<fanart></fanart>
 </item>
 
