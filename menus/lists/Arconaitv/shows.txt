@@ -8,22 +8,12 @@
 	<content></content>
 </item>
 
-
-<item>
-	<title>A & E </title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=216</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/59347e8ace05e_a&e.jpg</thumbnail>
-	<fanart></fanart>
-</item>
-
-
 <item>
 	<title>Adult Swim</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=4</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592c15b2bce8b_adultswim2.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Adventure Time</title>
@@ -32,14 +22,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Always Sunny In Philadelphia</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=5</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/59347f4f47a3a_alwaysunny.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>American Dad</title>
@@ -48,14 +36,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>American Horror Story</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=8</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/59348061b0b51_Webp.net-resizeimage%20(1).jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Anime</title>
@@ -64,14 +50,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Archer</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=13</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/593485c115f30_archer.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Arrested Development</title>
@@ -80,14 +64,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Batman 1966</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=109</link>
 	<thumbnail>https://images-na.ssl-images-amazon.com/images/M/MV5BMTkzNDY5NTg5MF5BMl5BanBnXkFtZTgwNzI4NzM1MjE@._V1_UY1200_CR151,0,630,1200_AL_.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Batman the Animated Series</title>
@@ -96,14 +78,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Battlestar Galactica</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=16</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/593486640994d_battle.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Beavis and Butt-Head</title>
@@ -112,14 +92,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Better Call Saul</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=17</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592e4859269d6_bettersaul.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Blacklist</title>
@@ -128,14 +106,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Bloods</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=19</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5934869d75c73 cornflowerblue.[B]jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Bobs Burgers</title>
@@ -144,14 +120,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Bones</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=21</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/593485aa715bd_bones.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Breaking Bad</title>
@@ -160,14 +134,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Celebrity Deathmatch</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=26</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592e4beb84d13_celebritydeaath.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Charmed</title>
@@ -176,14 +148,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Classic Toons</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=28</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592e4c9582b11_classic.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Community</title>
@@ -192,14 +162,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Cops</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=33</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/593485467d3d8_cops.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>CSI: Miami</title>
@@ -208,14 +176,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Curb Your Enthusiasm</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=34</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592e53e0312b8_curbyour.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Dexter</title>
@@ -224,14 +190,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Doctor Who</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=36</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592e54c044c9b_drwho.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Downton Abbey</title>
@@ -240,14 +204,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Dragonball Z</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=39</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592e55bd534f3_dragonballz2.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Family Guy</title>
@@ -256,14 +218,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Fawlty Towers</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=42</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592e5ae0adb8a_fawlty.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Frasier</title>
@@ -272,14 +232,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Friends</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=47</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592e5c51aefaf_friends.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Futurama</title>
@@ -288,14 +246,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Game of Thrones</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=50</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592e5d1b6e0b6_game-of-thrones.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Golden Girls</title>
@@ -304,14 +260,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Home Improvement</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=53</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5934848b19baa_home%20improvement.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>House MD</title>
@@ -320,14 +274,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>How I Met Your Mother</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=113</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/598837068ab03_howimetyourmother2.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>I Love Lucy</title>
@@ -336,14 +288,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Invader Zim</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=56</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592e5f48b2a88_zim.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>King of the Hill</title>
@@ -352,14 +302,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Kings of Queens</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=132</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5a57b2e941ad7_Webp.net-resizeimage.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Law & Order: SVU</title>
@@ -368,14 +316,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Malcolm in the Middle</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=60</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5934844830a9e_malcolm.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Married with Children</title>
@@ -384,14 +330,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Mission Impossible</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=144</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5a6f969716612_Webp.net-resizeimage%20(9).jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Modern Family</title>
@@ -400,14 +344,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>My name is Eral</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=118</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5a0375d99997c_earl2.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Narcos</title>
@@ -416,14 +358,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>NCIS</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=133</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5a57b5328ad25_Webp.net-resizeimage%20(1).jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Only Fools and Horses</title>
@@ -432,14 +372,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Outer Limits</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=70</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5934838016e8e_outer%20llimits.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Parks and Recreation</title>
@@ -448,14 +386,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Prison Break</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=72</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5934835ed513f_prison%20break.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Regular Show</title>
@@ -464,14 +400,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Reno 911</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=112</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5987664c92fae_reno911two.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Rick and Morty</title>
@@ -480,14 +414,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Salem</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=137</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5a6f90620375f_Webp.net-resizeimage%20(1).jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Samurai Jack</title>
@@ -496,14 +428,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Scrubs</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=79</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592ef860295cb_sccrubs2.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Seinfeld</title>
@@ -512,14 +442,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Shark Tank</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=81</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/593483448db09_sharktank.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Silicon Valley</title>
@@ -528,14 +456,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Simpsons</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=83</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/59348322d54f8_the-simpsoons.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>South Park</title>
@@ -544,14 +470,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>SpongeBob SquarePants</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=86</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/593482e7d5393_spongebob%20squarepants.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Stargate Atlantis & SSG1</title>
@@ -560,14 +484,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Steven Universe</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=152</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5a03791e11ba9_Webp.net-resizeimage.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Supernatural</title>
@@ -576,14 +498,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Teenage Mutant Ninja Turtles</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=142</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5a6f94b19eb87_Webp.net-resizeimage%20(7).jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>That 70s Show</title>
@@ -592,14 +512,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>The Big Bang Theory</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=91</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5934829811430_bigbang.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>The Boondocks</title>
@@ -608,14 +526,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>The Fresh Prince of Belair</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=46</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592e5c21551ac_freshprince.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>The Knick</title>
@@ -624,14 +540,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>The Last Airbender and legend of Korra</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=15</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5934864d2510c_avatar.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>The Marvelous Misadventures of Flapjack</title>
@@ -640,14 +554,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>The Musketeers</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=64</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/593483f5db8a9_the%20musketeerrs.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>The Office</title>
@@ -656,14 +568,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>The Ren & Stimpy Show</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=75</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/592ef750dedfb_renstimpy.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>The Sopranos</title>
@@ -672,14 +582,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>The Tudors</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=96</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/59348257c9905_tudors.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>The Twilight Zone</title>
@@ -688,14 +596,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>The White Queen</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=102</link>
 	<thumbnail>https://jeremyironsno1fan.files.wordpress.com/2012/10/the-white-queen-poster.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>The Wire</title>
@@ -704,14 +610,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Top Gear UK</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=98</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5934823910756_top%20gear.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Trailer Park Boys</title>
@@ -720,14 +624,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Unsolved Mysteries</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=135</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5a6f8e72af533_unsolvemystery.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Vampire Diaries</title>
@@ -736,14 +638,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>Whose line is it Anyway</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=103</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/5934818917746_whose-line.jpg</thumbnail>
 	<fanart></fanart>
 </item>
-
 
 <item>
 	<title>Workaholics</title>
@@ -752,12 +652,12 @@
 	<fanart></fanart>
 </item>
 
-
 <item>
 	<title>X Files</title>
 	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=105</link>
 	<thumbnail>https://www.arconaitv.us/uploads/streams/593476a25530c_xfiles.jpg</thumbnail>
 	<fanart></fanart>
 </item>
+
 
 </xml>
