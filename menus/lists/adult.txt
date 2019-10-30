@@ -420,7 +420,7 @@ def GetLSProData(page_data,Cookie_Jar,m,url = ''):
 </item>
 
 <plugin>
-  <title>Master Porn List</title>
+  <title>XList</title>
   <link>https://raw.githubusercontent.com/judaea/project/master/menus/lists/adult.m3u</link>
 </plugin>
 
