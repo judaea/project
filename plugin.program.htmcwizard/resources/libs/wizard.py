@@ -123,6 +123,8 @@ COLOR2         = uservar.COLOR2
 INCLUDEVIDEO   = ADDON.getSetting('includevideo')
 INCLUDEALL     = ADDON.getSetting('includeall')
 INCLUDEHTPCTV  = ADDON.getSetting('includehtpctv')
+INCLUDEDAVID   = ADDON.getSetting('includedavid')
+INCLUDEEXEGESIS= ADDON.getSetting('includeexegesis')
 INCLUDEEXODUSREDUX  = ADDON.getSetting('includeexodusredux')
 SHOWADULT      = ADDON.getSetting('adult')
 WIZDEBUGGING   = ADDON.getSetting('addon_debug')
@@ -500,6 +502,12 @@ def getCacheSize():
 		(os.path.join(ADDOND, 'plugin.video.htpctv', 'cache.db')),
 		(os.path.join(ADDOND, 'plugin.video.htpctv', 'cache.meta.5.db')),
 		(os.path.join(ADDOND, 'plugin.video.htpctv', 'cache.providers.13.db')),
+		(os.path.join(ADDOND, 'plugin.video.david', 'cache.db')),
+		(os.path.join(ADDOND, 'plugin.video.david', 'cache.meta.5.db')),
+		(os.path.join(ADDOND, 'plugin.video.david', 'cache.providers.13.db')),
+		(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.db')),
+		(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.metadata.db')),
+		(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.providers.13.db')),
 		(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.db')),
 		(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.meta.5.db')),
 		(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.providers.13.db'))]
@@ -536,6 +544,14 @@ def getCacheSize():
 				files.append(os.path.join(ADDOND, 'plugin.video.htpctv', 'cache.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.htpctv', 'meta.5.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.htpctv', 'providers.13.db'))
+			if INCLUDEDAVID == 'true':
+				files.append(os.path.join(ADDOND, 'plugin.video.david', 'cache.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.david', 'meta.5.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.david', 'providers.13.db'))
+			if INCLUDEEXEGESIS == 'true':
+				files.append(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.exegesis', 'metadata.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.exegesis', 'providers.13.db'))
 			if INCLUDEEXODUSREDUX == 'true':
 				files.append(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.exodusredux', 'meta.5.db'))
@@ -1356,6 +1372,12 @@ def backUpOptions(type, name=""):
 					(os.path.join(ADDOND, 'plugin.video.htpctv', 'cache.db')),
 					(os.path.join(ADDOND, 'plugin.video.htpctv', 'cache.meta.5.db')),
 					(os.path.join(ADDOND, 'plugin.video.htpctv', 'cache.providers.13.db')),
+					(os.path.join(ADDOND, 'plugin.video.david', 'cache.db')),
+					(os.path.join(ADDOND, 'plugin.video.david', 'cache.meta.5.db')),
+					(os.path.join(ADDOND, 'plugin.video.david', 'cache.providers.13.db')),
+					(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.db')),
+					(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.metadata.db')),
+					(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.providers.13.db')),
 					(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.db')),
 					(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.meta.5.db')),
 					(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.providers.13.db'))]
@@ -2256,6 +2278,12 @@ def clearCache(over=None):
 		(os.path.join(ADDOND, 'plugin.video.htpctv', 'cache.db')),
 		(os.path.join(ADDOND, 'plugin.video.htpctv', 'cache.meta.5.db')),
 		(os.path.join(ADDOND, 'plugin.video.htpctv', 'cache.providers.13.db')),
+		(os.path.join(ADDOND, 'plugin.video.david', 'cache.db')),
+		(os.path.join(ADDOND, 'plugin.video.david', 'cache.meta.5.db')),
+		(os.path.join(ADDOND, 'plugin.video.david', 'cache.providers.13.db')),
+		(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.db')),
+		(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.metadata.db')),
+		(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.providers.13.db')),
 		(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.db')),
 		(os.path.join(ADDOND, 'plugin.video.exoudsredux', 'meta.5.db')),
 		(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.providers.13.db'))]
@@ -2317,6 +2345,14 @@ def clearCache(over=None):
 				files.append(os.path.join(ADDOND, 'plugin.video.htpctv', 'cache.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.htpctv', 'meta.5.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.htpctv', 'providers.13.db'))
+			if INCLUDEDAVID == 'true':
+				files.append(os.path.join(ADDOND, 'plugin.video.david', 'cache.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.david', 'meta.5.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.david', 'providers.13.db'))
+			if INCLUDEEXEGESIS == 'true':
+				files.append(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.exegesis', 'metadata.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.exegesis', 'providers.13.db'))
 			if INCLUDEEXODUSREDUX == 'true':
 				files.append(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.exodusredux', 'meta.5.db'))

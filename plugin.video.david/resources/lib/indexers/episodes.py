@@ -440,6 +440,8 @@ class seasons:
 
         traktManagerMenu = control.lang(32070).encode('utf-8')
 
+        tvshowToLibraryMenu = control.lang(32211).encode('utf-8')
+
         labelMenu = control.lang(32055).encode('utf-8')
 
         playRandom = control.lang(32535).encode('utf-8')
@@ -498,6 +500,8 @@ class seasons:
 
                 if isOld == True:
                     cm.append((control.lang2(19033).encode('utf-8'), 'Action(Info)'))
+
+                cm.append((tvshowToLibraryMenu, 'RunPlugin(%s?action=tvshowToLibrary&tvshowtitle=%s&year=%s&imdb=%s&tvdb=%s)' % (sysaddon, systitle, year, imdb, tvdb)))
 
 
                 item = control.item(label=label)
@@ -1424,6 +1428,8 @@ class episodes:
 
         traktManagerMenu = control.lang(32070).encode('utf-8')
 
+        tvshowToLibraryMenu = control.lang(32211).encode('utf-8')
+
         tvshowBrowserMenu = control.lang(32071).encode('utf-8')
 
 
@@ -1504,6 +1510,8 @@ class episodes:
 
                 if isOld == True:
                     cm.append((control.lang2(19033).encode('utf-8'), 'Action(Info)'))
+
+                cm.append((tvshowToLibraryMenu, 'RunPlugin(%s?action=tvshowToLibrary&tvshowtitle=%s&year=%s&imdb=%s&tvdb=%s)' % (sysaddon, systvshowtitle, year, imdb, tvdb)))
 
 
                 item = control.item(label=label)

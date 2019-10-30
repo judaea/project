@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 '''
-    David Add-on
-    Copyright (C) 2016 David
+    Phoenix Add-on
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -20,12 +19,10 @@
 
 
 import os,re,sys,hashlib,urllib,urlparse,json,base64,random,datetime
-import xbmc,xbmcgui
-
+import xbmc
 
 try: from sqlite3 import dbapi2 as database
 except: from pysqlite2 import dbapi2 as database
-
 
 from resources.lib.modules import cache
 from resources.lib.modules import metacache
@@ -39,6 +36,7 @@ from resources.lib.modules import views
 from resources.lib.modules import trakt
 
 
+
 class indexer:
     def __init__(self):
         self.list = [] ; self.hash = []
@@ -47,7 +45,7 @@ class indexer:
     def root(self):
         try:
             regex.clear()
-            url = base64.b64decode ('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2p1ZGFlYS9wcm9qZWN0L21hc3Rlci9tZW51cy9kYXZpZC9tYWluLnhtbA==')
+            url = 'https://raw.githubusercontent.com/judaea/project/master/menus/lists/247.txt'
             self.list = self.tvshows247_list(url)
             for i in self.list: i.update({'content': 'addons'})
             self.addDirectory(self.list)
@@ -171,7 +169,6 @@ class indexer:
         except:
             pass
 
-
     def search(self, url):
         try:
             mark = False
@@ -274,7 +271,7 @@ class indexer:
             for i in self.list:
                 try:
                     name = ''
-                    if not i['vip'] in ['htmc TV']: name += '[B]%s[/B] | ' % i['vip'].upper()
+                    if not i['vip'] in ['Phoenix TV']: name += '[B]%s[/B] | ' % i['vip'].upper()
                     name += i['name']
                     i.update({'name' : name})
                 except:
@@ -282,7 +279,6 @@ class indexer:
 
             for i in self.list: i.update({'content': 'videos'})
             self.addDirectory(self.list)
-
 
     def tvshows247_list(self, url, result=None):
 
@@ -419,7 +415,6 @@ class indexer:
         regex.insert(self.hash)
 
         return self.list
-
 
     def worker(self):
         if not control.setting('metadata') == 'true': return
@@ -623,7 +618,7 @@ class indexer:
                 
                 if name == '':
                     name = i['name']
-                
+
                 url = '%s?action=%s' % (sysaddon, i['action'])
                 try: url += '&url=%s' % urllib.quote_plus(i['url'])
                 except: pass
@@ -716,7 +711,7 @@ class indexer:
             i = items[0]
             if i['next'] == '': raise Exception()
             url = '%s?action=%s&url=%s' % (sysaddon, i['nextaction'], urllib.quote_plus(i['next']))
-            item = control.item(label=control.lang(32500).encode('utf-8'))
+            item = control.item(label=control.lang(32700).encode('utf-8'))
             item.setArt({'addonPoster': addonPoster, 'thumb': addonPoster, 'poster': addonPoster, 'tvshow.poster': addonPoster, 'season.poster': addonPoster, 'banner': addonPoster, 'tvshow.banner': addonPoster, 'season.banner': addonPoster})
             item.setProperty('addonFanart_Image', addonFanart)
             control.addItem(handle=int(sys.argv[1]), url=url, listitem=item, isFolder=True)
@@ -727,6 +722,7 @@ class indexer:
         control.directory(int(sys.argv[1]), cacheToDisc=True)
         if mode in ['movies', 'tvshows', 'seasons', 'episodes']:
             views.setView(mode, {'skin.estuary': 55})
+
 
 
 class resolver:
@@ -773,10 +769,10 @@ class resolver:
 
     def f4m(self, url, name):
             try:
-                if not any(i in url for i in ['.f4m', '.ts']): raise Exception()
+                if not any(i in url for i in ['.f4m', '.ts', '.m3u8']): raise Exception()
                 ext = url.split('?')[0].split('&')[0].split('|')[0].rsplit('.')[-1].replace('/', '').lower()
                 if not ext: ext = url
-                if not ext in ['f4m', 'ts']: raise Exception()
+                if not ext in ['f4m', 'ts', 'm3u8']: raise Exception()
 
                 params = urlparse.parse_qs(url)
 
@@ -795,8 +791,13 @@ class resolver:
                 try: auth_string = params['auth'][0]
                 except: auth_string = ''
 
-                try: streamtype = params['streamtype'][0]
-                except: streamtype = 'TSDOWNLOADER' if ext == 'ts' else 'HLS'
+
+                try:
+                   streamtype = params['streamtype'][0]
+                except:
+                   if ext =='ts': streamtype = 'TSDOWNLOADER'
+                   elif ext =='m3u8': streamtype = 'HLS'
+                   else: streamtype = 'HDS'
 
                 try: swf = params['swf'][0]
                 except: swf = None
@@ -901,9 +902,9 @@ class resolver:
             pass
 
         try:
-            import resolveurl
+            import urlresolver
 
-            hmf = resolveurl.HostedMediaFile(url=url)
+            hmf = urlresolver.HostedMediaFile(url=url)
 
             if hmf.valid_url() == False: raise Exception()
 
@@ -993,6 +994,7 @@ class player(xbmc.Player):
         self.onPlayBackStopped()
 
 
+
 class bookmarks:
     def get(self, name, year='0'):
         try:
@@ -1049,3 +1051,4 @@ class bookmarks:
             dbcon.commit()
         except:
             pass
+

@@ -114,6 +114,8 @@ searchFile = os.path.join(dataPath, 'search.1.db')
 
 cacheFile = os.path.join(dataPath, 'cache.db')
 
+libcacheFile = os.path.join(dataPath, 'library.db')
+
 
 def addonIcon():
     theme = appearance() ; art = artPath()
@@ -192,7 +194,7 @@ def moderator():
 
 def metaFile():
     if condVisibility('System.HasAddon(script.htmc.metadata)'):
-        return os.path.join(xbmcaddon.Addon('script.htmc.metadata').getAddonInfo('path'), 'resources', 'data', 'meta.db')
+        return os.path.join(xbmcaddon.Addon('script.htpm.metadata').getAddonInfo('path'), 'resources', 'data', 'meta.db')
 
 
 def metadataClean(metadata): # Filter out non-existing/custom keys. Otherise there are tons of errors in Kodi 18 log.
@@ -261,10 +263,32 @@ def openSettings(query=None, id=addonInfo('id')):
         execute('Addon.OpenSettings(%s)' % id)
         if query == None: raise Exception()
         c, f = query.split('.')
-        execute('SetFocus(%i)' % (int(c) + 100))
-        execute('SetFocus(%i)' % (int(f) + 200))
+        if int(getKodiVersion()) >= 18:
+            execute('SetFocus(%i)' % (int(c) - 100))
+            execute('SetFocus(%i)' % (int(f) - 80))
+        else:
+            execute('SetFocus(%i)' % (int(c) + 100))
+            execute('SetFocus(%i)' % (int(f) + 200))
     except:
         return
+
+
+def getKodiVersion():
+    return xbmc.getInfoLabel("System.BuildVersion").split(".")[0]
+
+
+def busy():
+    if int(getKodiVersion()) >= 18:
+        return execute('ActivateWindow(busydialognocancel)')
+    else:
+        return execute('ActivateWindow(busydialog)')
+
+
+def idle():
+    if int(getKodiVersion()) >= 18:
+        return execute('Dialog.Close(busydialognocancel)')
+    else:
+        return execute('Dialog.Close(busydialog)')
 
 
 def getCurrentViewId():

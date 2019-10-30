@@ -3,9 +3,9 @@
 	<category label="Menu Settings">
 		<setting type="lsep" label="Main Menu Options:"/>
 		<setting id="savedata" type="bool" label="Show Save Data Menu: " enable="true" default="true"/>
-		<setting id="backup" type="bool" label="Show Backup/Restore Menu: " enable="true" default="false"/>
-		<setting id="wipe" type="bool" label="Show Wipe Device Menu: " enable="true" default="false"/>
-		<setting id="developer" type="bool" label="Show Developer Menu: " enable="true" default="false"/>
+		<setting id="backup" type="bool" label="Show Backup/Restore Menu: " enable="true" default="true"/>
+		<setting id="wipe" type="bool" label="Show Wipe Device Menu: " enable="true" default="true"/>
+		<setting id="developer" type="bool" label="Show Developer Menu: " enable="true" default="true"/>
 		<setting type="lsep" label="View Options:"/>
 		<setting id="auto-view" type="bool" label="Enable Auto View" default="false"/>
 		<setting id="viewType" type="number" label="View Type" default="50" enable="!eq(-1,false)"/>
@@ -66,6 +66,8 @@
 		<setting id="includevideo" type="bool" label="Include Video Addons in Clear Cache: " default="true"/>
 		<setting id="includeall" type="bool" label="Include All Addons: " default="true" enable="!eq(-1,false)" visible="!eq(-1,false)"/>
 		<setting id="includehtpctv" type="bool" label="Include htpcTV DB: " default="true" enable="!eq(-6,false)" visible="!eq(-6,false)"/>
+        <setting id="includedavid" type="bool" label="Include David DB: " default="true" enable="!eq(-6,false)" visible="!eq(-6,false)"/>
+        <setting id="includeexegesis" type="bool" label="Include Exegesis DB: " default="true" enable="!eq(-6,false)" visible="!eq(-6,false)"/>
         <setting id="includeexodusredux" type="bool" label="Include Exodus Redux DB: " default="true" enable="!eq(-6,false)" visible="!eq(-6,false)"/>
 	</category>
 
@@ -73,6 +75,8 @@
 		<setting type="lsep" label="Save Trakt Data:"/>
 		<setting id="keeptrakt" type="bool" label="Keep My Trakt Data" default="true"/>
 		<setting id="htpctv" type="text" label="htpcTV: " enable="false" default=""/>
+		<setting id="david" type="text" label="David: " enable="false" default=""/>
+		<setting id="exegesis" type="text" label="Exegesis: " enable="false" default=""/>
 		<setting id="exodusredux" type="text" label="Exodus Redux: " enable="false" default=""/>
 		<setting id="metaq" type="text" label="MetaQ: " enable="false" default=""/>
 		<setting id="trakt" type="text" label="Trakt: " enable="false" default=""/>
@@ -93,6 +97,12 @@
 		<setting id="api-tmdb-htpctv" type="text" label="htpcTV TMDb Key: " enable="false" default=""/>
 		<setting id="api-imdb-htpctv" type="text" label="htpcTV IMDb Key: " enable="false" default=""/>
 		<setting id="api-fanart-tv-htpctv" type="text" label="htpcTV Fanart.tv Key: " enable="false" default=""/>
+		<setting id="api-tmdb-david" type="text" label="David TMDb Key: " enable="false" default=""/>
+		<setting id="api-imdb-david" type="text" label="David IMDb Key: " enable="false" default=""/>
+		<setting id="api-fanart-tv-david" type="text" label="David Redux Fanart.tv Key: " enable="false" default=""/>
+		<setting id="api-tmdb-exegesis" type="text" label="Exegesis TMDb Key: " enable="false" default=""/>
+		<setting id="api-imdb-exegesis" type="text" label="Exegesis IMDb Key: " enable="false" default=""/>
+		<setting id="api-fanart-tv-exegesis" type="text" label="Exegesis Fanart.tv Key: " enable="false" default=""/>
 		<setting id="api-tmdb-exodusredux" type="text" label="Exodus Redux TMDb Key: " enable="false" default=""/>
 		<setting id="api-imdb-exodusredux" type="text" label="Exodus Redux IMDb Key: " enable="false" default=""/>
 		<setting id="api-fanart-tv-exodusredux" type="text" label="Exodus Redux Fanart.tv Key: " enable="false" default=""/>

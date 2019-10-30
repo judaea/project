@@ -1,6 +1,6 @@
 
-[B]4.1.40[/B]
-- Edit/Add Settings
+[B]4.1.41[/B]
+- Kodi 18 Fixes
 
 [B]4.1.38[/B]
 - Revert to v 4.1.36

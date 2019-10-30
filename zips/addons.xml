@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.htmcwizard" name="HTMC Wizard" version="1.0.15" provider-name="HTMC">
+<addon id="plugin.program.htmcwizard" name="HTMC Wizard" version="1.0.16" provider-name="HTMC">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>
@@ -33,13 +33,13 @@
 </extension>
 </addon>
 
-<addon id="plugin.video.david" version="1.0.2" name=" David" provider-name="HTMC">
+<addon id="plugin.video.david" version="1.0.4" name=" David" provider-name="HTMC">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="plugin.video.youtube" version="6.4.0" />
 		<import addon="script.extendedinfo" version="5.6.0" />
 		<import addon="script.htmc.artwork" version="1.0.1" />
-		<import addon="script.htmc.metadata" version="1.0.7" />
+		<import addon="script.htmc.metadata" version="1.0.6" />
 		<import addon="script.module.resolveurl" />
 		<import addon="script.module.metahandler" version="2.9.0" />
 		<import addon="script.module.openscrapers" />
@@ -47,9 +47,10 @@
 	<extension point="xbmc.python.pluginsource" library="david.py">
 		<provides>video</provides>
 	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">David</summary>
-		<description lang="en">David powered by OpenScrapers, Movies, TV Shows, Movie Collections - Boxsets, Live TV, Radio and TRAKT Support! Kindly note the David addon is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+		<description lang="en">David with OpenScrapers and Library Integration, Movies, TV Shows, Movie Collections - Boxsets, Live TV, Radio and TRAKT Support! Kindly note the David addon is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
 		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
 		<platform>all</platform>
 		<website></website>
@@ -62,7 +63,6 @@
 - Added Radio
 - Added Kids TV
 - Added Documentaries
-- Removed Library Support
 - Fixed Movie Certifications
 - Fixed TV Show Certifications
 - Added IPTV
@@ -81,6 +81,7 @@
 		<import addon="script.module.requests" />
 		<import addon="script.module.metahandler" />
 		<import addon="plugin.video.youtube" />
+		<import addon="plugin.video.SportsDevil" />
 		<import addon="script.extendedinfo" />
 		<import addon="script.module.openscrapers" />
 	</requires>
@@ -100,9 +101,6 @@
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
-    			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
-    			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
-    			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
 		<news>- RealDebrid Recommended
 - Added 24-7 TV Shows
@@ -181,7 +179,7 @@
 	</extension>
 </addon>
 
-<addon id="plugin.video.htpctv" version="4.1.40" name=" htpcTV" provider-name="HTMC">
+<addon id="plugin.video.htpctv" version="4.1.41" name=" htpcTV" provider-name="HTMC">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="plugin.video.youtube" version="6.4.0" />
@@ -324,7 +322,7 @@
   </extension>
 </addon>
 
-<addon id="repository.htmc" name="HTMC Repository" version="1.0.3" provider-name="HTMC">
+<addon id="repository.htmc" name="HTMC Repository" version="1.0.4" provider-name="HTMC">
 	<extension point="xbmc.addon.repository" name="HTMC Repository">
 		<dir>
 			<info compressed="false">https://raw.githubusercontent.com/judaea/modules4all/master/zips/addons.xml</info>
@@ -335,6 +333,11 @@
 			<info compressed="false">https://raw.githubusercontent.com/judaea/project/master/zips/addons.xml</info>
 			<checksum>https://raw.githubusercontent.com/judaea/project/master/zips/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/judaea/project/master/zips/</datadir>
+		</dir>
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
 		</dir>
 		<dir>
 			<info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>

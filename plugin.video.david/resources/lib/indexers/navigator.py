@@ -54,13 +54,26 @@ class navigator:
     THISADDONPATH = os.path.join(ADDONSPATH, ADDON_ID)
     LOCALNEWS     = os.path.join(THISADDONPATH, 'news.txt')
 
+    def __init__(self):
+        movie_library = os.path.join(control.transPath(control.setting('movie_library')),'')
+        tv_library = os.path.join(control.transPath(control.setting('tv_library')),'')
+        tv_downloads = os.path.join(control.transPath(control.setting('tv_downloads')),'')
+        movie_downloads = os.path.join(control.transPath(control.setting('movie_downloads')),'')
+
+        try:
+            if not os.path.exists(movie_library): os.makedirs(movie_library)
+        except:
+            pass
+        try:
+            if not os.path.exists(tv_library): os.makedirs(tv_library)
+        except:
+            pass
+
     def root(self):
         if self.getMenuEnabled('navi.movies') == True:
             self.addDirectoryItem(32001, 'movieNavigator', 'movies.png', 'DefaultMovies.png')
         if self.getMenuEnabled('navi.tvShows') == True:
             self.addDirectoryItem(32002, 'tvNavigator', 'tvshows.png', 'DefaultTVShows.png')
-        if self.getMenuEnabled('navi.kidsTv') == True:
-            self.addDirectoryItem('Kids TV', 'kidsNavigator', 'kids.png', 'DefaultTVShows.png')
         if self.getMenuEnabled('navi.liveTv') == True:
             self.addDirectoryItem('Live TV', 'iptvNavigator', 'channels.png', 'DefaultTVShows.png')
         if self.getMenuEnabled('navi.music') == True:
@@ -149,13 +162,13 @@ class navigator:
         self.accountCheck()
 
         if traktCredentials == True and imdbCredentials == True:
-            self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultMovies.png', queue=True)
-            self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultMovies.png', queue=True)
+            self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultMovies.png', queue=True, context=(32211, 'moviesToLibrary&url=traktcollection'))
+            self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultMovies.png', queue=True, context=(32211, 'moviesToLibrary&url=traktwatchlist'))
             self.addDirectoryItem(32034, 'movies&url=imdbwatchlist', 'imdb.png', 'DefaultMovies.png', queue=True)
 
         elif traktCredentials == True:
-            self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultMovies.png', queue=True)
-            self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultMovies.png', queue=True)
+            self.addDirectoryItem(32032, 'movies&url=traktcollection', 'trakt.png', 'DefaultMovies.png', queue=True, context=(32211, 'moviesToLibrary&url=traktcollection'))
+            self.addDirectoryItem(32033, 'movies&url=traktwatchlist', 'trakt.png', 'DefaultMovies.png', queue=True, context=(32211, 'moviesToLibrary&url=traktwatchlist'))
 
         elif imdbCredentials == True:
             self.addDirectoryItem(32032, 'movies&url=imdbwatchlist', 'imdb.png', 'DefaultMovies.png', queue=True)
@@ -222,13 +235,13 @@ class navigator:
         self.accountCheck()
 
         if traktCredentials == True and imdbCredentials == True:
-            self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultTVShows.png')
-            self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultTVShows.png')
+            self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultTVShows.png', context=(32211, 'tvshowsToLibrary&url=traktcollection'))
+            self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultTVShows.png', context=(32211, 'tvshowsToLibrary&url=traktwatchlist'))
             self.addDirectoryItem(32034, 'tvshows&url=imdbwatchlist', 'imdb.png', 'DefaultTVShows.png')
 
         elif traktCredentials == True:
-            self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultTVShows.png')
-            self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultTVShows.png')
+            self.addDirectoryItem(32032, 'tvshows&url=traktcollection', 'trakt.png', 'DefaultTVShows.png', context=(32211, 'tvshowsToLibrary&url=traktcollection'))
+            self.addDirectoryItem(32033, 'tvshows&url=traktwatchlist', 'trakt.png', 'DefaultTVShows.png', context=(32211, 'tvshowsToLibrary&url=traktwatchlist'))
 
         elif imdbCredentials == True:
             self.addDirectoryItem(32032, 'tvshows&url=imdbwatchlist', 'imdb.png', 'DefaultTVShows.png')
@@ -264,12 +277,6 @@ class navigator:
         self.endDirectory()
 
 
-    def kids(self):
-        self.addDirectoryItem('Kids TV', 'kidsNavigator', 'kids.png', 'DefaultTVShows.png')
-
-        self.endDirectory()
-
-
     def music(self):
         self.addDirectoryItem('Music', 'musicNavigator', 'music.png', 'DefaultTVShows.png')
 
@@ -296,15 +303,35 @@ class navigator:
 
 
     def tools(self):
-        self.addDirectoryItem('[B]David[/B] : Settings', 'openSettings', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]Settings[/B] : General', 'openSettings&query=0.0', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]Settings[/B] : Navigation', 'openSettings&query=1.0', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]Settings[/B] : Playback', 'openSettings&query=2.0', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]Settings[/B] : Free Accounts', 'openSettings&query=4.0', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]Settings[/B] : Premium Accounts', 'openSettings&query=5.0', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]David[/B] : Library', 'libtoolNavigator', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem('[B]David[/B] : Viewtypes', 'viewsNavigator', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem('[B]David[/B] : Clear Cache', 'clearCache', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem('[B]David[/B] : Clear Search History', 'clearCacheSearch', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem('[B]David[/B] : Clear Provider Sources', 'clearSources', 'tools.png', 'DefaultAddonProgram.png')
         self.addDirectoryItem('[B]David[/B] : News, Updates & Information', 'newsNavigator', 'tools.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem('[B]Trakt[/B] : Authorize David', 'authTrakt', 'trakt.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem('[B]Configure RealDebrid[/B] : ResolveURL Settings', 'smuSettings', 'tools.png', 'DefaultAddonProgram.png')
-        self.addDirectoryItem('[B]Configure Open Scraper Settings[/B] : OpenScraper Settings', 'openscrapersSettings', 'tools.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]Trakt[/B] : Authorize David With Trakt', 'authTrakt', 'trakt.png', 'DefaultAddonProgram.png')
+        self.addDirectoryItem('[B]ResolveURL[/B] : Configure ResolveURL Settings', 'smuSettings', 'tools.png', 'DefaultAddonProgram.png')
+
+        self.endDirectory()
+
+
+    def library(self):
+        self.addDirectoryItem('[B]Library[/B] : Settings', 'openSettings&query=8.0', 'tools.png', 'DefaultAddonProgram.png', isFolder=False)
+        self.addDirectoryItem('[B]David[/B] : Movies Folder', control.setting('movie_library'), 'movies.png', 'DefaultMovies.png', isAction=False)
+        self.addDirectoryItem('[B]David[/B] : TV Shows Folder', control.setting('tv_library'), 'tvshows.png', 'DefaultTVShows.png', isAction=False)
+        self.addDirectoryItem('[B]David[/B] : Update Libraries', 'updateLibrary&query=tool', 'library_update.png', 'DefaultAddonProgram.png')
+
+        if trakt.getTraktCredentialsInfo():
+
+            self.addDirectoryItem(32135, 'moviesToLibrary&url=traktcollection', 'trakt.png', 'DefaultMovies.png')
+            self.addDirectoryItem(32136, 'moviesToLibrary&url=traktwatchlist', 'trakt.png', 'DefaultMovies.png')
+            self.addDirectoryItem(32137, 'tvshowsToLibrary&url=traktcollection', 'trakt.png', 'DefaultTVShows.png')
+            self.addDirectoryItem(32138, 'tvshowsToLibrary&url=traktwatchlist', 'trakt.png', 'DefaultTVShows.png')
 
         self.endDirectory()
 

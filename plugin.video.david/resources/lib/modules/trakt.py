@@ -91,7 +91,7 @@ def authTrakt():
     try:
         if getTraktCredentialsInfo() == True:
             if control.yesnoDialog(control.lang(32511).encode('utf-8'), control.lang(32512).encode('utf-8'), '', 'Trakt'):
-                control.setSetting(id='trakt.username', value='')
+                control.setSetting(id='trakt.user', value='')
                 control.setSetting(id='trakt.token', value='')
                 control.setSetting(id='trakt.refresh', value='')
             raise Exception()
@@ -129,7 +129,7 @@ def authTrakt():
 
         user = result['username']
 
-        control.setSetting(id='trakt.username', value=user)
+        control.setSetting(id='trakt.user', value=user)
         control.setSetting(id='trakt.token', value=token)
         control.setSetting(id='trakt.refresh', value=refresh)
         raise Exception()
@@ -138,7 +138,7 @@ def authTrakt():
 
 
 def getTraktCredentialsInfo():
-    user = control.setting('trakt.username').strip()
+    user = control.setting('trakt.user').strip()
     token = control.setting('trakt.token')
     refresh = control.setting('trakt.refresh')
     if (user == '' or token == '' or refresh == ''): return False
@@ -290,12 +290,12 @@ def getWatchedActivity():
 
 
 def cachesyncMovies(timeout=0):
-    indicators = cache.get(syncMovies, timeout, control.setting('trakt.username').strip())
+    indicators = cache.get(syncMovies, timeout, control.setting('trakt.user').strip())
     return indicators
 
 
 def timeoutsyncMovies():
-    timeout = cache.timeout(syncMovies, control.setting('trakt.username').strip())
+    timeout = cache.timeout(syncMovies, control.setting('trakt.user').strip())
     return timeout
 
 
@@ -311,12 +311,12 @@ def syncMovies(user):
 
 
 def cachesyncTVShows(timeout=0):
-    indicators = cache.get(syncTVShows, timeout, control.setting('trakt.username').strip())
+    indicators = cache.get(syncTVShows, timeout, control.setting('trakt.user').strip())
     return indicators
 
 
 def timeoutsyncTVShows():
-    timeout = cache.timeout(syncTVShows, control.setting('trakt.username').strip())
+    timeout = cache.timeout(syncTVShows, control.setting('trakt.user').strip())
     return timeout
 
 

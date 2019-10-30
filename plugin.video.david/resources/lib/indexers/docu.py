@@ -182,7 +182,7 @@ class documentary:
         addonFanart, addonThumb, artPath = control.addonFanart(), control.addonThumb(), control.artPath()
         queueMenu = control.lang(32065).encode('utf-8')
         playRandom = control.lang(32535).encode('utf-8')
-#         addToLibrary = control.lang(32551).encode('utf-8')
+        addToLibrary = control.lang(32551).encode('utf-8')
         for i in items:
             try:
                 name = i['name']

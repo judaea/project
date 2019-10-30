@@ -1,11 +1,14 @@
 [B]Updates[/B]
 
+[B]October 30, 2019[/B]
+[B]Version 1.0.4[/B]
+- Kodi 18 Fixes
+
 [B]June 4, 2019[/B]
 [B]Version 1.0.2[/B]
 - Added Radio
 - Added Kids TV
 - Added Documentaries
-- Removed Library Support
 - Fixed Movie Certifications
 - Fixed TV Show Certifications
 
@@ -21,24 +24,41 @@
 - RealDebrid Recommended
 - VPN Recommended
 
+[B]How to Add Free Accounts and API Keys[/B]
+
 [B]Trakt Information:[/B]
 - Automatically Track TV Shows and Movies You're Watching
 - Sign up for free at https://trakt.tv/auth/join
-- Authorize your Trakt Account in Settings - Accounts
+- Authorize your Trakt Account in Tools/Settings/Accounts Free
 
 [B]TMDb Information:[/B]
 - Personal API keys provide quicker API responses
 - Sign up for free at https://www.themoviedb.org/account/signup
-- Enter your TMDb API Key in Settings - Accounts
+- Enter your TMDb API Key in Tools/Settings/Accounts Free
 
 [B]IMDb Information:[/B]
 - Stream Movies and TV Shows from your Personal IMDb Lists
 - Sign up for free at https://www.imdb.com/registration/signin
-- Enter your UR######## in Settings - Accounts
+- Enter your UR######## in Tools/Settings/Accounts Free
+
+[B]How to Authorize Premium Accounts in ResolveURL Settings[/B]
 
 [B]RealDebrid Information:[/B]
 - RealDebrid is a premium subscription service
 - Sign up at https://www.real-debrid.com
-- Open ResolveURL Settings in Settings - Accounts
-- Under the Universal Resolvers Tab change Priority to 90
-- Under the Universal Resolvers Tab click (Re)Authorize My Acoount
+- From Main Menu - Tools/Settings/Premium Accounts - Click Authorize My Real-Debrid.com Account
+
+[B]AllDebrid Information:[/B]
+- AllDebrid is a premium subscription service
+- Sign up at https://www.alldebrid.com
+- From Main Menu - Tools/Settings/Premium Accounts - Click Authorize My AllDebrid.com Account
+
+[B]Premiumize Information:[/B]
+- Premiumize is a premium subscription service
+- Sign up at https://www.premiumize.me
+- From Main Menu Tools/Settings/Premium Accounts - Click Authorize My Premiumize.me Account
+
+[B]Linksnappy Information:[/B]
+- Linksnappy is a premium subscription service
+- Sign up at https://linksnappy.com
+- From Main Menu Tools/Settings/Premium Accounts - Click Authorize My Linksnappy.com Account

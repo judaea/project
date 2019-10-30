@@ -8,7 +8,7 @@
         <setting id="scrapers.timeout.1" type="slider" label="32312" default="10" range="10,60" option="int" />
         <setting type="sep" />
         <setting type="lsep" label="TV Shows Settings" />
-        <setting id="trakt.user" type="text" default="" visible="false" />
+        <setting id="trakt.user" type="text" default="" label="Trakt User:" enable="false" visible="true" />
         <setting id="indicators.alt" type="enum" label="32313" lvalues="32314|32315" default="1" visible="!eq(-1,)" />
         <setting id="indicators" type="enum" label="32313" lvalues="32314" default="0" visible="eq(-2,)" />
         <setting type="sep" />
@@ -229,9 +229,10 @@
         <setting type="sep" />
         <setting type="lsep" label="Automatically Track TV Shows and Movies You're Watching" />
         <setting type="lsep" label="Sign up for free at https://trakt.tv/auth/join" />
-        <setting id="trakt.username" type="action" label="Trakt Authorization..." option="close" action="RunPlugin(plugin://plugin.video.htpctv/?action=authTrakt)" />
-        <setting id="trakt.token" type="text" option="hidden" visible="false" label="" default="" />
-        <setting id="trakt.refresh" type="text" option="hidden" visible="false" label="" default="" />
+        <setting id="trakt.auth" type="action" label="32306" option="close" action="RunPlugin(plugin://plugin.video.htpctv/?action=authTrakt)" />
+        <setting id="trakt.token" type="text" visible="false" label="" default="" />
+        <setting id="trakt.refresh" type="text" visible="false" label="" default="" />
+        <setting id="trakt.user" label="32303" type="text" default="" visible="true" enable="false" />
         <setting type="sep" />
         <setting type="lsep" label="Personal API keys provide quicker API responses" />
         <setting type="lsep" label="Sign up for free at https://www.themoviedb.org/account/signup" />

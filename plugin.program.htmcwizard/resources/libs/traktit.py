@@ -48,7 +48,7 @@ KEEPTRAKT      = wiz.getS('keeptrakt')
 TRAKTSAVE      = wiz.getS('traktlastsave')
 COLOR1         = uservar.COLOR1
 COLOR2         = uservar.COLOR2
-ORDER          = ['htpctv', 'exodusredux', 'metaq', 'trakt']
+ORDER          = ['htpctv', 'david', 'exegesis', 'exodusredux', 'metaq', 'trakt']
 
 TRAKTID = { 
 	'htpctv': {
@@ -63,6 +63,30 @@ TRAKTID = {
 		'default'  : 'trakt.user',
 		'data'     : ['trakt.user', 'trakt.refresh', 'trakt.token'],
 		'activate' : 'RunPlugin(plugin://plugin.video.htpctv/?action=authTrakt)'},
+	'david': {
+		'name'     : 'David',
+		'plugin'   : 'plugin.video.david',
+		'saved'    : 'david',
+		'path'     : os.path.join(ADDONS, 'plugin.video.david'),
+		'icon'     : os.path.join(ADDONS, 'plugin.video.david', 'icon.png'),
+		'fanart'   : os.path.join(ADDONS, 'plugin.video.david', 'fanart.jpg'),
+		'file'     : os.path.join(TRAKTFOLD, 'david_trakt'),
+		'settings' : os.path.join(ADDOND, 'plugin.video.david', 'settings.xml'),
+		'default'  : 'trakt.user',
+		'data'     : ['trakt.user', 'trakt.refresh', 'trakt.token'],
+		'activate' : 'RunPlugin(plugin://plugin.video.david/?action=authTrakt)'},
+	'exegesis': {
+		'name'     : 'Exegesis',
+		'plugin'   : 'plugin.video.exegesis',
+		'saved'    : 'exegesis',
+		'path'     : os.path.join(ADDONS, 'plugin.video.exegesis'),
+		'icon'     : os.path.join(ADDONS, 'plugin.video.exegesis', 'icon.png'),
+		'fanart'   : os.path.join(ADDONS, 'plugin.video.exegesis', 'fanart.jpg'),
+		'file'     : os.path.join(TRAKTFOLD, 'exegesis_trakt'),
+		'settings' : os.path.join(ADDOND, 'plugin.video.exegesis', 'settings.xml'),
+		'default'  : 'trakt.user',
+		'data'     : ['trakt.user', 'trakt.refresh', 'trakt.token'],
+		'activate' : 'RunPlugin(plugin://plugin.video.exegesis/?action=authTrakt)'},
 	'exodusredux': {
 		'name'     : 'Exodus Redux',
 		'plugin'   : 'plugin.video.exodusredux',

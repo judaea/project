@@ -250,6 +250,10 @@ elif action == 'downloadNavigator':
     from resources.lib.indexers import navigator
     navigator.navigator().downloads()
 
+elif action == 'libtoolNavigator':
+    from resources.lib.indexers import navigator
+    navigator.navigator().library()
+
 elif action == 'toolNavigator':
     from resources.lib.indexers import navigator
     navigator.navigator().tools()
@@ -507,27 +511,6 @@ elif action == 'docuNavigator':
     else:
         docu.documentary().root()
 
-elif action == 'kidsNavigator':
-    from resources.lib.indexers import youtube
-    if subid == None:
-        youtube.yt_index().root(action)
-    else:
-        youtube.yt_index().get(action, subid)
-
-# elif action == 'fitness':
-#     from resources.lib.indexers import youtube
-#     if subid == None:
-#         youtube.yt_index().root(action)
-#     else:
-#         youtube.yt_index().get(action, subid)
-# 
-# elif action == 'legends':
-#     from resources.lib.indexers import youtube
-#     if subid == None:
-#         youtube.yt_index().root(action)
-#     else:
-#         youtube.yt_index().get(action, subid)
-
 elif action == 'play':
     from resources.lib.modules import sources
     sources.sources().play(title, year, imdb, tvdb, season, episode, tvshowtitle, premiered, meta, select)
@@ -547,6 +530,30 @@ elif action == 'alterSources':
 elif action == 'clearSources':
     from resources.lib.modules import sources
     sources.sources().clearSources()
+
+elif action == 'movieToLibrary':
+    from resources.lib.modules import libtools
+    libtools.libmovies().add(name, title, year, imdb, tmdb)
+
+elif action == 'moviesToLibrary':
+    from resources.lib.modules import libtools
+    libtools.libmovies().range(url)
+
+elif action == 'tvshowToLibrary':
+    from resources.lib.modules import libtools
+    libtools.libtvshows().add(tvshowtitle, year, imdb, tvdb)
+
+elif action == 'tvshowsToLibrary':
+    from resources.lib.modules import libtools
+    libtools.libtvshows().range(url)
+
+elif action == 'updateLibrary':
+    from resources.lib.modules import libtools
+    libtools.libepisodes().update(query)
+
+elif action == 'service':
+    from resources.lib.modules import libtools
+    libtools.libepisodes().service()
 
 elif action == 'openscrapersSettings':
     from resources.lib.modules import control

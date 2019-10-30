@@ -7,6 +7,7 @@
 		<import addon="script.module.requests" />
 		<import addon="script.module.metahandler" />
 		<import addon="plugin.video.youtube" />
+		<import addon="plugin.video.SportsDevil" />
 		<import addon="script.extendedinfo" />
 		<import addon="script.module.openscrapers" />
 	</requires>
@@ -26,9 +27,6 @@
 		<assets>
 			<icon>icon.png</icon>
 			<fanart>fanart.jpg</fanart>
-    			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
-    			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
-    			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
 		</assets>
 		<news>- RealDebrid Recommended
 - Added 24-7 TV Shows

@@ -317,6 +317,14 @@ msgctxt "#32120"
 msgid "[B]DAVID[/B] : Clear search history..."
 msgstr "[B]DAVID[/B] : Clear search history..."
 
+msgctxt "#32121"
+msgid "[B]DAVID[/B] : Library"
+msgstr "[B]DAVID[/B] : Library"
+
+msgctxt "#32131"
+msgid "[B]LIBRARY[/B] : Settings"
+msgstr "[B]LIBRARY[/B] : Settings"
+
 msgctxt "#32132"
 msgid "[B]DAVID[/B] : Update folders..."
 msgstr "[B]DAVID[/B] : Update folders..."
@@ -352,6 +360,18 @@ msgstr "[B]IMDB[/B] : Import Watchlist..."
 msgctxt "#32140"
 msgid "[B]IMDB[/B] : Import TV Watchlist..."
 msgstr "[B]IMDB[/B] : Import TV Watchlist..."
+
+msgctxt "#32211"
+msgid "Add to Library"
+msgstr "Add to Library"
+
+msgctxt "#32239"
+msgid "Add to Library"
+msgstr "Add to Library"
+
+msgctxt "#32268"
+msgid "Add to Library"
+msgstr "Add to Library"
 
 msgctxt "#32301"
 msgid "Enabled"
@@ -637,6 +657,22 @@ msgctxt "#32408"
 msgid "Process Complete"
 msgstr "Process Complete"
 
+msgctxt "#32421"
+msgid "Adding to library..."
+msgstr "Adding to library..."
+
+msgctxt "#32422"
+msgid "Updating TV shows..."
+msgstr "Updating TV shows..."
+
+msgctxt "#32423"
+msgid "Process Complete"
+msgstr "Process Complete"
+
+msgctxt "#32425"
+msgid "Are you sure?"
+msgstr "Are you sure?"
+
 msgctxt "#32500"
 msgid "[I]Next Page[/I]"
 msgstr "[I]Next Page[/I]"
@@ -896,3 +932,47 @@ msgstr "Most Popular Actors"
 msgctxt "#32911"
 msgid "Most Popular Actresses"
 msgstr "Most Popular Actresses"
+
+msgctxt "#32920"
+msgid "Library"
+msgstr "Library"
+
+msgctxt "#32921"
+msgid "David folders will be imported to library if they are added to media sources."
+msgstr "David folders will be imported to library if they are added to media sources."
+
+msgctxt "#32922"
+msgid "Movies"
+msgstr "Movies"
+
+msgctxt "#32923"
+msgid "TV"
+msgstr "TV"
+
+msgctxt "#32924"
+msgid "Auto update TV Shows"
+msgstr "Auto update TV Shows"
+
+msgctxt "#32925"
+msgid "Show notifications during update"
+msgstr "Show notifications during update"
+
+msgctxt "#32926"
+msgid "Update library after adding content"
+msgstr "Update library after adding content"
+
+msgctxt "#32927"
+msgid "Avoid creating duplicate content"
+msgstr "Avoid creating duplicate content"
+
+msgctxt "#32928"
+msgid "Check movie before adding it"
+msgstr "Check movie before adding it"
+
+msgctxt "#32929"
+msgid "Check first episode of season before adding it"
+msgstr "Check first episode of season before adding it"
+
+msgctxt "#32930"
+msgid "Include episodes with unknown air dates"
+msgstr "Include episodes with unknown air dates"

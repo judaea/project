@@ -1051,6 +1051,8 @@ class tvshows:
 
         traktManagerMenu = control.lang(32070).encode('utf-8')
 
+        tvshowToLibraryMenu = control.lang(32211).encode('utf-8')
+
         playRandom = control.lang(32535).encode('utf-8')
 
         nextMenu = control.lang(32053).encode('utf-8')
@@ -1106,6 +1108,8 @@ class tvshows:
 
                 if isOld == True:
                     cm.append((control.lang2(19033).encode('utf-8'), 'Action(Info)'))
+
+                cm.append((tvshowToLibraryMenu, 'RunPlugin(%s?action=tvshowToLibrary&tvshowtitle=%s&year=%s&imdb=%s&tvdb=%s)' % (sysaddon, systitle, year, imdb, tvdb)))
 
 
                 item = control.item(label=label)
@@ -1184,6 +1188,8 @@ class tvshows:
 
         queueMenu = control.lang(32065).encode('utf-8')
 
+        tvshowToLibraryMenu = control.lang(32211).encode('utf-8')
+
         playRandom = control.lang(32535).encode('utf-8')
 
         for i in items:
@@ -1204,6 +1210,9 @@ class tvshows:
 
                 if queue == True:
                     cm.append((queueMenu, 'RunPlugin(%s?action=queueItem)' % sysaddon))
+
+                try: cm.append((tvshowToLibraryMenu, 'RunPlugin(%s?action=tvshowsToLibrary&url=%s)' % (sysaddon, urllib.quote_plus(i['context']))))
+                except: pass
 
                 item = control.item(label=name)
 

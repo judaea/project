@@ -1,5 +1,9 @@
 [B]Updates[/B]
 
+[B]October 30, 2019[/B]
+[B]Version 4.1.41[/B]
+- Kodi 18 Fixes
+
 [B]October 28, 2019[/B]
 [B]Version 4.1.40[/B]
 - Update Code

@@ -935,6 +935,8 @@ class movies:
 
         nextMenu = control.lang(32053).encode('utf-8')
 
+        movieToLibraryMenu = control.lang(32211).encode('utf-8')
+
         for i in items:
             try:
                 label = '%s (%s)' % (i['title'], i['year'])
@@ -991,6 +993,8 @@ class movies:
 
                 if isOld == True:
                     cm.append((control.lang2(19033).encode('utf-8'), 'Action(Info)'))
+
+                cm.append((movieToLibraryMenu, 'RunPlugin(%s?action=movieToLibrary&name=%s&title=%s&year=%s&imdb=%s&content=movie)' % (sysaddon, sysname, systitle, year, imdb)))
 
                 item = control.item(label=label)
 
