@@ -1,0 +1,53 @@
+[B]Updates[/B]
+
+[B]October 29, 2019[/B]
+[B]Version 1.0.0[/B]
+- RealDebrid Recommended
+- Added 24-7 TV Shows
+- Added 24-7 Movies
+- Added Live TV
+- Added Music Collections
+- Added Movie Collections to Movies
+- Added OpenScrapers Support
+- Update Code
+- VPN Recommended
+- Initial Version 1.0.0 Covenant Fork
+
+[B]How to Add Free Accounts and API Keys[/B]
+
+[B]Trakt Information:[/B]
+- Automatically Track TV Shows and Movies You're Watching
+- Sign up for free at https://trakt.tv/auth/join
+- Authorize your Trakt Account in Tools/Settings/Accounts Free
+
+[B]TMDb Information:[/B]
+- Personal API keys provide quicker API responses
+- Sign up for free at https://www.themoviedb.org/account/signup
+- Enter your TMDb API Key in Tools/Settings/Accounts Free
+
+[B]IMDb Information:[/B]
+- Stream Movies and TV Shows from your Personal IMDb Lists
+- Sign up for free at https://www.imdb.com/registration/signin
+- Enter your UR######## in Tools/Settings/Accounts Free
+
+[B]How to Authorize Premium Accounts in ResolveURL Settings[/B]
+
+[B]RealDebrid Information:[/B]
+- RealDebrid is a premium subscription service
+- Sign up at https://www.real-debrid.com
+- From Main Menu - Tools/Settings/Premium Accounts - Click Authorize My Real-Debrid.com Account
+
+[B]AllDebrid Information:[/B]
+- AllDebrid is a premium subscription service
+- Sign up at https://www.alldebrid.com
+- From Main Menu - Tools/Settings/Premium Accounts - Click Authorize My AllDebrid.com Account
+
+[B]Premiumize Information:[/B]
+- Premiumize is a premium subscription service
+- Sign up at https://www.premiumize.me
+- From Main Menu Tools/Settings/Premium Accounts - Click Authorize My Premiumize.me Account
+
+[B]Linksnappy Information:[/B]
+- Linksnappy is a premium subscription service
+- Sign up at https://linksnappy.com
+- From Main Menu Tools/Settings/Premium Accounts - Click Authorize My Linksnappy.com Account

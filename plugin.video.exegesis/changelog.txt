@@ -1,0 +1,12 @@
+
+[B]1.0.0[/B]
+- RealDebrid Recommended
+- Added 24-7 TV Shows
+- Added 24-7 Movies
+- Added Live TV
+- Added Music Collections
+- Added Movie Collections to Movies
+- Added OpenScrapers Support
+- Update Code
+- VPN Recommended
+- Initial Version 1.0.0 Covenant Fork
