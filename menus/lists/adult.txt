@@ -419,5 +419,9 @@ def GetLSProData(page_data,Cookie_Jar,m,url = ''):
 </regex>
 </item>
 
+<plugin>
+  <title>Master Porn List</title>
+  <link>https://raw.githubusercontent.com/judaea/project/master/menus/lists/adult.m3u</link>
+</plugin>
 
 </xml>
