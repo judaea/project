@@ -1,0 +1,101 @@
+<xml>
+
+<item>
+    <title>Action</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=3</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>Animation</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=10</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>Christmas</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=27</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>Comedy</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=31</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>Documentaries</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=37</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>Harry Potter and Lord of the Rings</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=51</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>Horror</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=54</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>Mafia</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=59</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>Musical Night</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=64</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>Mystery</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=65</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>Random</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=73</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>Romance</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=77</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>Star Wars and Star Trek</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=87</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+<item>
+    <title>Studio Ghibli</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=88</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+</item>
+
+</xml>

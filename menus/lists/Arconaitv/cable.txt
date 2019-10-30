@@ -1,213 +1,213 @@
 <xml>
 
 <item>
-	<title>A&E</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=216</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/5d92cb52ac2b2_a&e.jpg</thumbnail>
-	<fanart></fanart>
+    <title>A&E</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=216</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/5d92cb52ac2b2_a&e.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>ABC</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=2</link>
-	<thumbnail>http://logok.org/wp-content/uploads/2014/03/abc-gold-logo-880x660.png</thumbnail>
-	<fanart></fanart>
+    <title>ABC</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=2</link>
+    <thumbnail>http://logok.org/wp-content/uploads/2014/03/abc-gold-logo-880x660.png</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>AMC</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=6</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/59347f6143ba9_amc-logo-2016.jpg</thumbnail>
-	<fanart></fanart>
+    <title>AMC</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=6</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/59347f6143ba9_amc-logo-2016.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>Animal Planet</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=2</link>
-	<thumbnail>http://logok.org/wp-content/uploads/2014/04/Animal-Planet-logo-880x660.png</thumbnail>
-	<fanart></fanart>
+    <title>Animal Planet</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=2</link>
+    <thumbnail>http://logok.org/wp-content/uploads/2014/04/Animal-Planet-logo-880x660.png</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>Bravo TV</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=124</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/5a0ddca20ee94_bravo.png</thumbnail>
-	<fanart></fanart>
+    <title>Bravo TV</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=124</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/5a0ddca20ee94_bravo.png</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>CBS</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=25</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/593485751fff5_cbs.jpg</thumbnail>
-	<fanart></fanart>
+    <title>CBS</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=25</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/593485751fff5_cbs.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>CityTV</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=207</link>
-	<thumbnail></thumbnail>
-	<fanart></fanart>
+    <title>CityTV</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=207</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>CNBC</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=123</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/5a0ddba1961dd_CNBC.jpg</thumbnail>
-	<fanart></fanart>
+    <title>CNBC</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=123</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/5a0ddba1961dd_CNBC.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>CTV</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=205</link>
-	<thumbnail></thumbnail>
-	<fanart></fanart>
+    <title>CTV</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=205</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>Discovery Channel</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=35</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/593485373f617_discovery.jpg</thumbnail>
-	<fanart></fanart>
+    <title>Discovery Channel</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=35</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/593485373f617_discovery.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>Fight Network</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=219</link>
-	<thumbnail></thumbnail>
-	<fanart></fanart>
+    <title>Fight Network</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=219</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>FOX</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=43</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/593484f21e3eb_fox.jpg</thumbnail>
-	<fanart></fanart>
+    <title>FOX</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=43</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/593484f21e3eb_fox.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>FOX 43 WMPT</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=178</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/593484f21e3eb_fox.jpg</thumbnail>
-	<fanart></fanart>
+    <title>FOX 43 WMPT</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=178</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/593484f21e3eb_fox.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>Fox News</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=44</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/593484deaa5b2_foxnews.jpg</thumbnail>
-	<fanart></fanart>
+    <title>Fox News</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=44</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/593484deaa5b2_foxnews.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>Freeform</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=52</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/595e8c3aebc4a_Webp.net-resizeimage%20(2).jpg</thumbnail>
-	<fanart></fanart>
+    <title>Freeform</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=52</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/595e8c3aebc4a_Webp.net-resizeimage%20(2).jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>FX</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=49</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/593484c747d91_fx.jpg</thumbnail>
-	<fanart></fanart>
+    <title>FX</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=49</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/593484c747d91_fx.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>FYI</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=218</link>
-	<thumbnail></thumbnail>
-	<fanart></fanart>
+    <title>FYI</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=218</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>Game Show Network</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=217</link>
-	<thumbnail></thumbnail>
-	<fanart></fanart>
+    <title>Game Show Network</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=217</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>Lifetime Movies</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=220</link>
-	<thumbnail></thumbnail>
-	<fanart></fanart>
+    <title>Lifetime Movies</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=220</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>MavTV</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=177</link>
-	<thumbnail></thumbnail>
-	<fanart></fanart>
+    <title>MavTV</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=177</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>MSNBC</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=176</link>
-	<thumbnail></thumbnail>
-	<fanart></fanart>
+    <title>MSNBC</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=176</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>NASA HD</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=174</link>
-	<thumbnail></thumbnail>
-	<fanart></fanart>
+    <title>NASA HD</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=174</link>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>National Geographic</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=67</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/593483be36140_nat%20geoo.jpg</thumbnail>
-	<fanart></fanart>
+    <title>National Geographic</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=67</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/593483be36140_nat%20geoo.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>NBC</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=122</link>
-	<thumbnail>http://logok.org/wp-content/uploads/2014/03/NBC-peacock-logo-880x660.png</thumbnail>
-	<fanart></fanart>
+    <title>NBC</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=122</link>
+    <thumbnail>http://logok.org/wp-content/uploads/2014/03/NBC-peacock-logo-880x660.png</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>PBS</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=71</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/59348371110c7_pbs.jpg</thumbnail>
-	<fanart></fanart>
+    <title>PBS</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=71</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/59348371110c7_pbs.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>Sundance TV</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=131</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/5cdefbfa68e9e_SundanceTv.jpg</thumbnail>
-	<fanart></fanart>
+    <title>Sundance TV</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=131</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/5cdefbfa68e9e_SundanceTv.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>SYFY</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=121</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/5cdefc7ca57da_syfy.jpg</thumbnail>
-	<fanart></fanart>
+    <title>SYFY</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=121</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/5cdefc7ca57da_syfy.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>The CW</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=92</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/5934828bb3288_cw.jpg</thumbnail>
-	<fanart></fanart>
+    <title>The CW</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=92</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/5934828bb3288_cw.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>TLC</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=130</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/5a21b2aae5f0b_tlc2.jpg</thumbnail>
-	<fanart></fanart>
+    <title>TLC</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=130</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/5a21b2aae5f0b_tlc2.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 <item>
-	<title>USA Network</title>
-	<link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=120</link>
-	<thumbnail>https://www.arconaitv.us/uploads/streams/5a0dd972617e5_USA.jpg</thumbnail>
-	<fanart></fanart>
+    <title>USA Network</title>
+    <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=120</link>
+    <thumbnail>https://www.arconaitv.us/uploads/streams/5a0dd972617e5_USA.jpg</thumbnail>
+    <fanart></fanart>
 </item>
 
 </xml>
