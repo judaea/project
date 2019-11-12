@@ -339,7 +339,7 @@ class Sources(DisplayWindow):
         return
 
     def initProviders(self):
-        sys.path.append(control.dataPath)
+        sys.path.append(control.dataPathScrapers)
         import providers
         sourceList = providers.get_relevant(self.language)
 

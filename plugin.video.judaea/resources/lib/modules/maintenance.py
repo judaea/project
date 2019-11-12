@@ -92,9 +92,9 @@ def wipe_install():
     import shutil
     import os
 
-    if os.path.exists(control.dataPath):
-        shutil.rmtree(control.dataPath)
-    os.mkdir(control.dataPath)
+    if os.path.exists(control.dataPathScrapers):
+        shutil.rmtree(control.dataPathScrapers)
+    os.mkdir(control.dataPathScrapers)
 
 
 def premiumize_transfer_cleanup():

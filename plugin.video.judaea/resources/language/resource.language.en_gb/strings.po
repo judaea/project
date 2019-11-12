@@ -850,7 +850,7 @@ msgid "Force view types on menus"
 msgstr ""
 
 msgctxt "#40085"
-msgid "Clean/Wipe"
+msgid "Clean/Wipe/Sync"
 msgstr ""
 
 msgctxt "#40086"

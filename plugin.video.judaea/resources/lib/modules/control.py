@@ -92,6 +92,11 @@ try:
     addonDir = os.path.join(xbmc.translatePath('special://home'), 'addons/plugin.video.%s' % addonName.lower())
 
     try:
+        dataPathScrapers = xbmc.translatePath(addonInfo('profile')).decode('utf-8')
+    except:
+        dataPathScrapers = xbmc.translatePath(addonInfo('profile'))
+
+    try:
         dataPath = xbmc.translatePath(addonInfo('profile')).decode('utf-8')
     except:
         dataPath = xbmc.translatePath(addonInfo('profile'))
@@ -111,6 +116,8 @@ try:
     execute = xbmc.executebuiltin
 
     console_mode = False
+
+    dataPathScrapers = os.path.join(ADDON_PATH, 'resources', 'lib', 'sources')
 
 
 except:

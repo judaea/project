@@ -58,8 +58,10 @@
         <setting id="general.pmexpirycheck" type="text" visible="hidden" default="" />
         <setting id="general.textColor" type="text" default="" visible="false" />
         <setting id="general.fake" type="text" visible="hidden" default="" />
+<!-- 
         <setting id="provider.updateCheckTimeStamp" type="text" visible="hidden" default="" />
         <setting id="addon.updateCheckTimeStamp" type="text" visible="hidden" default="" />
+ -->
         
         <!-- I'm leaving this hidden for now, TMDB needs a fair bit of work to get back up to scratch -->
         <setting type="enum" id="general.metalocation" default="1" label="40013" values="TMDB|TVDB" visible="hidden" />
@@ -211,20 +213,24 @@
         <setting id="premiumize.cloudInspection" type="bool" default="true" subsetting="true" label="40149" visible="eq(-9,true)" />
     </category>
 
-    <!-- Providers -->
+<!-- 
+
+    <!~~ Providers ~~>
     <category label="40068">
 
-        <!-- General -->
+        <!~~ General ~~>
         <setting type="lsep" label="40001"/>
         <setting type="sep" />
         <setting id="providers.autoupdates" type="bool" label="40081" default="true" />
 
-        <!-- Manage Provider Packages -->
+        <!~~ Manage Provider Packages ~~>
         <setting type="lsep" label="40083"/>
         <setting type="sep" />
         <setting type="action" label="40082" action="RunPlugin(plugin://plugin.video.judaea/?action=manualProviderUpdate)" />
         <setting type="action" label="40083" action="RunPlugin(plugin://plugin.video.judaea/?action=manageProviders)" />
     </category>
+
+ -->
 
     <!-- Sort & Filter -->
     <category label="40093">
@@ -259,7 +265,7 @@
         <setting subsetting="true" id="tvdb.apikey" label="40092" type="text" default="" visible="eq(-4,true)"/>
     </category>
 
-    <!-- Clean/Wipe -->
+    <!-- Clean/Wipe/Sync -->
     <category label="40085">
         
         <!-- [B]JUDAEA[/B] : Clear Cache -->

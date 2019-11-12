@@ -891,7 +891,7 @@ msgid "Force view types on menus"
 msgstr "Weergaves forceren in menu's"
 
 msgctxt "#40085"
-msgid "Clean/Wipe"
+msgid "Clean/Wipe/Sync"
 msgstr "Snelkoppelingen"
 
 msgctxt "#40086"

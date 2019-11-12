@@ -481,7 +481,7 @@ class DialogProgressBG(object):
 
 class ListItem(object):
     def __init__(self, label="", label2="", iconImage="", thumbnailImage="", path=""):
-        from resources.lib.modules.tools import safeStr
+        from resources.lib.modules.control import safeStr
         label = safeStr(label)
         label2 = safeStr(label2)
         self._label = label
@@ -597,7 +597,7 @@ class ListItem(object):
         pass
 
     def __str__(self):
-        from resources.lib.modules.tools import display_string
+        from resources.lib.modules.control import display_string
         return display_string(self._label)
 
 

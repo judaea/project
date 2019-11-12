@@ -15,7 +15,7 @@ except:
     #Running outside Kodi Call
     pass
 
-sys.path.append(control.dataPath)
+sys.path.append(control.dataPathScrapers)
 
 class Resolver(BaseWindow):
 

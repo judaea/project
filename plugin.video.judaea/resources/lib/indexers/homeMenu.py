@@ -63,9 +63,9 @@ class Menus:
         control.addDirectoryItem('[B]Settings[/B] : Scraping', 'openSettings&query=2.0', isFolder=False)
         control.addDirectoryItem('[B]Settings[/B] : Playback', 'openSettings&query=3.0', isFolder=False)
         control.addDirectoryItem('[B]Settings[/B] : Accounts', 'openSettings&query=4.0', isFolder=False)
-        control.addDirectoryItem('[B]Settings[/B] : Providers', 'openSettings&query=5.0', isFolder=False)
-        control.addDirectoryItem('[B]Settings[/B] : API Keys', 'openSettings&query=7.0', isFolder=False)
-        control.addDirectoryItem('[B]Settings[/B] : Cache/Wipe/Sync', 'openSettings&query=8.0', isFolder=False)
+        control.addDirectoryItem('[B]Settings[/B] : Sort & Filter', 'openSettings&query=5.0', isFolder=False)
+        control.addDirectoryItem('[B]Settings[/B] : API Keys', 'openSettings&query=6.0', isFolder=False)
+        control.addDirectoryItem('[B]Settings[/B] : Cache/Wipe/Sync', 'openSettings&query=7.0', isFolder=False)
         control.addDirectoryItem(control.lang(32042), 'clearCache', isFolder=False)
         control.addDirectoryItem(control.lang(32055), 'clearTorrentCache', isFolder=False)
         control.addDirectoryItem(control.lang(40140), 'clearSearchHistory', isFolder=False)
@@ -81,11 +81,11 @@ class Menus:
 
         control.closeDirectory('addons')
 
-    def providerMenu(self):
-
-        control.addDirectoryItem(control.lang(40082), 'manualProviderUpdate', None, None)
-        control.addDirectoryItem(control.lang(40083), 'manageProviders', None, None)
-        control.closeDirectory('addons')
+#     def providerMenu(self):
+# 
+#         control.addDirectoryItem(control.lang(40082), 'manualProviderUpdate', None, None)
+#         control.addDirectoryItem(control.lang(40083), 'manageProviders', None, None)
+#         control.closeDirectory('addons')
 
     def traktSyncTools(self):
         control.addDirectoryItem(control.lang(40178), 'flushTraktActivities', None, None, isFolder=False)

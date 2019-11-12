@@ -4,7 +4,7 @@
 # If you update this init file you will need to update this base64 as well to ensure it is deployed on the users machine
 # If you change the init file without updating this it will be overwritten with the old one!!
 
-init_contents = 'aW1wb3J0IG9zCmZyb20gcmVzb3VyY2VzLmxpYi5tb2R1bGVzIGltcG9ydCBjb250cm9sCmZyb20gcmVzb3VyY2VzLmxpYi5tb2R1bGVzIGltcG9ydCBkYXRhYmFzZQoKZGF0YV9wYXRoID0gb3MucGF0aC5qb2luKGNvbnRyb2wuZGF0YVBhdGgsICdwcm92aWRlcnMnKQpob3N0ZXJfc291cmNlcyA9IFtdCnRvcnJlbnRfc291cmNlcyA9IFtdCgpkZWYgZ2V0X3JlbGV2YW50KGxhbmd1YWdlKToKICAgIHByb3ZpZGVyX3BhY2thZ2VzID0gW25hbWUgZm9yIG5hbWUgaW4gb3MubGlzdGRpcihkYXRhX3BhdGgpIGlmIG9zLnBhdGguaXNkaXIob3MucGF0aC5qb2luKGRhdGFfcGF0aCwgbmFtZSkpXQogICAgIyBHZXQgcmVsZXZhbnQgYW5kIGVuYWJsZWQgcHJvdmlkZXIgZW50cmllcyBmcm9tIHRoZSBkYXRhYmFzZQogICAgcHJvdmlkZXJfc3RhdHVzID0gW2kgZm9yIGkgaW4gZGF0YWJhc2UuZ2V0X3Byb3ZpZGVycygpIGlmIGlbJ2NvdW50cnknXSA9PSBsYW5ndWFnZV0KICAgIHByb3ZpZGVyX3N0YXR1cyA9IFtpIGZvciBpIGluIHByb3ZpZGVyX3N0YXR1cyBpZiBpWydzdGF0dXMnXSA9PSAnZW5hYmxlZCddCgogICAgZm9yIHBhY2thZ2UgaW4gcHJvdmlkZXJfcGFja2FnZXM6CiAgICAgICAgdHJ5OgogICAgICAgICAgICBwcm92aWRlcnNfcGF0aCA9ICdwcm92aWRlcnMuJXMuJXMnICUgKHBhY2thZ2UsIGxhbmd1YWdlKQogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICBwcm92aWRlcl9saXN0ID0gX19pbXBvcnRfXyhwcm92aWRlcnNfcGF0aCwgZnJvbWxpc3Q9WycnXSkKICAgICAgICAgICAgZXhjZXB0OgogICAgICAgICAgICAgICAgY29udGludWUKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgZm9yIGkgaW4gcHJvdmlkZXJfbGlzdC5nZXRfaG9zdGVycygpOgogICAgICAgICAgICAgICAgICAgIGZvciBzdGF0dXMgaW4gcHJvdmlkZXJfc3RhdHVzOgogICAgICAgICAgICAgICAgICAgICAgICBpZiBpID09IHN0YXR1c1sncHJvdmlkZXJfbmFtZSddOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgcGFja2FnZSA9PSBzdGF0dXNbJ3BhY2thZ2UnXToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIEFkZCBpbXBvcnQgcGF0aCBhbmQgbmFtZSB0byBob3N0ZXJfcHJvdmlkZXJzCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaG9zdGVyX3NvdXJjZXMuYXBwZW5kKCgnJXMuaG9zdGVycycgJSBwcm92aWRlcnNfcGF0aCwgaSwgcGFja2FnZSkpCiAgICAgICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgICAgIHBhc3MKICAgICAgICAgICAgCiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIGZvciBpIGluIHByb3ZpZGVyX2xpc3QuZ2V0X3RvcnJlbnQoKToKICAgICAgICAgICAgICAgICAgICBmb3Igc3RhdHVzIGluIHByb3ZpZGVyX3N0YXR1czoKICAgICAgICAgICAgICAgICAgICAgICAgaWYgaSA9PSBzdGF0dXNbJ3Byb3ZpZGVyX25hbWUnXToKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIHBhY2thZ2UgPT0gc3RhdHVzWydwYWNrYWdlJ106CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyBBZGQgaW1wb3J0IHBhdGggYW5kIG5hbWUgdG8gdG9ycmVudF9wcm92aWRlcnMKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0b3JyZW50X3NvdXJjZXMuYXBwZW5kKCgnJXMudG9ycmVudCcgJSBwcm92aWRlcnNfcGF0aCwgaSwgcGFja2FnZSkpCiAgICAgICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgICAgIHBhc3MKICAgICAgICBleGNlcHQ6CiAgICAgICAgICAgIGltcG9ydCB0cmFjZWJhY2sKICAgICAgICAgICAgdHJhY2ViYWNrLnByaW50X2V4YygpCiAgICAgICAgICAgIGNvbnRpbnVlCgogICAgcmV0dXJuICh0b3JyZW50X3NvdXJjZXMsIGhvc3Rlcl9zb3VyY2VzKQoKZGVmIGdldF9hbGwobGFuZ3VhZ2UpOgogICAgcHJvdmlkZXJfcGFja2FnZXMgPSBbbmFtZSBmb3IgbmFtZSBpbiBvcy5saXN0ZGlyKGRhdGFfcGF0aCkgaWYgb3MucGF0aC5pc2Rpcihvcy5wYXRoLmpvaW4oZGF0YV9wYXRoLCBuYW1lKSldCiAgICBmb3IgcGFja2FnZSBpbiBwcm92aWRlcl9wYWNrYWdlczoKICAgICAgICB0cnk6CiAgICAgICAgICAgIHByb3ZpZGVyc19wYXRoID0gJ3Byb3ZpZGVycy4lcy4lcycgJSAocGFja2FnZSwgbGFuZ3VhZ2UpCiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHByb3ZpZGVyX2xpc3QgPSBfX2ltcG9ydF9fKHByb3ZpZGVyc19wYXRoLCBmcm9tbGlzdD1bJyddKQogICAgICAgICAgICBleGNlcHQ6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICBmb3IgaSBpbiBwcm92aWRlcl9saXN0LmdldF9ob3N0ZXJzKCk6CiAgICAgICAgICAgICAgICAgICAgaG9zdGVyX3NvdXJjZXMuYXBwZW5kKCgnJXMuaG9zdGVycycgJSBwcm92aWRlcnNfcGF0aCwgaSwgcGFja2FnZSkpCiAgICAgICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgICAgIHBhc3MKCiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIGZvciBpIGluIHByb3ZpZGVyX2xpc3QuZ2V0X3RvcnJlbnQoKToKICAgICAgICAgICAgICAgICAgICB0b3JyZW50X3NvdXJjZXMuYXBwZW5kKCgnJXMudG9ycmVudCcgJSBwcm92aWRlcnNfcGF0aCwgaSwgcGFja2FnZSkpCiAgICAgICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgICAgIHBhc3MKCiAgICAgICAgZXhjZXB0OgogICAgICAgICAgICBpbXBvcnQgdHJhY2ViYWNrCiAgICAgICAgICAgIHRyYWNlYmFjay5wcmludF9leGMoKQogICAgICAgICAgICBjb250aW51ZQoKICAgIHJldHVybiAodG9ycmVudF9zb3VyY2VzLCBob3N0ZXJfc291cmNlcykK'
+init_contents = 'aW1wb3J0IG9zCmZyb20gcmVzb3VyY2VzLmxpYi5tb2R1bGVzIGltcG9ydCBjb250cm9sCmZyb20gcmVzb3VyY2VzLmxpYi5tb2R1bGVzIGltcG9ydCBkYXRhYmFzZQoKZGF0YV9wYXRoID0gb3MucGF0aC5qb2luKGNvbnRyb2wuZGF0YVBhdGhTY3JhcGVycywgJ3Byb3ZpZGVycycpCmhvc3Rlcl9zb3VyY2VzID0gW10KdG9ycmVudF9zb3VyY2VzID0gW10KCmRlZiBnZXRfcmVsZXZhbnQobGFuZ3VhZ2UpOgogICAgcHJvdmlkZXJfcGFja2FnZXMgPSBbbmFtZSBmb3IgbmFtZSBpbiBvcy5saXN0ZGlyKGRhdGFfcGF0aCkgaWYgb3MucGF0aC5pc2Rpcihvcy5wYXRoLmpvaW4oZGF0YV9wYXRoLCBuYW1lKSldCiAgICAjIEdldCByZWxldmFudCBhbmQgZW5hYmxlZCBwcm92aWRlciBlbnRyaWVzIGZyb20gdGhlIGRhdGFiYXNlCiAgICBwcm92aWRlcl9zdGF0dXMgPSBbaSBmb3IgaSBpbiBkYXRhYmFzZS5nZXRfcHJvdmlkZXJzKCkgaWYgaVsnY291bnRyeSddID09IGxhbmd1YWdlXQogICAgcHJvdmlkZXJfc3RhdHVzID0gW2kgZm9yIGkgaW4gcHJvdmlkZXJfc3RhdHVzIGlmIGlbJ3N0YXR1cyddID09ICdlbmFibGVkJ10KCiAgICBmb3IgcGFja2FnZSBpbiBwcm92aWRlcl9wYWNrYWdlczoKICAgICAgICB0cnk6CiAgICAgICAgICAgIHByb3ZpZGVyc19wYXRoID0gJ3Byb3ZpZGVycy4lcy4lcycgJSAocGFja2FnZSwgbGFuZ3VhZ2UpCiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHByb3ZpZGVyX2xpc3QgPSBfX2ltcG9ydF9fKHByb3ZpZGVyc19wYXRoLCBmcm9tbGlzdD1bJyddKQogICAgICAgICAgICBleGNlcHQ6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICBmb3IgaSBpbiBwcm92aWRlcl9saXN0LmdldF9ob3N0ZXJzKCk6CiAgICAgICAgICAgICAgICAgICAgZm9yIHN0YXR1cyBpbiBwcm92aWRlcl9zdGF0dXM6CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIGkgPT0gc3RhdHVzWydwcm92aWRlcl9uYW1lJ106CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiBwYWNrYWdlID09IHN0YXR1c1sncGFja2FnZSddOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgQWRkIGltcG9ydCBwYXRoIGFuZCBuYW1lIHRvIGhvc3Rlcl9wcm92aWRlcnMKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBob3N0ZXJfc291cmNlcy5hcHBlbmQoKCclcy5ob3N0ZXJzJyAlIHByb3ZpZGVyc19wYXRoLCBpLCBwYWNrYWdlKSkKICAgICAgICAgICAgZXhjZXB0OgogICAgICAgICAgICAgICAgcGFzcwogICAgICAgICAgICAKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgZm9yIGkgaW4gcHJvdmlkZXJfbGlzdC5nZXRfdG9ycmVudCgpOgogICAgICAgICAgICAgICAgICAgIGZvciBzdGF0dXMgaW4gcHJvdmlkZXJfc3RhdHVzOgogICAgICAgICAgICAgICAgICAgICAgICBpZiBpID09IHN0YXR1c1sncHJvdmlkZXJfbmFtZSddOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgcGFja2FnZSA9PSBzdGF0dXNbJ3BhY2thZ2UnXToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIEFkZCBpbXBvcnQgcGF0aCBhbmQgbmFtZSB0byB0b3JyZW50X3Byb3ZpZGVycwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRvcnJlbnRfc291cmNlcy5hcHBlbmQoKCclcy50b3JyZW50JyAlIHByb3ZpZGVyc19wYXRoLCBpLCBwYWNrYWdlKSkKICAgICAgICAgICAgZXhjZXB0OgogICAgICAgICAgICAgICAgcGFzcwogICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgaW1wb3J0IHRyYWNlYmFjawogICAgICAgICAgICB0cmFjZWJhY2sucHJpbnRfZXhjKCkKICAgICAgICAgICAgY29udGludWUKCiAgICByZXR1cm4gKHRvcnJlbnRfc291cmNlcywgaG9zdGVyX3NvdXJjZXMpCgpkZWYgZ2V0X2FsbChsYW5ndWFnZSk6CiAgICBwcm92aWRlcl9wYWNrYWdlcyA9IFtuYW1lIGZvciBuYW1lIGluIG9zLmxpc3RkaXIoZGF0YV9wYXRoKSBpZiBvcy5wYXRoLmlzZGlyKG9zLnBhdGguam9pbihkYXRhX3BhdGgsIG5hbWUpKV0KICAgIGZvciBwYWNrYWdlIGluIHByb3ZpZGVyX3BhY2thZ2VzOgogICAgICAgIHRyeToKICAgICAgICAgICAgcHJvdmlkZXJzX3BhdGggPSAncHJvdmlkZXJzLiVzLiVzJyAlIChwYWNrYWdlLCBsYW5ndWFnZSkKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgcHJvdmlkZXJfbGlzdCA9IF9faW1wb3J0X18ocHJvdmlkZXJzX3BhdGgsIGZyb21saXN0PVsnJ10pCiAgICAgICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIGZvciBpIGluIHByb3ZpZGVyX2xpc3QuZ2V0X2hvc3RlcnMoKToKICAgICAgICAgICAgICAgICAgICBob3N0ZXJfc291cmNlcy5hcHBlbmQoKCclcy5ob3N0ZXJzJyAlIHByb3ZpZGVyc19wYXRoLCBpLCBwYWNrYWdlKSkKICAgICAgICAgICAgZXhjZXB0OgogICAgICAgICAgICAgICAgcGFzcwoKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgZm9yIGkgaW4gcHJvdmlkZXJfbGlzdC5nZXRfdG9ycmVudCgpOgogICAgICAgICAgICAgICAgICAgIHRvcnJlbnRfc291cmNlcy5hcHBlbmQoKCclcy50b3JyZW50JyAlIHByb3ZpZGVyc19wYXRoLCBpLCBwYWNrYWdlKSkKICAgICAgICAgICAgZXhjZXB0OgogICAgICAgICAgICAgICAgcGFzcwoKICAgICAgICBleGNlcHQ6CiAgICAgICAgICAgIGltcG9ydCB0cmFjZWJhY2sKICAgICAgICAgICAgdHJhY2ViYWNrLnByaW50X2V4YygpCiAgICAgICAgICAgIGNvbnRpbnVlCgogICAgcmV0dXJuICh0b3JyZW50X3NvdXJjZXMsIGhvc3Rlcl9zb3VyY2VzKQ=='
 
 import os
 import sys
@@ -33,9 +33,9 @@ class providers:
         self.known_providers = database.get_providers()
         self.update_known_providers()
 
-        self.providers_path = os.path.join(control.dataPath, 'providers')
-        self.modules_path = os.path.join(control.dataPath, 'providerModules')
-        self.meta_path = os.path.join(control.dataPath, 'providerMeta')
+        self.providers_path = os.path.join(control.dataPathScrapers, 'providers')
+        self.modules_path = os.path.join(control.dataPathScrapers, 'providerModules')
+#        self.meta_path = os.path.join(control.dataPathScrapers, 'providerMeta')
 
     def poll_database(self):
         self.known_providers = database.get_providers()
@@ -43,7 +43,7 @@ class providers:
 
     def update_known_providers(self):
         provider_types = ['torrent', 'hosters']
-        sys.path.append(control.dataPath)
+        sys.path.append(control.dataPathScrapers)
         import providers
 
         all_providers = providers.get_all(self.language)
@@ -209,7 +209,7 @@ class providers:
         self.pre_update_collection = [i for i in database.get_providers() if i['package'] == pack_name]
 
         folders = ['providerModules/', 'providers/']
-        meta_output_location = os.path.join(control.dataPath, 'providerMeta', '%s.json' % pack_name)
+        meta_output_location = os.path.join(control.dataPathScrapers, 'providerMeta', '%s.json' % pack_name)
 
         if os.path.isfile(meta_output_location):
             if os.path.isfile(meta_output_location + '.temp'):
@@ -243,7 +243,7 @@ class providers:
         try:
             for folder in folders:
                 try:
-                    folder_path = os.path.join(control.dataPath, folder.strip('/'), pack_name)
+                    folder_path = os.path.join(control.dataPathScrapers, folder.strip('/'), pack_name)
                     if os.path.exists(folder_path):
                         if os.path.exists('%s.temp' % folder_path):
                             shutil.rmtree('%s.temp' % folder_path)
@@ -253,7 +253,7 @@ class providers:
                             continue
                         if file.startswith(folder):
                             memberpath = os.path.join(zip_root_dir, file)
-                            targetpath = os.path.join(control.dataPath, file)
+                            targetpath = os.path.join(control.dataPathScrapers, file)
 
                             upperdirs = os.path.dirname(targetpath)
                             if upperdirs and not os.path.exists(upperdirs):
@@ -303,7 +303,7 @@ class providers:
         if os.path.exists('%s.temp' % meta_output_location):
             os.remove('%s.temp' % meta_output_location)
         for folder in folders:
-            folder_path = os.path.join(control.dataPath, folder.strip('/'), pack_name)
+            folder_path = os.path.join(control.dataPathScrapers, folder.strip('/'), pack_name)
             if os.path.exists('%s.temp' % folder_path):
                 shutil.rmtree('%s.temp' % folder_path)
 
@@ -318,18 +318,18 @@ class providers:
 
     def deploy_init(self):
         folders = ['providerModules/', 'providers/']
-        root_init_path = os.path.join(control.dataPath, '__init__ .py')
+        root_init_path = os.path.join(control.dataPathScrapers, '__init__ .py')
 
-        if not os.path.exists(control.dataPath):
-            os.makedirs(control.dataPath)
+        if not os.path.exists(control.dataPathScrapers):
+            os.makedirs(control.dataPathScrapers)
         if not os.path.exists(root_init_path):
             open(root_init_path, 'a').close()
         for i in folders:
-            folder_path = os.path.join(control.dataPath, i)
+            folder_path = os.path.join(control.dataPathScrapers, i)
             if not os.path.exists(folder_path):
                 os.makedirs(folder_path)
             open(os.path.join(folder_path, '__init__.py'), 'a').close()
-        provider_init = open(os.path.join(control.dataPath, 'providers', '__init__.py'), 'w+')
+        provider_init = open(os.path.join(control.dataPathScrapers, 'providers', '__init__.py'), 'w+')
         try:
             provider_init.write(base64.b64decode(init_contents))
         except:
@@ -337,8 +337,8 @@ class providers:
 
     def output_meta(self, meta):
         try:
-            output_directory = os.path.join(control.dataPath, 'providerMeta')
-            output_file = os.path.join(control.dataPath, 'providerMeta', '%s.json' % meta['name'])
+            output_directory = os.path.join(control.dataPathScrapers, 'providerMeta')
+            output_file = os.path.join(control.dataPathScrapers, 'providerMeta', '%s.json' % meta['name'])
 
             if not os.path.exists(output_directory):
                 os.mkdir(output_directory)
@@ -400,7 +400,7 @@ class providers:
             pass
 
         for folder in folders:
-            folder_path = os.path.join(control.dataPath, folder.strip('/'), package_name)
+            folder_path = os.path.join(control.dataPathScrapers, folder.strip('/'), package_name)
             if os.path.exists('%s.temp' % folder_path):
                 try:
                     shutil.rmtree(folder_path)

@@ -170,7 +170,7 @@ def _get_connection_cursor(filepath):
 
 
 def _get_connection(filepath):
-    control.makeFile(control.dataPath)
+    control.makeFile(control.dataPathScrapers)
     conn = db.connect(filepath)
     conn.row_factory = _dict_factory
     return conn
@@ -858,7 +858,7 @@ def cache_version_check():
 
 def _find_cache_version():
     import os
-    versionFile = os.path.join(control.dataPath, 'cache.v')
+    versionFile = os.path.join(control.dataPathScrapers, 'cache.v')
     try:
         with open(versionFile, 'rb') as fh:
             oldVersion = fh.read()
