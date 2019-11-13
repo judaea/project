@@ -1,0 +1,45 @@
+<xml>
+
+  <dir>
+    <title>Movies</title>
+    <link>file://movies.xml</link>
+    <thumbnail>file://artwork/movies.png</thumbnail>
+    <summary>Movies</summary>
+  </dir>
+
+  <dir>
+    <title>TV Shows</title>
+    <link>file://tvshows.xml</link>
+    <thumbnail>file://artwork/tvshows.png</thumbnail>
+    <summary>TV Shows</summary>
+  </dir>
+
+  <dir>
+    <title>24-7</title>
+    <link>file://247.xml</link>
+    <thumbnail>file://artwork/247.png</thumbnail>
+    <summary>Stream Random 24-7 TV Shows & Movies</summary>
+  </dir>
+
+  <dir>
+    <title>Live TV</title>
+    <arconaitv>networks</arconaitv>
+    <thumbnail>https://htmc.tv/repo/artwork/livetv.png</thumbnail>
+    <summary>Live TV</summary>
+  </dir>
+
+  <dir>
+    <title>Trakt Hub</title>
+    <link>file://trakt-hub.xml</link>
+    <thumbnail>file://artwork/trakt.png</thumbnail>
+    <summary>Trakt Movie & TV Show Hub</summary>
+  </dir>
+  
+  <plugin>
+    <title>Tools</title>
+    <link>plugin://plugin.video.htmctv/?action=openSettings</link>
+    <thumbnail>file://artwork/tools.png</thumbnail>
+    <summary>Settings</summary>
+  </plugin>
+
+</xml>

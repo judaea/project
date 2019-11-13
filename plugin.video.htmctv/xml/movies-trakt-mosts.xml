@@ -1,0 +1,75 @@
+<xml>
+
+  <dir>
+    <title>Most Played This Week</title>
+    <trakt>https://api.trakt.tv/movies/played/weekly</trakt>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+    <summary>Most Played This Week</summary>
+  </dir>
+
+  <dir>
+    <title>Most Played This Month</title>
+    <trakt>https://api.trakt.tv/movies/played/month</trakt>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+    <summary>Most Played This Month</summary>
+  </dir>
+  
+  <dir>
+    <title>Most Played All Time</title>
+    <trakt>https://api.trakt.tv/movies/played/alltime</trakt>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+    <summary>Most Played All Time</summary>
+  </dir>
+
+  <dir>
+    <title>Most Watched This Week</title>
+    <trakt>https://api.trakt.tv/movies/watched/weekly</trakt>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+    <summary>Most Watched This Week</summary>
+  </dir>
+
+  <dir>
+    <title>Most Watched This Month</title>
+    <trakt>https://api.trakt.tv/movies/watched/month</trakt>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+    <summary>Most Watched This Month</summary>
+  </dir>
+  
+  <dir>
+    <title>Most Watched All Time</title>
+    <trakt>https://api.trakt.tv/movies/watched/alltime</trakt>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+    <summary>Most Watched All Time</summary>
+  </dir>
+
+  <dir>
+    <title>Most Collected This Week</title>
+    <trakt>https://api.trakt.tv/movies/collected/weekly</trakt>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+    <summary>Most Collected This Week</summary>
+  </dir>
+	
+  <dir>
+    <title>Most Collected This Month</title>
+    <trakt>https://api.trakt.tv/movies/collected/month</trakt>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+    <summary>Most Collected This Month</summary>
+  </dir>
+	
+  <dir>
+    <title>Most Collected All Time</title>
+    <trakt>https://api.trakt.tv/movies/collected/alltime</trakt>
+    <thumbnail></thumbnail>
+    <fanart></fanart>
+    <summary>Most Collected All Time</summary>
+  </dir>
+	
+</xml>

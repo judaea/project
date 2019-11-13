@@ -1,0 +1,17 @@
+<xml>
+
+  <dir>
+    <title>TMDb TV Show Indexer</title>
+    <link>file://tvshows-tmdb.xml</link>
+    <thumbnail>file://artwork/tvshows.png</thumbnail>
+    <summary>TMDb TV Show Indexer</summary>
+  </dir>
+
+  <dir>
+    <title>Trakt TV Show Indexer</title>
+    <link>file://tvshows-trakt.xml</link>
+    <thumbnail>file://artwork/tvshows.png</thumbnail>
+    <summary>Trakt TV Show Indexer</summary>
+  </dir>
+
+</xml>

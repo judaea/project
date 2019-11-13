@@ -1,0 +1,80 @@
+<xml>
+
+  <dir>
+    <title>Lists</title>
+    <trakt>https://api.trakt.tv/users/me/lists/movies</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/userlists.png</thumbnail>
+    <summary>Your Trakt Lists</summary>
+  </dir>
+
+  <dir>
+    <title>Liked Lists</title>
+    <trakt>https://api.trakt.tv/users/likes/lists</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/userlists.png</thumbnail>
+    <summary>Your Trakt Liked Lists</summary>
+  </dir>
+  
+  <dir>
+    <title>Movie Watchlist</title>
+    <trakt>https://api.trakt.tv/users/me/watchlist/movies</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Your Trakt - Movie WatchList</summary>
+  </dir>
+
+  <dir>
+    <title>Movie Collection</title>
+    <trakt>https://api.trakt.tv/users/me/collection/movies</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Your Trakt - Movie Collection</summary>
+  </dir>
+  
+  <dir>
+    <title>Movie History</title>
+    <trakt>https://api.trakt.tv/users/me/history/movies</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Your Trakt - Movie History</summary>
+  </dir>
+
+  <dir>
+    <title>Movie Recommendations</title>
+    <trakt>http://api.trakt.tv/recommendations/movies?limit=40</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Your Trakt - Movie Recommendations</summary>
+  </dir>
+	
+  <dir>
+    <title>TV Show Progress</title>
+    <trakt>http://api.trakt.tv/users/me/watched/shows</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Your Trakt - TV Show Progress</summary>
+  </dir>
+
+  <dir>
+    <title>TV Show Watchlist</title>
+    <trakt>https://api.trakt.tv/users/me/watchlist/shows</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Your Trakt - TV Show WatchList</summary>
+  </dir>
+
+  <dir>
+    <title>TV Show Collection</title>
+    <trakt>https://api.trakt.tv/users/me/collection/shows</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Your Trakt - TV Show Collection</summary>
+  </dir>
+  
+  <dir>
+    <title>TV Show History</title>
+    <trakt>https://api.trakt.tv/users/me/history/shows</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Your Trakt - TV Show History</summary>
+  </dir>
+
+  <dir>
+    <title>TV Show Recommendations</title>
+    <trakt>http://api.trakt.tv/recommendations/shows?limit=40</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Your Trakt - TV Show Recommendations</summary>
+  </dir>
+	
+</xml>

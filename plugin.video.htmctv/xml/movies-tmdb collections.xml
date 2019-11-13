@@ -1,0 +1,38 @@
+<xml>
+
+  <dir>
+    <title>Movie Collection</title>
+    <link>file://movies-tmdb-boxsets.xml</link>
+    <thumbnail>file://artwork/collections.png</thumbnail>
+    <summary>Movie Boxsets on TMDb</summary>
+  </dir>
+
+  <dir>
+    <title>Horror Collection</title>
+    <link>file://movies-tmdb-boxsets-horror.xml</link>
+    <thumbnail>file://artwork/collections.png</thumbnail>
+    <summary>Horror Movie Boxsets on TMDb</summary>
+  </dir>
+
+  <dir>
+    <title>Wes Craven Collection</title>
+    <tmdb>list/40760</tmdb>
+    <thumbnail>https://image.tmdb.org/t/p/w600_and_h900_bestv2/qwjz10FiAyMvxD2b3XNEUsRb0zz.jpg</thumbnail>
+    <summary>Wes Craven Collection on TMDb</summary>
+  </dir>
+
+  <dir>
+    <title>Stephen King Collection</title>
+    <tmdb>list/40758</tmdb>
+    <thumbnail>https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2ODIxNDM4Nl5BMl5BanBnXkFtZTYwMjkzMzU1._V1_.jpg</thumbnail>
+    <summary>Stephen King Collection on TMDb</summary>
+  </dir>
+
+  <dir>
+    <title>James Wan Collection</title>
+    <tmdb>list/40763</tmdb>
+    <thumbnail>https://image.tmdb.org/t/p/w600_and_h900_bestv2/d1LSKfzi5J6QngWS7niN1zPJdud.jpg</thumbnail>
+    <summary>James Wan Collection on TMDb</summary>
+  </dir>
+
+</xml>

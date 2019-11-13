@@ -1,0 +1,38 @@
+<xml>
+
+  <dir>
+    <title>Rotten Tomatoes Best of 2018</title>
+    <trakt>https://api.trakt.tv/users/htmc/lists/rotten-tomatoes-best-of-2018/items</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/userlists.png</thumbnail>
+    <summary>Powered by Trakt.tv - Rotten Tomatoes Best of 2018 - Support Trakt with VIP! @ https://trakt.tv/vip</summary>
+  </dir>
+
+  <dir>
+    <title>Rotten Tomatoes Best of 2017</title>
+    <trakt>https://api.trakt.tv/users/htmc/lists/rotten-tomatoes-best-of-2017/items</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/userlists.png</thumbnail>
+    <summary>Powered by Trakt.tv - Rotten Tomatoes Best of 2017 - Support Trakt with VIP! @ https://trakt.tv/vip</summary>
+  </dir>
+
+  <dir>
+    <title>Rotten Tomatoes Best of 2016</title>
+    <trakt>https://api.trakt.tv/users/htmc/lists/rotten-tomatoes-best-of-2016/items</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/userlists.png</thumbnail>
+    <summary>Powered by Trakt.tv - Rotten Tomatoes Best of 2016 - Support Trakt with VIP! @ https://trakt.tv/vip</summary>
+  </dir>
+
+  <dir>
+    <title>Rotten Tomatoes Best of 2015</title>
+    <trakt>https://api.trakt.tv/users/htmc/lists/rotten-tomatoes-best-of-2015/items</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/userlists.png</thumbnail>
+    <summary>Powered by Trakt.tv - Rotten Tomatoes Best of 2015 - Support Trakt with VIP! @ https://trakt.tv/vip</summary>
+  </dir>
+
+  <dir>
+    <title>Rotten Tomatoes Best of 2014</title>
+    <trakt>https://api.trakt.tv/users/htmc/lists/rotten-tomatoes-best-of-2014/items</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/userlists.png</thumbnail>
+    <summary>Powered by Trakt.tv - Rotten Tomatoes Best of 2014 - Support Trakt with VIP! @ https://trakt.tv/vip</summary>
+  </dir>
+
+</xml>

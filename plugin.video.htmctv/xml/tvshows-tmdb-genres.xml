@@ -1,0 +1,93 @@
+<xml>
+
+  <dir>
+    <title>Action & Adventure</title>
+    <tmdb>genre/shows/10759</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Animation</title>
+    <tmdb>genre/shows/16</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Comedy</title>
+    <tmdb>genre/shows/35</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Crime</title>
+    <tmdb>genre/shows/80</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Documentary</title>
+    <tmdb>genre/shows/99</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Drama</title>
+    <tmdb>genre/shows/18</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Family</title>
+    <tmdb>genre/shows/10751</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Kids</title>
+    <tmdb>genre/shows/10762</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Mystery</title>
+    <tmdb>genre/shows/9648</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>News</title>
+    <tmdb>genre/shows/10763</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Reality</title>
+    <tmdb>genre/shows/10764</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Sci-Fi & Fantasy</title>
+    <tmdb>genre/shows/10765</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Soap</title>
+    <tmdb>genre/shows/10766</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>War & Politics</title>
+    <tmdb>genre/shows/10768</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Western</title>
+    <tmdb>genre/shows/37</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+</xml>

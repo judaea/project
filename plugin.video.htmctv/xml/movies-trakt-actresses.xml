@@ -1,0 +1,603 @@
+<xml>
+
+  <dir>
+    <title>Alfre Woodard</title>
+    <trakt>https://api.trakt.tv/people/Alfre-Woodard/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/aCAjUOrV2WG3OaLUvQHVkyk8S2P.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Alicia Vikander</title>
+    <trakt>https://api.trakt.tv/people/Alicia-Vikander/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/4zrfXLhi4MbGQWUJQJcQroHbCS5.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Allison Janney</title>
+    <trakt>https://api.trakt.tv/people/Allison-Janney/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/hpBKWV1jjoXQbr1s0iUZTSvw582.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Amy Adams</title>
+    <trakt>https://api.trakt.tv/people/Amy-Adams/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/chjMOiuydU9frF95qcUhlC6fWG3.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Angela Bassett</title>
+    <trakt>https://api.trakt.tv/people/Angela-Bassett/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/qvIFNQLWzWyqjykiU0ONQ7u6Ihz.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Angelina Jolie</title>
+    <trakt>https://api.trakt.tv/people/Angelina-Jolie/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/wdrSStdTmiSHhynCV5CtTJTuzY1.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Anna Faris</title>
+    <trakt>https://api.trakt.tv/people/Anna-Faris/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/b9o0qGfRqaQqehSiVw3VHfDmlP8.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Anna Kendrick</title>
+    <trakt>https://api.trakt.tv/people/Anna-Kendrick/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/sylfU9EOLAF6R7BdOXGqyA4jYKv.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Anne Bancroft</title>
+    <trakt>https://api.trakt.tv/people/Anne-Bancroft/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/ydabiabIsMBe2HsNmx43gBpqzxx.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Anne Hathaway</title>
+    <trakt>https://api.trakt.tv/people/Anne-Hathaway/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/wzRiM9ylHMLdE2gp79K5MqhVdDC.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Audrey Hepburn</title>
+    <trakt>https://api.trakt.tv/people/Audrey-Hepburn/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/lNmmbyKxwnMSe0vb4kzZroa8lzr.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Cameron Diaz</title>
+    <trakt>https://api.trakt.tv/people/Cameron-Diaz/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/ahFkUN9Sm8oF1txUHE5JcJ95Ere.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Carey Mulligan</title>
+    <trakt>https://api.trakt.tv/people/Carey-Mulligan/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/hDZDZcvwpveGeSWLVJEa8VOg4xx.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Cate Blanchett</title>
+    <trakt>https://api.trakt.tv/people/Cate-Blanchett/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/5HikVWKfkkUa8aLdCMHtREBECIn.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Charlize Theron</title>
+    <trakt>https://api.trakt.tv/people/Charlize-Theron/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/k5Xt2mNlraX7yHYaPy9gvayCaKV.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Dakota Fanning</title>
+    <trakt>https://api.trakt.tv/people/Dakota-Fanning/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/upEXoCEO9vfVPvGeTJJMuIQahrz.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Diane Keaton</title>
+    <trakt>https://api.trakt.tv/people/Diane-Keaton/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/fzgUMnbOkxC6E3EFcYHWHFaiKyp.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Diane Lane</title>
+    <trakt>https://api.trakt.tv/people/Diane-Lane/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/81fhEMQlbhQ3mbI5ghq9RUrjkLB.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Drew Barrymore</title>
+    <trakt>https://api.trakt.tv/people/Drew-Barrymore/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/y8GKPHsBXVGIGBdDzdNxjm0IbKF.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Elizabeth Banks</title>
+    <trakt>https://api.trakt.tv/people/Elizabeth-Banks/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/t6sfUzvQkMZu3wh4LMNBFxEmiDy.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Elizabeth Olsen</title>
+    <trakt>https://api.trakt.tv/people/Elizabeth-Olsen/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/5oz1Urz5sjsid09ouSSG5zEibOv.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Elizabeth Taylor</title>
+    <trakt>https://api.trakt.tv/people/Elizabeth-Taylor/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/rPbfZlBX18OIj7H1Bahq7YcJL0v.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Ellen Burstyn</title>
+    <trakt>https://api.trakt.tv/people/ellen-burstyn-1f499794-3e30-4e95-9d03-644717825a5f/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/kxWFljG3JjJMbOMCLm0SkrPQjhf.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Ellen Page</title>
+    <trakt>https://api.trakt.tv/people/Ellen-Page/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/paexwBfmlVyzva7q4XgcBdqowmL.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Emilia Clarke</title>
+    <trakt>https://api.trakt.tv/people/Emilia-Clarke/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/j7d083zIMhwnKro3tQqDz2Fq1UD.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Emily Blunt</title>
+    <trakt>https://api.trakt.tv/people/Emily-Blunt/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/w5bjRgGy3vNkJqY97kbvTp7ldxb.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Emma Stone</title>
+    <trakt>https://api.trakt.tv/people/Emma-Stone/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/bQHnqMjc0dKOu9zpm54KvP6ffyB.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Emma Thompson</title>
+    <trakt>https://api.trakt.tv/people/Emma-Thompson/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/k6jUcHWhzwQDPO0kbDpFjMHYHgj.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Emma Watson</title>
+    <trakt>https://api.trakt.tv/people/Emma-Watson/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/4UvcvYaQ6qUoN3NMgO2vZWBSa9W.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Eva Green</title>
+    <trakt>https://api.trakt.tv/people/Eva-Green/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/wqK0BhMuNBvDqIg1bwT9RhYMy6L.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Faye Dunaway</title>
+    <trakt>https://api.trakt.tv/people/Faye-Dunaway/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/sq12RJZ1HTXHHI48y31YIS2qp87.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Frances McDormand</title>
+    <trakt>https://api.trakt.tv/people/Frances-McDormand/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/jodV4NuQAvxQWIHxqnop1jUX77N.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Glenn Close</title>
+    <trakt>https://api.trakt.tv/people/Glenn-Close/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/fF6tCfuvuUhaePm5onUNnIE4FvL.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Gwyneth Paltrow</title>
+    <trakt>https://api.trakt.tv/people/Gwyneth-Paltrow/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/8x3jpWD7DEvyMXO1FOjwNdd1UZT.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Halle Berry</title>
+    <trakt>https://api.trakt.tv/people/Halle-Berry/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/w7HRZh4UhimZO2F6GywkYhjgAX3.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Helen Mirren</title>
+    <trakt>https://api.trakt.tv/people/Helen-Mirren/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/4EGgBJPUBz68ZrnFuLVo01r0uND.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Helena Bonham Carter</title>
+    <trakt>https://api.trakt.tv/people/Helena-Bonham-Carter/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/rHZMwkumoRvhKV5ZvwBONKENAhG.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Hilary Swank</title>
+    <trakt>https://api.trakt.tv/people/Hilary-Swank/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/zVM2gbZhuipISCoALn6iEN1bmop.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Isla Fisher</title>
+    <trakt>https://api.trakt.tv/people/Isla-Fisher/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/15aRHYLwt9xJWv8PCcxV7ylc4qZ.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jada Pinkett Smith</title>
+    <trakt>https://api.trakt.tv/people/Jada-Pinkett-Smith/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/Pb8KeGa4kTgJqS2ASoYvbNHbLr.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jane Fonda</title>
+    <trakt>https://api.trakt.tv/people/Jane-Fonda/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/y1QtAxHn8XOi4cHzDRJUuvK3aFp.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jennifer Aniston</title>
+    <trakt>https://api.trakt.tv/people/Jennifer-Aniston/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/uH9FwXtRpiboKeqHUk0RuJRAm6I.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jennifer Connelly</title>
+    <trakt>https://api.trakt.tv/people/Jennifer-Connelly/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/xTpRRy9hwk4E2uypuQ30iqt2W2W.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jennifer Garner</title>
+    <trakt>https://api.trakt.tv/people/Jennifer-Garner/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/470yA7ZOiyAG6HvwjfiJRj3P5dq.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jennifer Lawrence</title>
+    <trakt>https://api.trakt.tv/people/Jennifer-Lawrence/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/naZyy9IqAQDaAbr1kYShLdg6aPR.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jessica Alba</title>
+    <trakt>https://api.trakt.tv/people/Jessica-Alba/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/yMiHrSyrv5u8qwfi3T8EuI4VPFk.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jessica Biel</title>
+    <trakt>https://api.trakt.tv/people/Jessica-Biel/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/34c4S8IX9JQPoEAMJ4o5FTVbzM1.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jessica Chastain</title>
+    <trakt>https://api.trakt.tv/people/Jessica-Chastain/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/nkFrkn5NZVGWb4b2X0yIcXezhyt.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jessica Lange</title>
+    <trakt>https://api.trakt.tv/people/Jessica-Lange/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/hC862LK6M6mMcCnhOzIyfvTmQk4.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jodie Foster</title>
+    <trakt>https://api.trakt.tv/people/Jodie-Foster/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/eAIE6bnOQ8rm0f933gyeAQdIwrP.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Judi Dench</title>
+    <trakt>https://api.trakt.tv/people/Judi-Dench/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/2is9RvJ3BQAku2EtCmyk5EZoxzT.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Julia Roberts</title>
+    <trakt>https://api.trakt.tv/people/Julia-Roberts/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/h13yvG0tRNMTAwciQXxYmQWdYW8.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Julia Stiles</title>
+    <trakt>https://api.trakt.tv/people/Julia-Stiles/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/qkCdQIHFDmbxCjp4F1x32qvaXeu.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Julianne Moore</title>
+    <trakt>https://api.trakt.tv/people/Julianne-Moore/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/v2FcWGiiuvl6P7NV0966jNL09uh.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Julie Andrews</title>
+    <trakt>https://api.trakt.tv/people/Julie-Andrews/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/yQ0J92DMiLtQYoytLJ6CuBkdeN0.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Julie Christie</title>
+    <trakt>https://api.trakt.tv/people/Julie-Christie/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/1QUyuf3SzrGdOpr1plvlEf3bqQT.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Kate Beckinsale</title>
+    <trakt>https://api.trakt.tv/people/Kate-Beckinsale/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/jlleQafwnW1j0mvxJLiqnNL2mYh.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Kate Winslet</title>
+    <trakt>https://api.trakt.tv/people/Kate-Winslet/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/e3tdop3WhseRnn8KwMVLAV25Ybv.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Katharine Hepburn</title>
+    <trakt>https://api.trakt.tv/people/Katharine-Hepburn/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/ieGNYekIGc5R16cYmIzzyo59Lfz.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Kathy Bates</title>
+    <trakt>https://api.trakt.tv/people/Kathy-Bates/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/pwHCkfIBeDdz93RlcmDWqXefozi.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Keira Knightley</title>
+    <trakt>https://api.trakt.tv/people/Emma-Stone/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/nU126foC9zdl8VDnL9J3gqn9Igb.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Kirsten Dunst</title>
+    <trakt>https://api.trakt.tv/people/Kirsten-Dunst/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/hQjeM4HUa6eC9dcfVWGeCPhskHy.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Kristen Stewart</title>
+    <trakt>https://api.trakt.tv/people/Kristen-Stewart/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/e3PsBYlpDSp1CaLNDWh42GIpDGF.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Lucy Liu</title>
+    <trakt>https://api.trakt.tv/people/Lucy-Liu/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/9nbtjqsx3De7hO2XDtrBQ7M9VCH.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Maggie Smith</title>
+    <trakt>https://api.trakt.tv/people/Maggie-Smith/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/kkMNu2iqkBPkbjhNBmDaUX7FHr.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Margot Robbie</title>
+    <trakt>https://api.trakt.tv/people/Margot-Robbie/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/6HFKf2yfZJWuxhy6RAvWM6mSIeX.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Marilyn Monroe</title>
+    <trakt>https://api.trakt.tv/people/Marilyn-Monroe/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/12djXHYsa1fc9tZK0b9BfxaA6CP.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Marion Cotillard</title>
+    <trakt>https://api.trakt.tv/people/Marion-Cotillard/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/wuEWDK1D2v26KRDIY7DTHBaSdwA.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Megan Fox</title>
+    <trakt>https://api.trakt.tv/people/Megan-Fox/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/e0ORFw5DcpiGEZ649UdYNwTBntr.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Melissa McCarthy</title>
+    <trakt>https://api.trakt.tv/people/Melissa-McCarthy/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/jSLdOktZHZOPEE4DzSShxuEeXPy.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Meryl Streep</title>
+    <trakt>https://api.trakt.tv/people/Meryl-Streep/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/jsjuUW07WTinnb1d0GcK2wCwZvE.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Michelle Pfeiffer</title>
+    <trakt>https://api.trakt.tv/people/Michelle-Pfeiffer/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/vyoJV5QYwIGZohrPpKFdKc7EpSP.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Michelle Monaghan</title>
+    <trakt>https://api.trakt.tv/people/Michelle-Monaghan/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/9W7xBcdBeFjoZVCwP2iROk1jtkV.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Michelle Williams</title>
+    <trakt>https://api.trakt.tv/people/Michelle-Williams/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/zUvxAK66dVIOMH7M0yZWGkkwZGL.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Mila Kunis</title>
+    <trakt>https://api.trakt.tv/people/Mila-Kunis/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/6Lp9qPkMO740Hcp8NBYZZLWWvJF.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Milla Jovovich</title>
+    <trakt>https://api.trakt.tv/people/Milla-Jovovich/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/mcNgLarIVho7LheWcvd1oQ2tBOg.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Naomi Watts</title>
+    <trakt>https://api.trakt.tv/people/Naomi-Watts/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/8W02WOJI1pEGh2iqQsgITR5tV0P.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Natalie Portman</title>
+    <trakt>https://api.trakt.tv/people/Natalie-Portman/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/jJcRWku3e9OHrmRqytn6WcBjhvh.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Nicole Kidman</title>
+    <trakt>https://api.trakt.tv/people/Nicole-Kidman/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/1ammEgq5D6qw5mM4WkgUmnxQ7Uy.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Octavia Spencer</title>
+    <trakt>https://api.trakt.tv/people/Octavia-Spencer/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/4FEVru6fBFyJECqwqjHwlZdsL4c.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Olivia Wilde</title>
+    <trakt>https://api.trakt.tv/people/Olivia-Wilde/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/kyzJblLaOPK89QkRJlh6w0tbvFI.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Penélope Cruz</title>
+    <trakt>https://api.trakt.tv/people/Penélope-Cruz/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/dcPSUfxMa791NZvrFiBc3ReDdpU.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Queen Latifah</title>
+    <trakt>https://api.trakt.tv/people/Queen-Latifah/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/ht52no1SMDhYBwRAmWL9a5YCss1.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Rachel McAdams</title>
+    <trakt>https://api.trakt.tv/people/Rachel-McAdams/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/wqSznVIPp0YDFCuZ9jjbrzDyJhV.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Rachel Weisz</title>
+    <trakt>https://api.trakt.tv/people/Rachel-Weisz/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/3QbFXeiUzXUVUrJ7fdiCn7A7ReW.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Reese Witherspoon</title>
+    <trakt>https://api.trakt.tv/people/Reese-Witherspoon/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/iWrxhy6HhTWGwtVcsLEloVzjRR5.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Rosamund Pike</title>
+    <trakt>https://api.trakt.tv/people/Rosamund-Pike/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/wevcai4tcGA5niawACntEzgZsKN.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Rosario Dawson</title>
+    <trakt>https://api.trakt.tv/people/Rosario-Dawson/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/dEK1rMmSJAPGdc2t1XWdbqBmvEq.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Sally Field</title>
+    <trakt>https://api.trakt.tv/people/Sally-Field/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/ymhpsxujOO3a9qaGYSpkenCt9Le.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Sandra Bullock</title>
+    <trakt>https://api.trakt.tv/people/Sandra-Bullock/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/1Im0NV6nVaKyXMpYjGOfWaj5khS.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Scarlett Johansson</title>
+    <trakt>https://api.trakt.tv/people/Scarlett-Johansson/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/8EueDe6rPF0jQU4LSpsH2Rmrqac.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Shirley MacLaine</title>
+    <trakt>https://api.trakt.tv/people/Shirley-MacLaine/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/faG5S4EOVaGHNf1CwZryGcHCE4e.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Sigourney Weaver</title>
+    <trakt>https://api.trakt.tv/people/Sigourney-Weaver/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/gxBIAr3CnBjkNRoPovVJCvEGqP0.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Sissy Spacek</title>
+    <trakt>https://api.trakt.tv/people/Sissy-Spacek/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/zauFMssYujKk7Kadz0t100VU5WE.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Susan Sarandon</title>
+    <trakt>https://api.trakt.tv/people/Susan-Sarandon/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/sT6zE3Bpa2HR5lAS44tB6rWDEtP.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Uma Thurman</title>
+    <trakt>https://api.trakt.tv/people/Uma-Thurman/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/6SuOc2R7kXjq3Em24KTNDW9qblJ.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Viola Davis</title>
+    <trakt>https://api.trakt.tv/people/Viola-Davis/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/9nhqKVGA09DLeZqsvWVoNeTRlRQ.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Whoopi Goldberg</title>
+    <trakt>https://api.trakt.tv/people/Whoopi-Goldberg/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/n3lF8w4X4rDa4J2LMDIxMEcuUeH.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Zoë Kravitz</title>
+    <trakt>https://api.trakt.tv/people/Zoe-Kravitz/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/wcl5pdFDAUyDgJ1gfQErXch6FgH.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Zoe Saldana</title>
+    <trakt>https://api.trakt.tv/people/Zoe-Saldana/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/ofNrWiA2KDdqiNxFTLp51HcXUlp.jpg</thumbnail>
+  </dir>
+
+</xml>

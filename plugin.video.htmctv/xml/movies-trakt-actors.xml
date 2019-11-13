@@ -1,0 +1,531 @@
+<xml>
+
+  <dir>
+    <title>Adam Sandler</title>
+    <trakt>https://api.trakt.tv/people/Adam-Sandler/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/tv9V6QsuZ3bcp4ciUJjwjcc4qAg.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Alan Arkin</title>
+    <trakt>https://api.trakt.tv/people/alan-arkin/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/gcrKO2z0YVUXBXVeB9V8PndG0IJ.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Al Pacino</title>
+    <trakt>https://api.trakt.tv/people/al-pacino/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/ks7Ba8x9fJUlP9decBr6Dh5mThX.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Alec Baldwin</title>
+    <trakt>https://api.trakt.tv/people/alec-baldwin/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/zFtp13AZyPbqbj6yHujPWHO5ioh.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Anthony Hopkins</title>
+    <trakt>https://api.trakt.tv/people/Anthony-Hopkins/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/btweZvSRBiE6jaMME93BSXeTQN6.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Anthony Quinn</title>
+    <trakt>https://api.trakt.tv/people/Anthony-Quinn/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/2044DeKSo0wekY6lof03XW3EBzw.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Arnold Schwarzenegger</title>
+    <trakt>https://api.trakt.tv/people/arnold-schwarzenegger/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/zooXFWF1JtrV7UnZyGRxXDW11qt.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Ben Affleck</title>
+    <trakt>https://api.trakt.tv/people/Ben-Affleck/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/lowyjtC3tZcNEGrxCGoEwjqgdvk.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Ben Stiller</title>
+    <trakt>https://api.trakt.tv/people/Ben-Stiller/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/o9M2PyoF7QDSMq1OwW0D892fIkV.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Brad Pitt</title>
+    <trakt>https://api.trakt.tv/people/Brad-Pitt/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/kU3B75TyRiCgE270EyZnHjfivoq.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Bradley Cooper</title>
+    <trakt>https://api.trakt.tv/people/Bradley-Cooper/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/z5LUl9bljJnah3S5rtN7rScrmI8.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Bruce Willis</title>
+    <trakt>https://api.trakt.tv/people/Bruce-Willis/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/kI1OluWhLJk3pnR19VjOfABpnTY.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Chris Evans</title>
+    <trakt>https://api.trakt.tv/people/Chris-Evans/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/kRlx7PxXkom7Daj8Z2HmcbPQB1o.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Chris Hemsworth</title>
+    <trakt>https://api.trakt.tv/people/Chris-Hemsworth/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/lrhth7yK9p3vy6p7AabDUM1THKl.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Chris Pratt</title>
+    <trakt>https://api.trakt.tv/people/Chris-Pratt/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/n4DD1AYU7WEMNPLga1TxqnHivn1.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Christian Bale</title>
+    <trakt>https://api.trakt.tv/people/Christian-Bale/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/pPXnqoGD91znz4FwQ6aKuxi6Pcy.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Christopher Walken</title>
+    <trakt>https://api.trakt.tv/people/Christopher-Walken/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/ApgDL7nudR9T2GpjCG4vESgymO2.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Chuck Norris</title>
+    <trakt>https://api.trakt.tv/people/Chuck-Norris/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/v37EfVIoKV4ooy1KE5z8BxsT6wU.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Clint Eastwood</title>
+    <trakt>https://api.trakt.tv/people/clint-eastwood/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/n8h4ZHteFFXfmzUW6OEaPWanDnm.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Colin Firth</title>
+    <trakt>https://api.trakt.tv/people/Colin-Firth/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/4pj31PUxqpuJZrHChinub4gr2ul.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Daniel Day-Lewis</title>
+    <trakt>https://api.trakt.tv/people/Daniel-Day-Lewis/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/zvsIA89Y7HPC6ZXLbJoC3MXS71w.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Denzel Washington</title>
+    <trakt>https://api.trakt.tv/people/Denzel-Washington/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/semwsON3dN3np6cyzlCw7F2YDGe.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Don Cheadle</title>
+    <trakt>https://api.trakt.tv/people/Don-Cheadle/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/b1EVJWdFn7a75qVYJgwO87W2TJU.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Dustin Hoffman</title>
+    <trakt>https://api.trakt.tv/people/Dustin-Hoffman/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/3pZx8NB30KIw31rBAT62TUDQFEb.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Dwayne Johnson</title>
+    <trakt>https://api.trakt.tv/people/Dwayne-Johnson/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/akweMz59qsSoPUJYe7QpjAc2rQp.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Ed Harris</title>
+    <trakt>https://api.trakt.tv/people/Ed-Harris/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/a9ITc3shCAWjV4qKf3rgR0Opu3y.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Eddie Murphy</title>
+    <trakt>https://api.trakt.tv/people/Eddie-Murphy/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/bsi706zdqs0KAPdOsqz6AkLNcFF.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Edward Norton</title>
+    <trakt>https://api.trakt.tv/people/Edward-Norton/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/588Hrov6wwM9WcU88nJHlw2iufN.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Ewan McGregor</title>
+    <trakt>https://api.trakt.tv/people/Ewan-McGregor/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/aEmyadfRXTmmR7UW7OXsm5a6smS.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Gary Oldman</title>
+    <trakt>https://api.trakt.tv/people/Gary-Oldman/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/tofLS5A6lBXNjeROGvgpfe2JwaT.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Gene Hackman</title>
+    <trakt>https://api.trakt.tv/people/Gene-Hackman/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/oNlqdUXWzi8WdrG2ox7QJjGD7sA.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>George Clooney</title>
+    <trakt>https://api.trakt.tv/people/George-Clooney/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/z4SBfpKDThuQY0FsvDbajcooBdA.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Gerard Butler</title>
+    <trakt>https://api.trakt.tv/people/Gerard-Butler/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/i54XoxYieuff2w6MwyfwVUBvmR0.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Harrison Ford</title>
+    <trakt>https://api.trakt.tv/people/harrison-ford/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/7LOTdRfHU1H1qHBxpUv3jT04eWB.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Heath Ledger</title>
+    <trakt>https://api.trakt.tv/people/Heath-Ledger/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/5Y9HnYYa9jF4NunY9lSgJGjSe8E.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Hugh Jackman</title>
+    <trakt>https://api.trakt.tv/people/Hugh-Jackman/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/dFbNlPpiEPupTAlNVNh5vrxBU1h.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jack Nicholson</title>
+    <trakt>https://api.trakt.tv/people/Jack-Nicholson/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/hINAkm21g80UbaAxA6rHhOaT5Jk.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jackie Chan</title>
+    <trakt>https://api.trakt.tv/people/Jackie-Chan/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/pmKJ4sGvPQ3imzXaFnjW4Vk5Gyc.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>James Earl Jones</title>
+    <trakt>https://api.trakt.tv/people/James-Earl-Jones/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/2ZuBf3ip2RXhkiQqGUjbUzAf4Nx.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jamie Foxx</title>
+    <trakt>https://api.trakt.tv/people/Jamie-Foxx/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/cDRGXCNrwf1p9jouw9GzhU2vWP7.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jason Statham</title>
+    <trakt>https://api.trakt.tv/people/Jason-Statham/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/PhWiWgasncGWD9LdbsGcmxkV4r.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jean-Claude Van Damme</title>
+    <trakt>https://api.trakt.tv/people/Jean-Claude-Van-Damme/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/t9to1GoMzx7IDSBXwzwe1huakFk.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jeff Bridges</title>
+    <trakt>https://api.trakt.tv/people/Jeff-Bridges/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/xms1RAY6q7Lzp7wNeRCB0kzhucn.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Jim Carrey</title>
+    <trakt>https://api.trakt.tv/people/Jim-Carrey/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/5tVf0ow8MX4OwjmVoSa5v7qUDka.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Joaquin Phoenix</title>
+    <trakt>https://api.trakt.tv/people/Joaquin-Phoenix/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/3TWtrrIScSXqyllQcyeB4bTp7un.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Joe Pesci</title>
+    <trakt>https://api.trakt.tv/people/Joe-Pesci/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/2CaYAhUZgkAeqtpIzuqGcqArsOy.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>John Wayne</title>
+    <trakt>https://api.trakt.tv/people/john-wayne/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/8I83wLVUil6tIe50yb82LdEggFR.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Johnny Depp</title>
+    <trakt>https://api.trakt.tv/people/Johnny-Depp/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/2vShQCCeSnQP0YbSzPKQqfbBOD.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Keanu Reeves</title>
+    <trakt>https://api.trakt.tv/people/Keanu-Reeves/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/bOlYWhVuOiU6azC4Bw6zlXZ5QTC.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Kevin Costner</title>
+    <trakt>https://api.trakt.tv/people/kevin-costner/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/ePo87kGyyY8JZ3z7Zm7Z2GYdmJ8.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Kevin Spacey</title>
+    <trakt>https://api.trakt.tv/people/Kevin-Spacey/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/x7wF050iuCASefLLG75s2uDPFUu.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Kurt Russell</title>
+    <trakt>https://api.trakt.tv/people/Kurt-Russell/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/rlnFuNkisPpuypARI7QaGCmOY6V.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Laurence Fishburne</title>
+    <trakt>https://api.trakt.tv/people/Laurence-Fishburne/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/8suOhUmPbfKqDQ17jQ1Gy0mI3P4.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Leonardo DiCaprio</title>
+    <trakt>https://api.trakt.tv/people/Leonardo-DiCaprio/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/w7bU92hsW21RgBgQRgvsEBFMA4h.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Liam Neeson</title>
+    <trakt>https://api.trakt.tv/people/Liam-Neeson/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/9mdAohLsDu36WaXV2N3SQ388bvz.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Liev Schreiber</title>
+    <trakt>https://api.trakt.tv/people/Liev-Schreiber/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/qFn3npmqd1qaYOk6yohmi3FbPhc.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Mark Wahlberg</title>
+    <trakt>https://api.trakt.tv/people/Mark-Wahlberg/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/z2wJh5n7qZRUE1y9uB8UrivAV2b.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Marlon Brando</title>
+    <trakt>https://api.trakt.tv/people/Marlon-Brando/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/e2u2Vyy66j2rUL8fyjjHWlYtWLH.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Matt Damon</title>
+    <trakt>https://api.trakt.tv/people/Matt-Damon/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/elSlNgV8xVifsbHpFsqrPGxJToZ.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Matthew McConaughey</title>
+    <trakt>https://api.trakt.tv/people/Matthew-McConaughey/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/jdRmHrG0TWXGhs4tO6TJNSoL25T.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Mel Gibson</title>
+    <trakt>https://api.trakt.tv/people/Mel-Gibson/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/4IsmIFUgoJgUZjen8Ldxnw5YQvG.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Michael Caine</title>
+    <trakt>https://api.trakt.tv/people/Michael-Caine/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/vvj0JMSFpOajXCE46Hy4dyqSP2U.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Mickey Rourke</title>
+    <trakt>https://api.trakt.tv/people/Mickey-Rourke/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/AvGzQ8fvjurGmZW3W1wlQ5WfSeT.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Morgan Freeman</title>
+    <trakt>https://api.trakt.tv/people/morgan-freeman/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/oGJQhOpT8S1M56tvSsbEBePV5O1.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Nicolas Cage</title>
+    <trakt>https://api.trakt.tv/people/Nicolas-Cage/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/fW37Gbk5PJZuXvyZwtcr0cMwPKY.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Owen Wilson</title>
+    <trakt>https://api.trakt.tv/people/Owen-Wilson/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/j7oYgvfDiO34VcFdSB7GhM2CSle.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Pierce Brosnan</title>
+    <trakt>https://api.trakt.tv/people/Pierce-Brosnan/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/A2VjhqFFGovqet8JKQz13MNbgL3.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Robert Carlyle</title>
+    <trakt>https://api.trakt.tv/people/Robert-Carlyle/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/dLNeFPfJACiCiUz3oEdAjeKIwvZ.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Robert De Niro</title>
+    <trakt>https://api.trakt.tv/people/Robert-De-Niro/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/lvTSwUcvJRLAJ2FB5qFaukel516.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Robert Downey Jr</title>
+    <trakt>https://api.trakt.tv/people/Robert-Downey-Jr/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/1YjdSym1jTG7xjHSI0yGGWEsw5i.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Robert Duvall</title>
+    <trakt>https://api.trakt.tv/people/Robert-Duvall/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/1aBC7NxPy10ofng6HsJBecJ1vMZ.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Robert Redford</title>
+    <trakt>https://api.trakt.tv/people/Robert-Redford/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/b4mJIBWvEyzB8yyZWbmvfzwrdtp.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Robin Williams</title>
+    <trakt>https://api.trakt.tv/people/Robin-Williams/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/5KebSMXT8uj2D0gkaMFJ8VEp53.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Russell Crowe</title>
+    <trakt>https://api.trakt.tv/people/Russell-Crowe/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/ktuOAyUHM2u2YPPChH8gAArxJ7b.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Ryan Gosling</title>
+    <trakt>https://api.trakt.tv/people/Ryan-Gosling/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/4X1wJo5xHm3YICPWZqVCPgLBEJ7.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Ryan Reynolds</title>
+    <trakt>https://api.trakt.tv/people/Ryan-Reynolds/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/h1co81QaT2nJA41Sb7eZwmWl1L2.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Samuel L. Jackson</title>
+    <trakt>https://api.trakt.tv/people/samuel-l-jackson/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/jyFUkDAP0XXHQDsDhufZWZG25y.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Sean Bean</title>
+    <trakt>https://api.trakt.tv/people/Sean-Bean/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/iIxP2IzvcLgr5WaTBD4UfSqaV3q.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Sean Penn</title>
+    <trakt>https://api.trakt.tv/people/Sean-Penn/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/f2uy1zq0qmtLBpsr6N9uQ8FktOr.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Seth Rogen</title>
+    <trakt>https://api.trakt.tv/people/Seth-Rogen/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/aQc8O52P4vWDRfuxCLsz9rvnwf3.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Sylvester Stallone</title>
+    <trakt>https://api.trakt.tv/people/Sylvester-Stallone/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/gnmwOa46C2TP35N7ARSzboTdx2u.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Tom Cruise</title>
+    <trakt>https://api.trakt.tv/people/Tom-Cruise/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/3oWEuo0e8Nx8JvkqYCDec2iMY6K.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Tom Hanks</title>
+    <trakt>https://api.trakt.tv/people/tom-hanks/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/a14CNByTYALAPSGlwlmfHILpEIW.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Tom Hardy</title>
+    <trakt>https://api.trakt.tv/people/tom-hardy-ee028f08-75d7-477f-ad60-fcf6c29c130a/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/4CR1D9VLWZcmGgh4b6kKuY2NOel.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Tommy Lee Jones</title>
+    <trakt>https://api.trakt.tv/people/Tommy-Lee-Jones/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/gRXugLFvr1oHZ6alLUxmYDq8cgW.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Vin Diesel</title>
+    <trakt>https://api.trakt.tv/people/Vin-Diesel/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/mjRdM6w6Uz1UnrKQ5Kw02qGln2K.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Wesley Snipes</title>
+    <trakt>https://api.trakt.tv/people/Wesley-Snipes/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/hQ6EBa6vgu7HoZpzms8Y10VL5Iw.jpg</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Will Smith</title>
+    <trakt>https://api.trakt.tv/people/Will-Smith/movies</trakt>
+    <thumbnail>https://image.tmdb.org/t/p/original/5V4OKHQpIEffF9rqgzGYK4TNaGg.jpg</thumbnail>
+  </dir>
+
+</xml>

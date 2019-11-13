@@ -1,0 +1,31 @@
+<xml>
+
+  <dir>
+    <title>TMDb Movie Indexer</title>
+    <link>file://movies-tmdb.xml</link>
+    <thumbnail>file://artwork/movies.png</thumbnail>
+    <summary>TMDb Movie Indexer</summary>
+  </dir>
+
+  <dir>
+    <title>Trakt Movie Indexer</title>
+    <link>file://movies-trakt.xml</link>
+    <thumbnail>file://artwork/movies.png</thumbnail>
+    <summary>Trakt Movie Indexer</summary>
+  </dir>
+
+  <dir>
+    <title>Reddit Top 250 Movies</title>
+    <link>file://movies-reddit.xml</link>
+    <thumbnail>https://htmc.tv/repo/artwork/userlists.png</thumbnail>
+    <summary>Reddit Movie Top 250 - Powered by Trakt.tv</summary>
+  </dir>
+
+  <dir>
+    <title>Rotten Tomatoes Best Movies</title>
+    <link>file://movies-rotten-tomatoes.xml</link>
+    <thumbnail>https://htmc.tv/repo/artwork/userlists.png</thumbnail>
+    <summary>Rotten Tomatoes Bests - Powered by Trakt.tv</summary>
+  </dir>
+  
+</xml>

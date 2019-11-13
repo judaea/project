@@ -1,0 +1,111 @@
+<xml>
+
+  <dir>
+    <title>Action Movies</title>
+    <tmdb>genre/movies/28</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Adventure Movies</title>
+    <tmdb>genre/movies/12</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Animation Movies</title>
+    <tmdb>genre/movies/16</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Comedy Movies</title>
+    <tmdb>genre/movies/35</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Crime Movies</title>
+    <tmdb>genre/movies/80</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Documentary Movies</title>
+    <tmdb>genre/movies/99</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Drama Movies</title>
+    <tmdb>genre/movies/18</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Family Movies</title>
+    <tmdb>genre/movies/10751</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Fantasy Movies</title>
+    <tmdb>genre/movies/14</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>History Movies</title>
+    <tmdb>genre/movies/36</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Horror Movies</title>
+    <tmdb>genre/movies/27</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Music Movies</title>
+    <tmdb>genre/movies/10402</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Mystery Movies</title>
+    <tmdb>genre/movies/9648</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Romance Movies</title>
+    <tmdb>genre/movies/10749</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Science Fiction</title>
+    <tmdb>genre/movies/878</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Thriller Movies</title>
+    <tmdb>genre/movies/53</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>War Movies</title>
+    <tmdb>genre/movies/10752</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+  <dir>
+    <title>Western Movies</title>
+    <tmdb>genre/movies/37</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/genres.png</thumbnail>
+  </dir>
+
+</xml>

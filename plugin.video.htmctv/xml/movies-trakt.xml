@@ -1,0 +1,87 @@
+<xml>
+
+  <dir>
+    <title>Popular</title>
+    <trakt>https://api.trakt.tv/movies/popular</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/popular.png</thumbnail>
+    <summary>Popular Movies on Trakt</summary>
+  </dir>
+
+  <dir>
+    <title>Trending</title>
+    <trakt>https://api.trakt.tv/movies/trending</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trending.png</thumbnail>
+    <summary>Trending Movies on Trakt</summary>
+  </dir>
+
+  <dir>
+    <title>Actors</title>
+    <link>file://movies-trakt-actors.xml</link>
+    <thumbnail>file://artwork/most-popular-people.png</thumbnail>
+    <summary>Popular Actors on Trakt</summary>
+  </dir>
+
+  <dir>
+    <title>Actresses</title>
+    <link>file://movies-trakt-actresses.xml</link>
+    <thumbnail>file://artwork/most-popular-people.png</thumbnail>
+    <summary>Popular Actresses on Trakt</summary>
+  </dir>
+
+  <dir>
+    <title>Mosts</title>
+    <link>file://movies-trakt-mosts.xml</link>
+    <thumbnail>file://artwork/most-voted.png</thumbnail>
+    <summary>Most Played, Watched & Collected Movies on Trakt</summary>
+  </dir>
+
+  <dir>
+    <title>Box Office Top 10</title>
+    <trakt>https://api.trakt.tv/movies/boxoffice</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/box-office.png</thumbnail>
+    <summary>Top 10 Grossing Box Office Movies Last Weekend</summary>
+  </dir>
+
+  <dir>
+    <title>Upcoming</title>
+    <trakt>https://api.trakt.tv/movies/anticipated</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/new-movies.png</thumbnail>
+    <summary>Anticipated Movies on Trakt</summary>
+  </dir>
+  
+  <dir>
+    <title>Movie Watchlist</title>
+    <trakt>https://api.trakt.tv/users/me/watchlist/movies</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Your Trakt - Movie WatchList</summary>
+  </dir>
+
+  <dir>
+    <title>Movie Collection</title>
+    <trakt>https://api.trakt.tv/users/me/collection/movies</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Your Trakt - Movie Collection</summary>
+  </dir>
+  
+  <dir>
+    <title>Movie History</title>
+    <trakt>https://api.trakt.tv/users/me/history/movies</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Your Trakt - Movie History</summary>
+  </dir>
+
+  <dir>
+    <title>Movie Recommendations</title>
+    <trakt>http://api.trakt.tv/recommendations/movies?limit=40</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Your Trakt - Movie Recommendations</summary>
+  </dir>
+	
+  <dir>
+    <title>Search</title>
+    <trakt>search</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/search.png</thumbnail>
+    <summary>Search Movies on Trakt</summary>
+  </dir>
+
+</xml>

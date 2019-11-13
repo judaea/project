@@ -1,0 +1,9 @@
+
+v.1.0.2
+- Update Artwork
+
+v.1.0.1
+- Add Universal Scrapers
+
+v.1.0.0
+- Initial Version fork of Borg...

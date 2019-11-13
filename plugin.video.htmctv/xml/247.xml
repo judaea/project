@@ -1,0 +1,17 @@
+<xml>
+ 	
+  <dir>
+    <title>24/7 TV Shows</title>
+    <arconaitv>shows</arconaitv>
+    <thumbnail>https://htmc.tv/repo/artwork/247.png</thumbnail>
+    <summary>Stream Random TV Shows</summary>
+  </dir>
+	
+  <dir>
+    <title>24/7 Movies</title>
+    <arconaitv>movies</arconaitv>
+    <thumbnail>https://htmc.tv/repo/artwork/247.png</thumbnail>
+    <summary>Stream Random Movies by Genre</summary>
+  </dir>
+
+</xml>

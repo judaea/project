@@ -1,0 +1,73 @@
+<xml>
+
+  <dir>
+    <title>In Theaters</title>
+    <tmdb>movies/now_playing</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/in-theaters.png</thumbnail>
+    <summary>Movies Now Playing on TMDb</summary>
+  </dir>
+
+  <dir>
+    <title>Popular</title>
+    <tmdb>movies/popular</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/popular.png</thumbnail>
+    <summary>Popular Movies on TMDb</summary>
+  </dir>
+
+  <dir>
+    <title>Top Rated</title>
+    <tmdb>movies/top_rated</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/highly-rated.png</thumbnail>
+    <summary>Top Rated Movies on TMDb</summary>
+  </dir>
+
+  <dir>
+    <title>Genres</title>
+    <link>file://movies-tmdb-genres.xml</link>
+    <thumbnail>file://artwork/genres.png</thumbnail>
+    <summary>Movie Genres on TMDb</summary>
+  </dir>
+
+  <dir>
+    <title>Collections</title>
+    <link>file://movies-tmdb collections.xml</link>
+    <thumbnail>file://artwork/collections.png</thumbnail>
+    <summary>Movie Boxsets on TMDb</summary>
+  </dir>
+
+  <dir>
+    <title>Popular People</title>
+    <tmdb>people/popular</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/popular.png</thumbnail>
+    <summary>Popular Actors on TMDb</summary>
+  </dir>
+
+  <dir>
+    <title>Years</title>
+    <link>file://movies-tmdb-years.xml</link>
+    <thumbnail>file://artwork/years.png</thumbnail>
+    <summary>Movie Years on TMDb</summary>
+  </dir>
+
+  <dir>
+    <title>Studios</title>
+    <link>file://movies-tmdb-studio.xml</link>
+    <thumbnail>file://artwork/networks.png</thumbnail>
+    <summary>Movie Studios on TMDb</summary>
+  </dir>
+
+  <dir>
+    <title>Upcoming</title>
+    <tmdb>movie/upcoming</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/new-movies.png</thumbnail>
+    <summary>Upcoming Movies on TMDb</summary>
+  </dir>
+
+  <dir>
+    <title>Search</title>
+    <tmdb>search</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/search.png</thumbnail>
+    <summary>Search Movies on TMDb</summary>
+  </dir>
+
+</xml>

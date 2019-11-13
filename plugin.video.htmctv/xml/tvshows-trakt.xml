@@ -1,0 +1,59 @@
+<xml>
+
+  <dir>
+    <title>Popular</title>
+    <trakt>https://api.trakt.tv/shows/popular</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/popular.png</thumbnail>
+    <summary>Popular TV Shows on Trakt</summary>
+  </dir>
+
+  <dir>   
+    <title>Trending</title>
+    <trakt>https://api.trakt.tv/shows/trending</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trending.png</thumbnail>
+    <summary>Trending TV Shows on Trakt</summary>
+  </dir>
+
+  <dir>
+    <title>Mosts</title>
+    <link>file://tvshows-trakt-mosts.xml</link>
+    <thumbnail>https://htmc.tv/repo/artwork/most-voted.png</thumbnail>
+    <summary>Most Played, Watched & Collected TV Shows on Trakt</summary>
+  </dir>
+
+  <dir>
+    <title>Watchlist</title>
+    <trakt>https://api.trakt.tv/sync/watchlist/shows</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Trakt TV Show Watchlist</summary>
+  </dir>
+
+  <dir>
+    <title>Collection</title>
+    <trakt>https://api.trakt.tv/sync/collection/shows</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Trakt TV Show Collection</summary>
+  </dir>
+
+  <dir>
+    <title>Lists</title>
+    <trakt>https://api.trakt.tv/users/me/lists/</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Trakt Lists</summary>
+  </dir>
+
+  <dir>
+    <title>Liked Lists</title>
+    <trakt>https://api.trakt.tv/users/likes/lists</trakt>
+    <thumbnail>https://htmc.tv/repo/artwork/trakt.png</thumbnail>
+    <summary>Trakt Liked Lists</summary>
+  </dir>
+
+  <dir>   
+    <title>Search</title>
+    <tmdb>search</tmdb>
+    <thumbnail>https://htmc.tv/repo/artwork/search.png</thumbnail>
+    <summary>Search TV Shows on Trakt</summary>
+  </dir>
+
+</xml>
