@@ -1,3 +1,6 @@
 
+[B]1.0.1[/B]
+- Fix tvdb
+
 [B]1.0.0[/B]
 - Initial version
