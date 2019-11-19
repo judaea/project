@@ -1,20 +1,20 @@
 ################################################################################
-#      Copyright (C) 2015 Surfacingx                                           #
-#                                                                              #
-#  This Program is free software; you can redistribute it and/or modify        #
-#  it under the terms of the GNU General Public License as published by        #
-#  the Free Software Foundation; either version 2, or (at your option)         #
-#  any later version.                                                          #
-#                                                                              #
-#  This Program is distributed in the hope that it will be useful,             #
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of              #
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the                #
-#  GNU General Public License for more details.                                #
-#                                                                              #
-#  You should have received a copy of the GNU General Public License           #
-#  along with XBMC; see the file COPYING.  If not, write to                    #
-#  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.       #
-#  http://www.gnu.org/copyleft/gpl.html                                        #
+#	  Copyright (C) 2015 Surfacingx										   #
+#																			  #
+#  This Program is free software; you can redistribute it and/or modify		#
+#  it under the terms of the GNU General Public License as published by		#
+#  the Free Software Foundation; either version 2, or (at your option)		 #
+#  any later version.														  #
+#																			  #
+#  This Program is distributed in the hope that it will be useful,			 #
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of			  #
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the				#
+#  GNU General Public License for more details.								#
+#																			  #
+#  You should have received a copy of the GNU General Public License		   #
+#  along with XBMC; see the file COPYING.  If not, write to					#
+#  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.	   #
+#  http://www.gnu.org/copyleft/gpl.html										#
 ################################################################################
 
 import xbmc, xbmcaddon, xbmcgui, xbmcplugin, os, sys, xbmcvfs, glob
@@ -23,105 +23,165 @@ import urllib2,urllib
 import re
 import uservar
 import time
-try:    from sqlite3 import dbapi2 as database
+try:	from sqlite3 import dbapi2 as database
 except: from pysqlite2 import dbapi2 as database
 from datetime import date, datetime, timedelta
 from resources.libs import wizard as wiz
 
-ADDON_ID       = uservar.ADDON_ID
-ADDONTITLE     = uservar.ADDONTITLE
-ADDON          = wiz.addonId(ADDON_ID)
-DIALOG         = xbmcgui.Dialog()
-HOME           = xbmc.translatePath('special://home/')
-ADDONS         = os.path.join(HOME,      'addons')
-USERDATA       = os.path.join(HOME,      'userdata')
-PLUGIN         = os.path.join(ADDONS,    ADDON_ID)
-PACKAGES       = os.path.join(ADDONS,    'packages')
-ADDONDATA      = os.path.join(USERDATA,  'addon_data', ADDON_ID)
-ADDOND         = os.path.join(USERDATA,  'addon_data')
-TRAKTFOLD      = os.path.join(ADDONDATA, 'Trakt')
-ICON           = os.path.join(PLUGIN,    'icon.png')
-TODAY          = date.today()
-TOMORROW       = TODAY + timedelta(days=1)
-THREEDAYS      = TODAY + timedelta(days=3)
-KEEPTRAKT      = wiz.getS('keeptrakt')
-TRAKTSAVE      = wiz.getS('traktlastsave')
-COLOR1         = uservar.COLOR1
-COLOR2         = uservar.COLOR2
-ORDER          = ['htpctv', 'david', 'exegesis', 'exodusredux', 'metaq', 'trakt']
+ADDON_ID	   = uservar.ADDON_ID
+ADDONTITLE	 = uservar.ADDONTITLE
+ADDON		  = wiz.addonId(ADDON_ID)
+DIALOG		 = xbmcgui.Dialog()
+HOME		   = xbmc.translatePath('special://home/')
+ADDONS		 = os.path.join(HOME,	  'addons')
+USERDATA	   = os.path.join(HOME,	  'userdata')
+PLUGIN		 = os.path.join(ADDONS,	ADDON_ID)
+PACKAGES	   = os.path.join(ADDONS,	'packages')
+ADDONDATA	  = os.path.join(USERDATA,  'addon_data', ADDON_ID)
+ADDOND		 = os.path.join(USERDATA,  'addon_data')
+TRAKTFOLD	  = os.path.join(ADDONDATA, 'Trakt')
+ICON		   = os.path.join(PLUGIN,	'icon.png')
+TODAY		  = date.today()
+TOMORROW	   = TODAY + timedelta(days=1)
+THREEDAYS	  = TODAY + timedelta(days=3)
+KEEPTRAKT	  = wiz.getS('keeptrakt')
+TRAKTSAVE	  = wiz.getS('traktlastsave')
+COLOR1		 = uservar.COLOR1
+COLOR2		 = uservar.COLOR2
+ORDER		  = ['htpctv', 'david', 'exegesis', 'scrubsv2', 'venom', 'judaea', 'seren', 'fen','exodusredux', 'metaq', 'trakt']
 
 TRAKTID = { 
 	'htpctv': {
-		'name'     : 'htpcTV',
+		'name'	 : 'htpcTV',
 		'plugin'   : 'plugin.video.htpctv',
-		'saved'    : 'htpctv',
-		'path'     : os.path.join(ADDONS, 'plugin.video.htpctv'),
-		'icon'     : os.path.join(ADDONS, 'plugin.video.htpctv', 'icon.png'),
+		'saved'	: 'htpctv',
+		'path'	 : os.path.join(ADDONS, 'plugin.video.htpctv'),
+		'icon'	 : os.path.join(ADDONS, 'plugin.video.htpctv', 'icon.png'),
 		'fanart'   : os.path.join(ADDONS, 'plugin.video.htpctv', 'fanart.jpg'),
-		'file'     : os.path.join(TRAKTFOLD, 'htpctv_trakt'),
+		'file'	 : os.path.join(TRAKTFOLD, 'htpctv_trakt'),
 		'settings' : os.path.join(ADDOND, 'plugin.video.htpctv', 'settings.xml'),
 		'default'  : 'trakt.user',
-		'data'     : ['trakt.user', 'trakt.refresh', 'trakt.token'],
+		'data'	 : ['trakt.user', 'trakt.refresh', 'trakt.token'],
 		'activate' : 'RunPlugin(plugin://plugin.video.htpctv/?action=authTrakt)'},
 	'david': {
-		'name'     : 'David',
+		'name'	 : 'David',
 		'plugin'   : 'plugin.video.david',
-		'saved'    : 'david',
-		'path'     : os.path.join(ADDONS, 'plugin.video.david'),
-		'icon'     : os.path.join(ADDONS, 'plugin.video.david', 'icon.png'),
+		'saved'	: 'david',
+		'path'	 : os.path.join(ADDONS, 'plugin.video.david'),
+		'icon'	 : os.path.join(ADDONS, 'plugin.video.david', 'icon.png'),
 		'fanart'   : os.path.join(ADDONS, 'plugin.video.david', 'fanart.jpg'),
-		'file'     : os.path.join(TRAKTFOLD, 'david_trakt'),
+		'file'	 : os.path.join(TRAKTFOLD, 'david_trakt'),
 		'settings' : os.path.join(ADDOND, 'plugin.video.david', 'settings.xml'),
 		'default'  : 'trakt.user',
-		'data'     : ['trakt.user', 'trakt.refresh', 'trakt.token'],
+		'data'	 : ['trakt.user', 'trakt.refresh', 'trakt.token'],
 		'activate' : 'RunPlugin(plugin://plugin.video.david/?action=authTrakt)'},
 	'exegesis': {
-		'name'     : 'Exegesis',
+		'name'	 : 'Exegesis',
 		'plugin'   : 'plugin.video.exegesis',
-		'saved'    : 'exegesis',
-		'path'     : os.path.join(ADDONS, 'plugin.video.exegesis'),
-		'icon'     : os.path.join(ADDONS, 'plugin.video.exegesis', 'icon.png'),
+		'saved'	: 'exegesis',
+		'path'	 : os.path.join(ADDONS, 'plugin.video.exegesis'),
+		'icon'	 : os.path.join(ADDONS, 'plugin.video.exegesis', 'icon.png'),
 		'fanart'   : os.path.join(ADDONS, 'plugin.video.exegesis', 'fanart.jpg'),
-		'file'     : os.path.join(TRAKTFOLD, 'exegesis_trakt'),
+		'file'	 : os.path.join(TRAKTFOLD, 'exegesis_trakt'),
 		'settings' : os.path.join(ADDOND, 'plugin.video.exegesis', 'settings.xml'),
 		'default'  : 'trakt.user',
-		'data'     : ['trakt.user', 'trakt.refresh', 'trakt.token'],
+		'data'	 : ['trakt.user', 'trakt.refresh', 'trakt.token'],
 		'activate' : 'RunPlugin(plugin://plugin.video.exegesis/?action=authTrakt)'},
+	'scrubsv2': {
+		'name'	 : 'Scrubs v2',
+		'plugin'   : 'plugin.video.scrubsv2',
+		'saved'	: 'scrubsv2',
+		'path'	 : os.path.join(ADDONS, 'plugin.video.scrubsv2'),
+		'icon'	 : os.path.join(ADDONS, 'plugin.video.scrubsv2', 'icon.png'),
+		'fanart'   : os.path.join(ADDONS, 'plugin.video.scrubsv2', 'fanart.jpg'),
+		'file'	 : os.path.join(TRAKTFOLD, 'scrubsv2_trakt'),
+		'settings' : os.path.join(ADDOND, 'plugin.video.scrubsv2', 'settings.xml'),
+		'default'  : 'trakt.user',
+		'data'	 : ['trakt.user', 'trakt.refresh', 'trakt.token'],
+		'activate' : 'RunPlugin(plugin://plugin.video.scrubsv2/?action=authTrakt)'},
+	'venom': {
+		'name'	 : 'Venom',
+		'plugin'   : 'plugin.video.venom',
+		'saved'	: 'venom',
+		'path'	 : os.path.join(ADDONS, 'plugin.video.venom'),
+		'icon'	 : os.path.join(ADDONS, 'plugin.video.venom', 'icon.png'),
+		'fanart'   : os.path.join(ADDONS, 'plugin.video.venom', 'fanart.jpg'),
+		'file'	 : os.path.join(TRAKTFOLD, 'venom_trakt'),
+		'settings' : os.path.join(ADDOND, 'plugin.video.venom', 'settings.xml'),
+		'default'  : 'trakt.user',
+		'data'	 : ['trakt.user', 'trakt.refresh', 'trakt.token'],
+		'activate' : 'RunPlugin(plugin://plugin.video.venom/?action=authTrakt)'},
+	'judaea': {
+		'name'	 : 'Judaea',
+		'plugin'   : 'plugin.video.judaea',
+		'saved'	: 'judaea',
+		'path'	 : os.path.join(ADDONS, 'plugin.video.judaea'),
+		'icon'	 : os.path.join(ADDONS, 'plugin.video.judaea', 'icon.png'),
+		'fanart'   : os.path.join(ADDONS, 'plugin.video.judaea', 'fanart.png'),
+		'file'	 : os.path.join(TRAKTFOLD, 'judaea_trakt'),
+		'settings' : os.path.join(ADDOND, 'plugin.video.judaea', 'settings.xml'),
+		'default'  : 'trakt.username',
+		'data'	 : ['trakt.auth', 'trakt.refresh', 'trakt.username'],
+		'activate' : 'RunPlugin(plugin://plugin.video.judaea/?action=authTrakt)'},
+	'seren': {
+		'name'	 : 'Seren',
+		'plugin'   : 'plugin.video.seren',
+		'saved'	: 'seren',
+		'path'	 : os.path.join(ADDONS, 'plugin.video.seren'),
+		'icon'	 : os.path.join(ADDONS, 'plugin.video.seren', 'ico-fox-gold-final.png'),
+		'fanart'   : os.path.join(ADDONS, 'plugin.video.seren', 'fanart-fox-gold-final.png'),
+		'file'	 : os.path.join(TRAKTFOLD, 'seren_trakt'),
+		'settings' : os.path.join(ADDOND, 'plugin.video.seren', 'settings.xml'),
+		'default'  : 'trakt.username',
+		'data'	 : ['trakt.auth', 'trakt.refresh', 'trakt.username'],
+		'activate' : 'RunPlugin(plugin://plugin.video.seren/?action=authTrakt)'},
+	'fen': {
+		'name'	 : 'Fen',
+		'plugin'   : 'plugin.video.fen',
+		'saved'	: 'fen',
+		'path'	 : os.path.join(ADDONS, 'plugin.video.fen'),
+		'icon'	 : os.path.join(ADDONS, 'plugin.video.fen', 'icon.png'),
+		'fanart'   : os.path.join(ADDONS, 'plugin.video.fen', 'fanart.jpg'),
+		'file'	 : os.path.join(TRAKTFOLD, 'fen_trakt'),
+		'settings' : os.path.join(ADDOND, 'plugin.video.fen', 'settings.xml'),
+		'default'  : 'trakt_user',
+		'data'	 : ['trakt_user', 'trakt_refresh_token', 'trakt_access_token'],
+		'activate' : 'RunPlugin(plugin://plugin.video.fen/?action=authTrakt)'},
 	'exodusredux': {
-		'name'     : 'Exodus Redux',
+		'name'	 : 'Exodus Redux',
 		'plugin'   : 'plugin.video.exodusredux',
-		'saved'    : 'exodusredux',
-		'path'     : os.path.join(ADDONS, 'plugin.video.exodusredux'),
-		'icon'     : os.path.join(ADDONS, 'plugin.video.exodusredux', 'icon.png'),
+		'saved'	: 'exodusredux',
+		'path'	 : os.path.join(ADDONS, 'plugin.video.exodusredux'),
+		'icon'	 : os.path.join(ADDONS, 'plugin.video.exodusredux', 'icon.png'),
 		'fanart'   : os.path.join(ADDONS, 'plugin.video.exodusredux', 'fanart.jpg'),
-		'file'     : os.path.join(TRAKTFOLD, 'exodusredux_trakt'),
+		'file'	 : os.path.join(TRAKTFOLD, 'exodusredux_trakt'),
 		'settings' : os.path.join(ADDOND, 'plugin.video.exodusredux', 'settings.xml'),
 		'default'  : 'trakt.user',
-		'data'     : ['trakt.user', 'trakt.refresh', 'trakt.token'],
+		'data'	 : ['trakt.user', 'trakt.refresh', 'trakt.token'],
 		'activate' : 'RunPlugin(plugin://plugin.video.exodusredux/?action=authTrakt)'},
 	'metaq': {
-		'name'     : 'MetaQ',
+		'name'	 : 'MetaQ',
 		'plugin'   : 'plugin.video.metaq',
-		'saved'    : 'metaq',
-		'path'     : os.path.join(ADDONS, 'plugin.video.metaq'),
-		'icon'     : os.path.join(ADDONS, 'plugin.video.metaq', 'icon.png'),
+		'saved'	: 'metaq',
+		'path'	 : os.path.join(ADDONS, 'plugin.video.metaq'),
+		'icon'	 : os.path.join(ADDONS, 'plugin.video.metaq', 'icon.png'),
 		'fanart'   : os.path.join(ADDONS, 'plugin.video.metaq', 'fanart.jpg'),
-		'file'     : os.path.join(TRAKTFOLD, 'metaq_trakt'),
+		'file'	 : os.path.join(TRAKTFOLD, 'metaq_trakt'),
 		'settings' : os.path.join(ADDOND, 'plugin.video.metaq', 'settings.xml'),
 		'default'  : 'trakt_access_token',
-		'data'     : ['trakt_access_token', 'trakt_refresh_token', 'trakt_expires_at'],
+		'data'	 : ['trakt_access_token', 'trakt_refresh_token', 'trakt_expires_at'],
 		'activate' : 'RunPlugin(plugin://plugin.video.metaq/trakt_authenticate)'},
 	'trakt': {
-		'name'     : 'Trakt',
+		'name'	 : 'Trakt',
 		'plugin'   : 'script.trakt',
-		'saved'    : 'trakt',
-		'path'     : os.path.join(ADDONS, 'script.trakt'),
-		'icon'     : os.path.join(ADDONS, 'script.trakt', 'icon.png'),
+		'saved'	: 'trakt',
+		'path'	 : os.path.join(ADDONS, 'script.trakt'),
+		'icon'	 : os.path.join(ADDONS, 'script.trakt', 'icon.png'),
 		'fanart'   : os.path.join(ADDONS, 'script.trakt', 'fanart.jpg'),
-		'file'     : os.path.join(TRAKTFOLD, 'trakt_trakt'),
+		'file'	 : os.path.join(TRAKTFOLD, 'trakt_trakt'),
 		'settings' : os.path.join(ADDOND, 'script.trakt', 'settings.xml'),
 		'default'  : 'user',
-		'data'     : ['user', 'Auth_Info', 'authorization'],
+		'data'	 : ['user', 'Auth_Info', 'authorization'],
 		'activate' : 'RunScript(script.trakt, action=auth_info)'}
 }
 
@@ -145,7 +205,7 @@ def traktIt(do, who):
 				try:
 					addonid   = wiz.addonId(TRAKTID[log]['plugin'])
 					default   = TRAKTID[log]['default']
-					user      = addonid.getSetting(default)
+					user	  = addonid.getSetting(default)
 					if user == '' and do == 'update': continue
 					updateTrakt(do, log)
 				except: pass
@@ -170,16 +230,16 @@ def clearSaved(who, over=False):
 	if over == False: wiz.refresh()
 
 def updateTrakt(do, who):
-	file      = TRAKTID[who]['file']
+	file	  = TRAKTID[who]['file']
 	settings  = TRAKTID[who]['settings']
-	data      = TRAKTID[who]['data']
+	data	  = TRAKTID[who]['data']
 	addonid   = wiz.addonId(TRAKTID[who]['plugin'])
-	saved     = TRAKTID[who]['saved']
+	saved	 = TRAKTID[who]['saved']
 	default   = TRAKTID[who]['default']
-	user      = addonid.getSetting(default)
-	suser     = wiz.getS(saved)
-	name      = TRAKTID[who]['name']
-	icon      = TRAKTID[who]['icon']
+	user	  = addonid.getSetting(default)
+	suser	 = wiz.getS(saved)
+	name	  = TRAKTID[who]['name']
+	icon	  = TRAKTID[who]['icon']
 
 	if do == 'update':
 		if not user == '':
@@ -268,7 +328,7 @@ def importlist(who):
 def activateTrakt(who):
 	if TRAKTID[who]:
 		if os.path.exists(TRAKTID[who]['path']): 
-			act     = TRAKTID[who]['activate']
+			act	 = TRAKTID[who]['activate']
 			addonid = wiz.addonId(TRAKTID[who]['plugin'])
 			if act == '': addonid.openSettings()
 			else: url = xbmc.executebuiltin(TRAKTID[who]['activate'])

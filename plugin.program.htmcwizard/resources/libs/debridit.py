@@ -48,7 +48,7 @@ KEEPTRAKT      = wiz.getS('keepdebrid')
 REALSAVE       = wiz.getS('debridlastsave')
 COLOR1         = uservar.COLOR1
 COLOR2         = uservar.COLOR2
-ORDER          = ['resolveurl', 'urlresolver']
+ORDER          = ['resolveurl', 'urlresolver', 'judaeard', 'judaeapm', 'serenrd', 'serenpm', 'fenrd']
 
 DEBRIDID = { 
 	'resolveurl': {
@@ -74,7 +74,67 @@ DEBRIDID = {
 		'settings' : os.path.join(ADDOND, 'script.module.urlresolver', 'settings.xml'),
 		'default'  : 'RealDebridResolver_client_id',
 		'data'     : ['RealDebridResolver_autopick', 'RealDebridResolver_client_id', 'RealDebridResolver_client_secret', 'RealDebridResolver_enabled', 'RealDebridResolver_login', 'RealDebridResolver_priority', 'RealDebridResolver_refresh', 'RealDebridResolver_token'],
-		'activate' : 'RunPlugin(plugin://script.module.urlresolver/?mode=auth_rd)'}
+		'activate' : 'RunPlugin(plugin://script.module.urlresolver/?mode=auth_rd)'},
+    'judaeard': {
+        'name'     : 'Judaea RD',
+        'plugin'   : 'plugin.video.judaea',
+        'saved'    : 'judaeard',
+        'path'     : os.path.join(ADDONS, 'plugin.video.judaea'),
+        'icon'     : os.path.join(ADDONS, 'plugin.video.judaea', 'icon.png'),
+        'fanart'   : os.path.join(ADDONS, 'plugin.video.judaea', 'fanart.png'),
+        'file'     : os.path.join(REALFOLD, 'judaea_rd'),
+        'settings' : os.path.join(ADDOND, 'plugin.video.judaea', 'settings.xml'),
+        'default'  : 'rd.username',
+        'data'     : [ 'rd.auth', 'rd.client_id', 'rd.expiry', 'rd.refresh', 'rd.secret', 'rd.username', 'realdebrid.enabled'],
+        'activate' : 'RunPlugin(plugin://plugin.video.judaea/?action=authRealDebrid)'},
+    'judaeapm': {
+        'name'     : 'Judaea PM',
+        'plugin'   : 'plugin.video.judaea',
+        'saved'    : 'judaeapm',
+        'path'     : os.path.join(ADDONS, 'plugin.video.judaea'),
+        'icon'     : os.path.join(ADDONS, 'plugin.video.judaea', 'icon.png'),
+        'fanart'   : os.path.join(ADDONS, 'plugin.video.judaea', 'fanart.png'),
+        'file'     : os.path.join(REALFOLD, 'judaea_pm'),
+        'settings' : os.path.join(ADDOND, 'plugin.video.judaea', 'settings.xml'),
+        'default'  : 'premiumize.pin',
+        'data'     : ['premiumize.enabled', 'premiumize.pin'],
+        'activate' : 'RunPlugin(plugin.video.judaea/?action=openSettings)'},
+    'serenrd': {
+        'name'     : 'Seren RD',
+        'plugin'   : 'plugin.video.seren',
+        'saved'    : 'serenrd',
+        'path'     : os.path.join(ADDONS, 'plugin.video.seren'),
+        'icon'     : os.path.join(ADDONS, 'plugin.video.seren', 'ico-fox-gold-final.png'),
+        'fanart'   : os.path.join(ADDONS, 'plugin.video.seren', 'fanart-fox-gold-final.png'),
+        'file'     : os.path.join(REALFOLD, 'seren_rd'),
+        'settings' : os.path.join(ADDOND, 'plugin.video.seren', 'settings.xml'),
+        'default'  : 'rd.username',
+        'data'     : [ 'rd.auth', 'rd.client_id', 'rd.expiry', 'rd.refresh', 'rd.secret', 'rd.username', 'realdebrid.enabled'],
+        'activate' : 'RunPlugin(plugin://plugin.video.seren/?action=authRealDebrid)'},
+    'serenpm': {
+        'name'     : 'Seren PM',
+        'plugin'   : 'plugin.video.seren',
+        'saved'    : 'serenpm',
+        'path'     : os.path.join(ADDONS, 'plugin.video.seren'),
+        'icon'     : os.path.join(ADDONS, 'plugin.video.seren', 'ico-fox-gold-final.png'),
+        'fanart'   : os.path.join(ADDONS, 'plugin.video.seren', 'fanart-fox-gold-final.png'),
+        'file'     : os.path.join(REALFOLD, 'seren_pm'),
+        'settings' : os.path.join(ADDOND, 'plugin.video.seren', 'settings.xml'),
+        'default'  : 'premiumize.pin',
+        'data'     : ['premiumize.enabled', 'premiumize.pin'],
+        'activate' : 'RunPlugin(plugin.video.seren/?action=openSettings)'},
+    'fenrd': {
+        'name'     : 'Fen RD',
+        'plugin'   : 'plugin.video.fen',
+        'saved'    : 'fenrd',
+        'path'     : os.path.join(ADDONS, 'plugin.video.fen'),
+        'icon'     : os.path.join(ADDONS, 'plugin.video.fen', 'icon.png'),
+        'fanart'   : os.path.join(ADDONS, 'plugin.video.fen', 'fanart.png'),
+        'file'     : os.path.join(REALFOLD, 'fen_rd'),
+        'settings' : os.path.join(ADDOND, 'plugin.video.fen', 'settings.xml'),
+        'default'  : 'rd.username',
+        'data'     : [ 'rd.auth', 'rd.client_id', 'rd.expiry', 'rd.refresh', 'rd.secret', 'rd.username', 'realdebrid.enabled'],
+        'activate' : 'RunPlugin(plugin://plugin.video.fen/?action=authRealDebrid)'}
 }
 
 def debridUser(who):

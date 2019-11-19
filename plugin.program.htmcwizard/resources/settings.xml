@@ -65,10 +65,14 @@
 		<setting type="lsep" label="Clearing Video Cache:"/>
 		<setting id="includevideo" type="bool" label="Include Video Addons in Clear Cache: " default="true"/>
 		<setting id="includeall" type="bool" label="Include All Addons: " default="true" enable="!eq(-1,false)" visible="!eq(-1,false)"/>
-		<setting id="includehtpctv" type="bool" label="Include htpcTV DB: " default="true" enable="!eq(-6,false)" visible="!eq(-6,false)"/>
-        <setting id="includedavid" type="bool" label="Include David DB: " default="true" enable="!eq(-6,false)" visible="!eq(-6,false)"/>
-        <setting id="includeexegesis" type="bool" label="Include Exegesis DB: " default="true" enable="!eq(-6,false)" visible="!eq(-6,false)"/>
-        <setting id="includeexodusredux" type="bool" label="Include Exodus Redux DB: " default="true" enable="!eq(-6,false)" visible="!eq(-6,false)"/>
+		<setting id="includehtpctv" type="bool" label="Include htpcTV DB: " default="true" enable="!eq(-2,false)" visible="!eq(-2,false)"/>
+        <setting id="includedavid" type="bool" label="Include David DB: " default="true" enable="!eq(-3,false)" visible="!eq(-3,false)"/>
+        <setting id="includeexegesis" type="bool" label="Include Exegesis DB: " default="true" enable="!eq(-4,false)" visible="!eq(-4,false)"/>
+        <setting id="includescrubsv2" type="bool" label="Include Scrubs v2 DB: " default="true" enable="!eq(-5,false)" visible="!eq(-5,false)"/>
+        <setting id="includevenom" type="bool" label="Include Venom DB: " default="true" enable="!eq(-6,false)" visible="!eq(-6,false)"/>
+        <setting id="includejudaea" type="bool" label="Include Judaea DB: " default="true" enable="!eq(-7,false)" visible="!eq(-7,false)"/>
+        <setting id="includeseren" type="bool" label="Include Seren DB: " default="true" enable="!eq(-8,false)" visible="!eq(-8,false)"/>
+        <setting id="includeexodusredux" type="bool" label="Include Exodus Redux DB: " default="true" enable="!eq(-9,false)" visible="!eq(-9,false)"/>
 	</category>
 
 	<category label="Trakt Settings">
@@ -77,18 +81,28 @@
 		<setting id="htpctv" type="text" label="htpcTV: " enable="false" default=""/>
 		<setting id="david" type="text" label="David: " enable="false" default=""/>
 		<setting id="exegesis" type="text" label="Exegesis: " enable="false" default=""/>
+		<setting id="scrubsv2" type="text" label="Scrubs v2: " enable="false" default=""/>
+		<setting id="venom" type="text" label="Venom: " enable="false" default=""/>
+		<setting id="judaea" type="text" label="Judaea: " enable="false" default=""/>
+		<setting id="seren" type="text" label="Seren: " enable="false" default=""/>
+		<setting id="fen" type="text" label="Fen: " enable="false" default=""/>
 		<setting id="exodusredux" type="text" label="Exodus Redux: " enable="false" default=""/>
 		<setting id="metaq" type="text" label="MetaQ: " enable="false" default=""/>
 		<setting id="trakt" type="text" label="Trakt: " enable="false" default=""/>
 		<setting id="traktlastsave" type="text" label="Last Time Trakt Saved: " enable="false" default=""/>
 	</category>
 
-	<category label="Real Debrid Settings">
-		<setting type="lsep" label="Save Real Debrid Data:"/>
-		<setting id="keepdebrid" type="bool" label="Keep My Real Debrid Info" default="true"/>
+	<category label="Premium Subscriptions">
+		<setting type="lsep" label="Save Premium Subscription Data:"/>
+		<setting id="keepdebrid" type="bool" label="Keep My Premium Subscription Info" default="true"/>
 		<setting id="resolveurl" type="text" label="ResolveURL: " enable="false" default=""/>
 		<setting id="urlresolver" type="text" label="URL Resolver: " enable="false" default=""/>
-		<setting id="debridlastsave" type="text" label="Last Time My Real Debrid Info Saved: " enable="false" default=""/>
+		<setting id="judaeard" type="text" label="Judaea Real Debrid: " enable="false" default=""/>
+		<setting id="judaeapm" type="text" label="Judaea Premiumize: " enable="false" default=""/>
+		<setting id="serenrd" type="text" label="Seren Real Debrid: " enable="false" default=""/>
+		<setting id="serenpm" type="text" label="Seren Premiumize: " enable="false" default=""/>
+		<setting id="fenrd" type="text" label="Fen Real Debrid: " enable="false" default=""/>
+		<setting id="debridlastsave" type="text" label="Last Time My Premium Subscription Info Saved: " enable="false" default=""/>
 	</category>
 
 	<category label="API Settings">
@@ -103,6 +117,19 @@
 		<setting id="api-tmdb-exegesis" type="text" label="Exegesis TMDb Key: " enable="false" default=""/>
 		<setting id="api-imdb-exegesis" type="text" label="Exegesis IMDb Key: " enable="false" default=""/>
 		<setting id="api-fanart-tv-exegesis" type="text" label="Exegesis Fanart.tv Key: " enable="false" default=""/>
+		<setting id="api-tmdb-scrubsv2" type="text" label="Scrubs v2 TMDb Key: " enable="false" default=""/>
+		<setting id="api-imdb-scrubsv2" type="text" label="Scrubs v2 IMDb Key: " enable="false" default=""/>
+		<setting id="api-fanart-tv-scrubsv2" type="text" label="Scrubs v2 Fanart.tv Key: " enable="false" default=""/>
+		<setting id="api-tmdb-venom" type="text" label="Venom TMDb Key: " enable="false" default=""/>
+		<setting id="api-imdb-venom" type="text" label="Venom IMDb Key: " enable="false" default=""/>
+		<setting id="api-fanart-tv-venom" type="text" label="Venom Fanart.tv Key: " enable="false" default=""/>
+		<setting id="api-tmdb-judaea" type="text" label="Judaea TMDb Key: " enable="false" default=""/>
+		<setting id="api-tvdb-judaea" type="text" label="Judaea TVDb Key: " enable="false" default=""/>
+		<setting id="api-fanart-tv-judaea" type="text" label="Judaea Fanart.tv Key: " enable="false" default=""/>
+		<setting id="api-tmdb-seren" type="text" label="Seren TMDb Key: " enable="false" default=""/>
+		<setting id="api-tvdb-seren" type="text" label="Seren TVDb Key: " enable="false" default=""/>
+		<setting id="api-fanart-tv-seren" type="text" label="Seren Fanart.tv Key: " enable="false" default=""/>
+		<setting id="api-tmdb-fen" type="text" label="Fen TMDb Key: " enable="false" default=""/>
 		<setting id="api-tmdb-exodusredux" type="text" label="Exodus Redux TMDb Key: " enable="false" default=""/>
 		<setting id="api-imdb-exodusredux" type="text" label="Exodus Redux IMDb Key: " enable="false" default=""/>
 		<setting id="api-fanart-tv-exodusredux" type="text" label="Exodus Redux Fanart.tv Key: " enable="false" default=""/>

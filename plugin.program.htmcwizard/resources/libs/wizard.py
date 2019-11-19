@@ -125,6 +125,10 @@ INCLUDEALL     = ADDON.getSetting('includeall')
 INCLUDEHTPCTV  = ADDON.getSetting('includehtpctv')
 INCLUDEDAVID   = ADDON.getSetting('includedavid')
 INCLUDEEXEGESIS= ADDON.getSetting('includeexegesis')
+INCLUDESCRUBSV2= ADDON.getSetting('includescrubsv2')
+INCLUDEVENOM   = ADDON.getSetting('includevenom')
+INCLUDEJUDAEA  = ADDON.getSetting('includejudaea')
+INCLUDESEREN   = ADDON.getSetting('includeseren')
 INCLUDEEXODUSREDUX  = ADDON.getSetting('includeexodusredux')
 SHOWADULT      = ADDON.getSetting('adult')
 WIZDEBUGGING   = ADDON.getSetting('addon_debug')
@@ -508,6 +512,16 @@ def getCacheSize():
 		(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.db')),
 		(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.metadata.db')),
 		(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.providers.13.db')),
+		(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'cache.db')),
+		(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'cache.meta.5.db')),
+		(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'cache.providers.13.db')),
+		(os.path.join(ADDOND, 'plugin.video.venom', 'cache.db')),
+		(os.path.join(ADDOND, 'plugin.video.venom', 'cache.metadata.db')),
+		(os.path.join(ADDOND, 'plugin.video.venom', 'cache.providers.13.db')),
+		(os.path.join(ADDOND, 'plugin.video.judaea', 'cache.db')),
+		(os.path.join(ADDOND, 'plugin.video.judaea', 'cache.torrentScrape.db')),
+		(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db')),
+		(os.path.join(ADDOND, 'plugin.video.seren', 'cache.torrentScrape.db')),
 		(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.db')),
 		(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.meta.5.db')),
 		(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.providers.13.db'))]
@@ -552,6 +566,20 @@ def getCacheSize():
 				files.append(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.exegesis', 'metadata.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.exegesis', 'providers.13.db'))
+			if INCLUDESCRUBSV2 == 'true':
+				files.append(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'cache.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'meta.5.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'providers.13.db'))
+			if INCLUDEVENOM == 'true':
+				files.append(os.path.join(ADDOND, 'plugin.video.venom', 'cache.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.venom', 'metadata.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.venom', 'providers.13.db'))
+			if INCLUDEJUDAEA == 'true':
+				files.append(os.path.join(ADDOND, 'plugin.video.judaea', 'cache.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.judaea', 'torrentScrape.db'))
+			if INCLUDESEREN == 'true':
+				files.append(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db'))
 			if INCLUDEEXODUSREDUX == 'true':
 				files.append(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.exodusredux', 'meta.5.db'))
@@ -1378,6 +1406,16 @@ def backUpOptions(type, name=""):
 					(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.db')),
 					(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.metadata.db')),
 					(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.providers.13.db')),
+					(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'cache.db')),
+					(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'cache.meta.5.db')),
+					(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'cache.providers.13.db')),
+					(os.path.join(ADDOND, 'plugin.video.venom', 'cache.db')),
+					(os.path.join(ADDOND, 'plugin.video.venom', 'cache.metadata.db')),
+					(os.path.join(ADDOND, 'plugin.video.venom,', 'cache.providers.13.db')),
+					(os.path.join(ADDOND, 'plugin.video.judaea', 'cache.db')),
+					(os.path.join(ADDOND, 'plugin.video.judaea', 'cache.torrentScrape.db')),
+					(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db')),
+					(os.path.join(ADDOND, 'plugin.video.seren', 'cache.torrentScrape.db')),
 					(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.db')),
 					(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.meta.5.db')),
 					(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.providers.13.db'))]
@@ -2284,6 +2322,16 @@ def clearCache(over=None):
 		(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.db')),
 		(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.metadata.db')),
 		(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.providers.13.db')),
+		(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'cache.db')),
+		(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'cache.meta.5.db')),
+		(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'cache.providers.13.db')),
+		(os.path.join(ADDOND, 'plugin.video.venom', 'cache.db')),
+		(os.path.join(ADDOND, 'plugin.video.venom', 'cache.metadata.db')),
+		(os.path.join(ADDOND, 'plugin.video.venom', 'cache.providers.13.db')),
+		(os.path.join(ADDOND, 'plugin.video.judaea', 'cache.db')),
+		(os.path.join(ADDOND, 'plugin.video.judaea', 'cache.torrentScrape.db')),
+		(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db')),
+		(os.path.join(ADDOND, 'plugin.video.seren', 'cache.torrentScrape.db')),
 		(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.db')),
 		(os.path.join(ADDOND, 'plugin.video.exoudsredux', 'meta.5.db')),
 		(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.providers.13.db'))]
@@ -2353,6 +2401,20 @@ def clearCache(over=None):
 				files.append(os.path.join(ADDOND, 'plugin.video.exegesis', 'cache.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.exegesis', 'metadata.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.exegesis', 'providers.13.db'))
+			if INCLUDESCRUBSV2 == 'true':
+				files.append(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'cache.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'meta.5.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.scrubsv2', 'providers.13.db'))
+			if INCLUDEVENOM == 'true':
+				files.append(os.path.join(ADDOND, 'plugin.video.venom', 'cache.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.venom', 'metadata.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.venom', 'providers.13.db'))
+			if INCLUDEJUDAEA == 'true':
+				files.append(os.path.join(ADDOND, 'plugin.video.judaea', 'cache.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.judaea', 'torrentScrape.db'))
+			if INCLUDESEREN == 'true':
+				files.append(os.path.join(ADDOND, 'plugin.video.seren', 'cache.db'))
+				files.append(os.path.join(ADDOND, 'plugin.video.seren', 'torrentScrape.db'))
 			if INCLUDEEXODUSREDUX == 'true':
 				files.append(os.path.join(ADDOND, 'plugin.video.exodusredux', 'cache.db'))
 				files.append(os.path.join(ADDOND, 'plugin.video.exodusredux', 'meta.5.db'))

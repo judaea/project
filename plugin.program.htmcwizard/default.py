@@ -83,6 +83,12 @@ AUTONEXTRUN         = wiz.getS('nextautocleanup')
 INCLUDEVIDEO        = wiz.getS('includevideo')
 INCLUDEALL          = wiz.getS('includeall')
 INCLUDEHTPCTV       = wiz.getS('includehtpctv')
+INCLUDEDAVID        = wiz.getS('includedavid')
+INCLUDEEXEGESIS     = wiz.getS('includeexegesis')
+INCLUDESCRUBSV2     = wiz.getS('includescrubsv2')
+INCLUDEVENOM        = wiz.getS('includevenom')
+INCLUDEJUDAEA       = wiz.getS('includejudaea')
+INCLUDESEREN        = wiz.getS('includeseren')
 INCLUDEEXODUSREDUX  = wiz.getS('includeexodusredux')
 SEPERATE            = wiz.getS('seperate')
 NOTIFY              = wiz.getS('notify')
@@ -816,9 +822,21 @@ def maintMenu(view=None):
     wizlogsize = ': [COLOR red]Not Found[/COLOR]' if not os.path.exists(WIZLOG) else ": [COLOR springgreen]%s[/COLOR]" % wiz.convertSize(os.path.getsize(WIZLOG))
     if includeall == 'true':
         includehtpctv = 'true'
+        includedavid = 'true'
+        includeexegesis = 'true'
+        includescrubsv2 = 'true'
+        includevenom = 'true'
+        includejudaea = 'true'
+        includeseren = 'true'
         includeexodusredux = 'true'
     else:
         includehtpctv = 'true' if INCLUDEHTPCTV == 'true' else 'false'
+        includedavid = 'true' if INCLUDEDAVID == 'true' else 'false'
+        includeexegesis = 'true' if INCLUDEEXEGESIS == 'true' else 'false'
+        includescrubsv2 = 'true' if INCLUDESCRUBSV2 == 'true' else 'false'
+        includevenom = 'true' if INCLUDEVENOM == 'true' else 'false'
+        includejudaea = 'true' if INCLUDEJUDAEA == 'true' else 'false'
+        includeseren = 'true' if INCLUDESEREN == 'true' else 'false'
         includeexodusredux = 'true' if INCLUDEEXODUSREDUX    == 'true' else 'false'
     sizepack   = wiz.getSize(PACKAGES)
     sizethumb  = wiz.getSize(THUMBS)
@@ -902,6 +920,12 @@ def maintMenu(view=None):
     if includevid == 'true':
         addFile('--- Include All Video Addons: %s' % includeall.replace('true',on).replace('false',off), 'togglecache', 'includeall', icon=ICONMAINT, themeit=THEME6)
         addFile('--- Include htpcTV: %s' % includehtpctv.replace('true',on).replace('false',off), 'togglecache', 'includehtpctv', icon=ICONMAINT, themeit=THEME6)
+        addFile('--- Include David: %s' % includedavid.replace('true',on).replace('false',off), 'togglecache', 'includedavid', icon=ICONMAINT, themeit=THEME6)
+        addFile('--- Include Exegesis: %s' % includeexegesis.replace('true',on).replace('false',off), 'togglecache', 'includeexegesis', icon=ICONMAINT, themeit=THEME6)
+        addFile('--- Include Scrubs v2: %s' % includedavid.replace('true',on).replace('false',off), 'togglecache', 'includescrubsv2', icon=ICONMAINT, themeit=THEME6)
+        addFile('--- Include Venom: %s' % includedavid.replace('true',on).replace('false',off), 'togglecache', 'includevenom', icon=ICONMAINT, themeit=THEME6)
+        addFile('--- Include Judaea: %s' % includejudaea.replace('true',on).replace('false',off), 'togglecache', 'includejudaea', icon=ICONMAINT, themeit=THEME6)
+        addFile('--- Include Seren: %s' % includeseren.replace('true',on).replace('false',off), 'togglecache', 'includeseren', icon=ICONMAINT, themeit=THEME6)
         addFile('--- Include Exodus Redux: %s' % includeexodusredux.replace('true',on).replace('false',off), 'togglecache', 'includeexodusredux', icon=ICONMAINT, themeit=THEME6)
         addFile('--- Enable All Video Addons', 'togglecache', 'true', icon=ICONMAINT, themeit=THEME6)
         addFile('--- Disable All Video Addons', 'togglecache', 'false', icon=ICONMAINT, themeit=THEME6)
@@ -1806,8 +1830,8 @@ def createMenu(type, add, name):
     return menu_items
 
 def toggleCache(state):
-    cachelist = ['includevideo', 'includeall', 'includehtpctv', 'includeexodusredux']
-    titlelist = ['Include Video Addons', 'Include All Addons', 'Include htpcTV', 'Include Exodus Redux']
+    cachelist = ['includevideo', 'includeall', 'includehtpctv', 'includedavid', 'includeexegesis', 'includescrubsv2', 'includevenom', 'includejudaea', 'includeseren', 'includeexodusredux']
+    titlelist = ['Include Video Addons', 'Include All Addons', 'Include htpcTV', 'Include David', 'Include Exegesis', 'Include Scrubs v2', 'Include Venom', 'Include Judaea', 'Include Seren', 'Include Exodus Redux']
     if state in ['true', 'false']:
         for item in cachelist:
             wiz.setS(item, state)
