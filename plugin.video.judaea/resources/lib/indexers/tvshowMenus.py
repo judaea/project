@@ -61,9 +61,6 @@ class Menus:
     def discoverShows(self):
 
         control.addDirectoryItem(control.lang(32007), 'showsPopular&page=1')
-        if control.getSetting('trakt.auth') is not '':
-            control.addDirectoryItem(control.lang(32008), 'showsRecommended')
-        # control.addDirectoryItem('This Years Most Popular', '')
         control.addDirectoryItem(control.lang(32009), 'showsTrending&page=1')
         control.addDirectoryItem(control.lang(32067), 'showsNew')
         control.addDirectoryItem(control.lang(32010), 'showsPlayed&page=1')
@@ -71,6 +68,8 @@ class Menus:
         control.addDirectoryItem(control.lang(32012), 'showsCollected&page=1')
         control.addDirectoryItem(control.lang(32013), 'showsAnticipated&page=1')
         control.addDirectoryItem(control.lang(32014), 'showsUpdated&page=1')
+        if control.getSetting('trakt.auth') is not '':
+            control.addDirectoryItem(control.lang(32008), 'showsRecommended')
         control.addDirectoryItem(control.lang(40121), 'showsNetworks')
         control.addDirectoryItem(control.lang(40123), 'showYears')
         control.addDirectoryItem(control.lang(32062), 'tvGenres')
@@ -83,13 +82,14 @@ class Menus:
         control.closeDirectory('addons')
 
     def myShows(self):
-        control.addDirectoryItem(control.lang(32063), 'onDeckShows')
+        control.addDirectoryItem(control.lang(40172), 'showsNextUp')
         control.addDirectoryItem(control.lang(32017), 'showsMyCollection')
         control.addDirectoryItem(control.lang(32018), 'showsMyWatchlist')
-        control.addDirectoryItem(control.lang(40172), 'showsNextUp')
         control.addDirectoryItem(control.lang(40173), 'myUpcomingEpisodes')
         control.addDirectoryItem(control.lang(40174), 'showsMyProgress')
         control.addDirectoryItem(control.lang(40175), 'showsMyRecentEpisodes')
+        control.addDirectoryItem(control.lang(32008), 'showsRecommended')
+        control.addDirectoryItem(control.lang(32063), 'onDeckShows')
         control.addDirectoryItem(control.lang(40176), 'myTraktLists&actionArgs=shows')
         control.closeDirectory('addons')
 

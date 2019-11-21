@@ -373,6 +373,7 @@ def torrent_cache_clear():
     if not confirmation:
         return
     try:
+        cursor_lock.acquire()
         cursor = _get_connection_cursor(control.torrentScrapeCacheFile)
         for t in [cache_table, 'rel_list', 'rel_lib']:
             try:

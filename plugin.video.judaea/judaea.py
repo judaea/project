@@ -541,9 +541,6 @@ def api(params):
 
         database.torrent_cache_clear()
 
-#     if action == 'openSettings':
-#         control.execute('Addon.OpenSettings(%s)' % control.addonInfo('id'))
-
     if action == 'openSettings':
         control.openSettings(query)
 
@@ -587,36 +584,6 @@ def api(params):
 
         maintenance.run_maintenance()
 
-#     if action == 'providerTools':
-#         from resources.lib.indexers import homeMenu
-# 
-#         homeMenu.Menus().providerMenu()
-
-#     if action == 'adjustProviders':
-#         control.log('adjustProviders endpoint has been deprecated')
-#         return
-        # from resources.lib.modules import customProviders
-        #
-        # customProviders.providers().adjust_providers(actionArgs)
-
-#     if action == 'adjustPackage':
-#         control.log('adjustPackage endpoint has been deprecated')
-#         return
-        # DEPRECATED
-        # from resources.lib.modules import customProviders
-        #
-        # customProviders.providers().adjust_providers(actionArgs, package_disable=True)
-
-#     if action == 'installProviders':
-#         from resources.lib.modules import customProviders
-# 
-#         customProviders.providers().install_package(actionArgs)
-# 
-#     if action == 'uninstallProviders':
-#         from resources.lib.modules import customProviders
-# 
-#         customProviders.providers().uninstall_package()
-
     if action == 'showsNew':
         from resources.lib.indexers import tvshowMenus
 
@@ -644,33 +611,10 @@ def api(params):
     if action == 'test2':
         pass
 
-#     if action == 'manualProviderUpdate':
-#         from resources.lib.modules import customProviders
-# 
-#         customProviders.providers().manual_update()
-
     if action == 'clearSearchHistory':
         from resources.lib.modules import database
 
         database.clearSearchHistory()
-
-#     if action == 'externalProviderInstall':
-#         from resources.lib.modules import customProviders
-# 
-#         confirmation = control.showDialog.yesno(control.addonName, control.lang(40117))
-#         if confirmation == 0:
-#             sys.exit()
-# 
-#         customProviders.providers().install_package(1, url=url)
-# 
-#     if action == 'externalProviderUninstall':
-#         from resources.lib.modules import customProviders
-# 
-#         confirmation = control.showDialog.yesno(control.addonName, control.lang(40119) % url)
-#         if confirmation == 0:
-#             sys.exit()
-# 
-#         customProviders.providers().uninstall_package(package=url, silent=False)
 
     if action == 'showsNetworks':
         from resources.lib.indexers import tvshowMenus
@@ -746,10 +690,6 @@ def api(params):
         from resources.lib.modules import smartPlay
         smartPlay.SmartPlay(actionArgs).play_from_random_point()
 
-#     if action == 'refreshProviders':
-#         from resources.lib.modules.customProviders import providers
-#         providers().update_known_providers()
-
     if action == 'installSkin':
         from resources.lib.modules.skin_manager import SkinManager
         SkinManager().install_skin()
@@ -761,12 +701,6 @@ def api(params):
     if action == 'switchSkin':
         from resources.lib.modules.skin_manager import SkinManager
         SkinManager().switch_skin()
-
-#     if action == 'manageProviders':
-#         control.showBusyDialog()
-#         from resources.lib.modules.windows.custom_providers import CustomProviders
-#         from resources.lib.modules.skin_manager import SkinManager
-#         CustomProviders('custom_providers.xml', SkinManager().active_skin_path).doModal()
 
     if action == 'flatEpisodes':
         from resources.lib.indexers.tvshowMenus import Menus

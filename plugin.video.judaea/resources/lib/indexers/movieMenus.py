@@ -55,20 +55,19 @@ class Menus:
     def discoverMovies(self):
 
         control.addDirectoryItem(control.lang(32007), 'moviesPopular&page=1')
-        if control.getSetting('trakt.auth') is not '':
-            control.addDirectoryItem(control.lang(32008), 'moviesRecommended')
         control.addDirectoryItem(control.lang(32009), 'moviesTrending&page=1')
+        control.addDirectoryItem(control.lang(32015), 'moviesBoxOffice')
         control.addDirectoryItem(control.lang(32010), 'moviesPlayed&page=1')
         control.addDirectoryItem(control.lang(32011), 'moviesWatched&page=1')
         control.addDirectoryItem(control.lang(32012), 'moviesCollected&page=1')
         control.addDirectoryItem(control.lang(32013), 'moviesAnticipated&page=1')
-        control.addDirectoryItem(control.lang(32015), 'moviesBoxOffice')
         control.addDirectoryItem(control.lang(32014), 'moviesUpdated&page=1')
+        if control.getSetting('trakt.auth') is not '':
+            control.addDirectoryItem(control.lang(32008), 'moviesRecommended')
         control.addDirectoryItem(control.lang(32062), 'movieGenres&page=1')
         control.addDirectoryItem(control.lang(40123), 'movieYears')
         control.addDirectoryItem(control.lang(40151), 'movieByActor')
 
-        # control.addDirectoryItem('Years', 'movieYears')
         if control.getSetting('searchHistory') == 'false':
             control.addDirectoryItem(control.lang(32016), 'moviesSearch', isFolder=True, isPlayable=False)
         else:
@@ -76,9 +75,11 @@ class Menus:
         control.closeDirectory('addons')
 
     def myMovies(self):
-        control.addDirectoryItem(control.lang(32063), 'onDeckMovies', None, None)
         control.addDirectoryItem(control.lang(32017), 'moviesMyCollection')
         control.addDirectoryItem(control.lang(32018), 'moviesMyWatchlist')
+        if control.getSetting('trakt.auth') is not '':
+            control.addDirectoryItem(control.lang(32008), 'moviesRecommended')
+        control.addDirectoryItem(control.lang(32063), 'onDeckMovies', None, None)
         control.addDirectoryItem(control.lang(32064), 'myTraktLists&actionArgs=movies')
         control.closeDirectory('addons')
 
