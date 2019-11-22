@@ -1,6 +1,9 @@
 
+[B]1.0.6[/B]
+- Fix Trakt Progress TVDb
+
 [B]1.0.5[/B]
-- Fix tvdb
+- Fix TVDb
 
 [B]1.0.4[/B]
 - Kodi 18 Fixes

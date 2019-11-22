@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.david" version="1.0.5" name=" David" provider-name="HTMC">
+<addon id="plugin.video.david" version="1.0.6" name=" David" provider-name="HTMC">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="plugin.video.youtube" version="6.4.0" />
@@ -26,7 +26,8 @@
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>- RealDebrid Recommended
-- Fix tvdb
+- Fix Trakt Progress TVDb
+- Fix TVDb
 - Added Radio
 - Added Kids TV
 - Added Documentaries
