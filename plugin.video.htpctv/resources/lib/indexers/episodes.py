@@ -896,7 +896,8 @@ class episodes:
 
                 zip = zipfile.ZipFile(StringIO.StringIO(data))
 #                 result = zip.read('%s.xml' % lang)
-                result = zip.read('%s.xml' % 'lang.zip')
+#                 result = zip.read('%s.xml' % 'lang.zip')
+                result = zip.read('%s.zip.xml' % lang)
                 artwork = zip.read('banners.xml')
                 zip.close()
 
