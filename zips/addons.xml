@@ -280,7 +280,7 @@ Initial version fork of Seren - Global Context Menu Items
 	</extension>
 </addon>
 
-<addon id="plugin.video.htpctv" version="4.1.42" name=" htpcTV" provider-name="HTMC">
+<addon id="plugin.video.htpctv" version="4.1.43" name=" htpcTV" provider-name="HTMC">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="plugin.video.youtube" version="6.4.0" />
@@ -306,7 +306,7 @@ Initial version fork of Seren - Global Context Menu Items
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>- RealDebrid Recommended
-- Fix tvdb
+- Fix TVDb
 - Update Code
 - Fixed Movie Certifications
 - Fixed TV Show Certifications

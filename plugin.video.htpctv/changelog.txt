@@ -1,6 +1,9 @@
 
+[B]4.1.43[/B]
+- Fix TVDb
+
 [B]4.1.42[/B]
-- Fix tvdb
+- Kodi 18 Fixes
 
 [B]4.1.41[/B]
 - Kodi 18 Fixes
