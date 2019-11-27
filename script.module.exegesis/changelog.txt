@@ -1,4 +1,10 @@
 
+[B]1.0.3[/B]
+- Fix Episodes
+
+[B]1.0.2[/B]
+- Fix Trakt Progress
+
 [B]1.0.1[/B]
 - Fix tvdb
 

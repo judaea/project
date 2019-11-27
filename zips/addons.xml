@@ -98,7 +98,7 @@ Initial version fork of Seren - Global Context Menu Items
 </extension>
 </addon>
 
-<addon id="plugin.video.david" version="1.0.6" name=" David" provider-name="HTMC">
+<addon id="plugin.video.david" version="1.0.7" name=" David" provider-name="HTMC">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="plugin.video.youtube" version="6.4.0" />
@@ -125,6 +125,7 @@ Initial version fork of Seren - Global Context Menu Items
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>- RealDebrid Recommended
+- Fix Episodes TVDb
 - Fix Trakt Progress TVDb
 - Fix TVDb
 - Added Radio
@@ -281,7 +282,7 @@ Initial version fork of Seren - Global Context Menu Items
 	</extension>
 </addon>
 
-<addon id="plugin.video.htpctv" version="4.1.43" name=" htpcTV" provider-name="HTMC">
+<addon id="plugin.video.htpctv" version="4.1.44" name=" htpcTV" provider-name="HTMC">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="plugin.video.youtube" version="6.4.0" />
@@ -307,6 +308,7 @@ Initial version fork of Seren - Global Context Menu Items
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>- RealDebrid Recommended
+- Fix Episodes TVDb
 - Fix Trakt Progress TVDb
 - Fix TVDb
 - Update Code
@@ -539,7 +541,7 @@ Initial version fork of Seren - Global Context Menu Items
 	</extension>
 </addon>
 
-<addon id="script.module.exegesis" name="Exegesis Module" version="1.0.2" provider-name="Exegesis">
+<addon id="script.module.exegesis" name="Exegesis Module" version="1.0.3" provider-name="Exegesis">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.htpctv" version="4.1.43" name=" htpcTV" provider-name="HTMC">
+<addon id="plugin.video.htpctv" version="4.1.44" name=" htpcTV" provider-name="HTMC">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="plugin.video.youtube" version="6.4.0" />
@@ -25,6 +25,7 @@
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>- RealDebrid Recommended
+- Fix Episodes TVDb
 - Fix Trakt Progress TVDb
 - Fix TVDb
 - Update Code

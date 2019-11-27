@@ -1,5 +1,9 @@
 [B]Updates[/B]
 
+[B]November 26, 2019[/B]
+[B]Version 4.1.44[/B]
+- Fix Episodes TVDb
+
 [B]November 22, 2019[/B]
 [B]Version 4.1.43[/B]
 - Fix Trakt Progress TVDb
