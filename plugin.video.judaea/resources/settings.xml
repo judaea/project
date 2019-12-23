@@ -175,10 +175,14 @@
         <setting id="stillwatching.numepisodes" type="slider" subsetting="true" label="40341" option="int" range="1,10" default="3" visible="eq(-1,true)" />
     </category>
     
-    <!-- Smart Play -->
+<!-- 
+
+    <!~~ Smart Play ~~>
     <category label="40026">
 
     </category>
+
+ -->
 
     <!-- Accounts -->
     <category label="40059">
