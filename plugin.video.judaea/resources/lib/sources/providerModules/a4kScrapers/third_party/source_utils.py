@@ -12,7 +12,7 @@ from requests import Session
 try:
     from resources.lib.modules import control
 except:
-    control = lambda: None
+    tools = lambda: None
     control.addonName = "Seren"
     def log(msg, level=None):
         if os.getenv('A4KSCRAPERS_TEST_TOTAL') != '1':

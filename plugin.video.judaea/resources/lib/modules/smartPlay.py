@@ -3,7 +3,7 @@
 import json
 
 from resources.lib.modules import control
-from resources.lib.indexers import tvshowMenus
+from resources.lib.indexers import tvshows
 from resources.lib.modules.windows.persistent_background import PersistentBackground
 from resources.lib.modules.trakt import TraktAPI
 from resources.lib.modules import database
@@ -19,18 +19,16 @@ class SmartPlay:
             raise Exception
 
         try:
-            self.poster = self.info_dictionary['showInfo']['art'].get('fanart', '')
             self.show_trakt_id = self.info_dictionary['showInfo']['ids']['trakt']
         except:
-            self.poster = self.info_dictionary['art'].get('fanart', '')
             self.show_trakt_id = self.info_dictionary['ids']['trakt']
-
-        self.window = None
+        self.display_style = control.getSetting('smartplay.displaystyle')
+        self.window = BackgroundWindowAdapter()
 
     def get_season_info(self):
         return database.get(TraktAPI().json_response, 12, 'shows/%s/seasons?extended=full' % self.show_trakt_id)
 
-    def fill_playlist(self):
+    def fill_playlist(self, params=None):
         try:
             control.cancelPlayback()
         except:
@@ -39,9 +37,10 @@ class SmartPlay:
             pass
         control.closeAllDialogs()
 
-        self.window = PersistentBackground('persistent_background.xml',
-                                           SkinManager().active_skin_path,
-                                           actionArgs=self.actionArgs)
+        if self.display_style == '0':
+            self.window = PersistentBackground(*SkinManager().confirm_skin_path('persistent_background.xml'),
+                                               actionArgs=self.actionArgs)
+
         self.window.setText(control.lang(32094))
         self.window.show()
 
@@ -56,7 +55,7 @@ class SmartPlay:
 
         self.window.setText(control.lang(32097))
 
-        self._build_playlist(season, episode)
+        self.build_playlist(season, episode, params=params)
 
         self.window.setText(control.lang(40322))
 
@@ -68,8 +67,11 @@ class SmartPlay:
 
     def resume_playback(self):
 
-        self.window = PersistentBackground('persistent_background.xml', SkinManager().active_skin_path,
-                                           actionArgs=self.actionArgs)
+        control.playList.clear()
+
+        if self.display_style == '0':
+            self.window = PersistentBackground(*SkinManager().confirm_skin_path('persistent_background.xml'),
+                                               actionArgs=self.actionArgs)
         self.window.show()
         self.window.setText(control.lang(32095).encode('utf-8'))
 
@@ -84,28 +86,62 @@ class SmartPlay:
 
         season, episode = self.get_resume_episode(playback_history)
 
-        self._build_playlist(season, episode)
+        self.build_playlist(season, episode)
 
         self.window.close()
 
         control.player().play(control.playList)
 
-    def _build_playlist(self, season, minimum_episode):
+    @staticmethod
+    def clean_playback_params(params):
+        if params is not None:
 
-        playlist = tvshowMenus.Menus().episodeListBuilder(self.show_trakt_id, season, smartPlay=True)
+            # Do not apply the resume function to all items in the list
+            if 'resume' in params:
+                params.pop('resume')
+
+            params.pop('actionArgs')
+            params.pop('action')
+
+            return control.urlencode(params)
+
+    def build_playlist(self, season=None, minimum_episode=None, params=None):
+
+        if season is None:
+            season = self.info_dictionary['info']['season']
+
+        if minimum_episode is None:
+            minimum_episode = int(self.info_dictionary['info']['episode']) + 1
+
+        url_params = self.clean_playback_params(params)
+
+        playlist = tvshows.Menus().episodeListBuilder(self.show_trakt_id, season, smartPlay=True)
 
         for i in playlist:
-            # Confirm that the episode meta we have received from TVDB are for the correct episodes
-            # If trakt provides the incorrect TVDB ID it's possible to begin play from the incorrect episode
             params = dict(control.parse_qsl(i[0].replace('?', '')))
-            actionArgs = json.loads(params.get('actionArgs'))
+            actionArgs = params.get('actionArgs')
+
+            if not tvshows.Menus().is_aired(control.get_item_information(actionArgs)['info']):
+                control.log('Episode not Aired, skipping')
+                continue
+
+            actionArgs = json.loads(actionArgs)
 
             if actionArgs['episode'] < minimum_episode:
                 continue
 
-            # If the episode is confirmed ok, add it to our playlist.
-            if tvshowMenus.Menus().is_aired(control.get_item_information(json.dumps(actionArgs))['info']):
-                control.playList.add(url=i[0], listitem=i[1])
+            url = i[0]
+
+            if actionArgs['episode'] == minimum_episode:
+                request_args = json.loads(control.unquote(self.actionArgs))
+                # actionArgs['resume'] = request_args['resume'] if 'resume' in request_args else 'false'
+                url = '&actionArgs='.join([url.split('&actionArgs=')[0],
+                                           control.quote(json.dumps(actionArgs, sort_keys=True))])
+
+            if url_params is not None:
+                url += '&{}'.format(url_params)
+
+            control.playList.add(url=url, listitem=i[1])
 
     def get_resume_episode(self, playback_history):
 
@@ -153,7 +189,7 @@ class SmartPlay:
 
         return False
 
-    def append_next_season(self):
+    def append_next_season(self, params=None):
 
         season = self.info_dictionary['info']['season']
         episode = self.info_dictionary['info']['episode']
@@ -170,7 +206,7 @@ class SmartPlay:
             episode = 1
             season += 1
 
-            self._build_playlist(season, episode)
+            self.build_playlist(season, episode, params=params)
 
         else:
             return False
@@ -197,7 +233,7 @@ class SmartPlay:
         season = info['info']['season']
         show_id = info['showInfo']['ids']['trakt']
 
-        list_item = tvshowMenus.Menus().episodeListBuilder(show_id, season, hide_unaired=True, smartPlay=True)
+        list_item = tvshows.Menus().episodeListBuilder(show_id, season, hide_unaired=True, smartPlay=True)
         url = list_item[0] + "&packSelect=true"
         control.playList.add(url=url, listitem=list_item[1])
         control.player().play(control.playList)
@@ -206,8 +242,9 @@ class SmartPlay:
 
         import random
 
-        self.window = PersistentBackground('persistent_background.xml', SkinManager().active_skin_path,
-                                           actionArgs=self.actionArgs)
+        if self.display_style == '0':
+            self.window = PersistentBackground(*SkinManager().confirm_skin_path('persistent_background.xml'),
+                                               actionArgs=self.actionArgs)
         self.window.show()
         self.window.setText(control.lang(32096))
 
@@ -228,7 +265,7 @@ class SmartPlay:
             shuffle_list.append({'episode': episode, 'show': {'ids': {'trakt': self.show_trakt_id}}})
 
         # mill the episodes
-        playlist = tvshowMenus.Menus().mixedEpisodeBuilder(shuffle_list, sort=False, smartPlay=True)
+        playlist = tvshows.Menus().mixedEpisodeBuilder(shuffle_list, sort=False, smartPlay=True)
 
         self.window.setText(control.lang(32098))
 
@@ -244,16 +281,17 @@ class SmartPlay:
     def play_from_random_point(self):
 
         import random
-        random_season = random.randint(1, int(self.info_dictionary['showInfo']['info']['season_count']))
+        random_season = random.randint(1, int(self.info_dictionary['info']['season_count']))
 
-        playlist = tvshowMenus.Menus().episodeListBuilder(self.show_trakt_id, random_season, smartPlay=True,
+        playlist = tvshows.Menus().episodeListBuilder(self.show_trakt_id, random_season, smartPlay=True,
                                                           hide_unaired=True)
+        random_episode = random.randint(0, len(playlist) - 1)
 
-        random_episode = random.randint(0, int(len(playlist)))
+        playlist = playlist[random_episode]
 
-        playlist = playlist[random_episode:]
+        control.playList.add(url=playlist[0], listitem=playlist[1])
 
-        control.player().play(playlist[0])
+        control.player().play(control.playList)
 
     def getSourcesWorkaround(self, actionArgs):
 
@@ -275,3 +313,22 @@ class SmartPlay:
     def workaround(self):
         control.execute('RunPlugin(plugin://plugin.video.%s?action=buildPlaylistWorkaround&actionArgs=%s)' %
                       (control.addonName.lower(), control.quote(self.actionArgs)))
+
+
+class BackgroundWindowAdapter(control.bgProgressDialog):
+
+    def __init__(self):
+        super(BackgroundWindowAdapter, self).__init__()
+        self.text = ''
+        self.created = False
+
+    def show(self):
+        self.create(control.addonName, self.text)
+
+    def setText(self, text):
+        self.text = text
+        if self.created:
+            self.update()
+
+    def update(self):
+        super(BackgroundWindowAdapter, self).update(0, message=self.text)

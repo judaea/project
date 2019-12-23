@@ -29,7 +29,7 @@ season_landscape = control.getSetting('season.landscape')
 season_fanart = control.getSetting('season.fanart')
 
 base_url = "http://webservice.fanart.tv/v3/%s/%s"
-api_key = "dfe6380e34f49f9b2b9518184922b49c"
+api_key = "e2355ed4187bb206b3b87152073333aa"
 language = control.get_language_code()
 
 
@@ -70,7 +70,7 @@ def get_query(art):
 def get(remote_id, query, season_number=None):
     art_request = base_url % (query if query == 'movies' or query == 'tv' else 'tv', remote_id)
     headers = {'client-key': client_key, 'api-key': api_key}
-    art = requests.get(art_request, headers=headers).json()
+    art = requests.get(art_request, headers=headers, timeout=5).json()
 
     meta = {}
     if query == 'movies':

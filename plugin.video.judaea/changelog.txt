@@ -1,4 +1,8 @@
 
+[B]1.0.3[/B]
+- Add AllDebrid
+- Update Providers
+
 [B]1.0.2[/B]
 - Fix Local Torrent Clear Cache
 

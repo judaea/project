@@ -4,8 +4,10 @@ import threading
 import time
 import traceback
 import sys
+import re
 
-from .third_party import source_utils, cfscrape
+from .third_party import source_utils
+from .third_party.cloudscraper import cloudscraper
 from .third_party.source_utils import control
 from .common_types import UrlParts
 from .utils import database
@@ -13,9 +15,26 @@ from requests.compat import urlparse, urlunparse
 
 _head_checks = {}
 
+def _is_cloudflare_iuam_challenge(resp, allow_empty_body=False):
+    try:
+        return (
+            resp.headers.get('Server', '').startswith('cloudflare')
+            and resp.status_code in [429, 503]
+            and (allow_empty_body or re.search(
+                r'action="/.*?__cf_chl_jschl_tk__=\S+".*?name="jschl_vc"\svalue=.*?',
+                resp.text,
+                re.M | re.DOTALL
+            ))
+        )
+    except AttributeError:
+        pass
+
+    return False
+
 def _get_domain(url): 
     parsed_url = urlparse(url)
-    return "%s://%s" % (parsed_url.scheme, parsed_url.netloc)
+    scheme = parsed_url.scheme if parsed_url.scheme != '' else 'https'
+    return "%s://%s" % (scheme, parsed_url.netloc)
 
 def _get_head_check(url):
     result = _head_checks.get(url, None)
@@ -29,7 +48,7 @@ def _get_head_check(url):
 class Request(object):
     def __init__(self, sequental=False, timeout=None, wait=1):
         self._request = source_utils.randomUserAgentRequests()
-        self._cfscrape = cfscrape.CloudflareScraper()
+        self._cfscrape = cloudscraper.create_scraper(interpreter='native')
         self._sequental = sequental
         self._wait = wait
         self._should_wait = False
@@ -38,12 +57,19 @@ class Request(object):
         if timeout is not None:
             self._timeout = timeout
         self.has_timeout_exc = False
-        self.has_exc = False
+        self.exc_msg = ''
         self.skip_head = False
+
+    def _verify_response(self, response):
+      if response.status_code >= 400:
+          self.exc_msg = 'response status code %s' % response.status_code
+          if response.status_code in [429, 503]:
+            self.exc_msg = '%s (probably Cloudflare)' % self.exc_msg
+          raise Exception()
 
     def _request_core(self, request, sequental = None):
         self.has_timeout_exc = False
-        self.has_exc = False
+        self.exc_msg = ''
 
         if sequental is None:
             sequental = self._sequental
@@ -55,8 +81,10 @@ class Request(object):
             response = None
             if sequental is False:
                 response = request()
-                if response.status_code >= 500:
-                    self.has_exc = True
+
+                response_err = response
+                self._verify_response(response)
+
                 return response
 
             with self._lock:
@@ -65,20 +93,22 @@ class Request(object):
                 self._should_wait = True
                 response = request()
 
-            if response.status_code >= 500:
-                self.has_exc = True
+            response_err = response
+            self._verify_response(response)
 
             return response
         except:
-            exc = traceback.format_exc(limit=1)
-            self.has_exc = True
-            if 'ConnectTimeout' in exc or 'ReadTimeout' in exc:
-                self.has_timeout_exc = True
-                control.log('%s timed out.' % request.url, 'notice')
-            elif 'Cloudflare' in exc:
-                control.log('%s failed Cloudflare protection.' % request.url, 'notice')
-            else:
-                control.log('%s failed. - %s' % (request.url, exc), 'notice')
+            if self.exc_msg == '':
+              exc = traceback.format_exc(limit=1)
+              if 'ConnectTimeout' in exc or 'ReadTimeout' in exc:
+                  self.has_timeout_exc = True
+                  self.exc_msg = 'request timed out'
+              elif 'Cloudflare' in exc:
+                  self.exc_msg = 'failed Cloudflare protection'
+              else:
+                  self.exc_msg = 'failed - %s' % exc
+
+            control.log('%s %s' % (request.url, self.exc_msg), 'notice')
 
             return response_err
 
@@ -101,11 +131,12 @@ class Request(object):
         elif head_check is False:
             return (url, 500)
 
+        url = _get_domain(url)
         control.log('HEAD: %s' % url, 'info')
         request = lambda: self._request.head(url, timeout=2)
         request.url = url
         response = self._request_core(request, sequental=False)
-        if self._cfscrape.is_cloudflare_iuam_challenge(response, allow_empty_body=True):
+        if _is_cloudflare_iuam_challenge(response, allow_empty_body=True):
             response = lambda: None
             response.url = url
             response.status_code = 200
@@ -164,14 +195,14 @@ class Request(object):
             )
         )
 
-        control.log('GET: %s' % url, 'info')
-        request = lambda: cfscrape.CloudflareScraper().get(url, headers=headers, timeout=self._timeout, allow_redirects=allow_redirects)
+        control.log('GET: %s' % re.sub(r'\?key=(.+?)&', '?', url), 'info')
+        request = lambda: self._cfscrape.get(url, headers=headers, timeout=self._timeout, allow_redirects=allow_redirects)
         request.url = url
 
         return self._request_core(request)
 
     def post(self, url, data, headers={}):
         control.log('POST: %s' % url, 'info')
-        request = lambda: cfscrape.CloudflareScraper().post(url, data, headers=headers, timeout=self._timeout)
+        request = lambda: self._cfscrape.post(url, data, headers=headers, timeout=self._timeout)
         request.url = url
         return self._request_core(request)

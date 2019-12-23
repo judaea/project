@@ -3,10 +3,16 @@
 import time
 import requests
 import re
+import os
 
 from resources.lib.modules import control
 from resources.lib.modules import customProviders
 
+
+def update_themes():
+    if control.getSetting('skin.updateAutomatic') == 'true':
+        from resources.lib.modules.skin_manager import SkinManager
+        SkinManager().check_for_updates(silent=True)
 
 def check_for_addon_update():
 
@@ -16,7 +22,7 @@ def check_for_addon_update():
         update_timestamp = float(control.getSetting('addon.updateCheckTimeStamp'))
 
         if time.time() > (update_timestamp + (24 * (60 * 60))):
-            repo_xml = requests.get('https://raw.githubusercontent.com/judaea/judaea/master/addons.xml')
+            repo_xml = requests.get('https://raw.githubusercontent.com/judaea/judaea/master/packages/addons.xml')
             if not repo_xml.status_code == 200:
                 control.log('Could not connect to repo XML, status: %s' % repo_xml.status_code, 'error')
                 return
@@ -92,6 +98,10 @@ def wipe_install():
     import shutil
     import os
 
+#     if os.path.exists(control.dataPath):
+#         shutil.rmtree(control.dataPath)
+#     os.mkdir(control.dataPath)
+
     if os.path.exists(control.dataPathScrapers):
         shutil.rmtree(control.dataPathScrapers)
     os.mkdir(control.dataPathScrapers)
@@ -101,7 +111,7 @@ def premiumize_transfer_cleanup():
     from resources.lib.modules import premiumize
     from resources.lib.modules import database
 
-    premiumize = premiumize.PremiumizeFunctions()
+    premiumize = premiumize.Premiumize()
     fair_usage = int(premiumize.get_used_space())
     threshold = int(control.getSetting('premiumize.threshold'))
 
@@ -131,10 +141,52 @@ def account_notifications():
                                           control.lang(32051))
 
     if control.getSetting('premiumize.enabled') == 'true':
-        premium_status = premiumize.PremiumizeBase().account_info()['premium_until']
+        premium_status = premiumize.Premiumize().account_info()['premium_until']
         if time.time() > premium_status:
             control.showDialog.notification('%s: Premiumize' % control.addonName,
                                           control.lang(32052))
+
+
+def clean_deprecated_settings():
+
+    settings_config_file = os.path.join(control.ADDON_PATH, 'resources', 'settings.xml')
+    current_settings_file = os.path.join(control.SETTINGS_PATH)
+
+    valid_settings = []
+
+    with open(settings_config_file, 'r') as config_file:
+        for i in config_file.readlines():
+            if '<!--' in i:
+                continue
+
+            try:
+                valid_settings.append(re.findall(r'id="(.*?)"', i)[0])
+            except:
+                pass
+
+    filtered_settings = []
+
+    with open(current_settings_file, 'r') as settings_file:
+        current_setting_lines = settings_file.readlines()
+
+    open_line = current_setting_lines.pop(0)
+    closing_line = current_setting_lines.pop(-1)
+
+    for i in current_setting_lines:
+        if re.findall(r'id="(.*?)"', i)[0] in valid_settings:
+            filtered_settings.append(i)
+
+    if len(valid_settings) != len(filtered_settings):
+        control.log('Mismatch in valid settings, cancelling the removal of deprecated settings', 'error')
+
+    with open(current_settings_file, 'w+') as settings_file:
+        settings_file.write(open_line)
+        for i in filtered_settings:
+            settings_file.write(i)
+        settings_file.write(closing_line)
+
+    control.log('Filtered settings, removed %s deprecated settings ' %
+              (len(current_setting_lines) - len(filtered_settings)))
 
 
 def run_maintenance():
@@ -166,9 +218,20 @@ def run_maintenance():
     except:
         pass
 
+    try:
+        update_themes()
+    except:
+        pass
+
     # Check Premiumize Fair Usage for cleanup
     try:
         if control.getSetting('premiumize.enabled') == 'true' and control.getSetting('premiumize.autodelete') == 'true':
             premiumize_transfer_cleanup()
     except:
         pass
+
+    try:
+        clean_deprecated_settings()
+    except:
+        import traceback
+        traceback.print_exc()

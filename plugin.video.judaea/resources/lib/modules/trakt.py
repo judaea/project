@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import ast
 import json
 import threading
 from time import sleep
@@ -7,6 +7,7 @@ from time import sleep
 import requests
 
 from resources.lib.modules import control
+from resources.lib.modules.trakt_sync import lists
 
 
 class TraktAPI:
@@ -71,11 +72,9 @@ class TraktAPI:
         currentTime = 0
         control.copy2clip(user_code)
         control.progressDialog.create(control.addonName + ': ' + control.lang(32031),
-                                    control.lang(32024) +
-                                    control.colorString('https://trakt.tv/activate \n') +
-                                    control.lang(32025) + control.colorString(user_code) + "\n" +
-                                    control.lang(32071)
-
+                                    control.lang(32024).format(control.colorString('https://trakt.tv/activate \n')) +
+                                    control.lang(32025).format(control.colorString(user_code) + "\n" +
+                                    control.lang(32071))
                                     )
         control.progressDialog.update(100)
         while currentTime < (expiry - interval):
@@ -152,7 +151,6 @@ class TraktAPI:
     def get_request(self, url, limit=True, limitOverride=0, refreshCheck=False):
 
         if refreshCheck == False:
-            url = self.ApiUrl + url
             if limit == True:
                 if limitOverride == 0:
                     limitAmount = int(control.getSetting('item.limit'))
@@ -164,9 +162,9 @@ class TraktAPI:
                     url += '&limit=%s' % limitAmount
 
         try:
-            response = requests.get(url, headers=self.headers)
+            response = requests.get(self.ApiUrl + url, headers=self.headers)
             self.response_headers = response.headers
-            if response.status_code == 401:
+            if response.status_code in [403, 401]:
                 control.log('Trakt OAuth Failure, %s %s' % (str(response.text), response.request.headers), 'info')
                 if refreshCheck == False:
                     self.refreshToken()
@@ -177,7 +175,7 @@ class TraktAPI:
                 control.log('Trakt is having issues with their servers', 'error')
                 return None
             if response.status_code == 404:
-                control.log('Trakt returned a 404', 'error')
+                control.log('Trakt returned a 404: {}'.format(url), 'error')
                 return None
             if response.status_code == 502:
                 control.log('Trakt is currently experiencing Gateway Issues', 'error')
@@ -201,7 +199,7 @@ class TraktAPI:
         try:
             response = requests.post(url, json=postData, headers=self.headers)
             self.response_headers = response.headers
-            if response.status_code == 401:
+            if response.status_code in [403, 401]:
                 if refreshCheck == False:
                     self.refreshToken()
                     self.post_request(url, postData, limit=limit, refreshCheck=True)
@@ -220,13 +218,13 @@ class TraktAPI:
         return response.text
 
     def delete_request(self, url, refreshCheck=False):
-        if refreshCheck == False:
+        if not refreshCheck:
             url = self.ApiUrl + url
 
         try:
             response = requests.delete(url, headers=self.headers)
             if response.status_code == 401:
-                if refreshCheck == False:
+                if not refreshCheck:
                     self.refreshToken()
                     self.delete_request(url, refreshCheck=True)
                 else:
@@ -263,7 +261,11 @@ class TraktAPI:
 
     def traktManager(self, actionArgs):
 
-        trakt_object = control.get_item_information(actionArgs)['trakt_object']
+        item_information = control.get_item_information(actionArgs)
+
+        trakt_object = item_information['trakt_object']
+
+        trakt_id = item_information['ids']['trakt']
 
         actionArgs = json.loads(control.unquote(actionArgs))
 
@@ -271,42 +273,72 @@ class TraktAPI:
 
         display_type = self._get_display_name(type)
 
-        trakt_object['show_id'] = actionArgs['trakt_id']
-        
         if trakt_object is None:
             control.showDialog.notification(control.addonName, control.lang(40264))
 
-        dialog_list = [control.lang(40265), control.lang(40266), control.lang(40267), control.lang(40268), control.lang(40269),
-                       control.lang(40270), control.lang(40271), control.lang(40272), control.lang(40273) % display_type,
-                       control.lang(40274), control.lang(40275)]
+        dialog_list = []
 
-        if type in ['show', 'season']:
-            dialog_list.pop(10)
+        if item_information['info']['playcount'] > 0:
+            dialog_list.append(control.lang(40270))
+        else:
+            dialog_list.append(control.lang(40269))
+
+        if 'movies' in trakt_object:
+            from resources.lib.modules.trakt_sync.movies import TraktSyncDatabase
+            collection = [i['trakt_id'] for i in TraktSyncDatabase().get_collected_movies()]
+            if trakt_id in collection:
+                dialog_list.append(control.lang(40266) % display_type)
+            else:
+                dialog_list.append(control.lang(40265) % display_type)
+        else:
+            from resources.lib.modules.trakt_sync.shows import TraktSyncDatabase
+            collection = TraktSyncDatabase().get_collected_episodes()
+            collection = [i for i in collection if i is not None]
+            collection = list(set([i['show_id'] for i in collection]))
+            trakt_id = trakt_object['show_id'] = actionArgs['trakt_id']
+            if trakt_id in collection:
+                dialog_list.append(control.lang(40266) % display_type)
+            else:
+                dialog_list.append(control.lang(40265) % display_type)
+            pass
+
+        standard_list = [control.lang(40267), control.lang(40268),
+                         control.lang(40271), control.lang(40272), control.lang(40273) % display_type, control.lang(40274)]
+
+        for i in standard_list:
+            dialog_list.append(i)
+
+        if not type in ['show', 'season']:
+            dialog_list.append(control.lang(40275))
 
         selection = control.showDialog.select('{}: {}'.format(control.addonName, control.lang(40280)), dialog_list)
+
+        if selection == -1:
+            return
+
         thread = None
 
-        if selection == 0:
+        if dialog_list[selection] == control.lang(40265) % display_type:
             thread = threading.Thread(target=self.addToCollection, args=(trakt_object,))
-        elif selection == 1:
+        elif dialog_list[selection] == control.lang(40266) % display_type:
             thread = threading.Thread(target=self.removeFromCollection, args=(trakt_object,))
-        elif selection == 2:
+        elif dialog_list[selection] == control.lang(40267):
             thread = threading.Thread(target=self.addToWatchList, args=(trakt_object,))
-        elif selection == 3:
+        elif dialog_list[selection] == control.lang(40268):
             thread = threading.Thread(target=self.removeFromWatchlist, args=(trakt_object,))
-        elif selection == 4:
+        elif dialog_list[selection] == control.lang(40269):
             thread = threading.Thread(target=self.markWatched, args=(trakt_object, actionArgs))
-        elif selection == 5:
+        elif dialog_list[selection] == control.lang(40270):
             thread = threading.Thread(target=self.markUnwatched, args=(trakt_object, actionArgs))
-        elif selection == 6:
+        elif dialog_list[selection] == control.lang(40271):
             self.addToList(trakt_object)
-        elif selection == 7:
+        elif dialog_list[selection] == control.lang(40272):
             self.removeFromList(trakt_object)
-        elif selection == 8:
+        elif dialog_list[selection] == control.lang(40273) % display_type:
             self.hideItem(actionArgs)
-        elif selection == 9:
+        elif dialog_list[selection] == control.lang(40274):
             self.refresh_meta_information(trakt_object)
-        elif selection == 10:
+        elif dialog_list[selection] == control.lang(40275):
             self.removePlaybackHistory(trakt_object)
         else:
             return
@@ -319,11 +351,11 @@ class TraktAPI:
     def refresh_meta_information(self, trakt_object):
         from resources.lib.modules import trakt_sync
         trakt_sync.TraktSyncDatabase().clear_specific_meta(trakt_object)
-        control.execute('Container.Refresh')
+        control.container_refresh()
+        control.trigger_widget_refresh()
 
     def confirm_marked_watched(self, response, type):
         try:
-
             if response['added'][type] > 0:
                 return True
 
@@ -348,43 +380,52 @@ class TraktAPI:
 
             return False
 
-    def markWatched(self, trakt_object, actionArgs):
+    def markWatched(self, trakt_object, actionArgs, silent=False):
         response = self.json_response('sync/history', postData=trakt_object)
 
         if 'episodes' in trakt_object:
-            if not self.confirm_marked_watched(response, 'episodes'):
-                return
+            if not silent:
+                if not self.confirm_marked_watched(response, 'episodes'):
+                    return
             from resources.lib.modules.trakt_sync.shows import TraktSyncDatabase
             trakt_object = trakt_object['episodes'][0]
             TraktSyncDatabase().mark_episode_watched_by_id(trakt_object['ids']['trakt'])
+            from resources.lib.modules.trakt_sync.activities import TraktSyncDatabase
+            TraktSyncDatabase().remove_bookmark(trakt_object['ids']['trakt'])
 
         elif 'seasons' in trakt_object:
-            if not self.confirm_marked_watched(response, 'episodes'):
-                return
+            if not silent:
+                if not self.confirm_marked_watched(response, 'episodes'):
+                    return
             from resources.lib.modules.trakt_sync.shows import TraktSyncDatabase
             show_id = actionArgs['trakt_id']
             season_no = trakt_object['seasons'][0]['number']
             TraktSyncDatabase().mark_season_watched(show_id, season_no, 1)
 
         elif 'shows' in trakt_object:
-            if not self.confirm_marked_watched(response, 'episodes'):
-                return
+            if not silent:
+                if not self.confirm_marked_watched(response, 'episodes'):
+                    return
             from resources.lib.modules.trakt_sync.shows import TraktSyncDatabase
             trakt_object = trakt_object['shows'][0]
             TraktSyncDatabase().mark_show_watched(trakt_object['ids']['trakt'], 1)
 
         elif 'movies' in trakt_object:
-            if not self.confirm_marked_watched(response, 'movies'):
-                return
+            if not silent:
+                if not self.confirm_marked_watched(response, 'movies'):
+                    return
             from resources.lib.modules.trakt_sync.movies import TraktSyncDatabase
             trakt_object = trakt_object['movies'][0]
             TraktSyncDatabase().mark_movie_watched(trakt_object['ids']['trakt'])
+            from resources.lib.modules.trakt_sync.activities import TraktSyncDatabase
+            TraktSyncDatabase().remove_bookmark(trakt_object['ids']['trakt'])
 
-        control.showDialog.notification('{}: {}'.format(control.addonName, control.lang(40280)), control.lang(40281))
-        control.trigger_widget_refresh()
+        control.showDialog.notification('{}: {}'.format(control.addonName, control.lang(40280)), control.lang(40282))
+        if not silent:
+            control.container_refresh()
+            control.trigger_widget_refresh()
 
     def markUnwatched(self, trakt_object, actionArgs):
-
         response = self.json_response('sync/history/remove', postData=trakt_object)
 
         if 'episodes' in trakt_object:
@@ -393,9 +434,10 @@ class TraktAPI:
             from resources.lib.modules.trakt_sync.shows import TraktSyncDatabase
             trakt_object = trakt_object['episodes'][0]
             TraktSyncDatabase().mark_episode_unwatched_by_id(trakt_object['ids']['trakt'])
+            from resources.lib.modules.trakt_sync.activities import TraktSyncDatabase
+            TraktSyncDatabase().remove_bookmark(trakt_object['ids']['trakt'])
 
         elif 'seasons' in trakt_object:
-
             from resources.lib.modules.trakt_sync.shows import TraktSyncDatabase
             if not self.confirm_marked_unwatched(response, 'episodes'):
                 return
@@ -416,63 +458,57 @@ class TraktAPI:
                 return
             trakt_object = trakt_object['movies'][0]
             TraktSyncDatabase().mark_movie_unwatched(trakt_object['ids']['trakt'])
+            from resources.lib.modules.trakt_sync.activities import TraktSyncDatabase
+            TraktSyncDatabase().remove_bookmark(trakt_object['ids']['trakt'])
 
         control.showDialog.notification('{}: {}'.format(control.addonName, control.lang(40280)), control.lang(40283))
+        control.container_refresh()
         control.trigger_widget_refresh()
 
     def addToCollection(self, trakt_object):
-
-        self.post_request('sync/collection', postData=trakt_object)
-
-        if 'seasons' in trakt_object:
-            from resources.lib.modules.trakt_sync.shows import TraktSyncDatabase
-            trakt_object = trakt_object['seasons'][0]
-            TraktSyncDatabase().mark_season_collected(trakt_object['ids']['trakt'], trakt_object['number'], 1)
-        if 'shows' in trakt_object:
-            from resources.lib.modules.trakt_sync.shows import TraktSyncDatabase
-            trakt_object = trakt_object['shows'][0]
-            TraktSyncDatabase().mark_show_collected(trakt_object['ids']['trakt'], 1)
-        if 'episodes' in trakt_object:
-            from resources.lib.modules.trakt_sync.shows import TraktSyncDatabase
-            trakt_object = trakt_object['episodes'][0]
-            TraktSyncDatabase().mark_episode_collected(trakt_object['ids']['trakt'], trakt_object['season'],
-                                                       trakt_object['number'])
         if 'movies' in trakt_object:
+            self.post_request('sync/collection', postData=trakt_object)
             from resources.lib.modules.trakt_sync.movies import TraktSyncDatabase
             trakt_object = trakt_object['movies'][0]
             TraktSyncDatabase().mark_movie_collected(trakt_object['ids']['trakt'])
+        else:
+            trakt_object = {'shows': [{'ids': {'trakt': trakt_object['show_id']}}]}
+            self.post_request('sync/collection', postData=trakt_object)
+            from resources.lib.modules.trakt_sync.activities import TraktSyncDatabase
+            TraktSyncDatabase()._sync_collection_shows()
 
+        control.container_refresh()
+        control.trigger_widget_refresh()
         control.showDialog.notification('{}: {}'.format(control.addonName, control.lang(40280)), control.lang(40284))
 
     def removeFromCollection(self, trakt_object):
-        self.post_request('sync/collection/remove', postData=trakt_object)
-
-        if 'seasons' in trakt_object:
-            from resources.lib.modules.trakt_sync.shows import TraktSyncDatabase
-            trakt_object = trakt_object['seasons'][0]
-            TraktSyncDatabase().mark_season_collected(trakt_object['ids']['trakt'], trakt_object['number'], 0)
-        if 'shows' in trakt_object:
-            from resources.lib.modules.trakt_sync.shows import TraktSyncDatabase
-            trakt_object = trakt_object['shows'][0]
-            TraktSyncDatabase().mark_show_collected(trakt_object['ids']['trakt'], 0)
-        if 'episodes' in trakt_object:
-            from resources.lib.modules.trakt_sync.shows import TraktSyncDatabase
-            trakt_object = trakt_object['episodes'][0]
-            TraktSyncDatabase().mark_episode_uncollected(trakt_object['ids']['trakt'], trakt_object['season'],
-                                                         trakt_object['number'])
         if 'movies' in trakt_object:
+            self.post_request('sync/collection/remove', postData=trakt_object)
             from resources.lib.modules.trakt_sync.movies import TraktSyncDatabase
             trakt_object = trakt_object['movies'][0]
             TraktSyncDatabase().mark_movie_uncollected(trakt_object['ids']['trakt'])
+        else:
+            show_id = trakt_object['show_id']
+            trakt_object = {'shows': [{'ids': {'trakt': show_id}}]}
 
+            self.post_request('sync/collection/remove', postData=trakt_object)
+            from resources.lib.modules.trakt_sync.shows import TraktSyncDatabase
+            TraktSyncDatabase().mark_show_collected(show_id, 0)
+
+        control.container_refresh()
+        control.trigger_widget_refresh()
         control.showDialog.notification('{}: {}'.format(control.addonName, control.lang(40280)), control.lang(40285))
 
     def addToWatchList(self, trakt_object):
         self.post_request('sync/watchlist', postData=trakt_object)
+        control.container_refresh()
+        control.trigger_widget_refresh()
         control.showDialog.notification('{}: {}'.format(control.addonName, control.lang(40280)), control.lang(40286))
 
     def removeFromWatchlist(self, trakt_object):
         self.post_request('sync/watchlist/remove', postData=trakt_object)
+        control.container_refresh()
+        control.trigger_widget_refresh()
         control.showDialog.notification('{}: {}'.format(control.addonName, control.lang(40280)), control.lang(40287))
 
     def addToList(self, trakt_object):
@@ -481,6 +517,8 @@ class TraktAPI:
                                             [i['name'] for i in lists])
         selection = lists[selection]
         self.json_response('users/me/lists/%s/items' % selection['ids']['trakt'], postData=trakt_object)
+        control.container_refresh()
+        control.trigger_widget_refresh()
         control.showDialog.notification('{}: {}'.format(control.addonName, control.lang(40280)),
                                       control.lang(40288) % selection['name'])
 
@@ -490,6 +528,8 @@ class TraktAPI:
                                             [i['name'] for i in lists])
         selection = lists[selection]
         self.json_response('users/me/lists/%s/items/remove' % selection['ids']['trakt'], postData=trakt_object)
+        control.container_refresh()
+        control.trigger_widget_refresh()
         control.showDialog.notification('{}: {}'.format(control.addonName, control.lang(40280)),
                                       control.lang(40289) % selection['name'])
 
@@ -515,6 +555,8 @@ class TraktAPI:
             trakt_object = trakt_object['shows'][0]
             TraktSyncDatabase().add_hidden_item(trakt_object['ids']['trakt'], 'show', section)
 
+        control.container_refresh()
+        control.trigger_widget_refresh()
         control.showDialog.notification(control.addonName, control.lang(40294) % sections_display[selection])
 
     def removePlaybackHistory(self, trakt_object):
@@ -533,6 +575,11 @@ class TraktAPI:
         for i in progress:
             self.delete_request('sync/playback/%s' % i['id'])
 
+        from resources.lib.modules.trakt_sync.activities import TraktSyncDatabase
+        TraktSyncDatabase().remove_bookmark(trakt_object[multi_type][0]['ids']['trakt'])
+
+        control.container_refresh()
+        control.trigger_widget_refresh()
         control.showDialog.notification(control.addonName, control.lang(40295))
 
     def get_username(self):
@@ -544,33 +591,25 @@ class TraktAPI:
         return lists
 
     def myTraktLists(self, media_type):
-
-        lists = self.getLists()
-
-        try:
-            liked_lists = [i for i in self.json_response('users/likes/lists', limit=True, limitOverride=500)]
-            liked_lists = [i['list'] for i in liked_lists]
-            lists += liked_lists
-
-        except:
-
-            import traceback
-            traceback.print_exc()
-            pass
-
-        for user_list in lists:
-            arguments = {'trakt_id': user_list['ids']['slug'],
-                         'username': user_list['user']['ids']['slug'],
-                         'type': media_type,
+        lists_database = lists.TraktSyncDatabase()
+        for user_list in lists_database.get_lists(self._remove_pluralization(media_type), 'myLists'):
+            arguments = {'trakt_id': user_list['trakt_id'],
+                         'username': user_list['username'],
+                         'type': user_list['media_type'],
                          'sort_how': user_list['sort_how'],
-                         'sort_by': user_list['sort_by']
-                         }
+                         'sort_by': user_list['sort_by']}
 
-            control.addDirectoryItem(user_list['name'],
+            control.addDirectoryItem('{}'.format(user_list['name'].encode('utf-8')),
                                    'traktList&page=1&actionArgs=%s' % control.quote(json.dumps(arguments)))
 
         control.closeDirectory('addons')
-        return
+
+    @staticmethod
+    def _remove_pluralization(media_type):
+        if media_type == 'shows':
+            return 'show'
+        if media_type == 'movies':
+            return 'movie'
 
     def sort_list(self, sort_by, sort_how, list_items, media_type):
         supported_sorts = ['added', 'rank', 'title', 'released', 'runtime', 'popularity', 'votes', 'random']
@@ -609,38 +648,32 @@ class TraktAPI:
         return list_items
 
     def getListItems(self, arguments, page):
-
+        lists_database = lists.TraktSyncDatabase()
+        paginate_lists = (control.getSetting('general.paginatetraktlists') == 'true')
         arguments = json.loads(control.unquote(arguments))
         media_type = arguments['type']
-        username = control.quote_plus(arguments['username'])
-        url = 'users/%s/lists/%s/items/%s?extended=full' % (username, arguments['trakt_id'], media_type)
-        list_items = self.json_response(url, None, False)
+        list_items = ast.literal_eval(lists_database.get_list(arguments['trakt_id'], media_type)['kodi_meta'])
+        max_items = len(list_items)
 
-        if list_items is None or len(list_items) == 0:
-            return
+        if paginate_lists:
+            list_items = control.paginate_list(list_items, int(page), int(control.getSetting('item.limit')))
 
-        if media_type == 'movies':
-            media_type = 'movie'
+        if media_type in ['show', 'shows']:
+            from resources.lib.indexers import tvshows
+            tvshows.Menus().showListBuilder(list_items)
 
-        if media_type == 'shows':
-            media_type = 'show'
-
-        list_items = self.sort_list(arguments['sort_by'], arguments['sort_how'], list_items, media_type)
-
-        if media_type == 'show':
-            list_items = [i['show'] for i in list_items if i['type'] == 'show' and i is not None]
-            from resources.lib.indexers import tvshowMenus
-            tvshowMenus.Menus().showListBuilder(list_items)
-
-        if media_type == 'movie':
-            list_items = [i['movie'] for i in list_items if i['type'] == 'movie' and i is not None]
-            from resources.lib.indexers import movieMenus
-            movieMenus.Menus().commonListBuilder(list_items)
+        if media_type in ['movie', 'movies']:
+            from resources.lib.indexers import movies
+            movies.Menus().commonListBuilder(list_items)
 
         content_type = 'tvshows'
-
-        if media_type == 'movie':
+        if media_type in ['movie', 'movies']:
             content_type = 'movies'
 
+        if paginate_lists:
+            limit = int(control.getSetting('item.limit'))
+            if int(page) * limit < max_items:
+                control.addDirectoryItem(control.lang(32019), 'traktList&page=%s&actionArgs=%s' %
+                                       (int(page) + 1, control.quote(json.dumps(arguments))))
         control.closeDirectory(content_type)
         return

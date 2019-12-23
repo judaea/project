@@ -16,7 +16,7 @@ class TMDBAPI:
     def __init__(self):
         self.apiKey = control.getSetting('tmdb.apikey')
         if self.apiKey == '':
-            self.apiKey = "9f3ca569aa46b6fb13931ec96ab8ae7e"
+            self.apiKey = "35cc7265458319ec3711636a91149442"
         self.baseUrl = "https://api.themoviedb.org/3/"
         self.posterPath = "https://image.tmdb.org/t/p/w500"
         self.thumbPath = "https://image.tmdb.org/t/p/w500"
@@ -237,6 +237,8 @@ class TMDBAPI:
 
             item['info']['mediatype'] = 'season'
             item['ids'] = seasonObject['ids']
+            for id, value in showArgs['ids'].items():
+                item['ids']['tvshow.{}'.format(id)] = value
             item['trakt_object'] = {}
             item['trakt_object']['seasons'] = [seasonObject]
             item['art'] = self.art
@@ -275,12 +277,12 @@ class TMDBAPI:
             self.art.update(self.fanartart)
             try:
                 if self.movies_landscape:
-                    self.art['landscape'] = self.backgroundPath + str(details.get('backdrop_path', ''))
+                    self.art['landscape'] = self.art.get('landscape', self.backgroundPath + str(details.get('backdrop_path', '')))
             except:
                 pass
             try:
                 self.art['poster'] = self.backgroundPath + str(details.get('poster_path', ''))
-                self.art['thumb'] = self.art['poster']
+                self.art['thumb'] = self.art.get('thumb', self.art.get('poster', ''))
             except:
                 pass
             try:
@@ -865,6 +867,8 @@ class TMDBAPI:
                 pass
 
             item['ids'] = traktInfo['ids']
+            for id, value in showArgs['showInfo']['ids'].items():
+                item['ids']['tvshow.{}'.format(id)] = value
             item['info'] = info
             item['art'] = art
             item['showInfo'] = showArgs['showInfo']

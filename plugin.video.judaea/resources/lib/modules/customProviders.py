@@ -4,13 +4,15 @@
 # If you update this init file you will need to update this base64 as well to ensure it is deployed on the users machine
 # If you change the init file without updating this it will be overwritten with the old one!!
 
+
 init_contents = 'aW1wb3J0IG9zCmZyb20gcmVzb3VyY2VzLmxpYi5tb2R1bGVzIGltcG9ydCBjb250cm9sCmZyb20gcmVzb3VyY2VzLmxpYi5tb2R1bGVzIGltcG9ydCBkYXRhYmFzZQoKZGF0YV9wYXRoID0gb3MucGF0aC5qb2luKGNvbnRyb2wuZGF0YVBhdGhTY3JhcGVycywgJ3Byb3ZpZGVycycpCmhvc3Rlcl9zb3VyY2VzID0gW10KdG9ycmVudF9zb3VyY2VzID0gW10KCmRlZiBnZXRfcmVsZXZhbnQobGFuZ3VhZ2UpOgogICAgcHJvdmlkZXJfcGFja2FnZXMgPSBbbmFtZSBmb3IgbmFtZSBpbiBvcy5saXN0ZGlyKGRhdGFfcGF0aCkgaWYgb3MucGF0aC5pc2Rpcihvcy5wYXRoLmpvaW4oZGF0YV9wYXRoLCBuYW1lKSldCiAgICAjIEdldCByZWxldmFudCBhbmQgZW5hYmxlZCBwcm92aWRlciBlbnRyaWVzIGZyb20gdGhlIGRhdGFiYXNlCiAgICBwcm92aWRlcl9zdGF0dXMgPSBbaSBmb3IgaSBpbiBkYXRhYmFzZS5nZXRfcHJvdmlkZXJzKCkgaWYgaVsnY291bnRyeSddID09IGxhbmd1YWdlXQogICAgcHJvdmlkZXJfc3RhdHVzID0gW2kgZm9yIGkgaW4gcHJvdmlkZXJfc3RhdHVzIGlmIGlbJ3N0YXR1cyddID09ICdlbmFibGVkJ10KCiAgICBmb3IgcGFja2FnZSBpbiBwcm92aWRlcl9wYWNrYWdlczoKICAgICAgICB0cnk6CiAgICAgICAgICAgIHByb3ZpZGVyc19wYXRoID0gJ3Byb3ZpZGVycy4lcy4lcycgJSAocGFja2FnZSwgbGFuZ3VhZ2UpCiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIHByb3ZpZGVyX2xpc3QgPSBfX2ltcG9ydF9fKHByb3ZpZGVyc19wYXRoLCBmcm9tbGlzdD1bJyddKQogICAgICAgICAgICBleGNlcHQ6CiAgICAgICAgICAgICAgICBjb250aW51ZQogICAgICAgICAgICB0cnk6CiAgICAgICAgICAgICAgICBmb3IgaSBpbiBwcm92aWRlcl9saXN0LmdldF9ob3N0ZXJzKCk6CiAgICAgICAgICAgICAgICAgICAgZm9yIHN0YXR1cyBpbiBwcm92aWRlcl9zdGF0dXM6CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIGkgPT0gc3RhdHVzWydwcm92aWRlcl9uYW1lJ106CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiBwYWNrYWdlID09IHN0YXR1c1sncGFja2FnZSddOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICMgQWRkIGltcG9ydCBwYXRoIGFuZCBuYW1lIHRvIGhvc3Rlcl9wcm92aWRlcnMKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBob3N0ZXJfc291cmNlcy5hcHBlbmQoKCclcy5ob3N0ZXJzJyAlIHByb3ZpZGVyc19wYXRoLCBpLCBwYWNrYWdlKSkKICAgICAgICAgICAgZXhjZXB0OgogICAgICAgICAgICAgICAgcGFzcwogICAgICAgICAgICAKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgZm9yIGkgaW4gcHJvdmlkZXJfbGlzdC5nZXRfdG9ycmVudCgpOgogICAgICAgICAgICAgICAgICAgIGZvciBzdGF0dXMgaW4gcHJvdmlkZXJfc3RhdHVzOgogICAgICAgICAgICAgICAgICAgICAgICBpZiBpID09IHN0YXR1c1sncHJvdmlkZXJfbmFtZSddOgogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgcGFja2FnZSA9PSBzdGF0dXNbJ3BhY2thZ2UnXToKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAjIEFkZCBpbXBvcnQgcGF0aCBhbmQgbmFtZSB0byB0b3JyZW50X3Byb3ZpZGVycwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRvcnJlbnRfc291cmNlcy5hcHBlbmQoKCclcy50b3JyZW50JyAlIHByb3ZpZGVyc19wYXRoLCBpLCBwYWNrYWdlKSkKICAgICAgICAgICAgZXhjZXB0OgogICAgICAgICAgICAgICAgcGFzcwogICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgaW1wb3J0IHRyYWNlYmFjawogICAgICAgICAgICB0cmFjZWJhY2sucHJpbnRfZXhjKCkKICAgICAgICAgICAgY29udGludWUKCiAgICByZXR1cm4gKHRvcnJlbnRfc291cmNlcywgaG9zdGVyX3NvdXJjZXMpCgpkZWYgZ2V0X2FsbChsYW5ndWFnZSk6CiAgICBwcm92aWRlcl9wYWNrYWdlcyA9IFtuYW1lIGZvciBuYW1lIGluIG9zLmxpc3RkaXIoZGF0YV9wYXRoKSBpZiBvcy5wYXRoLmlzZGlyKG9zLnBhdGguam9pbihkYXRhX3BhdGgsIG5hbWUpKV0KICAgIGZvciBwYWNrYWdlIGluIHByb3ZpZGVyX3BhY2thZ2VzOgogICAgICAgIHRyeToKICAgICAgICAgICAgcHJvdmlkZXJzX3BhdGggPSAncHJvdmlkZXJzLiVzLiVzJyAlIChwYWNrYWdlLCBsYW5ndWFnZSkKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgcHJvdmlkZXJfbGlzdCA9IF9faW1wb3J0X18ocHJvdmlkZXJzX3BhdGgsIGZyb21saXN0PVsnJ10pCiAgICAgICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgICAgIGNvbnRpbnVlCiAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgIGZvciBpIGluIHByb3ZpZGVyX2xpc3QuZ2V0X2hvc3RlcnMoKToKICAgICAgICAgICAgICAgICAgICBob3N0ZXJfc291cmNlcy5hcHBlbmQoKCclcy5ob3N0ZXJzJyAlIHByb3ZpZGVyc19wYXRoLCBpLCBwYWNrYWdlKSkKICAgICAgICAgICAgZXhjZXB0OgogICAgICAgICAgICAgICAgcGFzcwoKICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgZm9yIGkgaW4gcHJvdmlkZXJfbGlzdC5nZXRfdG9ycmVudCgpOgogICAgICAgICAgICAgICAgICAgIHRvcnJlbnRfc291cmNlcy5hcHBlbmQoKCclcy50b3JyZW50JyAlIHByb3ZpZGVyc19wYXRoLCBpLCBwYWNrYWdlKSkKICAgICAgICAgICAgZXhjZXB0OgogICAgICAgICAgICAgICAgcGFzcwoKICAgICAgICBleGNlcHQ6CiAgICAgICAgICAgIGltcG9ydCB0cmFjZWJhY2sKICAgICAgICAgICAgdHJhY2ViYWNrLnByaW50X2V4YygpCiAgICAgICAgICAgIGNvbnRpbnVlCgogICAgcmV0dXJuICh0b3JyZW50X3NvdXJjZXMsIGhvc3Rlcl9zb3VyY2VzKQ=='
 
-import os
-import sys
-import json
-import shutil
 import base64
+import json
+import os
+import shutil
+import sys
+
 import requests
 import xbmc
 
@@ -31,15 +33,29 @@ class providers:
         self.language = 'en'
         self.known_packages = database.get_provider_packages()
         self.known_providers = database.get_providers()
-        self.update_known_providers()
 
         self.providers_path = os.path.join(control.dataPathScrapers, 'providers')
         self.modules_path = os.path.join(control.dataPathScrapers, 'providerModules')
-#        self.meta_path = os.path.join(control.dataPathScrapers, 'providerMeta')
+
+        self.update_known_providers()
+        self.update_known_packages()
 
     def poll_database(self):
         self.known_providers = database.get_providers()
         self.known_packages = database.get_provider_packages()
+
+    def update_known_packages(self):
+        for root, _, filenames in os.walk(self.meta_path):
+            for filename in filenames:
+                if filename.endswith('.json'):
+                    with open(os.path.join(root, filename)) as file:
+                        try:
+                            meta = json.loads(file.read())
+                            database.add_provider_package(meta['name'], meta['author'], meta['remote_meta'],
+                                                          meta['version'])
+                        except:
+                            pass
+        self.poll_database()
 
     def update_known_providers(self):
         provider_types = ['torrent', 'hosters']
@@ -51,12 +67,28 @@ class providers:
                          'hosters': all_providers[1]}
 
         for provider_type in provider_types:
-
             for provider in all_providers[provider_type]:
-                database.add_provider(provider[1], provider[2], 'enabled', self.language,
-                                      provider_type)
+                if not self._provider_exists(provider[1], provider[2]):
+                    database.add_provider(provider[1], provider[2], 'enabled', self.language,
+                                          provider_type)
+
+        for known_provider in self.known_providers:
+            provider_exists = False
+            for provider in all_providers[known_provider['provider_type']]:
+                if known_provider['provider_name'] == provider[1] and known_provider['package'] == provider[2]:
+                    provider_exists = True
+                    break
+
+            if not provider_exists:
+                database.remove_individual_provider(known_provider['provider_name'], known_provider['package'])
 
         self.poll_database()
+
+    def _provider_exists(self, provider_name, package):
+        for provider in self.known_providers:
+            if provider['provider_name'] == provider_name and provider['package'] == package:
+                return True
+        return False
 
     def flip_provider_status(self, package_name, provider_name, status_overide=None):
 

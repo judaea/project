@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import os
 import xbmc
 
 from resources.lib.modules import maintenance
@@ -8,16 +7,22 @@ from resources.lib.modules import control
 from resources.lib.modules.trakt_sync.activities import TraktSyncDatabase
 
 control.log('##################  STARTING SERVICE  ######################')
+monitor = xbmc.Monitor()
 
 control.setSetting('general.tempSilent', 'false')
-control.log('Checking Common API Tokens for refresh')
+
+control.log('Performing initial background maintenance...')
+
 if control.getSetting('general.checkAddonUpdates') == 'true':
     maintenance.check_for_addon_update()
-maintenance.run_maintenance()
-control.log('Initial API Checks have completed succesfully')
-monitor = xbmc.Monitor()
-control.log('#############  SERVICE ENTERED KEEP ALIVE  #################')
+
 TraktSyncDatabase().sync_activities()
+
+maintenance.run_maintenance()
+
+control.log('Initial maintenance cycle completed')
+
+control.log('#############  SERVICE ENTERED KEEP ALIVE  #################')
 
 while not monitor.abortRequested():
     try:

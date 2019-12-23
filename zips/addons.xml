@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="context.judaea" version="1.0.0" name="Judaea - Global Context Menu Items" provider-name="Judaea">
+<addon id="context.judaea" version="1.0.1" name="Judaea - Global Context Menu Items" provider-name="Judaea">
 	<requires>
 		<import addon="xbmc.python" version="2.23.0" />
 	</requires>
@@ -55,12 +55,46 @@
 		<source></source>
 		<disclaimer lang="en"></disclaimer>
 		<assets>
-			<icon>icon.png</icon>
+			<icon>icon.png.png</icon>
 			<fanart>fanart.png</fanart>
 		</assets>
 		<news>
-Version 1.0.0
-Initial version fork of Seren - Global Context Menu Items
+Changelog 1.0.4:
+Remove plugin.video.judaea Dependency
+Added Quick Resume option
+Added Play From Random Episode option
+
+Changelog 1.0.3:
+Updated artwork to match Judaea
+
+Changelog 1.0.2:
+Fixed Re-scrape item not working on smartplay items
+Fixed Source Select not working on smartplay items
+Fixed shuffle play for episode items
+
+Changelog 1.0.1:
+Trakt Manager now supports new Judaea URL format
+
+Changelog 1.0.0:
+Support for Judaea 1.0.0
+
+Changelog 0.8:
+Fixed missing season number
+
+Changelog 0.7
+Updated Trakt Manager to support Seasons
+
+Changelog Version 0.5:
+Fixed Source Select (Changed built-in function to PlayMedia)
+
+Changelog Version 0.4:
+Trakt Manager now available for season objects
+
+Changelog Version 0.3:
+Fixed Shuffle play on continue watching items
+Added Browse Show for TV show items
+Removed Torrent File Select - Moved to internal judaea Menus only
+Added Trakt Manager
 		</news>
 	</extension>
 </addon>
@@ -343,43 +377,7 @@ Initial version fork of Seren - Global Context Menu Items
 	</extension>
 </addon>
 
-<addon id="plugin.video.judaea" version="1.0.2" name="Judaea" provider-name="Judaea">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0" />
-		<import addon="script.module.requests" version="2.19.1" />
-		<import addon="script.module.beautifulsoup4" version="4.5.3"/>
-		<import addon="script.module.metahandler" version="1.0.0" />
-		<import addon="plugin.video.youtube" version="6.2.0"/>
-		<import addon="script.module.addon.signals" version="0.0.1"/>
-		<import addon="script.module.dateutil" version="2.7.3"/>
-        <import addon="context.judaea" version="1.0.0"/>
-        <import addon="service.upnext" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="judaea.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.service" library="service.py" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Judaea</summary>
-		<description lang="en">[B]Movies, TV Shows, Trakt Support. Up Next Random Shuffle Auto Play TV Show Integration.[/B][CR][CR]This addon does not form part of the Kodi Media Center. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR][CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<forum></forum>
-		<website></website>
-		<source></source>
-		<disclaimer lang="en">The author of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.png</fanart>
-		</assets>
-		<news>
-- Fix Local Torrent Clear Cache
-- RealDebrid or Premiumize Subscription Required
-		</news>
-	</extension>
-</addon>
-
-<addon id="plugin.video.judaeaTEST" version="1.0.3" name=" Judaea TEST" provider-name="Judaea">
+<addon id="plugin.video.judaea" version="1.0.3" name=" Judaea" provider-name="Judaea">
 	<requires>
 		<import addon="xbmc.python" version="2.25.0" />
 		<import addon="script.module.requests" version="2.19.1" />
