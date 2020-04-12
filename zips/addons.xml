@@ -132,47 +132,43 @@ Added Trakt Manager
 </extension>
 </addon>
 
-<addon id="plugin.video.david" version="1.0.7" name=" David" provider-name="HTMC">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0" />
-		<import addon="plugin.video.youtube" version="6.4.0" />
-		<import addon="script.extendedinfo" version="5.6.0" />
-		<import addon="script.htmc.artwork" version="1.0.1" />
-		<import addon="script.htmc.metadata" version="1.0.6" />
-		<import addon="script.module.resolveurl" />
-		<import addon="script.module.metahandler" version="2.9.0" />
-		<import addon="script.module.openscrapers" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="david.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">David</summary>
-		<description lang="en">David with OpenScrapers and Library Integration, Movies, TV Shows, Movie Collections - Boxsets, Live TV, Radio and TRAKT Support! Kindly note the David addon is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
-		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
-		<platform>all</platform>
-		<website></website>
-		<source></source>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-		<news>- RealDebrid Recommended
-- Fix Episodes TVDb
-- Fix Trakt Progress TVDb
-- Fix TVDb
-- Added Radio
-- Added Kids TV
-- Added Documentaries
-- Fixed Movie Certifications
-- Fixed TV Show Certifications
-- Added IPTV
-- Added Music
-- Removed 24/7 TV Shows to stand alone Addon
-- Added OpenScrapers Support
-</news>
-	</extension>
+<addon id="plugin.video.david" version="1.0.8" name="David" provider-name="Judaea">
+    <requires>
+        <import addon="plugin.video.youtube" version="6.4.0" />
+        <import addon="script.extendedinfo" version="5.6.0" />
+        <import addon="script.module.requests" version="2.3.0"/>
+        <import addon="script.module.beautifulsoup4" version="0.6.0"/>
+        <import addon="script.david.artwork" version="1.0.0"/>
+        <import addon="script.module.davidmeta" version="1.0.0" />
+        <import addon="script.module.openscrapers"/>
+        <import addon="script.module.resolveurl" version="1.0.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="resources/lib/david.py">
+        <provides>video audio</provides>
+    </extension>
+    <extension point="xbmc.service" library="resources/lib/services.py" start="startup"/>
+    <extension point="xbmc.python.module" library="resources/lib/"/>
+    <extension point="xbmc.addon.metadata">
+        <summary>
+            Specializes in Furk and Easynews.
+        </summary>
+        <description>
+Specializes in Furk and Easynews(web) account access.
+Also utilizes Openscrapers for those without a Furk or Easynews(web) account.
+Please Note: This add-on is NOT an Exodus fork, and as such will behave differently to an Exodus fork.
+        </description>
+        <platform>all</platform>
+        <disclaimer>
+        </disclaimer>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <news>
+INFO: For latest changes see Changelog within Tools of add-on.
+        </news>
+    </extension>
 </addon>
 
 <addon id="plugin.video.exegesis" version="1.0.0" name=" Exegesis" provider-name="Exegesis">
@@ -536,6 +532,23 @@ Added Trakt Manager
 	</extension>
 </addon>
 
+<addon id="script.david.artwork" version="1.1.9" name="David Artwork" provider-name="Judaea">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary>Themes for Addons</summary>
+        <description>Themes for Addons</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
 <addon id="script.htmc.artwork" version="1.0.4" name="HTMC Artwork" provider-name="HTMC">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
@@ -571,6 +584,28 @@ Added Trakt Manager
 		<description lang="en">Collection of modules used by ArconaiTV. Fork of muckys common</description>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
 	</extension>
+</addon>
+
+<addon id="script.module.davidmeta" version="1.1.40" name="David Meta Module" provider-name="Judaea">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Metadata for Addons</summary>
+        <description>Metadata for Addons</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+        <news>
+        </news>
+    </extension>
 </addon>
 
 <addon id="script.module.exegesis" name="Exegesis Module" version="1.0.3" provider-name="Exegesis">

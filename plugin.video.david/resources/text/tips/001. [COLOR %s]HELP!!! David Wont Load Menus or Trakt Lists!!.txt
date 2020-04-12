@@ -1,0 +1,2 @@
+[COLOR dodgerblue][B]David Wont Load Menus or Trakt Lists[/B][/COLOR]
+[I]There is a setting (off by default) that allows David to load menus/lists a bit faster. Unfortunately, some devices do not play well with this setting. If you are having a problem with David not loading menus, not loading lists, or generally not loading, turn off "Use Threading for Menu Items" (Settings-->General-->Navigation-->Use Threading for Menu Items). Hopefully this will stop David from hanging/not loading menus and lists. Good Luck![/I]

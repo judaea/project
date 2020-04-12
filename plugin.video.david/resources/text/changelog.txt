@@ -1,0 +1,7 @@
+
+[B]1.0.8[/B]
+- RealDebrid Recommended
+- OpenScrapers Support
+- Update Code
+- VPN Recommended
+- Initial Version 1.0.8 Fen Fork

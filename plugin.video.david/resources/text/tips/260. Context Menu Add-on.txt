@@ -1,0 +1,2 @@
+[COLOR dodgerblue][B]Context Menu Add-on[/B][/COLOR]
+[I]David has a supplementary context menu add-on (David Context Menu) that can be found in the Judaea repo. This allows limited David functionality to be accessed from widgets made from David menu items. Some include marking an episode watched through David, browsing to a series from a widget episode item, and accesing David's settings. It is useful if you make widgets from David's menus, and want some David functionality from the widgets context menu.[/I]
