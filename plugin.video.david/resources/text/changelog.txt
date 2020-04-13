@@ -1,4 +1,9 @@
 
+[B]1.0.9[/B]
+- Update Trakt
+- Update Artwork
+- Update Code
+
 [B]1.0.8[/B]
 - RealDebrid Recommended
 - OpenScrapers Support

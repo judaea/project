@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category label="Fanart.tv">
+        <setting type="lsep" label="Extra Art" default="" />
+        <setting id="fanart_amble1" label="Become a VIP member at fanart.tv for many benefits." type="text" default="" enable="false" />
+        <setting id="get_fanart_data" label="Include Extra Art" type="bool" default="false" />
+        <setting id="fanart_client_key" type="text" label="Fanart API Key" default="0083bfd32f3d91876dc62556b451641e" subsetting="true" visible="eq(-1,true)" />
+    </category>
+<!-- 
+    <category label="KyraDB">
+        <setting type="lsep" label="Animated Movie Posters" default="" />
+        <setting id="animated_amble1" label="CAUTION!!! Use at own risk!!!" type="text" default="" enable="false" />
+        <setting id="animated_amble2" label="Animated Posters put a HUGE load on Kodi," type="text" default="" enable="false" />
+        <setting id="animated_amble3" label="and GIFS will be STORED LOCALLY!" type="text" default="" enable="false" />
+        <setting id="animated_amble4" label="Only Use if You Have a Powerful System!" type="text" default="" enable="false" />
+        <setting id="get_gif_data" label="Download and Use Animated Movie Posters" type="bool" default="false" />
+        <setting id="kyra_api_key" type="text" label="KyraDB API Key" default="58a305946f417e02fd9d80c117aff062" subsetting="true" visible="eq(-1,true)" />
+        <setting id="kyra_user_key" type="text" label="KyraDB User Key" default="5b8a78387761619e" subsetting="true" visible="eq(-2,true)" />
+    </category>
+ -->
+    <category label="TMDb">
+        <setting type="lsep" label="TMDb" default="" />
+        <setting id="tmdb_api" type="text" label="TMDb API Key" default="6e6a68c545dffdce0e054d1060fdd6e0" />
+    </category>
+    <category label="TVDb">
+        <setting type="lsep" label="TVDb" default="" />
+        <setting id="tvdb_api" type="text" label="TVDb API Key (v2/3 only)" default="CAC2F74D9CB97149" />
+        <setting id="clear_tvdb_token" type="action" label="Clear TVDb token (when assigning new API Key)" option="close" subsetting="true" action="RunPlugin(plugin://script.david.metadata/?mode=clear_tvdb_token)" />
+        <setting id="tvdb.jwtoken" type="text" default="" visible="false" />
+        <setting id="tvdb.jwtoken_expiry" type="text" default="" visible="false" />
+    </category>
+    <category label="Language">
+        <setting type="lsep" label="Language" default="" />
+        <setting id="meta_language_display" type="action" label="Set language for Metadata" default="English" option="close" action="RunPlugin(plugin://script.david.metadata/?mode=set_language)" />
+        <setting id="meta_language" label="meta_language" type="text" default="en" visible="hidden" />
+    </category>
+    <category label="Cache">
+        <setting type="lsep" label="Clear Meta Cache" default="" />
+        <setting id="clear_meta_cache" type="action" label="Clear Cached Data" option="close" action="RunPlugin(plugin://script.david.metadata/?mode=clear_cache)" />
+    </category>
+</settings>

@@ -16,11 +16,11 @@ def build_navigate_to_page():
     params = dict(parse_qsl(sys.argv[2].replace('?','')))
     if use_alphabet:
         start_list = [chr(i) for i in range(97,123)]
-        choice_list = [xbmcgui.ListItem(i.upper(), "[I]Jump to %s Starting with '%s'[/I]" % (params.get('db_type'), i.upper()), iconImage=os.path.join(get_theme(), 'item_jump.png')) for i in start_list]
+        choice_list = [xbmcgui.ListItem(i.upper(), "[I]Jump to %s Starting with '%s'[/I]" % (params.get('db_type'), i.upper()), iconImage=os.path.join(get_theme(), 'next.png')) for i in start_list]
     else:
         start_list = [str(i) for i in range(1, int(params.get('total_pages'))+1)]
         start_list.remove(params.get('current_page'))
-        choice_list = [xbmcgui.ListItem('Page %s' % i, '[I]Jump to Page %s[/I]' % i, iconImage=os.path.join(get_theme(), 'item_jump.png')) for i in start_list]
+        choice_list = [xbmcgui.ListItem('Page %s' % i, '[I]Jump to Page %s[/I]' % i, iconImage=os.path.join(get_theme(), 'next.png')) for i in start_list]
     chosen_start = xbmcgui.Dialog().select('David', choice_list, useDetails=True)
     xbmc.sleep(500)
     if chosen_start < 0: return
@@ -405,7 +405,7 @@ def clean_settings():
     progressDialog.create('Please Wait...', '', '', '')
     progressDialog.update(0, '  ', '', '')
     kodi_version = get_kodi_version()
-    addon_ids = ['plugin.video.david', 'script.module.davidmeta', 'script.module.openscrapers']
+    addon_ids = ['plugin.video.david', 'script.david.metadata', 'script.module.openscrapers']
     addon_names = [xbmcaddon.Addon(id=i).getAddonInfo('name') for i in addon_ids]
     addon_dirs = [xbmc.translatePath(xbmcaddon.Addon(id=i).getAddonInfo('path')) for i in addon_ids]
     profile_dirs = [xbmc.translatePath(xbmcaddon.Addon(id=i).getAddonInfo('profile')) for i in addon_ids]
@@ -787,25 +787,25 @@ regions = [{'code': 'AF', 'name': 'Afghanistan'},         {'code': 'AL', 'name':
            {'code': 'VN', 'name': 'Viet Nam'},            {'code': 'YE', 'name': 'Yemen'},
            {'code': 'ZW', 'name': 'Zimbabwe'}]
 
-movie_genres = {'Action': ['28', 'genre_action.png'],              'Adventure': ['12', 'genre_adventure.png'],
-                'Animation': ['16', 'genre_animation.png'],        'Comedy': ['35', 'genre_comedy.png'],
-                'Crime': ['80', 'genre_crime.png'],                'Documentary': ['99', 'genre_documentary.png'],
-                'Drama': ['18', 'genre_drama.png'],                'Family': ['10751', 'genre_family.png'],
-                'Fantasy': ['14', 'genre_fantasy.png'],            'History': ['36', 'genre_history.png'],
-                'Horror': ['27', 'genre_horror.png'],              'Music': ['10402', 'genre_music.png'],
-                'Mystery': ['9648', 'genre_mystery.png'],          'Romance': ['10749', 'genre_romance.png'],
-                'Science Fiction': ['878', 'genre_scifi.png'],     'TV Movie': ['10770', 'genre_soap.png'],
-                'Thriller': ['53', 'genre_thriller.png'],          'War': ['10752', 'genre_war.png'], 
-                'Western': ['37', 'genre_western.png']}
+movie_genres = {'Action': ['28', 'genres.png'],              'Adventure': ['12', 'genres.png'],
+                'Animation': ['16', 'genres.png'],        'Comedy': ['35', 'genres.png'],
+                'Crime': ['80', 'genres.png'],                'Documentary': ['99', 'genres.png'],
+                'Drama': ['18', 'genres.png'],                'Family': ['10751', 'genres.png'],
+                'Fantasy': ['14', 'genres.png'],            'History': ['36', 'genres.png'],
+                'Horror': ['27', 'genres.png'],              'Music': ['10402', 'genres.png'],
+                'Mystery': ['9648', 'genres.png'],          'Romance': ['10749', 'genres.png'],
+                'Science Fiction': ['878', 'genres.png'],     'TV Movie': ['10770', 'genres.png'],
+                'Thriller': ['53', 'genres.png'],          'War': ['10752', 'genres.png'], 
+                'Western': ['37', 'genres.png']}
 
-tvshow_genres = {'Action & Adventure': ['10759', 'genre_action.png'],     'Animation': ['16', 'genre_animation.png'],
-                'Comedy': ['35', 'genre_comedy.png'],                     'Crime': ['80', 'genre_crime.png'],
-                'Documentary': ['99', 'genre_documentary.png'],           'Drama': ['18', 'genre_drama.png'],
-                'Family': ['10751', 'genre_family.png'],                  'Kids': ['10762', 'genre_kids.png'],
-                'Mystery': ['9648', 'genre_mystery.png'],                 'News':['10763', 'genre_news.png'],
-                'Reality': ['10764', 'genre_reality.png'],                'Sci-Fi & Fantasy': ['10765', 'genre_scifi.png'],
-                'Soap': ['10766', 'genre_soap.png'],                      'Talk': ['10767', 'genre_talk.png'],
-                'War & Politics': ['10768', 'genre_war.png'],             'Western': ['37', 'genre_western.png']}
+tvshow_genres = {'Action & Adventure': ['10759', 'genres.png'],     'Animation': ['16', 'genres.png'],
+                'Comedy': ['35', 'genres.png'],                     'Crime': ['80', 'genres.png'],
+                'Documentary': ['99', 'genres.png'],           'Drama': ['18', 'genres.png'],
+                'Family': ['10751', 'genres.png'],                  'Kids': ['10762', 'genres.png'],
+                'Mystery': ['9648', 'genres.png'],                 'News':['10763', 'genres.png'],
+                'Reality': ['10764', 'genres.png'],                'Sci-Fi & Fantasy': ['10765', 'genres.png'],
+                'Soap': ['10766', 'genres.png'],                      'Talk': ['10767', 'genres.png'],
+                'War & Politics': ['10768', 'genres.png'],             'Western': ['37', 'genres.png']}
 
 networks = [{"id":54,"name":"Disney Channel","logo": "https://i.imgur.com/ZCgEkp6.png"},          {"id":44,"name":"Disney XD","logo": "https://i.imgur.com/PAJJoqQ.png"},
             {"id":2,"name":"ABC","logo": "https://i.imgur.com/qePLxos.png"},                      {"id":493,"name":"BBC America","logo": "https://i.imgur.com/TUHDjfl.png"},

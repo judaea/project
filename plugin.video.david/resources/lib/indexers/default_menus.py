@@ -3,6 +3,7 @@ class DefaultMenus:
     
     def RootList(self):
         return [
+
             {
                 "iconImage": "movies.png", 
                 "mode": "navigator.main",
@@ -10,185 +11,105 @@ class DefaultMenus:
                 "name": "Movies", 
                 "foldername": "Movies",
             }, 
+
             {
-                "iconImage": "tv.png", 
+                "iconImage": "tvshows.png", 
                 "mode": "navigator.main",
                 "action": "TVShowList",
                 "name": "TV Shows", 
                 "foldername": "TV Shows",
             }, 
+
 #             {
-#                 "iconImage": "discover.png", 
-#                 "mode": "navigator.discover_main", 
-#                 "name": "Discover", 
-#                 "foldername": "Discover",
+#                 "iconImage": "trakt.png", 
+#                 "mode": "navigator.my_trakt_content", 
+#                 "name": "My Fen Menu (Trakt)", 
+#                 "foldername": "My Trakt",
 #             }, 
+
             {
                 "iconImage": "trakt.png", 
-                "mode": "navigator.my_trakt_content", 
-                "name": "My (Trakt)", 
-                "foldername": "My Trakt",
+                "mode": "navigator.main", 
+                "action": "MovieListTrakt",
+                "name": "My Movies (Trakt)", 
+                "foldername": "My Movies Trakt",
             }, 
+
             {
-                "iconImage": "next_episodes.png", 
-                "mode": "build_next_episode", 
-                "name": "Next Episodes (Trakt)", 
-                "foldername": "It Next Episodes",
+                "iconImage": "trakt.png", 
+                "mode": "navigator.main", 
+                "action": "TVShowListTrakt",
+                "name": "My TV Shows (Trakt)", 
+                "foldername": "My TV Shows Trakt",
             }, 
-#             {
-#                 "iconImage": "favourites.png", 
-#                 "mode": "navigator.favourites", 
-#                 "name": "Favourites", 
-#                 "foldername": "Favourites",
-#             }, 
-#             {
-#                 "iconImage": "library.png", 
-#                 "mode": "navigator.subscriptions", 
-#                 "name": "Subscriptions", 
-#                 "foldername": "Subscriptions Root",
-#             }, 
-#             {
-#                 "iconImage": "watched_1.png", 
-#                 "mode": "navigator.watched", 
-#                 "name": "Watched", 
-#                 "foldername": "Watched",
-#             }, 
-#             {
-#                 "iconImage": "player.png", 
-#                 "mode": "navigator.in_progress", 
-#                 "name": "In Progress", 
-#                 "foldername": "In Progress",
-#             }, 
-#             {
-#                 "iconImage": "downloads.png", 
-#                 "mode": "navigator.downloads", 
-#                 "name": "Downloads", 
-#                 "foldername": "David Downloads",
-#             }, 
-#             {
-#                 "iconImage": "library_kodi.png", 
-#                 "mode": "navigator.kodi_library", 
-#                 "name": "Kodi Library", 
-#                 "foldername": "Kodi Library Root",
-#             }, 
-#             {
-#                 "iconImage": "most__collected.png", 
-#                 "mode": "navigator.sources_folders", 
-#                 "name": "Sources Folders", 
-#                 "foldername": "Sources Folders",
-#             }, 
-#             {
-#                 "iconImage": "premium.png", 
-#                 "mode": "navigator.premium", 
-#                 "name": "Premium Services", 
-#                 "foldername": "Premium Services",
-#             }, 
+
+            {
+                "iconImage": "trakt.png", 
+                "mode": "build_next_episode", 
+                "name": "New Episodes", 
+                "foldername": "New Episodes",
+            }, 
+
             {
                 "iconImage": "search.png", 
                 "mode": "navigator.search", 
                 "name": "Search", 
                 "foldername": "Search",
             }, 
+
             {
-                "iconImage": "settings2.png", 
+                "iconImage": "tools.png", 
                 "mode": "navigator.tools", 
                 "name": "Tools", 
                 "foldername": "Tools",
-            }, 
-            {
-                "iconImage": "settings.png", 
-                "mode": "navigator.settings", 
-                "name": "Settings", 
-                "foldername": "Settings",
-            }
+            } 
+
         ]
+
 
     def MovieList(self):
         return [
-            {
-                "name": "Trending", 
-                "iconImage": "trending.png", 
-                "foldername": "Trending", 
-                "mode": "build_movie_list", 
-                "action": "trakt_movies_trending",
-            }, 
-            {
-                "name": "Popular", 
-                "iconImage": "popular.png", 
-                "foldername": "Popular", 
-                "mode": "build_movie_list", 
-                "action": "tmdb_movies_popular",
-            }, 
-            {
-                "action": "tmdb_movies_premieres", 
-                "iconImage": "fresh.png", 
-                "mode": "build_movie_list", 
-                "name": "Premieres", 
-                "foldername": "Movies Premiering",
-            }, 
-            {
-                "name": "Latest Releases", 
-                "iconImage": "dvd.png", 
-                "foldername": "Latest Releases", 
-                "mode": "build_movie_list", 
-                "action": "tmdb_movies_latest_releases",
-            }, 
-            {
-                "action": "trakt_movies_top10_boxoffice", 
-                "iconImage": "box_office.png", 
-                "mode": "build_movie_list", 
-                "name": "Top 10 Box Office", 
-                "foldername": "Movies Box Office",
-            }, 
-            {
-                "name": "Blockbusters", 
-                "iconImage": "most_voted.png", 
-                "foldername": "Blockbusters", 
-                "mode": "build_movie_list", 
-                "action": "tmdb_movies_blockbusters",
-            }, 
+
             {
                 "name": "In Theaters", 
-                "iconImage": "intheatres.png", 
+                "iconImage": "in-theaters.png", 
                 "foldername": "In Theaters", 
                 "mode": "build_movie_list", 
                 "action": "tmdb_movies_in_theaters",
             }, 
+
             {
-                "name": "Top Rated", 
-                "iconImage": "top_rated.png", 
-                "foldername": "Top Rated", 
+                "action": "tmdb_movies_premieres", 
+                "iconImage": "latest-movies.png", 
                 "mode": "build_movie_list", 
-                "action": "tmdb_movies_top_rated",
+                "name": "Premieres", 
+                "foldername": "Movies Premiering",
             }, 
+
             {
-                "name": "Up Coming", 
-                "iconImage": "lists.png", 
-                "foldername": "Up Coming", 
+                "name": "Latest Releases", 
+                "iconImage": "latest-movies.png", 
+                "foldername": "Latest Releases", 
                 "mode": "build_movie_list", 
-                "action": "tmdb_movies_upcoming",
+                "action": "tmdb_movies_latest_releases",
             }, 
+
             {
-                "name": "Anticipated", 
-                "iconImage": "most_anticipated.png", 
-                "foldername": "Anticipated", 
+                "name": "Most Popular", 
+                "iconImage": "most-popular.png", 
+                "foldername": "Most Popular", 
                 "mode": "build_movie_list", 
-                "action": "trakt_movies_anticipated",
+                "action": "tmdb_movies_popular",
             }, 
+
             {
-                "name": "Oscar Winners", 
-                "iconImage": "oscar-winners.png", 
-                "foldername": "Oscar Winners", 
+                "name": "Trending", 
+                "iconImage": "featured.png", 
+                "foldername": "Trending", 
                 "mode": "build_movie_list", 
-                "action": "imdb_movies_oscar_winners",
+                "action": "trakt_movies_trending",
             }, 
-            {
-                "name": "Mosts", 
-                "menu_type": "movie", 
-                "iconImage": "trakt.png", 
-                "foldername": "Mosts", 
-                "mode": "navigator.trakt_mosts",
-            }, 
+
             {
                 "name": "Genres", 
                 "menu_type": "movie", 
@@ -196,6 +117,63 @@ class DefaultMenus:
                 "foldername": "Genres", 
                 "mode": "navigator.genres",
             }, 
+
+            {
+                "action": "trakt_movies_top10_boxoffice", 
+                "iconImage": "box-office.png", 
+                "mode": "build_movie_list", 
+                "name": "Top 10 Box Office", 
+                "foldername": "Movies Box Office",
+            }, 
+
+            {
+                "name": "Blockbusters", 
+                "iconImage": "most-voted.png", 
+                "foldername": "Blockbusters", 
+                "mode": "build_movie_list", 
+                "action": "tmdb_movies_blockbusters",
+            }, 
+
+            {
+                "name": "Top Rated", 
+                "iconImage": "highly-rated.png", 
+                "foldername": "Top Rated", 
+                "mode": "build_movie_list", 
+                "action": "tmdb_movies_top_rated",
+            }, 
+
+            {
+                "name": "Up Coming", 
+                "iconImage": "userlists.png", 
+                "foldername": "Up Coming", 
+                "mode": "build_movie_list", 
+                "action": "tmdb_movies_upcoming",
+            }, 
+
+            {
+                "name": "Anticipated", 
+                "iconImage": "latest-movies.png", 
+                "foldername": "Anticipated", 
+                "mode": "build_movie_list", 
+                "action": "trakt_movies_anticipated",
+            }, 
+
+            {
+                "name": "Oscar Winners", 
+                "iconImage": "oscar-winners.png", 
+                "foldername": "Oscar Winners", 
+                "mode": "build_movie_list", 
+                "action": "imdb_movies_oscar_winners",
+            }, 
+
+            {
+                "name": "Mosts", 
+                "menu_type": "movie", 
+                "iconImage": "trakt.png", 
+                "foldername": "Mosts", 
+                "mode": "navigator.trakt_mosts",
+            }, 
+
             {
                 "name": "Languages", 
                 "menu_type": "movie", 
@@ -203,97 +181,71 @@ class DefaultMenus:
                 "foldername": "Movie Languages", 
                 "mode": "navigator.languages", 
             }, 
+
             {
                 "name": "Years", 
                 "menu_type": "movie", 
-                "iconImage": "calender.png", 
+                "iconImage": "years.png", 
                 "foldername": "Movie Years", 
                 "mode": "navigator.years", 
             }, 
+
             {
                 "name": "Certifications", 
                 "menu_type": "movie", 
-                "iconImage": "certifications.png", 
+                "iconImage": "certificates.png", 
                 "foldername": "Certifications", 
                 "mode": "navigator.certifications",
             }, 
+
             {
                 "name": "Because You Watched...", 
-                "iconImage": "because_you_watched.png", 
+                "iconImage": "library_update.png", 
                 "foldername": "Because You Watched", 
                 "mode": "navigator.because_you_watched", 
                 "menu_type": "movie",
             }, 
+
             {
                 "name": "Popular People", 
-                "iconImage": "genre_comedy.png", 
+                "iconImage": "people.png", 
                 "foldername": "Popular People", 
                 "mode": "build_movie_list", 
                 "action": "tmdb_popular_people",
             }, 
-            {
-                "name": "Trakt Collection", 
-                "iconImage": "traktcollection.png", 
-                "foldername": "Trakt Collection", 
-                "mode": "build_movie_list", 
-                "action": "trakt_collection",
-            }, 
-            {
-                "name": "Trakt Watchlist", 
-                "iconImage": "traktwatchlist.png", 
-                "foldername": "Trakt Watchlist", 
-                "mode": "build_movie_list", 
-                "action": "trakt_watchlist",
-            }, 
-            {
-                "name": "Trakt Recommendations", 
-                "iconImage": "traktrecommendations.png", 
-                "foldername": "Trakt Recommendations", 
-                "mode": "build_movie_list", 
-                "action": "trakt_recommendations",
-            }, 
-            {
-                "foldername": "Watched", 
-                "iconImage": "watched_1.png", 
-                "mode": "build_movie_list",  
-                "action": "watched_movies", 
-                "name": "Watched",
-            }, 
-            {
-                "foldername": "In Progress", 
-                "iconImage": "player.png", 
-                "mode": "build_movie_list",  
-                "action": "in_progress_movies", 
-                "name": "In Progress",
-            }, 
+
             {
                 "name": "Favourites", 
-                "iconImage": "favourites.png", 
+                "iconImage": "userlists.png", 
                 "foldername": "Movie Favourites", 
                 "mode": "build_movie_list", 
                 "action": "favourites_movies",
             }, 
+
             {
                 "name": "Subscriptions", 
-                "iconImage": "library.png", 
+                "iconImage": "library_update.png", 
                 "foldername": "Subscriptions", 
                 "mode": "build_movie_list", 
                 "action": "subscriptions_movies",
             }, 
+
             {
                 "name": "Kodi Library", 
-                "iconImage": "library_kodi.png", 
+                "iconImage": "library_update.png", 
                 "foldername": "Kodi Library", 
                 "mode": "build_movie_list", 
                 "action": "kodi_library_movies",
             }, 
+
             {
                 "name": "Kodi Library - Recently Added", 
-                "iconImage": "library_kodi_recently_added.png", 
+                "iconImage": "library_update.png", 
                 "foldername": "Recently Added to Kodi Library", 
                 "mode": "build_kodi_library_recently_added", 
                 "db_type": "movies",
             }, 
+
             {
                 "name": "Search", 
                 "iconImage": "search.png", 
@@ -302,12 +254,14 @@ class DefaultMenus:
                 "action": "tmdb_movies_search", 
                 "query": "NA",
             }, 
+
             {
                 "name": "People Search", 
-                "iconImage": "search_people.png", 
+                "iconImage": "people-search.png", 
                 "foldername": "People Movie Search", 
                 "mode": "people_search.search", 
             }, 
+
             {
                 "foldername": "Movie Search History", 
                 "iconImage": "search.png", 
@@ -315,71 +269,91 @@ class DefaultMenus:
                 "action": "movie",
                 "name": "Search History",
             }
+
+        ]
+
+
+    def MovieListTrakt(self):
+        return [
+
+            {
+                "name": "Trakt Collection", 
+                "iconImage": "trakt.png", 
+                "foldername": "Trakt Collection", 
+                "mode": "build_movie_list", 
+                "action": "trakt_collection",
+            }, 
+
+            {
+                "name": "Trakt Watchlist", 
+                "iconImage": "trakt.png", 
+                "foldername": "Trakt Watchlist", 
+                "mode": "build_movie_list", 
+                "action": "trakt_watchlist",
+            }, 
+
+            {
+                "name": "Trakt Recommendations", 
+                "iconImage": "trakt.png", 
+                "foldername": "Trakt Recommendations", 
+                "mode": "build_movie_list", 
+                "action": "trakt_recommendations",
+            }, 
+
+            {
+                "foldername": "Watched", 
+                "iconImage": "trakt.png", 
+                "mode": "build_movie_list",  
+                "action": "watched_movies", 
+                "name": "Watched",
+            }, 
+
+            {
+                "foldername": "In Progress", 
+                "iconImage": "trakt.png", 
+                "mode": "build_movie_list",  
+                "action": "in_progress_movies", 
+                "name": "In Progress",
+            }
+
         ]
     
+
     def TVShowList(self):
         return [
+
+            {
+                "action": "tmdb_tv_popular", 
+                "iconImage": "most-popular.png", 
+                "mode": "build_tvshow_list", 
+                "name": "Most Popular", 
+                "foldername": "TV Most Popular",
+            }, 
+
             {
                 "action": "trakt_tv_trending", 
-                "iconImage": "trending.png", 
+                "iconImage": "featured.png", 
                 "mode": "build_tvshow_list", 
                 "name": "Trending", 
                 "foldername": "TV Trending",
             }, 
-            {
-                "action": "tmdb_tv_popular", 
-                "iconImage": "popular.png", 
-                "mode": "build_tvshow_list", 
-                "name": "Popular", 
-                "foldername": "TV Popular",
-            }, 
+
             {
                 "action": "tmdb_tv_premieres", 
-                "iconImage": "fresh.png", 
+                "iconImage": "new-tvshows.png", 
                 "mode": "build_tvshow_list", 
                 "name": "Premieres", 
                 "foldername": "TV Premiering",
             }, 
+
             {
                 "action": "tmdb_tv_top_rated", 
-                "iconImage": "top_rated.png", 
+                "iconImage": "highly-rated.png", 
                 "mode": "build_tvshow_list", 
                 "name": "Top Rated", 
                 "foldername": "TV Top Rated",
             }, 
-            {
-                "action": "tmdb_tv_airing_today", 
-                "iconImage": "live.png", 
-                "mode": "build_tvshow_list", 
-                "name": "Airing Today",
-            }, 
-            {
-                "action": "tmdb_tv_on_the_air", 
-                "iconImage": "ontheair.png", 
-                "mode": "build_tvshow_list", 
-                "name": "On the Air", 
-                "foldername": "TV On the Air",
-            }, 
-            {
-                "name": "Up Coming", 
-                "iconImage": "lists.png", 
-                "foldername": "Up Coming", 
-                "mode": "build_tvshow_list", 
-                "action": "tmdb_tv_upcoming",
-            }, 
-            {
-                "action": "trakt_tv_anticipated", 
-                "iconImage": "most_anticipated.png", 
-                "mode": "build_tvshow_list", 
-                "name": "Anticipated",
-            }, 
-            {
-                "menu_type": "tvshow", 
-                "iconImage": "trakt.png", 
-                "mode": "navigator.trakt_mosts", 
-                "name": "Mosts", 
-                "foldername": "TV Trakt Mosts",
-            }, 
+
             {
                 "menu_type": "tvshow", 
                 "iconImage": "genres.png", 
@@ -387,6 +361,7 @@ class DefaultMenus:
                 "name": "Genres", 
                 "foldername": "TV Genres",
             }, 
+
             {
                 "menu_type": "tvshow", 
                 "iconImage": "networks.png", 
@@ -394,6 +369,45 @@ class DefaultMenus:
                 "name": "Networks", 
                 "foldername": "TV Networks",
             }, 
+
+            {
+                "action": "tmdb_tv_airing_today", 
+                "iconImage": "airing-today.png", 
+                "mode": "build_tvshow_list", 
+                "name": "Airing Today",
+            }, 
+
+            {
+                "action": "tmdb_tv_on_the_air", 
+                "iconImage": "airing-today.png", 
+                "mode": "build_tvshow_list", 
+                "name": "On the Air", 
+                "foldername": "TV On the Air",
+            }, 
+
+            {
+                "name": "Up Coming", 
+                "iconImage": "userlists.png", 
+                "foldername": "Up Coming", 
+                "mode": "build_tvshow_list", 
+                "action": "tmdb_tv_upcoming",
+            }, 
+
+            {
+                "action": "trakt_tv_anticipated", 
+                "iconImage": "latest-episodes.png", 
+                "mode": "build_tvshow_list", 
+                "name": "Anticipated",
+            }, 
+
+            {
+                "menu_type": "tvshow", 
+                "iconImage": "trakt.png", 
+                "mode": "navigator.trakt_mosts", 
+                "name": "Mosts", 
+                "foldername": "TV Trakt Mosts",
+            }, 
+
             {
                 "menu_type": "tvshow", 
                 "iconImage": "languages.png", 
@@ -401,109 +415,71 @@ class DefaultMenus:
                 "name": "Languages", 
                 "foldername": "TV Show Languages",
             }, 
+
             {
                 "name": "Years", 
                 "menu_type": "tvshow", 
-                "iconImage": "calender.png", 
+                "iconImage": "years.png", 
                 "foldername": "TV Show Years", 
                 "mode": "navigator.years", 
             }, 
+
             {
                 "menu_type": "tvshow", 
-                "iconImage": "certifications.png", 
+                "iconImage": "certificates.png", 
                 "mode": "navigator.certifications", 
                 "name": "Certifications", 
                 "foldername": "TV Show Certifications",
             }, 
+
             {
                 "name": "Because You Watched...", 
-                "iconImage": "because_you_watched.png", 
+                "iconImage": "library_update.png", 
                 "foldername": "Because You Watched", 
                 "mode": "navigator.because_you_watched", 
                 "menu_type": "tvshow",
             }, 
+
             {
                 "name": "Popular People", 
-                "iconImage": "genre_comedy.png", 
+                "iconImage": "people-boxsets.png", 
                 "foldername": "Popular People", 
                 "mode": "build_tvshow_list", 
                 "action": "tmdb_popular_people",
             }, 
-            {
-                "action": "trakt_collection", 
-                "iconImage": "traktcollection.png", 
-                "mode": "build_tvshow_list", 
-                "name": "Trakt Collection", 
-                "foldername": "Trakt TV Collection",
-            }, 
-            {
-                "action": "trakt_watchlist", 
-                "iconImage": "traktwatchlist.png", 
-                "mode": "build_tvshow_list", 
-                "name": "Trakt Watchlist", 
-                "foldername": "Trakt TV Watchlist",
-            }, 
-            {
-                "name": "Trakt Recommendations", 
-                "iconImage": "traktrecommendations.png", 
-                "foldername": "Trakt Recommendations", 
-                "mode": "build_tvshow_list", 
-                "action": "trakt_recommendations",
-            }, 
-            {
-                "foldername": "Watched", 
-                "iconImage": "watched_1.png", 
-                "mode": "build_tvshow_list",  
-                "action": "watched_tvshows", 
-                "name": "Watched",
-            }, 
-            {
-                "action": "in_progress_tvshows", 
-                "iconImage": "in_progress_tvshow.png", 
-                "mode": "build_tvshow_list", 
-                "name": "In Progress TV Shows", 
-                "foldername": "In Progress TV Shows",
-            }, 
-            {
-                "iconImage": "player.png", 
-                "mode": "build_in_progress_episode", 
-                "name": "In Progress Episodes", 
-                "foldername": "In Progress Episodes",
-            }, 
-            {
-                "iconImage": "next_episodes.png", 
-                "mode": "build_next_episode", 
-                "name": "Next Episodes", 
-                "foldername": "It Next Episodes",
-            }, 
+
             {
                 "action": "favourites_tvshows", 
-                "iconImage": "favourites.png", 
+                "iconImage": "userlists.png", 
                 "mode": "build_tvshow_list", 
                 "name": "Favourites", 
                 "foldername": "TV Show It Favourites",
             }, 
+
             {
                 "action": "subscriptions_tvshows", 
-                "iconImage": "library.png", 
+                "iconImage": "library_update.png", 
                 "mode": "build_tvshow_list", 
                 "name": "Subscriptions", 
                 "foldername": "Subscriptions",
             }, 
+
             {
                 "action": "kodi_library_tvshows", 
-                "iconImage": "library_kodi.png", 
+                "iconImage": "library_update.png", 
                 "mode": "build_tvshow_list", 
                 "name": "Kodi Library", 
                 "foldername": "Kodi Library",
             }, 
+
             {
                 "name": "Kodi Library - Recently Added", 
-                "iconImage": "library_kodi_recently_added.png", 
+                "iconImage": "library_update.png", 
                 "foldername": "Recently Added to Kodi Library", 
                 "mode": "build_kodi_library_recently_added", 
                 "db_type": "episodes",
             }, 
+
             {
                 "name": "Search", 
                 "iconImage": "search.png", 
@@ -512,13 +488,15 @@ class DefaultMenus:
                 "action": "tmdb_tv_search", 
                 "query": "NA",
             }, 
+
             {
                 "name": "People Search", 
-                "iconImage": "search_people.png", 
+                "iconImage": "people-search.png", 
                 "foldername": "People TV Show Search", 
                 "mode": "people_search.search", 
                 "query": "NA",
             }, 
+
             {
                 "iconImage": "search.png", 
                 "mode": "search_history", 
@@ -526,13 +504,70 @@ class DefaultMenus:
                 "name": "Search History", 
                 "foldername": "TV Show Search History",
             }
+
         ]
-    
+
+
+    def TVShowListTrakt(self):
+        return [
+
+            {
+                "action": "trakt_collection", 
+                "iconImage": "trakt.png", 
+                "mode": "build_tvshow_list", 
+                "name": "Trakt Collection", 
+                "foldername": "Trakt TV Collection",
+            }, 
+
+            {
+                "action": "trakt_watchlist", 
+                "iconImage": "trakt.png", 
+                "mode": "build_tvshow_list", 
+                "name": "Trakt Watchlist", 
+                "foldername": "Trakt TV Watchlist",
+            }, 
+
+            {
+                "name": "Trakt Recommendations", 
+                "iconImage": "trakt.png", 
+                "foldername": "Trakt Recommendations", 
+                "mode": "build_tvshow_list", 
+                "action": "trakt_recommendations",
+            }, 
+
+            {
+                "foldername": "Watched", 
+                "iconImage": "trakt.png", 
+                "mode": "build_tvshow_list",  
+                "action": "watched_tvshows", 
+                "name": "Watched",
+            }, 
+
+            {
+                "action": "in_progress_tvshows", 
+                "iconImage": "trakt.png", 
+                "mode": "build_tvshow_list", 
+                "name": "In Progress TV Shows", 
+                "foldername": "In Progress TV Shows",
+            }, 
+
+            {
+                "iconImage": "trakt.png", 
+                "mode": "build_in_progress_episode", 
+                "name": "In Progress Episodes", 
+                "foldername": "In Progress Episodes",
+            }, 
+
+            {
+                "iconImage": "trakt.png", 
+                "mode": "build_next_episode", 
+                "name": "New Episodes", 
+                "foldername": "New Episodes",
+            }
+
+        ]
+
+
     def DefaultMenuItems(self):
-        return ['RootList', 'MovieList', 'TVShowList']
-
-
-
-
-
+        return ['RootList', 'MovieList', 'MovieListTrakt', 'TVShowList', 'TVShowListTrakt']
 

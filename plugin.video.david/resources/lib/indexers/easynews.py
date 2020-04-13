@@ -16,7 +16,7 @@ __handle__ = int(sys.argv[1])
 addon_dir = xbmc.translatePath(__addon__.getAddonInfo('path'))
 dialog = xbmcgui.Dialog()
 icon_directory = get_theme()
-default_easynews_icon = os.path.join(icon_directory, 'easynews.png')
+default_easynews_icon = os.path.join(icon_directory, 'tools.png')
 fanart = os.path.join(addon_dir, 'fanart.jpg')
 
 EasyNews = EasyNewsAPI()

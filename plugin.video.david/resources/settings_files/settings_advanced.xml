@@ -8,7 +8,7 @@
         <!-- Appearance -->
         <setting id="settings_layout" type="action" label="Choose Settings Layout" default="Basic" action="RunPlugin(plugin://plugin.video.david/?mode=switch_settings)" option="close" visible="eq(-2,0)" />
         <setting id="theme_installed" type="bool" label="" default="false" visible="false" />
-        <setting id="david.theme" label="Icon Type" type="labelenum" default="Light" values="Light" visible="eq(-4,0)+eq(-1,true)" />
+        <setting id="david.theme" label="Icon Type" type="labelenum" default="Xtuary" values="Xtuary" visible="eq(-4,0)+eq(-1,true)" />
         <setting id="theme_amble" label="Download David Artwork for Icons" type="text" default="" visible="eq(-5,0)+eq(-2,false)" enable="false" />
         <setting id="unaired_episode_colour" type="action" label="Choose Unaired Episodes Highlight Color" default="red" visible="eq(-6,0)" action="RunPlugin(plugin://plugin.video.david/?mode=unaired_episode_color_choice)" />
         <setting id="show_specials" type="bool" label="Show TV Show Specials When Available" default="false" visible="eq(-7,0)" />
@@ -101,7 +101,7 @@
         <setting id="nextep.include_unwatched" label="Include Trakt Watchlist / TV Show Unwatched" type="bool" default="true" visible="eq(-5,0)" />
         <setting id="nextep.cache_to_disk" label="Cache To Disc" type="bool" default="false" visible="eq(-6,0)" />
         <!-- Appearance -->
-        <setting id="nextep.include_airdate" label="Include Airdate in Title" type="bool" default="true" visible="eq(-7,1)" />
+        <setting id="nextep.include_airdate" label="Include Airdate in Title" type="bool" default="false" visible="eq(-7,1)" />
         <setting id="nextep.airdate_format" label="Choose Airdate Format" type="enum" default="2" values="Day-Month-Year|Year-Month-Day|Month-Day-Year" subsetting="true" visible="eq(-8,1)" enable="eq(-1,true)" />
         <setting id="nextep.airdate_colour" type="action" label="Choose Airdate Color" default="magenta" visible="eq(-9,1)" enable="eq(-2,true)" action="RunPlugin(plugin://plugin.video.david/?mode=next_episode_color_choice&amp;setting=Airdate)" subsetting="true" />
         <setting id="nextep.unaired_colour" type="action" label="Choose Unaired Color" default="red" visible="eq(-10,1)" action="RunPlugin(plugin://plugin.video.david/?mode=next_episode_color_choice&amp;setting=Unaired)" />

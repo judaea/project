@@ -18,7 +18,7 @@ __resolveURL__ = xbmcaddon.Addon(id='script.module.resolveurl')
 __handle__ = int(sys.argv[1])
 window = xbmcgui.Window(10000)
 dialog = xbmcgui.Dialog()
-default_furk_icon = os.path.join(settings.get_theme(), 'furk.png')
+default_furk_icon = os.path.join(settings.get_theme(), 'tools.png')
 
 class Sources:
     def __init__(self):
@@ -53,7 +53,7 @@ class Sources:
         self.include_prerelease_results = settings.include_prerelease_results()
         self.include_uncached_results = settings.include_uncached_results()
         self.internal_scraper_order = settings.internal_scraper_order()
-        self.language = xbmcaddon.Addon(id='script.module.davidmeta').getSetting('meta_language')
+        self.language = xbmcaddon.Addon(id='script.david.metadata').getSetting('meta_language')
         self.vid_type = vid_type
         self.tmdb_id = tmdb_id
         self.season = int(season) if season else ''

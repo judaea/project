@@ -136,9 +136,9 @@ class TVShows:
                 fanart = __addon__.getAddonInfo('fanart')
                 for item in data['results']:
                     cm = []
-                    actor_poster = "http://image.tmdb.org/t/p/original%s" % item['profile_path'] if item['profile_path'] else os.path.join(icon_directory, 'genre_family.png')
+                    actor_poster = "http://image.tmdb.org/t/p/original%s" % item['profile_path'] if item['profile_path'] else os.path.join(icon_directory, 'genres.png')
                     url_params = {'mode': 'people_search.main', 'actor_id': item['id'], 'actor_name': item['name'], 'actor_image': actor_poster.replace('w185', 'h632')}
-                    cm.append(("[B]Extended Info[/B]", 'RunScript(script.extendedinfo,info=extendedactorinfo,id=%s)' % item['id']))
+                    cm.append(("Extended Info", 'RunScript(script.extendedinfo,info=extendedactorinfo,id=%s)' % item['id']))
                     url = build_url(url_params)
                     listitem = xbmcgui.ListItem(item['name'])
                     listitem.setArt({'icon': actor_poster, 'poster': actor_poster, 'thumb': actor_poster, 'fanart': fanart, 'banner': actor_poster})
@@ -160,7 +160,7 @@ class TVShows:
                 self.list = [i['id'] for i in data['results']]
             if self.total_pages and not is_widget:
                 url_params = {'mode': 'build_navigate_to_page', 'db_type': 'TV Shows', 'current_page': page_no, 'total_pages': self.total_pages, 'transfer_mode': mode, 'transfer_action': self.action, 'foldername': self.action, 'query': params.get('search_name', ''), 'actor_id': params.get('actor_id', '')}
-                self.add_dir(url_params, 'Jump To...', 'Jump To a Certain Page/Letter...', 'item_jump.png')
+                self.add_dir(url_params, 'Jump To...', 'Jump To a Certain Page/Letter...', 'next.png')
             if cache_page: cached_page(self.cache_page_string, page_no=page_no)
             if worker: self.worker()
             if self.new_page: self.add_dir(self.new_page)
@@ -199,7 +199,7 @@ class TVShows:
                 cm.append(("Mark Watched %s" % watched_title, "XBMC.RunPlugin(%s)" % build_url(watched_params)))
                 cm.append(("Mark Unwatched %s" % watched_title, "XBMC.RunPlugin(%s)" % build_url(unwatched_params)))
                 cm.append(("Options",'XBMC.RunPlugin(%s)' % build_url(playback_menu_params)))
-                if default_openinfo: cm.append(("[B]Browse...[/B]",'XBMC.Container.Update(%s)' % build_url(browse_params)))
+                if default_openinfo: cm.append(("Browse...",'XBMC.Container.Update(%s)' % build_url(browse_params)))
                 cm.append(("Add/Remove", "XBMC.RunPlugin(%s)" % build_url(add_remove_params)))
                 cm.append(("Similar/Recommended", "XBMC.RunPlugin(%s)" % build_url(sim_recom_params)))
                 if self.action in ('tmdb_tv_similar', 'tmdb_tv_recommendations'):
@@ -209,7 +209,7 @@ class TVShows:
                                     'sim_recom_tmdb': self.sim_recom_tmdb}
                     cm.append(("[B]Export %s List[/B]" % sim_recom_title.split(' ')[0], "XBMC.RunPlugin(%s)" % build_url(export_sim_recom_params)))
                 if trailer: cm.append(("%s" % trailer_title,"XBMC.RunPlugin(%s)" % build_url(trailer_params)))
-                if self.action == 'trakt_recommendations': cm.append(("[B]Hide from Recommendations[/B]", "XBMC.RunPlugin(%s)" % build_url(hide_recommended_params)))
+                if self.action == 'trakt_recommendations': cm.append(("Hide from Recommendations", "XBMC.RunPlugin(%s)" % build_url(hide_recommended_params)))
                 cm.append(("Extended Info", 'RunScript(script.extendedinfo,info=extendedtvinfo,id=%s)' % tmdb_id))
                 cm.append(("Exit TV Show List","XBMC.Container.Refresh(%s)" % build_url(exit_list_params)))
                 listitem = xbmcgui.ListItem()
@@ -285,7 +285,7 @@ class TVShows:
         genre_ids = [choice_list[i].getProperty('genre_id') for i in chosen_genres]
         return ','.join(genre_ids)
 
-    def add_dir(self, url_params, list_name='Next Page >>', info='Navigate to Next Page...', iconImage='item_next.png'):
+    def add_dir(self, url_params, list_name='Next Page >>', info='Navigate to Next Page...', iconImage='next.png'):
         icon = os.path.join(settings.get_theme(), iconImage)
         url = build_url(url_params)
         listitem = xbmcgui.ListItem(list_name)
@@ -310,10 +310,10 @@ def build_season_list():
             watched_params = {"mode": "mark_season_as_watched_unwatched", "action": 'mark_as_watched', "title": show_title, "year": show_year, "media_id": tmdb_id, "imdb_id": imdb_id, "tvdb_id": tvdb_id, "season": season_number, "meta_user_info": meta_user_info}
             unwatched_params = {"mode": "mark_season_as_watched_unwatched", "action": 'mark_as_unwatched', "title": show_title, "year": show_year, "media_id": tmdb_id, "imdb_id": imdb_id, "tvdb_id": tvdb_id, "season": season_number, "meta_user_info": meta_user_info}
             playback_menu_params = {'mode': 'playback_menu'}
-            cm.append(("[B]Mark Watched %s[/B]" % watched_title,'XBMC.RunPlugin(%s)' % build_url(watched_params)))
-            cm.append(("[B]Mark Unwatched %s[/B]" % watched_title,'XBMC.RunPlugin(%s)' % build_url(unwatched_params)))
-            cm.append(("[B]Options[/B]",'XBMC.RunPlugin(%s)' % build_url(playback_menu_params)))
-            cm.append(("[B]Extended Info[/B]", 'RunScript(script.extendedinfo,info=extendedtvinfo,id=%s)' % tmdb_id))
+            cm.append(("Mark Watched %s" % watched_title,'XBMC.RunPlugin(%s)' % build_url(watched_params)))
+            cm.append(("Mark Unwatched %s" % watched_title,'XBMC.RunPlugin(%s)' % build_url(unwatched_params)))
+            cm.append(("Options",'XBMC.RunPlugin(%s)' % build_url(playback_menu_params)))
+            cm.append(("Extended Info", 'RunScript(script.extendedinfo,info=extendedtvinfo,id=%s)' % tmdb_id))
             url_params = {'mode': 'build_episode_list', 'tmdb_id': tmdb_id, 'season': season_number}
             url = build_url(url_params)
             listitem = xbmcgui.ListItem()
@@ -429,10 +429,10 @@ def build_episode_list():
             playback_menu_params = {'mode': 'playback_menu', 'suggestion': query, 'play_params': json.dumps(url_params)}
             if not unaired:
                 watched_unwatched_params = {"mode": "mark_episode_as_watched_unwatched", "action": action, "media_id": tmdb_id, "imdb_id": imdb_id, "tvdb_id": tvdb_id, "season": season, "episode": episode,  "title": title, "year": year}
-                cm.append(("[B]Mark %s %s[/B]" % (state, watched_title),'RunPlugin(%s)' % build_url(watched_unwatched_params)))
-            cm.append(("[B]Options[/B]",'RunPlugin(%s)' % build_url(playback_menu_params)))
-            if not unaired and resumetime != '0': cm.append(("[B]Clear Progress[/B]", 'RunPlugin(%s)' % build_url({"mode": "watched_unwatched_erase_bookmark", "db_type": "episode", "media_id": tmdb_id, "season": season, "episode": episode, "refresh": "true"})))
-            cm.append(("[B]Extended Info[/B]", 'RunScript(script.extendedinfo,info=extendedtvinfo,id=%s)' % tmdb_id))
+                cm.append(("Mark %s %s" % (state, watched_title),'RunPlugin(%s)' % build_url(watched_unwatched_params)))
+            cm.append(("Options",'RunPlugin(%s)' % build_url(playback_menu_params)))
+            if not unaired and resumetime != '0': cm.append(("Clear Progress", 'RunPlugin(%s)' % build_url({"mode": "watched_unwatched_erase_bookmark", "db_type": "episode", "media_id": tmdb_id, "season": season, "episode": episode, "refresh": "true"})))
+            cm.append(("Extended Info", 'RunScript(script.extendedinfo,info=extendedtvinfo,id=%s)' % tmdb_id))
             listitem = xbmcgui.ListItem()
             listitem.setLabel(display)
             listitem.setProperty("resumetime", resumetime)
@@ -584,14 +584,14 @@ def build_episode(item, watched_info, use_trakt, meta_user_info):
         watched_title = 'Trakt' if watched_indicators in (1, 2) else "David"
         watched_params = {"mode": "mark_episode_as_watched_unwatched", "action": waction, "media_id": tmdb_id, "imdb_id": imdb_id, "tvdb_id": tvdb_id, "season": season, "episode": episode,  "title": title, "year": year}
         if action == 'next_episode': nextep_manage_params = {"mode": "next_episode_context_choice"}
-        if not unaired: cm.append(("[B]Mark %s %s[/B]" % (wstate, watched_title),'RunPlugin(%s)' % build_url(watched_params)))
-        cm.append(("[B]Options[/B]",'RunPlugin(%s)' % build_url(playback_menu_params)))
+        if not unaired: cm.append(("Mark %s %s" % (wstate, watched_title),'RunPlugin(%s)' % build_url(watched_params)))
+        cm.append(("Options",'RunPlugin(%s)' % build_url(playback_menu_params)))
         if action == 'next_episode':
-            cm.append(("[B]Next Episode Manager[/B]",'RunPlugin(%s)'% build_url(nextep_manage_params)))
-            if nextep_info['cache_to_disk']: cm.append(("[B]Refresh...[/B]", 'Container.Refresh()'))
-        cm.append(("[B]Browse...[/B]",'Container.Update(%s)' % browse_url))
-        cm.append(("[B]Extended Info[/B]", 'RunScript(script.extendedinfo,info=extendedtvinfo,id=%s)' % tmdb_id))
-        if not unaired and resumetime != '0': cm.append(("[B]Clear Progress[/B]", 'RunPlugin(%s)' % build_url({"mode": "watched_unwatched_erase_bookmark", "db_type": "episode", "media_id": tmdb_id, "season": season, "episode": episode, "refresh": "true"})))
+            cm.append(("Next Episode Manager",'RunPlugin(%s)'% build_url(nextep_manage_params)))
+            if nextep_info['cache_to_disk']: cm.append(("Refresh...", 'Container.Refresh()'))
+        cm.append(("Browse Series",'Container.Update(%s)' % browse_url))
+        cm.append(("Extended Info", 'RunScript(script.extendedinfo,info=extendedtvinfo,id=%s)' % tmdb_id))
+        if not unaired and resumetime != '0': cm.append(("Clear Progress", 'RunPlugin(%s)' % build_url({"mode": "watched_unwatched_erase_bookmark", "db_type": "episode", "media_id": tmdb_id, "season": season, "episode": episode, "refresh": "true"})))
         listitem = xbmcgui.ListItem()
         listitem.setLabel(display)
         listitem.setProperty("resumetime", resumetime)

@@ -210,7 +210,7 @@ def build_next_episode_manager():
         tmdb_list = [row[0] for row in rows]
         exclude_list = check_for_next_episode_excludes()
         heading = 'Select Show to Include/Exclude in David Next Episode:'
-    add_dir({'mode': 'nill'}, '[I][COLOR=grey][B]INFO:[/B][/COLOR] [COLOR=grey2]%s[/COLOR][/I]' % heading, iconImage='settings.png')
+    add_dir({'mode': 'nill'}, '[I][COLOR=grey][B]INFO:[/B][/COLOR] [COLOR=grey2]%s[/COLOR][/I]' % heading, iconImage='tools.png')
     if not tmdb_list:
         from modules.nav_utils import notification
         return notification('No Shows Present', time=5000)

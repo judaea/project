@@ -16,7 +16,7 @@ addon_dir = xbmc.translatePath(__addon__.getAddonInfo('path'))
 icon_directory = settings.get_theme()
 dialog = xbmcgui.Dialog()
 window = xbmcgui.Window(10000)
-default_furk_icon = os.path.join(icon_directory, 'furk.png')
+default_furk_icon = os.path.join(icon_directory, 'tools.png')
 fanart = os.path.join(addon_dir, 'fanart.jpg')
 
 Furk = FurkAPI()

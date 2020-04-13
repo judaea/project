@@ -701,7 +701,7 @@ def playback_menu(from_results=False, suggestion=None, list_name=None, play_para
     elif choice == 'search_directly': furk_easynews_direct_search_choice(suggestion, from_results, list_name)
     elif choice == 'clear_trakt_cache': clear_cache('trakt')
     elif choice == 'open_external_scrapers_manager': external_scrapers_manager()
-    elif choice == 'open_meta_settings': xbmc.executebuiltin('Addon.OpenSettings(script.module.davidmeta)')
+    elif choice == 'open_meta_settings': xbmc.executebuiltin('Addon.OpenSettings(script.david.metadata)')
     elif choice == 'open_scraper_settings': xbmc.executebuiltin('Addon.OpenSettings(script.module.openscrapers)')
     elif choice == 'open_david_settings': open_settings('0.0')
     if choice in ('clear_cache_page', 'toggle_indicators', 'clear_trakt_cache') and content in ('movies', 'tvshows', 'seasons', 'episodes'): xbmc.executebuiltin('Container.Refresh')

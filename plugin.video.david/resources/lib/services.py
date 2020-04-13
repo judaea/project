@@ -15,7 +15,7 @@ class VersionCheck:
     def run(self):
         xbmc.log("[DAVID] VersionCheck Service Starting...", 2)
         david_version = __addon__.getAddonInfo('version')
-        davidmeta_version = xbmcaddon.Addon(id='script.module.davidmeta').getAddonInfo('version')
+        davidmeta_version = xbmcaddon.Addon(id='script.david.metadata').getAddonInfo('version')
         davidart_version = xbmcaddon.Addon(id='script.david.artwork').getAddonInfo('version')
         xbmc.log("[DAVID] Current DAVID Version: %s" % david_version, 2)
         xbmc.log("[DAVID] Current DAVIDMETA Version: %s" % davidmeta_version, 2)

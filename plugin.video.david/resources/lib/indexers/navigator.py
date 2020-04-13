@@ -38,16 +38,16 @@ class Navigator:
         episode_path = settings.download_directory('episode')
         premium_path = settings.download_directory('premium')
         self._add_dir({'mode': 'navigator.folder_navigator', 'folder_path': movie_path, 'foldername': 'Movie Downloads', 'list_name': 'Movie Downloads'}, '[B]DOWNLOADS: [/B]Movies', iconImage='movies.png')
-        self._add_dir({'mode': 'navigator.folder_navigator', 'folder_path': episode_path, 'foldername': 'TV Show Downloads', 'list_name': 'TV Show Downloads'}, '[B]DOWNLOADS: [/B]TV Shows', iconImage='tv.png')
-        self._add_dir({'mode': 'navigator.folder_navigator', 'folder_path': premium_path, 'foldername': 'Premium File Downloads', 'list_name': 'Premium File Downloads'}, '[B]DOWNLOADS: [/B]Premium Files', iconImage='premium.png')
+        self._add_dir({'mode': 'navigator.folder_navigator', 'folder_path': episode_path, 'foldername': 'TV Show Downloads', 'list_name': 'TV Show Downloads'}, '[B]DOWNLOADS: [/B]TV Shows', iconImage='tvshows.png')
+        self._add_dir({'mode': 'navigator.folder_navigator', 'folder_path': premium_path, 'foldername': 'Premium File Downloads', 'list_name': 'Premium File Downloads'}, '[B]DOWNLOADS: [/B]Premium Files', iconImage='tools.png')
         self._end_directory()
 
     def discover_main(self):
-        self._add_dir({'mode': 'discover.movie', 'db_type': 'movie', 'foldername': 'Discover Movies', 'list_name': 'Discover Movies'}, '[B]DISCOVER : [/B]Movies', iconImage='discover.png')
-        self._add_dir({'mode': 'discover.tvshow', 'db_type': 'tvshow', 'foldername': 'Discover TV Shows', 'list_name': 'Discover TV Shows'}, '[B]DISCOVER : [/B]TV Shows', iconImage='discover.png')
-        self._add_dir({'mode': 'discover.history', 'db_type': 'movie', 'foldername': 'Discover Movie History', 'list_name': 'Discover Movie History'}, '[B]DISCOVER : [/B]Movie History', iconImage='discover.png')
-        self._add_dir({'mode': 'discover.history', 'db_type': 'tvshow', 'foldername': 'Discover TV Show History', 'list_name': 'Discover TV Show History'}, '[B]DISCOVER : [/B]TV Show History', iconImage='discover.png')
-        self._add_dir({'mode': 'discover.help', 'foldername': 'Discover Help', 'list_name': 'Discover Help'}, '[B]DISCOVER : [/B]Help', iconImage='discover.png')
+        self._add_dir({'mode': 'discover.movie', 'db_type': 'movie', 'foldername': 'Discover Movies', 'list_name': 'Discover Movies'}, '[B]DISCOVER : [/B]Movies', iconImage='tools.png')
+        self._add_dir({'mode': 'discover.tvshow', 'db_type': 'tvshow', 'foldername': 'Discover TV Shows', 'list_name': 'Discover TV Shows'}, '[B]DISCOVER : [/B]TV Shows', iconImage='tools.png')
+        self._add_dir({'mode': 'discover.history', 'db_type': 'movie', 'foldername': 'Discover Movie History', 'list_name': 'Discover Movie History'}, '[B]DISCOVER : [/B]Movie History', iconImage='tools.png')
+        self._add_dir({'mode': 'discover.history', 'db_type': 'tvshow', 'foldername': 'Discover TV Show History', 'list_name': 'Discover TV Show History'}, '[B]DISCOVER : [/B]TV Show History', iconImage='tools.png')
+        self._add_dir({'mode': 'discover.help', 'foldername': 'Discover Help', 'list_name': 'Discover Help'}, '[B]DISCOVER : [/B]Help', iconImage='tools.png')
         self._end_directory()
 
     def premium(self):
@@ -57,214 +57,211 @@ class Navigator:
                 enable_fu = False
         enable_en = False if '' in (__addon__.getSetting('easynews_user'), __addon__.getSetting('easynews_password')) else True
         enable_pm = False if __addon__.getSetting('pm.token') == '' else True
-        if enable_fu: self._add_dir({'mode': 'navigator.furk', 'foldername': 'Furk', 'list_name': 'Furk'}, '[B]PREMIUM : [/B]Furk', iconImage='furk.png')
-        if enable_en: self._add_dir({'mode': 'navigator.easynews', 'foldername': 'Easynews', 'list_name': 'Easynews'}, '[B]PREMIUM : [/B]Easynews', iconImage='easynews.png')
-        self._add_dir({'mode': 'navigator.real_debrid', 'foldername': 'Real Debrid', 'list_name': 'Real Debrid'}, '[B]PREMIUM : [/B]Real Debrid', iconImage='realdebrid.png')
-        self._add_dir({'mode': 'navigator.premiumize', 'foldername': 'Premiumize', 'list_name': 'Premiumize'}, '[B]PREMIUM : [/B]Premiumize', iconImage='premiumize.png')
-        self._add_dir({'mode': 'navigator.alldebrid', 'foldername': 'All Debrid', 'list_name': 'All Debrid'}, '[B]PREMIUM : [/B]All Debrid', iconImage='alldebrid.png')
+        if enable_fu: self._add_dir({'mode': 'navigator.furk', 'foldername': 'Furk', 'list_name': 'Furk'}, '[B]PREMIUM : [/B]Furk', iconImage='tools.png')
+        if enable_en: self._add_dir({'mode': 'navigator.easynews', 'foldername': 'Easynews', 'list_name': 'Easynews'}, '[B]PREMIUM : [/B]Easynews', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.real_debrid', 'foldername': 'Real Debrid', 'list_name': 'Real Debrid'}, '[B]PREMIUM : [/B]Real Debrid', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.premiumize', 'foldername': 'Premiumize', 'list_name': 'Premiumize'}, '[B]PREMIUM : [/B]Premiumize', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.alldebrid', 'foldername': 'All Debrid', 'list_name': 'All Debrid'}, '[B]PREMIUM : [/B]All Debrid', iconImage='tools.png')
         self._end_directory()
 
     def furk(self):
-        self._add_dir({'mode': 'furk.my_furk_files', 'list_type': 'file_get_video', 'foldername': 'My Furk Video Files', 'list_name': 'Furk Video Files'}, '[B]FURK: [/B]Video Files', iconImage='lists.png')
-        self._add_dir({'mode': 'furk.my_furk_files', 'list_type': 'file_get_audio', 'foldername': 'My Furk Audio Files', 'list_name': 'Furk Audio Files'}, '[B]FURK: [/B]Audio Files', iconImage='lists.png')
-        self._add_dir({'mode': 'furk.my_furk_files', 'list_type': 'file_get_active', 'foldername': 'My Furk Active Downloads', 'list_name': 'My Furk Active Downloads'}, '[B]FURK: [/B]Active Downloads', iconImage='lists.png')
-        self._add_dir({'mode': 'furk.my_furk_files', 'list_type': 'file_get_failed', 'foldername': 'My Furk Failed Downloads', 'list_name': 'My Furk Failed Downloads'}, '[B]FURK: [/B]Failed Downloads', iconImage='lists.png')
+        self._add_dir({'mode': 'furk.my_furk_files', 'list_type': 'file_get_video', 'foldername': 'My Furk Video Files', 'list_name': 'Furk Video Files'}, '[B]FURK: [/B]Video Files', iconImage='userlists.png')
+        self._add_dir({'mode': 'furk.my_furk_files', 'list_type': 'file_get_audio', 'foldername': 'My Furk Audio Files', 'list_name': 'Furk Audio Files'}, '[B]FURK: [/B]Audio Files', iconImage='userlists.png')
+        self._add_dir({'mode': 'furk.my_furk_files', 'list_type': 'file_get_active', 'foldername': 'My Furk Active Downloads', 'list_name': 'My Furk Active Downloads'}, '[B]FURK: [/B]Active Downloads', iconImage='userlists.png')
+        self._add_dir({'mode': 'furk.my_furk_files', 'list_type': 'file_get_failed', 'foldername': 'My Furk Failed Downloads', 'list_name': 'My Furk Failed Downloads'}, '[B]FURK: [/B]Failed Downloads', iconImage='userlists.png')
         self._add_dir({'mode': 'furk.search_furk', 'db_type': 'video', 'foldername': 'Search Furk (Video)', 'list_name': 'Furk Search Video'}, '[B]FURK: [/B]Search (Video)', iconImage='search.png')
         self._add_dir({'mode': 'furk.search_furk', 'db_type': 'audio', 'foldername': 'Search Furk (Audio)', 'list_name': 'Furk Search Audio'}, '[B]FURK: [/B]Search (Audio)', iconImage='search.png')
         self._add_dir({'mode': 'search_history', 'action': 'furk_video', 'foldername': 'Video Search History', 'list_name': 'Furk Search History (Video)'}, '[B]FURK: [/B]Search History (Video)', iconImage='search.png')
         self._add_dir({'mode': 'search_history', 'action': 'furk_audio', 'foldername': 'Audio Search History', 'list_name': 'Furk Search History (Audio)'}, '[B]FURK: [/B]Search History (Audio)', iconImage='search.png')
-        self._add_dir({'mode': 'furk.account_info', 'foldername': 'Account Info', 'list_name': 'Furk Account Info'}, '[B]FURK: [/B]Account Info', iconImage='furk.png')
+        self._add_dir({'mode': 'furk.account_info', 'foldername': 'Account Info', 'list_name': 'Furk Account Info'}, '[B]FURK: [/B]Account Info', iconImage='tools.png')
         self._end_directory()
 
     def easynews(self):
         self._add_dir({'mode': 'easynews.search_easynews', 'foldername': 'Search Easynews (Video)', 'list_name': 'Search Easynews (Video)'}, '[B]EASYNEWS : [/B]Search (Video)', iconImage='search.png')
         self._add_dir({'mode': 'search_history', 'action': 'easynews_video', 'foldername': 'Easynews Video Search History', 'list_name': 'Search History Easynews (Video)'}, '[B]EASYNEWS: [/B]Search History (Video)', iconImage='search.png')
-        self._add_dir({'mode': 'easynews.account_info', 'foldername': 'Account Info', 'list_name': 'Easynews Account Info'}, '[B]EASYNEWS: [/B]Account Info', iconImage='easynews.png')
+        self._add_dir({'mode': 'easynews.account_info', 'foldername': 'Account Info', 'list_name': 'Easynews Account Info'}, '[B]EASYNEWS: [/B]Account Info', iconImage='tools.png')
         self._end_directory()
 
     def real_debrid(self):
         enable_rd = False if __addon__.getSetting('rd.token') == '' else True
-        if enable_rd: self._add_dir({'mode': 'real_debrid.rd_torrent_cloud', 'foldername': 'Cloud Storage', 'list_name': 'Real Debrid Cloud Storage'}, '[B]REAL DEBRID: [/B]Cloud Storage', iconImage='realdebrid.png')
-        if enable_rd: self._add_dir({'mode': 'real_debrid.rd_downloads', 'foldername': 'Download History', 'list_name': 'Real Debrid Download History'}, '[B]REAL DEBRID: [/B]Download History', iconImage='realdebrid.png')
-        if enable_rd: self._add_dir({'mode': 'real_debrid.rd_account_info', 'foldername': 'Account Info', 'list_name': 'Real Debrid Account Info'}, '[B]REAL DEBRID: [/B]Account Info', iconImage='realdebrid.png')
-        self._add_dir({'mode': 'real_debrid.authenticate', 'foldername': '(Re)Authorize Real-Debrid', 'list_name': 'Authorize Real-Debrid'}, '[B]REAL-DEBRID : [/B](Re)Authenticate Real-Debrid', iconImage='realdebrid.png')
-        if enable_rd: self._add_dir({'mode': 'clear_cache', 'cache': 'rd_cloud', 'foldername': 'Clear Cache', 'list_name': 'Tools Clear Real Debrid Cache'}, '[B]REAL DEBRID: [/B]Clear Cloud Cache', iconImage='realdebrid.png')
+        if enable_rd: self._add_dir({'mode': 'real_debrid.rd_torrent_cloud', 'foldername': 'Cloud Storage', 'list_name': 'Real Debrid Cloud Storage'}, '[B]Real-Debrid: [/B]Cloud Storage', iconImage='tools.png')
+        if enable_rd: self._add_dir({'mode': 'real_debrid.rd_downloads', 'foldername': 'Download History', 'list_name': 'Real Debrid Download History'}, '[B]Real-Debrid: [/B]Download History', iconImage='tools.png')
+        if enable_rd: self._add_dir({'mode': 'real_debrid.rd_account_info', 'foldername': 'Account Info', 'list_name': 'Real Debrid Account Info'}, '[B]Real-Debrid: [/B]Account Info', iconImage='tools.png')
+        self._add_dir({'mode': 'real_debrid.authenticate', 'foldername': '(Re)Authorize Real-Debrid', 'list_name': 'Authorize Real-Debrid'}, '[B]Real-Debrid : [/B](Re)Authenticate Real-Debrid', iconImage='tools.png')
+        if enable_rd: self._add_dir({'mode': 'clear_cache', 'cache': 'rd_cloud', 'foldername': 'Clear Cache', 'list_name': 'Tools Clear Real Debrid Cache'}, '[B]Real-Debrid: [/B]Clear Cloud Cache', iconImage='tools.png')
         self._end_directory()
 
     def premiumize(self):
-        self._add_dir({'mode': 'premiumize.pm_torrent_cloud', 'foldername': 'Cloud Storage', 'list_name': 'Premiumize Cloud Storage'}, '[B]PREMIUMIZE: [/B]Cloud Storage', iconImage='premiumize.png')
-        self._add_dir({'mode': 'premiumize.pm_transfers', 'foldername': 'Transfer History', 'list_name': 'Premiumize Transfer History'}, '[B]PREMIUMIZE: [/B]Transfer History', iconImage='premiumize.png')
-        self._add_dir({'mode': 'premiumize.pm_account_info', 'foldername': 'Account Info', 'list_name': 'Premiumize Account Info'}, '[B]PREMIUMIZE: [/B]Account Info', iconImage='premiumize.png')
-        self._add_dir({'mode': 'premiumize.authenticate', 'foldername': '(Re)Authorize Premiumize', 'list_name': 'Authorize Premiumize'}, '[B]PREMIUMIZE : [/B](Re)Authenticate Premiumize', iconImage='premiumize.png')
-        self._add_dir({'mode': 'clear_cache', 'cache': 'pm_cloud', 'foldername': 'Clear Cache', 'list_name': 'Tools Clear Premiumize Cache'}, '[B]PREMIUMIZE: [/B]Clear Cloud Cache', iconImage='premiumize.png')
+        self._add_dir({'mode': 'premiumize.pm_torrent_cloud', 'foldername': 'Cloud Storage', 'list_name': 'Premiumize Cloud Storage'}, '[B]Premiumize: [/B]Cloud Storage', iconImage='tools.png')
+        self._add_dir({'mode': 'premiumize.pm_transfers', 'foldername': 'Transfer History', 'list_name': 'Premiumize Transfer History'}, '[B]Premiumize: [/B]Transfer History', iconImage='tools.png')
+        self._add_dir({'mode': 'premiumize.pm_account_info', 'foldername': 'Account Info', 'list_name': 'Premiumize Account Info'}, '[B]Premiumize: [/B]Account Info', iconImage='tools.png')
+        self._add_dir({'mode': 'premiumize.authenticate', 'foldername': '(Re)Authorize Premiumize', 'list_name': 'Authorize Premiumize'}, '[B]Premiumize : [/B](Re)Authenticate Premiumize', iconImage='tools.png')
+        self._add_dir({'mode': 'clear_cache', 'cache': 'pm_cloud', 'foldername': 'Clear Cache', 'list_name': 'Tools Clear Premiumize Cache'}, '[B]Premiumize: [/B]Clear Cloud Cache', iconImage='tools.png')
         self._end_directory()
 
     def alldebrid(self):
         enable_ad = False if __addon__.getSetting('ad.token') == '' else True
-        if enable_ad: self._add_dir({'mode': 'alldebrid.ad_torrent_cloud', 'foldername': 'Cloud Storage', 'list_name': 'All Debrid Cloud Storage'}, '[B]ALL DEBRID: [/B]Cloud Storage', iconImage='alldebrid.png')
-        if enable_ad: self._add_dir({'mode': 'alldebrid.ad_account_info', 'foldername': 'Account Info', 'list_name': 'All Debrid Account Info'}, '[B]ALL DEBRID: [/B]Account Info', iconImage='alldebrid.png')
-        self._add_dir({'mode': 'alldebrid.authenticate', 'foldername': '(Re)Authorize All Debrid', 'list_name': 'Authorize All Debrid'}, '[B]ALL DEBRID : [/B](Re)Authenticate All Debrid', iconImage='alldebrid.png')
-        if enable_ad: self._add_dir({'mode': 'clear_cache', 'cache': 'ad_cloud', 'foldername': 'Clear Cache', 'list_name': 'Tools Clear All Debrid Cache'}, '[B]ALL DEBRID: [/B]Clear Cloud Cache', iconImage='alldebrid.png')
+        if enable_ad: self._add_dir({'mode': 'alldebrid.ad_torrent_cloud', 'foldername': 'Cloud Storage', 'list_name': 'All Debrid Cloud Storage'}, '[B]All Debrid: [/B]Cloud Storage', iconImage='tools.png')
+        if enable_ad: self._add_dir({'mode': 'alldebrid.ad_account_info', 'foldername': 'Account Info', 'list_name': 'All Debrid Account Info'}, '[B]All Debrid: [/B]Account Info', iconImage='tools.png')
+        self._add_dir({'mode': 'alldebrid.authenticate', 'foldername': '(Re)Authorize All Debrid', 'list_name': 'Authorize All Debrid'}, '[B]All Debrid : [/B](Re)Authenticate All Debrid', iconImage='tools.png')
+        if enable_ad: self._add_dir({'mode': 'clear_cache', 'cache': 'ad_cloud', 'foldername': 'Clear Cache', 'list_name': 'Tools Clear All Debrid Cache'}, '[B]All Debrid: [/B]Clear Cloud Cache', iconImage='tools.png')
         self._end_directory()
 
     def favourites(self):
         self._add_dir({'mode': 'build_movie_list', 'action': 'favourites_movies', 'foldername': 'Movie Favourites', 'list_name': 'Movies Favourites'}, '[B]FAVOURITES : [/B]Movies', iconImage='movies.png')
-        self._add_dir({'mode': 'build_tvshow_list', 'action': 'favourites_tvshows', 'foldername': 'TV Show Favourites', 'list_name': 'TV Shows Favourites'}, '[B]FAVOURITES : [/B]TV Shows', iconImage='tv.png')
+        self._add_dir({'mode': 'build_tvshow_list', 'action': 'favourites_tvshows', 'foldername': 'TV Show Favourites', 'list_name': 'TV Shows Favourites'}, '[B]FAVOURITES : [/B]TV Shows', iconImage='tvshows.png')
         self._end_directory()
 
     def subscriptions(self):
         self._add_dir({'mode': 'build_movie_list', 'action': 'subscriptions_movies', 'foldername': 'David Subscriptions', 'list_name': 'Movies Subscriptions'}, '[B]SUBSCRIPTIONS : [/B]Movies', iconImage='movies.png')
-        self._add_dir({'mode': 'build_tvshow_list', 'action': 'subscriptions_tvshows', 'foldername': 'David Subscriptions', 'list_name': 'TV Shows Subscriptions'}, '[B]SUBSCRIPTIONS : [/B]TV Shows', iconImage='tv.png')
+        self._add_dir({'mode': 'build_tvshow_list', 'action': 'subscriptions_tvshows', 'foldername': 'David Subscriptions', 'list_name': 'TV Shows Subscriptions'}, '[B]SUBSCRIPTIONS : [/B]TV Shows', iconImage='tvshows.png')
         self._end_directory()
 
     def kodi_library(self):
         self._add_dir({'mode': 'build_movie_list', 'action': 'kodi_library_movies', 'foldername': 'Movies Kodi Library', 'list_name': 'Movies Kodi Library'}, '[B]KODI LIBRARY : [/B]Movies', iconImage='movies.png')
-        self._add_dir({'mode': 'build_tvshow_list', 'action': 'kodi_library_tvshows', 'foldername': 'TV Shows Kodi Library', 'list_name': 'TV Shows Kodi Library'}, '[B]KODI LIBRARY : [/B]TV Shows', iconImage='tv.png')
-        self._add_dir({'mode': 'build_kodi_library_recently_added', 'db_type': 'movies', 'foldername': 'Recently Added Movies Kodi Library', 'list_name': 'Recently Added Movies Kodi Library'}, '[B]KODI LIBRARY : [/B]Recently Added Movies', iconImage='recently_added_movies.png')
-        self._add_dir({'mode': 'build_kodi_library_recently_added', 'db_type': 'episodes', 'foldername': 'Recently Added Movies Kodi Library', 'list_name': 'Recently Added Episodes Kodi Library'}, '[B]KODI LIBRARY : [/B]Recently Added Episodes', iconImage='recently_added_episodes.png')
+        self._add_dir({'mode': 'build_tvshow_list', 'action': 'kodi_library_tvshows', 'foldername': 'TV Shows Kodi Library', 'list_name': 'TV Shows Kodi Library'}, '[B]KODI LIBRARY : [/B]TV Shows', iconImage='tvshows.png')
+        self._add_dir({'mode': 'build_kodi_library_recently_added', 'db_type': 'movies', 'foldername': 'Recently Added Movies Kodi Library', 'list_name': 'Recently Added Movies Kodi Library'}, '[B]KODI LIBRARY : [/B]Recently Added Movies', iconImage='movies.png')
+        self._add_dir({'mode': 'build_kodi_library_recently_added', 'db_type': 'episodes', 'foldername': 'Recently Added Movies Kodi Library', 'list_name': 'Recently Added Episodes Kodi Library'}, '[B]KODI LIBRARY : [/B]Recently Added Episodes', iconImage='tvshows.png')
         self._end_directory()
 
     def in_progress(self):
         self._add_dir({'mode': 'build_movie_list', 'action': 'in_progress_movies', 'foldername': 'Movies In Progress', 'list_name': 'Movies In Progress'}, '[B]IN PROGRESS : [/B]Movies', iconImage='movies.png')
-        self._add_dir({'mode': 'build_tvshow_list', 'action': 'in_progress_tvshows', 'foldername': 'TV Shows In Progress', 'list_name': 'TV Shows In Progress'}, '[B]IN PROGRESS : [/B]TV Shows', iconImage='tv.png')
-        self._add_dir({'mode': 'build_in_progress_episode', 'foldername': 'Episodes In Progress', 'list_name': 'Episodes In Progress'}, '[B]IN PROGRESS : [/B]Episodes', iconImage='episode.png')
+        self._add_dir({'mode': 'build_tvshow_list', 'action': 'in_progress_tvshows', 'foldername': 'TV Shows In Progress', 'list_name': 'TV Shows In Progress'}, '[B]IN PROGRESS : [/B]TV Shows', iconImage='tvshows.png')
+        self._add_dir({'mode': 'build_in_progress_episode', 'foldername': 'Episodes In Progress', 'list_name': 'Episodes In Progress'}, '[B]IN PROGRESS : [/B]Episodes', iconImage='tvshows.png')
         self._end_directory()
 
     def watched(self):
         self._add_dir({'mode': 'build_movie_list', 'action': 'watched_movies', 'foldername': 'David Watched Movies', 'list_name': 'Movies Watched'}, '[B]WATCHED : [/B]Movies', iconImage='movies.png')
-        self._add_dir({'mode': 'build_tvshow_list', 'action': 'watched_tvshows', 'foldername': 'David Watched Shows', 'list_name': 'TV Shows Watched'}, '[B]WATCHED : [/B]TV Shows', iconImage='tv.png')
+        self._add_dir({'mode': 'build_tvshow_list', 'action': 'watched_tvshows', 'foldername': 'David Watched Shows', 'list_name': 'TV Shows Watched'}, '[B]WATCHED : [/B]TV Shows', iconImage='tvshows.png')
         self._end_directory()
 
-    def my_trakt_content(self):
-        self._add_dir({'mode': 'navigator.trakt_collection', 'foldername': 'My Trakt Collections', 'list_name': 'Trakt My Collections'}, '[B]TRAKT: [/B]Collections', iconImage='traktcollection.png')
-        self._add_dir({'mode': 'navigator.trakt_watchlist', 'foldername': 'My Trakt Watchlists', 'list_name': 'Trakt My Watchlists'}, '[B]TRAKT: [/B]Watchlists', iconImage='traktwatchlist.png')
-        self._add_dir({'mode': 'trakt.get_trakt_my_lists', 'foldername': 'My Trakt Lists', 'list_name': 'Trakt My Lists'}, '[B]TRAKT: [/B]Lists', iconImage='traktmylists.png')
-        self._add_dir({'mode': 'trakt.get_trakt_liked_lists', 'foldername': 'My Trakt Liked Lists', 'list_name': 'Trakt My Liked Lists'}, '[B]TRAKT: [/B]Liked Lists', iconImage='traktlikedlists.png')
-        self._add_dir({'mode': 'navigator.trakt_recommendations', 'foldername': 'My Trakt Recommended Lists', 'list_name': 'Trakt My Recommended Lists'}, '[B]TRAKT: [/B]Recommended Lists', iconImage='traktrecommendations.png')
-        self._add_dir({'mode': 'trakt.search_trakt_lists', 'foldername': 'Search Trakt Lists', 'list_name': 'Trakt Search Lists'}, '[B]TRAKT: [/B]Search User Lists', iconImage='search_trakt_lists.png')
-        self._add_dir({'mode': 'trakt.get_trakt_my_calendar', 'foldername': 'TV Show Calendar', 'list_name': 'TV Show Calendar'}, '[B]TRAKT: [/B]TV Show Calendar', iconImage='traktcalendar.png')
-        self._add_dir({'mode': 'navigator.trakt_widgets', 'foldername': 'Trakt Widgets', 'list_name': 'Trakt Widgets'}, '[B]TRAKT: [/B]Widgets', iconImage='traktmylists.png')
-        self._end_directory()
-
-    def trakt_collection(self):
-        self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_collection', 'foldername': 'My Trakt Movie Collection', 'list_name': 'Movies Trakt Collection'}, '[B]COLLECTION: [/B]Movies', iconImage='movies.png')
-        self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_collection', 'foldername': 'My Trakt TV Show Collection', 'list_name': 'TV Shows Trakt Collection'}, '[B]COLLECTION: [/B]TV Shows', iconImage='tv.png')
-        self._end_directory()
-
-    def trakt_watchlist(self):
-        self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_watchlist', 'foldername': 'My Trakt Movie Watchlist', 'list_name': 'Movies Trakt Watchlist'}, '[B]WATCHLIST: [/B]Movies', iconImage='movies.png')
-        self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_watchlist', 'foldername': 'My Trakt TV Show Watchlist', 'list_name': 'TV Shows Trakt Watchlist'}, '[B]WATCHLIST: [/B]TV Shows', iconImage='tv.png')
-        self._end_directory()
-
-    def trakt_recommendations(self):
-        self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_recommendations', 'foldername': 'My Trakt Movie Recommendations', 'list_name': 'Trakt My Movie Recommendations'}, '[B]RECOMMENDATIONS: [/B]Movies', iconImage='movies.png')
-        self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_recommendations', 'foldername': 'My Trakt TV Show Recommendations', 'list_name': 'Trakt My TV Show Recommendations'}, '[B]RECOMMENDATIONS: [/B]TV Shows', iconImage='tv.png')
-        self._end_directory()
-
-    def trakt_widgets(self):
-        # use 'new_page' to pass the type of list to be processed when using 'trakt_collection_widgets'...
-        self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_collection_widgets', 'new_page': 'recent', 'foldername': 'Trakt Collection Recently Added Movies', 'list_name': 'Trakt Collection Recently Added Movies'}, '[B]TRAKT WIDGETS: [/B]Collection: Recently Added Movies', iconImage='trakt.png')
-        self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_collection_widgets', 'new_page': 'random', 'foldername': 'Trakt Collection Random Movies', 'list_name': 'Trakt Collection Random Movies'}, '[B]TRAKT WIDGETS: [/B]Collection: Random Movies', iconImage='trakt.png')
-        self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_collection_widgets', 'new_page': 'recent', 'foldername': 'Trakt Collection Recently Added TV Shows', 'list_name': 'Trakt Collection Recently Added TV Shows'}, '[B]TRAKT WIDGETS: [/B]Collection: Recently Added TV Shows', iconImage='trakt.png')
-        self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_collection_widgets', 'new_page': 'random', 'foldername': 'Trakt Collection Random TV Shows', 'list_name': 'Trakt Collection Random TV Shows'}, '[B]TRAKT WIDGETS: [/B]Collection: Random TV Shows', iconImage='trakt.png')
-        self._add_dir({'mode': 'trakt.get_trakt_my_calendar', 'recently_aired': 'true', 'foldername': 'Trakt Collection Recently Aired Episodes', 'list_name': 'Trakt Collection Recently Aired Episodes'}, '[B]TRAKT WIDGETS: [/B]Collection: Recently Aired Episodes', iconImage='trakt.png')
-        self._end_directory()
+#     def my_trakt_content(self):
+#         self._add_dir({'mode': 'navigator.trakt_collection', 'foldername': 'My Trakt Collections', 'list_name': 'Trakt My Collections'}, '[B]TRAKT: [/B]Collections', iconImage='trakt.png')
+#         self._add_dir({'mode': 'navigator.trakt_watchlist', 'foldername': 'My Trakt Watchlists', 'list_name': 'Trakt My Watchlists'}, '[B]TRAKT: [/B]Watchlists', iconImage='trakt.png')
+#         self._add_dir({'mode': 'trakt.get_trakt_my_lists', 'foldername': 'My Trakt Lists', 'list_name': 'Trakt My Lists'}, '[B]TRAKT: [/B]Lists', iconImage='trakt.png')
+#         self._add_dir({'mode': 'trakt.get_trakt_liked_lists', 'foldername': 'My Trakt Liked Lists', 'list_name': 'Trakt My Liked Lists'}, '[B]TRAKT: [/B]Liked Lists', iconImage='trakt.png')
+#         self._add_dir({'mode': 'navigator.trakt_recommendations', 'foldername': 'My Trakt Recommended Lists', 'list_name': 'Trakt My Recommended Lists'}, '[B]TRAKT: [/B]Recommended Lists', iconImage='trakt.png')
+#         self._add_dir({'mode': 'trakt.search_trakt_lists', 'foldername': 'Search Trakt Lists', 'list_name': 'Trakt Search Lists'}, '[B]TRAKT: [/B]Search User Lists', iconImage='search.png')
+#         self._add_dir({'mode': 'trakt.get_trakt_my_calendar', 'foldername': 'TV Show Calendar', 'list_name': 'TV Show Calendar'}, '[B]TRAKT: [/B]TV Show Calendar', iconImage='trakt.png')
+#         self._add_dir({'mode': 'navigator.trakt_widgets', 'foldername': 'Trakt Widgets', 'list_name': 'Trakt Widgets'}, '[B]TRAKT: [/B]Widgets', iconImage='trakt.png')
+#         self._end_directory()
+# 
+#     def trakt_collection(self):
+#         self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_collection', 'foldername': 'My Trakt Movie Collection', 'list_name': 'Movies Trakt Collection'}, '[B]COLLECTION: [/B]Movies', iconImage='movies.png')
+#         self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_collection', 'foldername': 'My Trakt TV Show Collection', 'list_name': 'TV Shows Trakt Collection'}, '[B]COLLECTION: [/B]TV Shows', iconImage='tvshows.png')
+#         self._end_directory()
+# 
+#     def trakt_watchlist(self):
+#         self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_watchlist', 'foldername': 'My Trakt Movie Watchlist', 'list_name': 'Movies Trakt Watchlist'}, '[B]WATCHLIST: [/B]Movies', iconImage='movies.png')
+#         self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_watchlist', 'foldername': 'My Trakt TV Show Watchlist', 'list_name': 'TV Shows Trakt Watchlist'}, '[B]WATCHLIST: [/B]TV Shows', iconImage='tvshows.png')
+#         self._end_directory()
+# 
+#     def trakt_recommendations(self):
+#         self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_recommendations', 'foldername': 'My Trakt Movie Recommendations', 'list_name': 'Trakt My Movie Recommendations'}, '[B]RECOMMENDATIONS: [/B]Movies', iconImage='movies.png')
+#         self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_recommendations', 'foldername': 'My Trakt TV Show Recommendations', 'list_name': 'Trakt My TV Show Recommendations'}, '[B]RECOMMENDATIONS: [/B]TV Shows', iconImage='tvshows.png')
+#         self._end_directory()
+# 
+#     def trakt_widgets(self):
+#         # use 'new_page' to pass the type of list to be processed when using 'trakt_collection_widgets'...
+#         self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_collection_widgets', 'new_page': 'recent', 'foldername': 'Trakt Collection Recently Added Movies', 'list_name': 'Trakt Collection Recently Added Movies'}, '[B]TRAKT WIDGETS: [/B]Collection: Recently Added Movies', iconImage='trakt.png')
+#         self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_collection_widgets', 'new_page': 'random', 'foldername': 'Trakt Collection Random Movies', 'list_name': 'Trakt Collection Random Movies'}, '[B]TRAKT WIDGETS: [/B]Collection: Random Movies', iconImage='trakt.png')
+#         self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_collection_widgets', 'new_page': 'recent', 'foldername': 'Trakt Collection Recently Added TV Shows', 'list_name': 'Trakt Collection Recently Added TV Shows'}, '[B]TRAKT WIDGETS: [/B]Collection: Recently Added TV Shows', iconImage='trakt.png')
+#         self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_collection_widgets', 'new_page': 'random', 'foldername': 'Trakt Collection Random TV Shows', 'list_name': 'Trakt Collection Random TV Shows'}, '[B]TRAKT WIDGETS: [/B]Collection: Random TV Shows', iconImage='trakt.png')
+#         self._add_dir({'mode': 'trakt.get_trakt_my_calendar', 'recently_aired': 'true', 'foldername': 'Trakt Collection Recently Aired Episodes', 'list_name': 'Trakt Collection Recently Aired Episodes'}, '[B]TRAKT WIDGETS: [/B]Collection: Recently Aired Episodes', iconImage='trakt.png')
+#         self._end_directory()
 
     def search(self):
-        self._add_dir({'mode': 'build_movie_list', 'action': 'tmdb_movies_search', 'query': 'NA', 'foldername': 'Movie Search', 'list_name': 'Search Movies'}, '[B]SEARCH : [/B]Movies', iconImage='search_movie.png')
-        self._add_dir({'mode': 'build_tvshow_list', 'action': 'tmdb_tv_search', 'query': 'NA', 'foldername': 'TV Show Search', 'list_name': 'Search TV Shows'}, '[B]SEARCH : [/B]TV Shows', iconImage='search_tv.png')
-        self._add_dir({'mode': 'people_search.search', 'foldername': 'People Search', 'list_name': 'Search People'}, '[B]SEARCH : [/B]People', iconImage='genre_comedy.png')
-        self._add_dir({'mode': 'search_history', 'action': 'movie', 'foldername': 'Movie Search', 'list_name': 'Search History Movies'}, '[B]HISTORY : [/B]Movie Search', iconImage='search.png')
-        self._add_dir({'mode': 'search_history', 'action': 'tvshow', 'foldername': 'TV Show Search', 'list_name': 'Search History TV Shows'}, '[B]HISTORY : [/B]TV Show Search', iconImage='search.png')
-        self._add_dir({'mode': 'search_history', 'action': 'people', 'foldername': 'People Search', 'list_name': 'Search History People'}, '[B]HISTORY : [/B]People Search', iconImage='search.png')
+        self._add_dir({'mode': 'build_movie_list', 'action': 'tmdb_movies_search', 'query': 'NA', 'foldername': 'Movie Search', 'list_name': 'Search Movies'}, '[B]Search : [/B]Movies', iconImage='search.png')
+        self._add_dir({'mode': 'build_tvshow_list', 'action': 'tmdb_tv_search', 'query': 'NA', 'foldername': 'TV Show Search', 'list_name': 'Search TV Shows'}, '[B]Search : [/B]TV Shows', iconImage='search.png')
+        self._add_dir({'mode': 'people_search.search', 'foldername': 'People Search', 'list_name': 'Search People'}, '[B]Search : [/B]People', iconImage='people-search.png')
+        self._add_dir({'mode': 'search_history', 'action': 'movie', 'foldername': 'Movie Search', 'list_name': 'Search History Movies'}, '[B]History : [/B]Movie Search', iconImage='search.png')
+        self._add_dir({'mode': 'search_history', 'action': 'tvshow', 'foldername': 'TV Show Search', 'list_name': 'Search History TV Shows'}, '[B]History : [/B]TV Show Search', iconImage='search.png')
+        self._add_dir({'mode': 'search_history', 'action': 'people', 'foldername': 'People Search', 'list_name': 'Search History People'}, '[B]History : [/B]People Search', iconImage='people-search.png')
         self._end_directory()
 
     def tools(self):
+        self._add_dir({'mode': 'open_settings', 'query': '0.0', 'foldername': 'General', 'list_name': 'Settings General'}, '[B]Settings : [/B]General', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '1.0', 'foldername': 'Accounts', 'list_name': 'Settings Accounts'}, '[B]Settings : [/B]Accounts', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '2.0', 'foldername': 'Next Episodes', 'list_name': 'Settings Next Episodes'}, '[B]Settings : [/B]Next Episodes', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '3.0', 'foldername': 'Trakt', 'list_name': 'Trakt'}, '[B]Settings : [/B]Trakt', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '4.0', 'foldername': 'Internal Scrapers', 'list_name': 'Settings Internal Scrapers'}, '[B]Settings : [/B]Internal Scrapers', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '5.0', 'foldername': 'External Scrapers', 'list_name': 'Settings External Scrapers'}, '[B]Settings : [/B]External Scrapers', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '6.0', 'foldername': 'Results', 'list_name': 'Settings Results'}, '[B]Settings : [/B]Results', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '7.0', 'foldername': 'Playback', 'list_name': 'Settings Playback'}, '[B]Settings : [/B]Playback', iconImage='tools.png')
+#         self._add_dir({'mode': 'open_settings', 'query': '8.0', 'foldername': 'Subscriptions', 'list_name': 'Settings Subscriptions'}, '[B]Settings : [/B]Subscriptions', iconImage='tools.png')
+#         self._add_dir({'mode': 'open_settings', 'query': '9.0', 'foldername': 'Downloads', 'list_name': 'Settings Downloads'}, '[B]Settings : [/B]Downloads', iconImage='tools.png')
         display_time = '' if settings.subscription_update() == False else '[COLOR=grey]| Next Update: %s[/COLOR]' % str(__addon__.getSetting('service_time'))
-        self._add_dir({'mode': 'navigator.changelogs', 'foldername': 'Changelogs & Log Viewer', 'list_name': 'Tools Changelogs & Log Viewer'}, '[B]TOOLS : [/B]Changelogs & Log Viewer', iconImage='settings2.png')
-        self._add_dir({'mode': 'navigator.tips', 'foldername': 'Tips for David Use', 'list_name': 'Tips for David Use'}, '[B]TOOLS : [/B]Tips for David Use', iconImage='settings2.png')
-        self._add_dir({'mode': 'navigator.set_view_modes', 'foldername': 'Set Views', 'list_name': 'Tools Set Views'}, '[B]TOOLS : [/B]Set Views', iconImage='settings2.png')
-        self._add_dir({'mode': 'navigator.backup_restore', 'foldername': 'Backup/Restore David User Data', 'list_name': 'Tools Backup/Restore David User Data'}, '[B]TOOLS : [/B]Backup/Restore David User Data', iconImage='settings2.png')
-        self._add_dir({'mode': 'navigator.clear_info', 'foldername': 'Clear Databases and Clean Settings Files', 'list_name': 'Tools Clear Databases and Clean Settings Files'}, '[B]TOOLS : [/B]Clear Databases and Clean Settings Files', iconImage='settings2.png')
-        self._add_dir({'mode': 'navigator.external_scrapers', 'foldername': 'External Scrapers Manager', 'list_name': 'Tools External Scrapers Manager'}, '[B]TOOLS : [/B]External Scrapers Manager', iconImage='settings2.png')
-        self._add_dir({'mode': 'navigator.shortcut_folders', 'foldername': 'Shortcut Folders Manager', 'list_name': 'Tools Shortcut Folders Manager'}, '[B]TOOLS : [/B]Shortcut Folders Manager', iconImage='settings2.png')
-        self._add_dir({'mode': 'navigator.next_episodes', 'foldername': 'Next Episode Manager', 'list_name': 'Tools Next Episode Manager'}, '[B]TOOLS : [/B]Next Episode Manager', iconImage='settings2.png')
-        self._add_dir({'mode': 'update_subscriptions', 'foldername': 'Update Subscriptions', 'list_name': 'Tools Update Subscriptions'}, '[B]TOOLS : [/B]Update Subscriptions %s' % display_time, iconImage='settings2.png')
-        if settings.watched_indicators() == 1: self._add_dir({'mode': 'trakt_sync_watched_to_david', 'refresh': True, 'foldername': 'ReSync David Watched to Trakt Watched', 'list_name': '[B]TOOLS : [/B]ReSync David Watched to Trakt Watched'}, '[B]TOOLS : [/B]ReSync David Watched to Trakt Watched', iconImage='settings2.png')
+        self._add_dir({'mode': 'navigator.changelogs', 'foldername': 'Changelogs & Log Viewer', 'list_name': 'Tools Changelogs & Log Viewer'}, '[B]David : [/B]Changelogs & Kodi Log Viewer', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.tips', 'foldername': 'Tips for David Use', 'list_name': 'Tips for David Use'}, '[B]David : [/B]Tips for David Use', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.set_view_modes', 'foldername': 'Set Views', 'list_name': 'Tools Set Views'}, '[B]David : [/B]Set Views', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.backup_restore', 'foldername': 'Backup/Restore David User Data', 'list_name': 'Tools Backup/Restore David User Data'}, '[B]David : [/B]Backup/Restore David User Data', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.clear_info', 'foldername': 'Clear Databases and Clean Settings Files', 'list_name': 'Tools Clear Databases and Clean Settings Files'}, '[B]David : [/B]Clear Databases and Clean Settings Files', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.external_scrapers', 'foldername': 'External Scrapers Manager', 'list_name': 'Tools External Scrapers Manager'}, '[B]David : [/B]External Scrapers Manager', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.shortcut_folders', 'foldername': 'Shortcut Folders Manager', 'list_name': 'Tools Shortcut Folders Manager'}, '[B]David : [/B]Shortcut Folders Manager', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.next_episodes', 'foldername': 'Next Episode Manager', 'list_name': 'Tools Next Episode Manager'}, '[B]David : [/B]Next Episode Manager', iconImage='tools.png')
+        self._add_dir({'mode': 'update_subscriptions', 'foldername': 'Update Subscriptions', 'list_name': 'Tools Update Subscriptions'}, '[B]David : [/B]Update Subscriptions %s' % display_time, iconImage='tools.png')
+        if settings.watched_indicators() == 1: self._add_dir({'mode': 'trakt_sync_watched_to_david', 'refresh': True, 'foldername': 'ReSync David Watched to Trakt Watched', 'list_name': '[B]David : [/B]ReSync David Watched to Trakt Watched'}, '[B]TOOLS : [/B]ReSync David Watched to Trakt Watched', iconImage='tools.png')
         enable_fu = True
         if not __addon__.getSetting('furk_api_key'):
             if not __addon__.getSetting('furk_login') or not __addon__.getSetting('furk_password'):
                 enable_fu = False
         enable_en = False if '' in (__addon__.getSetting('easynews_user'), __addon__.getSetting('easynews_password')) else True
         enable_pm = False if __addon__.getSetting('pm.token') == '' else True
-        if enable_fu: self._add_dir({'mode': 'navigator.furk', 'foldername': 'Furk', 'list_name': 'Furk'}, '[B]PREMIUM SERVICES: [/B]Furk', iconImage='furk.png')
-        if enable_en: self._add_dir({'mode': 'navigator.easynews', 'foldername': 'Easynews', 'list_name': 'Easynews'}, '[B]PREMIUM SERVICES : [/B]Easynews', iconImage='easynews.png')
-        self._add_dir({'mode': 'navigator.real_debrid', 'foldername': 'Real Debrid', 'list_name': 'Real Debrid'}, '[B]PREMIUM SERVICES : [/B]Real Debrid', iconImage='realdebrid.png')
-        self._add_dir({'mode': 'navigator.premiumize', 'foldername': 'Premiumize', 'list_name': 'Premiumize'}, '[B]PREMIUM SERVICES : [/B]Premiumize', iconImage='premiumize.png')
-        self._add_dir({'mode': 'navigator.alldebrid', 'foldername': 'All Debrid', 'list_name': 'All Debrid'}, '[B]PREMIUM SERVICES : [/B]All Debrid', iconImage='alldebrid.png')
-        self._add_dir({'mode': 'navigator.debrid_authorize', 'foldername': '(Re)Authorize Debrid Services', 'list_name': 'Authorize Debrid Services'}, '[B]DEBRID : [/B](Re)Authorize Debrid Services', iconImage='settings2.png')
-        self._add_dir({'mode': 'trakt_authenticate', 'foldername': '(Re)Authenticate Trakt', 'list_name': 'Tools (Re)Authenticate Trakt'}, '[B]TRAKT : [/B](Re)Authenticate Trakt', iconImage='settings2.png')
+        if enable_fu: self._add_dir({'mode': 'navigator.furk', 'foldername': 'Furk', 'list_name': 'Furk'}, '[B]Premium Services: [/B]Furk', iconImage='tools.png')
+        if enable_en: self._add_dir({'mode': 'navigator.easynews', 'foldername': 'Easynews', 'list_name': 'Easynews'}, '[B]Premium Services : [/B]Easynews', iconImage='tools.png')
+        self._add_dir({'mode': 'external_settings', 'ext_addon': 'script.david.metadata', 'foldername': 'David Meta Settings', 'list_name': 'Settings David Meta Settings'}, '[B]David : [/B]Configure Meta Settings', iconImage='tools.png')
+        self._add_dir({'mode': 'external_settings', 'ext_addon': 'script.module.openscrapers', 'foldername': 'OpenScrapers Settings', 'list_name': 'Settings OpenScrapers Settings'}, '[B]OpenScraper Settings : [/B]Configure OpenScrapers Settings', iconImage='tools.png')
+        self._add_dir({'mode': 'resolveurl_settings', 'foldername': 'ResolveURL Settings', 'list_name': 'Settings ResolveURL Settings'}, '[B]ResolveURL : [/B]Configure ResolveURL Settings', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.premiumize', 'foldername': 'Premiumize', 'list_name': 'Premiumize'}, '[B]Premiumize : [/B](Re)Authorize David With Premiumize', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.alldebrid', 'foldername': 'All Debrid', 'list_name': 'All Debrid'}, '[B]All Debrid : [/B](Re)Authorize David With All Debrid', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.real_debrid', 'foldername': 'Real Debrid', 'list_name': 'Real Debrid'}, '[B]Real-Debrid : [/B](Re)Authorize David With Real-Debrid', iconImage='tools.png')
+#         self._add_dir({'mode': 'navigator.debrid_authorize', 'foldername': '(Re)Authorize Debrid Services', 'list_name': 'Authorize Debrid Services'}, '[B]Premium Services : [/B](Re)Authorize Debrid Services', iconImage='tools.png')
+        self._add_dir({'mode': 'trakt_authenticate', 'foldername': '(Re)Authenticate Trakt', 'list_name': 'Tools (Re)Authenticate Trakt'}, '[B]Trakt : [/B](Re)Authorize David With Trakt', iconImage='trakt.png')
 
-        self._end_directory()
-
-    def settings(self):
-        self._add_dir({'mode': 'open_settings', 'query': '0.0', 'foldername': 'General', 'list_name': 'Settings General'}, '[B]SETTINGS : [/B]General', iconImage='settings.png')
-        self._add_dir({'mode': 'open_settings', 'query': '1.0', 'foldername': 'Accounts', 'list_name': 'Settings Accounts'}, '[B]SETTINGS : [/B]Accounts', iconImage='settings.png')
-        self._add_dir({'mode': 'open_settings', 'query': '2.0', 'foldername': 'Next Episodes', 'list_name': 'Settings Next Episodes'}, '[B]SETTINGS : [/B]Next Episodes', iconImage='settings.png')
-        self._add_dir({'mode': 'open_settings', 'query': '3.0', 'foldername': 'Trakt', 'list_name': 'Trakt'}, '[B]SETTINGS : [/B]Trakt', iconImage='settings.png')
-        self._add_dir({'mode': 'open_settings', 'query': '4.0', 'foldername': 'Internal Scrapers', 'list_name': 'Settings Internal Scrapers'}, '[B]SETTINGS : [/B]Internal Scrapers', iconImage='settings.png')
-        self._add_dir({'mode': 'open_settings', 'query': '5.0', 'foldername': 'External Scrapers', 'list_name': 'Settings External Scrapers'}, '[B]SETTINGS : [/B]External Scrapers', iconImage='settings.png')
-        self._add_dir({'mode': 'open_settings', 'query': '6.0', 'foldername': 'Results', 'list_name': 'Settings Results'}, '[B]SETTINGS : [/B]Results', iconImage='settings.png')
-        self._add_dir({'mode': 'open_settings', 'query': '7.0', 'foldername': 'Playback', 'list_name': 'Settings Playback'}, '[B]SETTINGS : [/B]Playback', iconImage='settings.png')
-        self._add_dir({'mode': 'open_settings', 'query': '8.0', 'foldername': 'Subscriptions', 'list_name': 'Settings Subscriptions'}, '[B]SETTINGS : [/B]Subscriptions', iconImage='settings.png')
-        self._add_dir({'mode': 'open_settings', 'query': '9.0', 'foldername': 'Downloads', 'list_name': 'Settings Downloads'}, '[B]SETTINGS : [/B]Downloads', iconImage='settings.png')
-        self._add_dir({'mode': 'external_settings', 'ext_addon': 'script.module.openscrapers', 'foldername': 'OpenScrapers Settings', 'list_name': 'Settings OpenScrapers Settings'}, '[B]EXTERNAL (SCRAPER) : [/B]OpenScrapers Settings', iconImage='settings.png')
-        self._add_dir({'mode': 'external_settings', 'ext_addon': 'script.module.davidmeta', 'foldername': 'David Meta Settings', 'list_name': 'Settings David Meta Settings'}, '[B]EXTERNAL (META) : [/B]David Meta Settings', iconImage='settings.png')
-        self._add_dir({'mode': 'resolveurl_settings', 'foldername': 'ResolveURL Settings', 'list_name': 'Settings ResolveURL Settings'}, '[B]EXTERNAL (RESOLVEURL) : [/B]ResolveURL Settings', iconImage='settings.png')
         self._end_directory()
 
     def backup_restore(self):
-        self._add_dir({'mode': 'backup_settings', 'foldername': 'Backup David User Data', 'list_name': 'Tools Backup David User Data'}, '[B]TOOLS : [/B]Backup David User Data', iconImage='backup_export.png')
-        self._add_dir({'mode': 'restore_settings', 'foldername': 'Restore David User Data', 'list_name': 'Tools Restore David User Data'}, '[B]TOOLS : [/B]Restore David User Data', iconImage='backup_import.png')
+        self._add_dir({'mode': 'backup_settings', 'foldername': 'Backup David User Data', 'list_name': 'Tools Backup David User Data'}, '[B]Tools : [/B]Backup David User Data', iconImage='tools.png')
+        self._add_dir({'mode': 'restore_settings', 'foldername': 'Restore David User Data', 'list_name': 'Tools Restore David User Data'}, '[B]Tools : [/B]Restore David User Data', iconImage='tools.png')
         self._end_directory()
 
     def clear_info(self):
         clear_all_amble = '[B][COLOR=grey] (Excludes Favourites, Subscriptions & Search History)[/COLOR][/B]'
-        self._add_dir({'mode': 'clean_settings', 'foldername': 'Clean Settings Files', 'list_name': 'Clean Settings Files'}, '[B]CLEAN : [/B]Clean Settings Files', iconImage='settings2.png')
-        self._add_dir({'mode': 'clear_all_cache', 'foldername': 'Clear All Cache', 'list_name': 'Tools Clear All Cache'}, '[B]CLEAR ALL CACHE[/B] [I]%s[/I]' % clear_all_amble, iconImage='settings2.png')
-        self._add_dir({'mode': 'clear_favourites', 'foldername': 'Clear David Favourites', 'list_name': 'Tools Clear David Favourites'}, '[B]CACHE : [/B]Clear David Favourites', iconImage='settings2.png')
-        self._add_dir({'mode': 'clear_subscriptions', 'foldername': 'Clear David Subscriptions', 'list_name': 'Tools Clear David Subscriptions'}, '[B]CACHE : [/B]Clear David Subscriptions', iconImage='settings2.png')
-        self._add_dir({'mode': 'clear_search_history', 'foldername': 'Clear Search History', 'list_name': 'Tools Clear Search History'}, '[B]CACHE : [/B]Clear Search History', iconImage='settings2.png')
-        self._add_dir({'mode': 'clear_cache', 'cache': 'meta', 'foldername': 'Clear Meta Cache', 'list_name': 'Tools Clear Meta Cache'}, '[B]CACHE : [/B]Clear Meta Cache', iconImage='settings2.png')
-        self._add_dir({'mode': 'clear_cache', 'cache': 'list', 'foldername': 'Clear List Cache', 'list_name': 'Tools Clear List Cache'}, '[B]CACHE : [/B]Clear List Cache', iconImage='settings2.png')
-        self._add_dir({'mode': 'clear_cache', 'cache': 'trakt', 'foldername': 'Clear Trakt Cache', 'list_name': 'Tools Clear Trakt Cache'}, '[B]CACHE : [/B]Clear Trakt Cache', iconImage='settings2.png')
-        self._add_dir({'mode': 'clear_cache', 'cache': 'pages', 'foldername': 'Clear Browsed Pages Cache', 'list_name': 'Tools Clear Browsed Pages Cache'}, '[B]CACHE : [/B]Clear Browsed Pages Cache', iconImage='settings2.png')
-        self._add_dir({'mode': 'clear_cache', 'cache': 'internal_scrapers', 'foldername': 'Clear Internal Scrapers Cache', 'list_name': 'Tools Clear Internal Scrapers Cache'}, '[B]CACHE : [/B]Clear Internal Scrapers Cache', iconImage='settings2.png')
-        self._add_dir({'mode': 'clear_cache', 'cache': 'external_scrapers', 'foldername': 'Clear External Scrapers Cache', 'list_name': 'Tools Clear External Scrapers Cache'}, '[B]CACHE : [/B]Clear External Scrapers Cache', iconImage='settings2.png')
-        self._add_dir({'mode': 'clear_cache', 'cache': 'rd_cloud', 'foldername': 'Clear Real Debrid Cache', 'list_name': 'Tools Clear Real Debrid Cache'}, '[B]CACHE : [/B]Clear Real Debrid Cache', iconImage='settings2.png')
-        self._add_dir({'mode': 'clear_cache', 'cache': 'pm_cloud', 'foldername': 'Clear Premiumize Cache', 'list_name': 'Tools Clear Premiumize Cache'}, '[B]CACHE : [/B]Clear Premiumize Cache', iconImage='settings2.png')
-        self._add_dir({'mode': 'clear_cache', 'cache': 'ad_cloud', 'foldername': 'Clear Cache', 'list_name': 'Tools Clear All Debrid Cache'}, '[B]CACHE : [/B]Clear All Debrid Cache', iconImage='settings2.png')
+        self._add_dir({'mode': 'clean_settings', 'foldername': 'Clean Settings Files', 'list_name': 'Clean Settings Files'}, '[B]Clean : [/B]Clean Settings Files', iconImage='tools.png')
+        self._add_dir({'mode': 'clear_all_cache', 'foldername': 'Clear All Cache', 'list_name': 'Tools Clear All Cache'}, '[B]Clear All Cache[/B] [I]%s[/I]' % clear_all_amble, iconImage='tools.png')
+        self._add_dir({'mode': 'clear_favourites', 'foldername': 'Clear David Favourites', 'list_name': 'Tools Clear David Favourites'}, '[B]Cache : [/B]Clear David Favourites', iconImage='tools.png')
+        self._add_dir({'mode': 'clear_subscriptions', 'foldername': 'Clear David Subscriptions', 'list_name': 'Tools Clear David Subscriptions'}, '[B]Cache : [/B]Clear David Subscriptions', iconImage='tools.png')
+        self._add_dir({'mode': 'clear_search_history', 'foldername': 'Clear Search History', 'list_name': 'Tools Clear Search History'}, '[B]Cache : [/B]Clear Search History', iconImage='tools.png')
+        self._add_dir({'mode': 'clear_cache', 'cache': 'meta', 'foldername': 'Clear Meta Cache', 'list_name': 'Tools Clear Meta Cache'}, '[B]Cache : [/B]Clear Meta Cache', iconImage='tools.png')
+        self._add_dir({'mode': 'clear_cache', 'cache': 'list', 'foldername': 'Clear List Cache', 'list_name': 'Tools Clear List Cache'}, '[B]Cache : [/B]Clear List Cache', iconImage='tools.png')
+        self._add_dir({'mode': 'clear_cache', 'cache': 'trakt', 'foldername': 'Clear Trakt Cache', 'list_name': 'Tools Clear Trakt Cache'}, '[B]Cache : [/B]Clear Trakt Cache', iconImage='tools.png')
+        self._add_dir({'mode': 'clear_cache', 'cache': 'pages', 'foldername': 'Clear Browsed Pages Cache', 'list_name': 'Tools Clear Browsed Pages Cache'}, '[B]Cache : [/B]Clear Browsed Pages Cache', iconImage='tools.png')
+        self._add_dir({'mode': 'clear_cache', 'cache': 'internal_scrapers', 'foldername': 'Clear Internal Scrapers Cache', 'list_name': 'Tools Clear Internal Scrapers Cache'}, '[B]Cache : [/B]Clear Internal Scrapers Cache', iconImage='tools.png')
+        self._add_dir({'mode': 'clear_cache', 'cache': 'external_scrapers', 'foldername': 'Clear External Scrapers Cache', 'list_name': 'Tools Clear External Scrapers Cache'}, '[B]Cache : [/B]Clear External Scrapers Cache', iconImage='tools.png')
+        self._add_dir({'mode': 'clear_cache', 'cache': 'rd_cloud', 'foldername': 'Clear Real Debrid Cache', 'list_name': 'Tools Clear Real Debrid Cache'}, '[B]Cache : [/B]Clear Real Debrid Cache', iconImage='tools.png')
+        self._add_dir({'mode': 'clear_cache', 'cache': 'pm_cloud', 'foldername': 'Clear Premiumize Cache', 'list_name': 'Tools Clear Premiumize Cache'}, '[B]Cache : [/B]Clear Premiumize Cache', iconImage='tools.png')
+        self._add_dir({'mode': 'clear_cache', 'cache': 'ad_cloud', 'foldername': 'Clear Cache', 'list_name': 'Tools Clear All Debrid Cache'}, '[B]Cache : [/B]Cache All Debrid Cache', iconImage='tools.png')
         self._end_directory()
 
     def next_episodes(self):
-        self._add_dir({'mode': 'build_next_episode_manager', 'action': 'manage_in_progress', 'foldername': 'Manage In Progress Shows', 'exclude_external': 'true'}, '[B]NEXT EPISODE : [/B]Manage In Progress Shows', iconImage='settings.png')
-        if settings.watched_indicators() == 0: self._add_dir({'mode': 'build_next_episode_manager', 'action': 'manage_unwatched', 'foldername': 'Manage Unwatched Shows', 'exclude_external': 'true'}, '[B]NEXT EPISODE : [/B]Manage Unwatched Shows', iconImage='settings.png')
-        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Sort Type', 'foldername': 'Manage Sort Type', 'exclude_external': 'true'}, '[B]NEXT EPISODE : [/B]Manage Sort Type', iconImage='settings.png')
-        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Sort Order', 'foldername': 'Manage Sort Order', 'exclude_external': 'true'}, '[B]NEXT EPISODE : [/B]Manage Sort Order', iconImage='settings.png')
-        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Include Unaired', 'foldername': 'Manage Unaired Episodes', 'exclude_external': 'true'}, '[B]NEXT EPISODE : [/B]Manage Unaired Episodes', iconImage='settings.png')
-        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Include Trakt or David Unwatched', 'foldername': 'Include Include Unwatched TV Shows', 'exclude_external': 'true'}, '[B]NEXT EPISODE : [/B]Include Unwatched TV Shows', iconImage='settings.png')
-        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Cache To Disk', 'foldername': 'Manage Cache To Disk', 'exclude_external': 'true'}, '[B]NEXT EPISODE : [/B]Manage Cache To Disk', iconImage='settings.png')
-        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Include Airdate in Title', 'foldername': 'Include Airdate in title', 'exclude_external': 'true'}, '[B]NEXT EPISODE : [/B]Include Airdate in title', iconImage='settings.png')
-        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Airdate Format', 'foldername': 'Manage Airdate Format', 'exclude_external': 'true'}, '[B]NEXT EPISODE : [/B]Manage Airdate Format', iconImage='settings.png')
-        self._add_dir({'mode': 'next_episode_color_choice', 'setting': 'Airdate', 'foldername': 'Manage Airdate Color Highlight', 'exclude_external': 'true'}, '[B]NEXT EPISODE : [/B]Manage Airdate Color Highlight', iconImage='settings.png')
-        self._add_dir({'mode': 'next_episode_color_choice', 'setting': 'Unaired', 'foldername': 'Manage Unaired Color Highlight', 'exclude_external': 'true'}, '[B]NEXT EPISODE : [/B]Manage Unaired Color Highlight', iconImage='settings.png')
-        self._add_dir({'mode': 'next_episode_color_choice', 'setting': 'Unwatched', 'foldername': 'Manage Unwatched Color Highlight', 'exclude_external': 'true'}, '[B]NEXT EPISODE : [/B]Manage Unwatched Color Highlight', iconImage='settings.png')
+        self._add_dir({'mode': 'build_next_episode_manager', 'action': 'manage_in_progress', 'foldername': 'Manage In Progress Shows', 'exclude_external': 'true'}, '[B]Next Episode : [/B]Manage In Progress Shows', iconImage='tools.png')
+        if settings.watched_indicators() == 0: self._add_dir({'mode': 'build_next_episode_manager', 'action': 'manage_unwatched', 'foldername': 'Manage Unwatched Shows', 'exclude_external': 'true'}, '[B]Next Episode : [/B]Manage Unwatched Shows', iconImage='tools.png')
+        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Sort Type', 'foldername': 'Manage Sort Type', 'exclude_external': 'true'}, '[B]Next Episode : [/B]Manage Sort Type', iconImage='tools.png')
+        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Sort Order', 'foldername': 'Manage Sort Order', 'exclude_external': 'true'}, '[B]Next Episode : [/B]Manage Sort Order', iconImage='tools.png')
+        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Include Unaired', 'foldername': 'Manage Unaired Episodes', 'exclude_external': 'true'}, '[B]Next Episode : [/B]Manage Unaired Episodes', iconImage='tools.png')
+        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Include Trakt or David Unwatched', 'foldername': 'Include Include Unwatched TV Shows', 'exclude_external': 'true'}, '[B]Next Episode : [/B]Include Unwatched TV Shows', iconImage='tools.png')
+        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Cache To Disk', 'foldername': 'Manage Cache To Disk', 'exclude_external': 'true'}, '[B]Next Episode : [/B]Manage Cache To Disk', iconImage='tools.png')
+        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Include Airdate in Title', 'foldername': 'Include Airdate in title', 'exclude_external': 'true'}, '[B]Next Episode : [/B]Include Airdate in title', iconImage='tools.png')
+        self._add_dir({'mode': 'next_episode_options_choice', 'setting': 'Airdate Format', 'foldername': 'Manage Airdate Format', 'exclude_external': 'true'}, '[B]Next Episode : [/B]Manage Airdate Format', iconImage='tools.png')
+        self._add_dir({'mode': 'next_episode_color_choice', 'setting': 'Airdate', 'foldername': 'Manage Airdate Color Highlight', 'exclude_external': 'true'}, '[B]Next Episode : [/B]Manage Airdate Color Highlight', iconImage='tools.png')
+        self._add_dir({'mode': 'next_episode_color_choice', 'setting': 'Unaired', 'foldername': 'Manage Unaired Color Highlight', 'exclude_external': 'true'}, '[B]Next Episode : [/B]Manage Unaired Color Highlight', iconImage='tools.png')
+        self._add_dir({'mode': 'next_episode_color_choice', 'setting': 'Unwatched', 'foldername': 'Manage Unwatched Color Highlight', 'exclude_external': 'true'}, '[B]Next Episode : [/B]Manage Unwatched Color Highlight', iconImage='tools.png')
         self._end_directory()
 
     def debrid_authorize(self):
-        self._add_dir({'mode': 'real_debrid.authenticate', 'foldername': '(Re)Authorize Real-Debrid', 'list_name': 'Authorize Real-Debrid'}, '[B]REAL-DEBRID : [/B](Re)Authorize Real-Debrid', iconImage='realdebrid.png')
-        self._add_dir({'mode': 'premiumize.authenticate', 'foldername': '(Re)Authorize Premiumize', 'list_name': 'Authorize Premiumize'}, '[B]PREMIUMIZE : [/B](Re)Authorize Premiumize', iconImage='premiumize.png')
-        self._add_dir({'mode': 'alldebrid.authenticate', 'foldername': '(Re)Authorize All Debrid', 'list_name': 'Authorize All Debrid'}, '[B]ALL DEBRID : [/B](Re)Authorize All Debrid', iconImage='alldebrid.png')
+        self._add_dir({'mode': 'real_debrid.authenticate', 'foldername': '(Re)Authorize Real-Debrid', 'list_name': 'Authorize Real-Debrid'}, '[B]Real Debrid : [/B](Re)Authorize Real-Debrid', iconImage='tools.png')
+        self._add_dir({'mode': 'alldebrid.authenticate', 'foldername': '(Re)Authorize All Debrid', 'list_name': 'Authorize All Debrid'}, '[B]All Debrid : [/B](Re)Authorize All Debrid', iconImage='tools.png')
+        self._add_dir({'mode': 'premiumize.authenticate', 'foldername': '(Re)Authorize Premiumize', 'list_name': 'Authorize Premiumize'}, '[B]Premiumize : [/B](Re)Authorize Premiumize', iconImage='tools.png')
         self._end_directory()
 
     def external_scrapers(self):
@@ -287,29 +284,29 @@ class Navigator:
         self._end_directory()
 
     def set_view_modes(self):
-        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.main', 'title': 'Set Main List View', 'view_type': 'addons', 'exclude_external': 'true'},'[B]SET VIEW : [/B]Main List', iconImage='settings.png')
-        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.movies', 'title': 'Set Movies View', 'view_type': 'movies', 'exclude_external': 'true'},'[B]SET VIEW : [/B]Movies', iconImage='settings.png')
-        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.tvshows', 'title': 'Set TV Show View', 'view_type': 'tvshows', 'exclude_external': 'true'},'[B]SET VIEW : [/B]TV Shows', iconImage='settings.png')
-        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.seasons', 'title': 'Set Seasons View', 'view_type': 'seasons', 'exclude_external': 'true'},'[B]SET VIEW : [/B]Seasons', iconImage='settings.png')
-        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.episodes', 'title': 'Set Episodes View', 'view_type': 'episodes', 'exclude_external': 'true'},'[B]SET VIEW : [/B]Episodes', iconImage='settings.png')
-        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.episode_lists', 'title': 'Set Episode Lists View', 'view_type': 'episodes', 'exclude_external': 'true'},'[B]SET VIEW : [/B]Episode Lists View', iconImage='settings.png')
-        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.trakt_list', 'title': 'Set Trakt Lists View', 'view_type': 'movies', 'exclude_external': 'true'},'[B]SET VIEW : [/B]Trakt Lists', iconImage='settings.png')
-        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.search_results', 'title': 'Set Search Results View', 'view_type': 'files', 'exclude_external': 'true'},'[B]SET VIEW : [/B]Search Results', iconImage='settings.png')
-        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.premium', 'title': 'Set Premium Files View', 'view_type': 'files', 'exclude_external': 'true'},'[B]SET VIEW : [/B]Premium Files', iconImage='settings.png')
+        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.main', 'title': 'Set Main List View', 'view_type': 'addons', 'exclude_external': 'true'},'[B]Set View : [/B]Main List', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.movies', 'title': 'Set Movies View', 'view_type': 'movies', 'exclude_external': 'true'},'[B]Set View : [/B]Movies', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.tvshows', 'title': 'Set TV Show View', 'view_type': 'tvshows', 'exclude_external': 'true'},'[B]Set View : [/B]TV Shows', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.seasons', 'title': 'Set Seasons View', 'view_type': 'seasons', 'exclude_external': 'true'},'[B]Set View : [/B]Seasons', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.episodes', 'title': 'Set Episodes View', 'view_type': 'episodes', 'exclude_external': 'true'},'[B]Set View : [/B]Episodes', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.episode_lists', 'title': 'Set Episode Lists View', 'view_type': 'episodes', 'exclude_external': 'true'},'[B]Set View : [/B]Episode Lists View', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.trakt_list', 'title': 'Set Trakt Lists View', 'view_type': 'movies', 'exclude_external': 'true'},'[B]Set View : [/B]Trakt Lists', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.search_results', 'title': 'Set Search Results View', 'view_type': 'files', 'exclude_external': 'true'},'[B]Set View : [/B]Search Results', iconImage='tools.png')
+        self._add_dir({'mode': 'navigator.view_chooser', 'view_setting_id': 'view.premium', 'title': 'Set Premium Files View', 'view_type': 'files', 'exclude_external': 'true'},'[B]Set View : [/B]Premium Files', iconImage='tools.png')
         self._end_directory()
 
     def changelogs(self):
         david_version = __addon__.getAddonInfo('version')
         scrapers_version = xbmcaddon.Addon(id='script.module.openscrapers').getAddonInfo('version')
-        meta_version = xbmcaddon.Addon(id='script.module.davidmeta').getAddonInfo('version')
+        meta_version = xbmcaddon.Addon(id='script.david.metadata').getAddonInfo('version')
         main_text_file, main_heading = xbmc.translatePath(os.path.join(addon_dir, "resources", "text", "changelog.txt")), 'David Changelog  [I](v.%s)[/I]' % david_version
-        meta_text_file, meta_heading = xbmc.translatePath(os.path.join(xbmc.translatePath(xbmcaddon.Addon(id='script.module.davidmeta').getAddonInfo('path')), "changelog.txt")), 'David Meta Changelog  [I](v.%s)[/I]' % meta_version
+        meta_text_file, meta_heading = xbmc.translatePath(os.path.join(xbmc.translatePath(xbmcaddon.Addon(id='script.david.metadata').getAddonInfo('path')), "changelog.txt")), 'David Meta Changelog  [I](v.%s)[/I]' % meta_version
         scrapers_text_file, scrapers_heading = xbmc.translatePath(os.path.join(xbmc.translatePath(xbmcaddon.Addon(id='script.module.openscrapers').getAddonInfo('path')), "changelog.txt")), 'OpenScrapers Changelog  [I](v.%s)[/I]' % scrapers_version
         kodi_log_location = os.path.join(xbmc.translatePath('special://logpath/'), 'kodi.log')
-        self._add_dir({'mode': 'show_text', 'text_file': main_text_file, 'heading': main_heading, 'foldername': main_heading, 'list_name': 'David Changelog'}, '[B]CHANGELOG : [/B] %s' % main_heading.replace(' Changelog', ''), iconImage='lists.png')
-        self._add_dir({'mode': 'show_text', 'text_file': meta_text_file, 'heading': meta_heading, 'foldername': meta_heading, 'list_name': 'David Meta Changelog'}, '[B]CHANGELOG : [/B] %s' % meta_heading.replace(' Changelog', ''), iconImage='lists.png')
-        self._add_dir({'mode': 'show_text', 'text_file': scrapers_text_file, 'heading': scrapers_heading, 'foldername': scrapers_heading, 'list_name': 'Open Scrapers Changelog'}, '[B]CHANGELOG : [/B] %s' % scrapers_heading.replace(' Changelog', ''), iconImage='lists.png')
-        self._add_dir({'mode': 'show_text', 'text_file': kodi_log_location, 'heading': 'Kodi Log Viewer', 'usemono': 'True', 'foldername': 'Kodi Log Viewer', 'list_name': 'Kodi Log Viewer'}, '[B]LOG : [/B]Kodi Log Viewer', iconImage='lists.png')
+        self._add_dir({'mode': 'show_text', 'text_file': main_text_file, 'heading': main_heading, 'foldername': main_heading, 'list_name': 'David Changelog'}, '[B]Changelog : [/B] %s' % main_heading.replace(' Changelog', ''), iconImage='tools.png')
+        self._add_dir({'mode': 'show_text', 'text_file': meta_text_file, 'heading': meta_heading, 'foldername': meta_heading, 'list_name': 'David Meta Changelog'}, '[B]Changelog : [/B] %s' % meta_heading.replace(' Changelog', ''), iconImage='tools.png')
+        self._add_dir({'mode': 'show_text', 'text_file': scrapers_text_file, 'heading': scrapers_heading, 'foldername': scrapers_heading, 'list_name': 'Open Scrapers Changelog'}, '[B]Changelog : [/B] %s' % scrapers_heading.replace(' Changelog', ''), iconImage='tools.png')
+        self._add_dir({'mode': 'show_text', 'text_file': kodi_log_location, 'heading': 'Kodi Log Viewer', 'usemono': 'True', 'foldername': 'Kodi Log Viewer', 'list_name': 'Kodi Log Viewer'}, '[B]Log : [/B]Kodi Log Viewer', iconImage='tools.png')
         self._end_directory()
 
     def certifications(self):
@@ -320,7 +317,7 @@ class Navigator:
         action = 'tmdb_movies_certifications' if params.get('menu_type') == 'movie' else 'trakt_tv_certifications'
         list_name_insert = self.make_list_name(params.get('menu_type'))
         for cert in certifications:
-            self._add_dir({'mode': mode, 'action': action, 'certification': cert, 'foldername': cert.upper(), 'list_name': '%ss %s Certification' % (list_name_insert, cert.upper())}, cert.upper(), iconImage='certifications.png')
+            self._add_dir({'mode': mode, 'action': action, 'certification': cert, 'foldername': cert.upper(), 'list_name': '%ss %s Certification' % (list_name_insert, cert.upper())}, cert.upper(), iconImage='certificates.png')
         self._end_directory()
 
     def languages(self):
@@ -340,7 +337,7 @@ class Navigator:
         action = 'tmdb_movies_year' if params.get('menu_type') == 'movie' else 'tmdb_tv_year'
         list_name_insert = self.make_list_name(params.get('menu_type'))
         for i in years():
-            self._add_dir({'mode': mode, 'action': action, 'year': str(i), 'foldername': '%s - %s' % (str(i), params.get('menu_type')), 'list_name': '%ss %s Premiered' % (list_name_insert, str(i))}, str(i), iconImage='calender.png')
+            self._add_dir({'mode': mode, 'action': action, 'year': str(i), 'foldername': '%s - %s' % (str(i), params.get('menu_type')), 'list_name': '%ss %s Premiered' % (list_name_insert, str(i))}, str(i), iconImage='calendar.png')
         self._end_directory()
 
     def genres(self):
@@ -366,9 +363,9 @@ class Navigator:
         final_mode = 'build_movie_list' if params.get('menu_type') == 'movie' else 'build_tvshow_list'
         action = 'trakt_movies_mosts' if params.get('menu_type') == 'movie' else 'trakt_tv_mosts'
         list_name_insert = self.make_list_name(params.get('menu_type'))
-        trakt_mosts = {'Played': ['played', 'most__played.png'],
-        'Collected': ['collected', 'most__collected.png'],
-        'Watched': ['watched', 'most__watched.png']}
+        trakt_mosts = {'Played': ['played', 'trakt.png'],
+        'Collected': ['collected', 'trakt.png'],
+        'Watched': ['watched', 'trakt.png']}
         for most, value in trakt_mosts.items():
             self._add_dir({'mode': 'navigator.trakt_mosts_duration', 'action': action, 'period': value[0], 'menu_type': params.get('menu_type'), 'final_mode': final_mode, 'iconImage': value[1], 'foldername': 'Most %s' % most, 'list_name': '%ss Most %s' % (list_name_insert, most)}, '[B]MOST: [/B]%s' % most, iconImage=value[1])
         self._end_directory()
@@ -403,7 +400,7 @@ class Navigator:
                 folder_path = settings.source_folders_directory(db_type, source)
                 if not folder_path: continue
                 name = '[B]%s (%sS): %s[/B]\n     [I]%s[/I]' % (source.upper(), db_type.upper(), __addon__.getSetting('%s.display_name' % source).upper(), folder_path)
-                self._add_dir({'mode': 'navigator.folder_navigator', 'folder_path': folder_path, 'foldername': name, 'list_name': name}, name, iconImage='most__collected.png')
+                self._add_dir({'mode': 'navigator.folder_navigator', 'folder_path': folder_path, 'foldername': name, 'list_name': name}, name, iconImage='trakt.png')
         self._end_directory()
 
     def tips(self):
@@ -418,7 +415,7 @@ class Navigator:
                         break
                 color = 'orange' if idx == 0 else 'crimson' if idx == 1 else 'purple'
                 tip_name = (tip_name % color).replace(important[idx], important[idx] + '[/COLOR]')
-            self._add_dir({'mode': 'show_text', 'text_file': xbmc.translatePath(os.path.join(tips_location, tip)), 'exclude_external': 'true', 'heading': 'David Tips', 'foldername': '[B]David Tips %s[/B]' % tip_name, 'list_name': 'David Tips [B]%s[/B]' % tip_name}, '[B]TIPS : [/B] %s' % tip_name, iconImage='faq8.png')
+            self._add_dir({'mode': 'show_text', 'text_file': xbmc.translatePath(os.path.join(tips_location, tip)), 'exclude_external': 'true', 'heading': 'David Tips', 'foldername': '[B]David Tips %s[/B]' % tip_name, 'list_name': 'David Tips [B]%s[/B]' % tip_name}, '[B]TIPS : [/B] %s' % tip_name, iconImage='tools.png')
         self._end_directory()
 
     def because_you_watched(self):
@@ -456,12 +453,12 @@ class Navigator:
                 season, episode = item[2][-1]
                 name = '[I]Because You Watched...[/I]  [B]%s - %sx%s[/B]' % (item[name_index], season, episode)
             tmdb_id = item[tmdb_index]
-            self._add_dir({'mode': mode, 'action': action, 'sim_recom_name': name, 'sim_recom_tmdb': tmdb_id, 'foldername': name, 'list_name': name, 'exclude_external': 'true'}, name, iconImage='because_you_watched.png')
+            self._add_dir({'mode': mode, 'action': action, 'sim_recom_name': name, 'sim_recom_tmdb': tmdb_id, 'foldername': name, 'list_name': name, 'exclude_external': 'true'}, name, iconImage='userlists.png')
         self._end_directory()
 
     def view_chooser(self):
         params = dict(parse_qsl(sys.argv[2].replace('?','')))
-        self._add_dir({'mode': 'navigator.set_views', 'view_setting_id': params.get('view_setting_id'), 'title': params.get('title'), 'view_type': params.get('view_type'), 'exclude_external': 'true'}, 'Set view and then click here', iconImage='settings.png')
+        self._add_dir({'mode': 'navigator.set_views', 'view_setting_id': params.get('view_setting_id'), 'title': params.get('title'), 'view_type': params.get('view_type'), 'exclude_external': 'true'}, 'Set view and then click here', iconImage='tools.png')
         xbmcplugin.setContent(__handle__, params.get('view_type'))
         xbmcplugin.endOfDirectory(__handle__)
         self._setView(params.get('view_setting_id'), params.get('view_type'))
@@ -496,7 +493,7 @@ class Navigator:
         folders = dbcur.fetchall()
         try: folders = sorted([(str(i[0]), i[1]) for i in folders], key=lambda s: s[0].lower())
         except: folders = []
-        icon = os.path.join(self.icon_directory, 'furk.png')
+        icon = os.path.join(self.icon_directory, 'tools.png')
         _make_new_item()
         for i in folders:
             try:
@@ -504,7 +501,7 @@ class Navigator:
                 name = i[0]
                 display_name = '[B]SHORTCUT FOLDER : [/B] %s ' % i[0]
                 contents = json.loads(i[1])
-                url_params = {"iconImage": "furk.png", 
+                url_params = {"iconImage": "tools.png", 
                             "mode": "navigator.build_shortcut_folder_lists",
                             "action": name,
                             "name": name, 
@@ -542,13 +539,13 @@ class Navigator:
                 choice_list.append(listitem)
             if position_list:
                 listitemTop = xbmcgui.ListItem('Top Position', 'Place [B]%s[/B] at Top of List' % menu_name)
-                listitemTop.setArt({'icon': os.path.join(self.icon_directory, 'top.png')})
+                listitemTop.setArt({'icon': os.path.join(self.icon_directory, 'library_update.png')})
                 choice_list.insert(0, listitemTop)
             return dialog.select(heading, choice_list, useDetails=True)
         def select_from_main_menus(current_list=[], item_list=[]):
             include_list = DefaultMenus().DefaultMenuItems()
             menus = DefaultMenus().RootList()
-            menus.insert(0, {'name': 'Root', 'iconImage': 'david.png', 'foldername': 'Root', 'mode': 'navigator.main', 'action': 'RootList'})
+            menus.insert(0, {'name': 'Root', 'iconImage': 'icon.png', 'foldername': 'Root', 'mode': 'navigator.main', 'action': 'RootList'})
             include_list = [i for i in include_list if i != current_list]
             menus = [i for i in menus if i.get('action', None) in include_list and not i.get('name') == item_list]
             return menus
@@ -585,13 +582,13 @@ class Navigator:
                 folder_choice_list = []
                 folder_names = ['[B]%s[/B]' % i[0] for i in folders]
                 for item in folder_names:
-                    icon = os.path.join(self.icon_directory, 'furk.png')
+                    icon = os.path.join(self.icon_directory, 'tools.png')
                     listitem = xbmcgui.ListItem(item, 'Existing Shortcut Folder')
                     listitem.setArt({'icon': icon})
                     folder_choice_list.append(listitem)
                 if make_new:
                     make_new_item = xbmcgui.ListItem('[B]MAKE NEW FOLDER[/B]', 'Make New Shortcut Folder')
-                    make_new_item.setArt({'icon': os.path.join(self.icon_directory, 'new.png')})
+                    make_new_item.setArt({'icon': os.path.join(self.icon_directory, 'library_update.png')})
                     folder_choice_list.insert(0, make_new_item)
                 selection = dialog.select('DAVID - Shortcut Folder Choice', folder_choice_list, useDetails=True)
             return folders, selection
@@ -724,7 +721,7 @@ class Navigator:
                 choice_items = li
                 item_position = menu_select('Choose Insert Position of Menu Item (Insert Below Chosen Item)...', position_list=True)
                 if item_position < 0: return
-                li.insert(item_position, {"iconImage": "traktmylists.png", "mode": "trakt.build_trakt_list", "name": name, "foldername": name, "user": trakt_selection['user'], "slug": trakt_selection['slug'], 'external_list_item': 'True'})
+                li.insert(item_position, {"iconImage": "trakt.png", "mode": "trakt.build_trakt_list", "name": name, "foldername": name, "user": trakt_selection['user'], "slug": trakt_selection['slug'], 'external_list_item': 'True'})
                 db_execute()
             elif method == 'add_trakt_external':
                 name = dialog.input('Choose Display Name', type=xbmcgui.INPUT_ALPHANUM, defaultt=params['name'])
@@ -742,7 +739,7 @@ class Navigator:
                 choice_items = li
                 item_position = 0 if len(li) == 0 else menu_select('Choose Insert Position of Menu Item (Insert Below Chosen Item)...', position_list=True)
                 if item_position < 0: return
-                li.insert(item_position, {"iconImage": "traktmylists.png", "mode": "trakt.build_trakt_list", "name": name, "foldername": name, "user": params['user'], "slug": params['slug'], 'external_list_item': 'True'})
+                li.insert(item_position, {"iconImage": "trakt.png", "mode": "trakt.build_trakt_list", "name": name, "foldername": name, "user": params['user'], "slug": params['slug'], 'external_list_item': 'True'})
                 db_execute()
             elif method == 'add_sim_recom_external':
                 name = dialog.input('Choose Display Name', type=xbmcgui.INPUT_ALPHANUM, defaultt=params['sim_recom_name'])
@@ -760,7 +757,7 @@ class Navigator:
                 choice_items = li
                 item_position = 0 if len(li) == 0 else menu_select('Choose Insert Position of Menu Item (Insert Below Chosen Item)...', position_list=True)
                 if item_position < 0: return
-                li.insert(item_position, {"iconImage": "discover.png", "mode": params['end_mode'], 'action': params['end_action'], "name": name, "sim_recom_name": name, "foldername": name, "sim_recom_tmdb": params['sim_recom_tmdb'], 'external_list_item': 'True'})
+                li.insert(item_position, {"iconImage": "library_update.png", "mode": params['end_mode'], 'action': params['end_action'], "name": name, "sim_recom_name": name, "foldername": name, "sim_recom_tmdb": params['sim_recom_tmdb'], 'external_list_item': 'True'})
                 db_execute()
             elif method == 'browse':
                 heading = "Choose Removed Item to Browse Into.."
@@ -798,7 +795,7 @@ class Navigator:
                     if not name: return
                     contents = []
                 if name in [i['name'] for i in li]: return
-                menu_item = {"iconImage": "furk.png", 
+                menu_item = {"iconImage": "tools.png", 
                             "mode": "navigator.build_shortcut_folder_lists",
                             "action": name,
                             "name": name, 
@@ -914,7 +911,7 @@ class Navigator:
                 choice_list.append(listitem)
             if position_list:
                 listitemTop = xbmcgui.ListItem('Top Position', 'Place [B]%s[/B] at Top of List' % name)
-                listitemTop.setArt({'icon': os.path.join(self.icon_directory, 'top.png')})
+                listitemTop.setArt({'icon': os.path.join(self.icon_directory, 'library_update.png')})
                 choice_list.insert(0, listitemTop)
             return dialog.select(heading, choice_list, useDetails=True)
         def select_shortcut_folders(select=True):
@@ -930,7 +927,7 @@ class Navigator:
                 folder_choice_list = []
                 folder_names = ['[B]%s[/B]' % i[0] for i in folders]
                 for item in folder_names:
-                    icon = os.path.join(self.icon_directory, 'furk.png')
+                    icon = os.path.join(self.icon_directory, 'tools.png')
                     listitem = xbmcgui.ListItem(item, 'Existing Shortcut Folder')
                     listitem.setArt({'icon': icon})
                     folder_choice_list.append(listitem)
@@ -1012,7 +1009,7 @@ class Navigator:
                 choice_items = li
                 item_position = menu_select('Choose Insert Position of Menu Item (Insert Below Chosen Item)...', position_list=True)
                 if item_position < 0: return
-                li.insert(item_position, {"iconImage": "traktmylists.png", "mode": "trakt.build_trakt_list", "name": name, "foldername": name, "user": trakt_selection['user'], "slug": trakt_selection['slug'], 'external_list_item': 'True'})
+                li.insert(item_position, {"iconImage": "trakt.png", "mode": "trakt.build_trakt_list", "name": name, "foldername": name, "user": trakt_selection['user'], "slug": trakt_selection['slug'], 'external_list_item': 'True'})
                 db_execute_shortcut_folder()
             elif method == 'add_trakt_external':
                 name = dialog.input('Choose Display Name', type=xbmcgui.INPUT_ALPHANUM, defaultt=params['name'])
@@ -1028,7 +1025,7 @@ class Navigator:
                 if item_position < 0: return
                 menu_name = shortcut_folder_name
                 li = shortcut_folder_contents
-                li.insert(item_position, {"iconImage": "traktmylists.png", "mode": "trakt.build_trakt_list", "name": name, "foldername": name, "user": params['user'], "slug": params['slug'], 'external_list_item': 'True'})
+                li.insert(item_position, {"iconImage": "trakt.png", "mode": "trakt.build_trakt_list", "name": name, "foldername": name, "user": params['user'], "slug": params['slug'], 'external_list_item': 'True'})
                 db_execute_shortcut_folder()
             elif method == 'clear_all':
                 confirm = dialog.yesno('Are you sure?', 'Continuing will clear this Shortcut Folder.')
@@ -1069,7 +1066,7 @@ class Navigator:
     
     def build_shortcut_folder_lists(self):
         def _build_default():
-            icon = os.path.join(self.icon_directory, 'furk.png')
+            icon = os.path.join(self.icon_directory, 'tools.png')
             url_params = {'mode': 'navigator.adjust_shortcut_folder_lists', 'method': 'add_trakt', 'contents': [], 'menu_item': '',
                         'list_name': list_name, 'menu_name': '',
                         'position': '', 'list_slug': '',

@@ -220,7 +220,7 @@ class DavidPlayer(xbmc.Player):
         from modules.utils import clean_file_name, batch_replace, to_utf8
         from modules.nav_utils import setView
         icon_directory = settings.get_theme()
-        default_furk_icon = os.path.join(icon_directory, 'furk.png')
+        default_furk_icon = os.path.join(icon_directory, 'tools.png')
         formats = ('.3gp', ''), ('.aac', ''), ('.flac', ''), ('.m4a', ''), ('.mp3', ''), \
         ('.ogg', ''), ('.raw', ''), ('.wav', ''), ('.wma', ''), ('.webm', ''), ('.ra', ''), ('.rm', '')
         params = dict(parse_qsl(sys.argv[2].replace('?','')))

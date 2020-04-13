@@ -134,10 +134,10 @@ class Movies:
                 fanart = __addon__.getAddonInfo('fanart')
                 for item in data['results']:
                     cm = []
-                    actor_poster = "http://image.tmdb.org/t/p/w185%s" % item['profile_path'] if item['profile_path'] else os.path.join(icon_directory, 'genre_family.png')
+                    actor_poster = "http://image.tmdb.org/t/p/w185%s" % item['profile_path'] if item['profile_path'] else os.path.join(icon_directory, 'genres.png')
                     url_params = {'mode': 'people_search.main', 'actor_id': item['id'], 'actor_name': item['name'], 'actor_image': actor_poster.replace('w185', 'h632')}
                     url = build_url(url_params)
-                    cm.append(("[B]Extended Info[/B]", 'RunScript(script.extendedinfo,info=extendedactorinfo,id=%s)' % item['id']))
+                    cm.append(("Extended Info", 'RunScript(script.extendedinfo,info=extendedactorinfo,id=%s)' % item['id']))
                     listitem = xbmcgui.ListItem(item['name'])
                     listitem.setArt({'icon': actor_poster, 'poster': actor_poster, 'thumb': actor_poster, 'fanart': fanart, 'banner': actor_poster})
                     listitem.addContextMenuItems(cm)
@@ -158,7 +158,7 @@ class Movies:
                 self.list = [i['id'] for i in data['results']]
             if self.total_pages and not is_widget:
                 url_params = {'mode': 'build_navigate_to_page', 'db_type': 'Movies', 'current_page': page_no, 'total_pages': self.total_pages, 'transfer_mode': mode, 'transfer_action': self.action, 'foldername': self.action, 'query': params.get('search_name', ''), 'actor_id': params.get('actor_id', '')}
-                self.add_dir(url_params, 'Jump To...', 'Jump To a Certain Page/Letter...', 'item_jump.png')
+                self.add_dir(url_params, 'Jump To...', 'Jump To a Certain Page/Letter...', 'next.png')
             if cache_page: cached_page(self.cache_page_string, page_no=page_no)
             if worker: self.worker()
             if self.new_page: self.add_dir(self.new_page)
@@ -210,8 +210,8 @@ class Movies:
                                     'sim_recom_tmdb': self.sim_recom_tmdb}
                     cm.append(("Export %s List" % sim_recom_title.split(' ')[0], "XBMC.RunPlugin(%s)" % build_url(export_sim_recom_params)))
                 if trailer: cm.append(("%s" % trailer_title,"XBMC.RunPlugin(%s)" % build_url(trailer_params)))
-                if resumetime != '0': cm.append(("[B]Clear Progress[/B]", 'XBMC.RunPlugin(%s)' % build_url({"mode": "watched_unwatched_erase_bookmark", "db_type": "movie", "media_id": tmdb_id, "refresh": "true"})))
-                if self.action == 'trakt_recommendations': cm.append(("[B]Hide from Recommendations[/B]", "XBMC.RunPlugin(%s)" % build_url(hide_recommended_params)))
+                if resumetime != '0': cm.append(("Clear Progress", 'XBMC.RunPlugin(%s)' % build_url({"mode": "watched_unwatched_erase_bookmark", "db_type": "movie", "media_id": tmdb_id, "refresh": "true"})))
+                if self.action == 'trakt_recommendations': cm.append(("Hide from Recommendations", "XBMC.RunPlugin(%s)" % build_url(hide_recommended_params)))
                 cm.append(("Read Reviews","XBMC.RunPlugin(%s)" % build_url({'mode': 'movie_reviews', 'rootname': rootname, 'tmdb_id': tmdb_id, 'poster': poster})))
                 cm.append(("Extended Info", 'RunScript(script.extendedinfo,info=extendedinfo,id=%s)' % tmdb_id))
                 cm.append(("Exit Movie List","XBMC.Container.Refresh(%s)" % build_url(exit_list_params)))
@@ -284,7 +284,7 @@ class Movies:
         genre_ids = [choice_list[i].getProperty('genre_id') for i in chosen_genres]
         return ','.join(genre_ids)
 
-    def add_dir(self, url_params, list_name='Next Page >>', info='Navigate to Next Page...', iconImage='item_next.png'):
+    def add_dir(self, url_params, list_name='Next Page >>', info='Navigate to Next Page...', iconImage='next.png'):
         icon = os.path.join(settings.get_theme(), iconImage)
         url = build_url(url_params)
         listitem = xbmcgui.ListItem(list_name)

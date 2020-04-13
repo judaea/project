@@ -443,7 +443,7 @@ def search_trakt_lists():
     search_title = params.get('search_title') if 'search_title' in params else dialog.input("Search Trakt Lists", type=xbmcgui.INPUT_ALPHANUM)
     if not search_title: return
     lists, pages = call_trakt("search", params={'type': 'list', 'fields': 'name, description', 'query': search_title, 'limit': 50}, pagination=True, page=page)
-    icon = os.path.join(icon_directory, "search_trakt_lists.png")
+    icon = os.path.join(icon_directory, "search.png")
     for item in lists:
         try:
             list_info = item["list"]
@@ -472,7 +472,7 @@ def search_trakt_lists():
     if pages > page:
         new_page = int(page) + 1
         add_dir({'mode': mode, 'search_title': search_title, 'new_page': str(new_page),
-            'foldername': mode}, 'Next Page >>', iconImage='item_next.png')
+            'foldername': mode}, 'Next Page >>', iconImage='next.png')
     xbmcplugin.setContent(__handle__, 'files')
     xbmcplugin.endOfDirectory(__handle__)
     setView('view.main')
@@ -570,7 +570,7 @@ def get_trakt_list_selection(list_choice='none'):
 def get_trakt_my_lists(build_list=True):
     from modules.trakt_cache import clear_all_trakt_cache_data
     clear_all_trakt_cache_data(confirm=False)
-    my_list_icon = os.path.join(icon_directory, 'traktmylists.png')
+    my_list_icon = os.path.join(icon_directory, 'trakt.png')
     try:
         string = "trakt_my_lists"
         url = {"path": "users/me/lists%s", "with_auth": True, "pagination": False}
@@ -606,7 +606,7 @@ def get_trakt_my_lists(build_list=True):
 def get_trakt_liked_lists(build_list=True):
     from modules.trakt_cache import clear_all_trakt_cache_data
     clear_all_trakt_cache_data(confirm=False)
-    liked_list_icon = os.path.join(icon_directory, 'traktlikedlists.png')
+    liked_list_icon = os.path.join(icon_directory, 'trakt.png')
     try:
         string = "trakt_liked_lists"
         url = {"path": "users/likes/lists%s", "params": {'limit': 1000}, "pagination": False, "with_auth": True}
@@ -643,7 +643,7 @@ def build_trakt_list():
     from modules.nav_utils import paginate_list, cached_page
     from modules.trakt_cache import clear_all_trakt_cache_data
     from apis.trakt_api import sync_watched_trakt_to_david
-    def _add_misc_dir(url_params, list_name='Next Page >>', iconImage='item_next.png'):
+    def _add_misc_dir(url_params, list_name='Next Page >>', iconImage='next.png'):
         icon = os.path.join(icon_directory, iconImage)
         listitem = xbmcgui.ListItem(list_name)
         listitem.setArt({'icon': icon, 'poster': icon, 'thumb': icon, 'fanart': fanart, 'banner': icon})
@@ -682,7 +682,7 @@ def build_trakt_list():
         movie_list = [i['media_id'] for i in final_list if i['media_type'] == 'movie']
         show_list = [i['media_id'] for i in final_list if i['media_type'] == 'show']
         content = 'movies' if len(movie_list) > len(show_list) else 'tvshows'
-        if total_pages > 2 and not is_widget: _add_misc_dir({'mode': 'build_navigate_to_page', 'db_type': 'Media', 'user': user, 'slug': slug, 'current_page': page_no, 'total_pages': total_pages, 'transfer_mode': 'trakt.build_trakt_list'}, 'Jump To...', 'item_jump.png')
+        if total_pages > 2 and not is_widget: _add_misc_dir({'mode': 'build_navigate_to_page', 'db_type': 'Media', 'user': user, 'slug': slug, 'current_page': page_no, 'total_pages': total_pages, 'transfer_mode': 'trakt.build_trakt_list'}, 'Jump To...', 'next.png')
         if len(movie_list) >= 1: Movies(movie_list, action=slug).worker()
         if len(show_list) >= 1: TVShows(show_list, action=slug).worker()
         if total_pages > page_no: _add_misc_dir({'mode': 'trakt.build_trakt_list', 'user': user, 'slug': slug, 'new_page': str(page_no + 1), 'new_letter': letter})

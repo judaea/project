@@ -6,7 +6,7 @@
         <setting label="Appearance" type="lsep" />
         <setting id="settings_layout" type="action" label="Choose Settings Layout" default="Basic" action="RunPlugin(plugin://plugin.video.david/?mode=switch_settings)" option="close" />
         <setting id="theme_installed" type="bool" label="" default="false" visible="false" />
-        <setting id="david.theme" label="Icon Type" type="labelenum" default="Light" values="Light" visible="eq(-1,true)" />
+        <setting id="david.theme" label="Icon Type" type="labelenum" default="Xtuary" values="Xtuary" visible="eq(-1,true)" />
         <setting id="theme_amble" label="Download David Artwork for Icons" type="text" default="" visible="eq(-2,false)" enable="false" />
         <setting id="unaired_episode_colour" type="action" label="Choose Unaired Episodes Highlight Color" default="red" action="RunPlugin(plugin://plugin.video.david/?mode=unaired_episode_color_choice)" />
         <setting id="show_specials" type="bool" label="Show TV Show Specials When Available" default="false" />
@@ -117,7 +117,7 @@
         <setting id="nextep.cache_to_disk" label="Cache To Disc" type="bool" default="false" />
         <!-- Appearance -->
         <setting label="Appearance" type="lsep" />
-        <setting id="nextep.include_airdate" label="Include Airdate in Title" type="bool" default="true" />
+        <setting id="nextep.include_airdate" label="Include Airdate in Title" type="bool" default="false" />
         <setting id="nextep.airdate_format" label="Choose Airdate Format" type="enum" default="2" values="Day-Month-Year|Year-Month-Day|Month-Day-Year" subsetting="true" enable="eq(-1,true)" />
         <setting id="nextep.airdate_colour" type="action" label="Choose Airdate Color" default="magenta" enable="eq(-2,true)" action="RunPlugin(plugin://plugin.video.david/?mode=next_episode_color_choice&amp;setting=Airdate)" subsetting="true" />
         <setting id="nextep.unaired_colour" type="action" label="Choose Unaired Color" default="red" action="RunPlugin(plugin://plugin.video.david/?mode=next_episode_color_choice&amp;setting=Unaired)" />

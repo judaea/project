@@ -88,7 +88,7 @@ class People():
         from indexers.tvshows import TVShows
         from modules.nav_utils import paginate_list, cached_page
         from modules.utils import title_key
-        def _add_misc_dir(url_params, list_name='Next Page >>', info='Navigate to Next Page...', iconImage='item_next.png'):
+        def _add_misc_dir(url_params, list_name='Next Page >>', info='Navigate to Next Page...', iconImage='next.png'):
             listitem = xbmcgui.ListItem(list_name, iconImage=os.path.join(icon_directory, iconImage))
             listitem.setArt({'fanart': __addon__.getAddonInfo('fanart')})
             listitem.setInfo('video', {'title': list_name, 'plot': info})
@@ -113,7 +113,7 @@ class People():
             original_list = [{'media_id': i['id'], 'title': i[key]} for i in data]
             paginated_list, total_pages = paginate_list(original_list, page_no, letter, limit)
             media_list = [i['media_id'] for i in paginated_list]
-            if total_pages > 2 and not_widget: _add_misc_dir({'mode': 'build_navigate_to_page', 'db_type': 'Media', 'media_type': media_type, 'actor_id': self.actor_id, 'actor_name': self.actor_name, 'actor_image': self.actor_image, 'current_page': page_no, 'total_pages': total_pages, 'transfer_mode': 'people_search.media_results'}, 'Jump To...', 'Jump To a Certain Page/Letter...', 'item_jump.png')
+            if total_pages > 2 and not_widget: _add_misc_dir({'mode': 'build_navigate_to_page', 'db_type': 'Media', 'media_type': media_type, 'actor_id': self.actor_id, 'actor_name': self.actor_name, 'actor_image': self.actor_image, 'current_page': page_no, 'total_pages': total_pages, 'transfer_mode': 'people_search.media_results'}, 'Jump To...', 'Jump To a Certain Page/Letter...', 'next.png')
             builder(media_list, action='people_search_%s' % media_type).worker()
             if total_pages > page_no: _add_misc_dir({'mode': 'people_search.media_results', 'media_type': media_type, 'actor_id': self.actor_id, 'actor_name': self.actor_name, 'actor_image': self.actor_image, 'new_page': str(page_no + 1), 'new_letter': letter})
             if cache_page: cached_page(cache_page_string, page_no=page_no)
@@ -137,7 +137,7 @@ class People():
                 known_for_list = [i for i in known_for_list if not i == 'NA']
                 known_for = '[I]%s[/I]' % ', '.join(known_for_list) if known_for_list else '[I]Movie Actor[/I]'
                 listitem = xbmcgui.ListItem(item['name'], known_for)
-                image = 'http://image.tmdb.org/t/p/w185/%s' % item['profile_path'] if item['profile_path'] else os.path.join(icon_directory, 'genre_family.png')
+                image = 'http://image.tmdb.org/t/p/w185/%s' % item['profile_path'] if item['profile_path'] else os.path.join(icon_directory, 'genres.png')
                 listitem.setArt({'icon': image})
                 listitem.setProperty('id', str(item['id']))
                 listitem.setProperty('name', str(item['name']))
@@ -155,7 +155,7 @@ class People():
             actor_name = actors['name']
             try: image_id = actors['profile_path']
             except: image_id = None
-            if not image_id: actor_image = os.path.join(icon_directory, 'genre_family.png')
+            if not image_id: actor_image = os.path.join(icon_directory, 'genres.png')
             else: actor_image = 'http://image.tmdb.org/t/p/h632/%s' % image_id
         add_to_search_history(actor_name, 'people_queries')
         return actor_id, actor_name, actor_image

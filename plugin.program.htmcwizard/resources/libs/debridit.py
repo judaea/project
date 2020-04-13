@@ -48,7 +48,7 @@ KEEPTRAKT      = wiz.getS('keepdebrid')
 REALSAVE       = wiz.getS('debridlastsave')
 COLOR1         = uservar.COLOR1
 COLOR2         = uservar.COLOR2
-ORDER          = ['resolveurl', 'urlresolver', 'judaeard', 'judaeapm', 'serenrd', 'serenpm', 'fenrd']
+ORDER          = ['resolveurl', 'urlresolver', 'judaeard', 'judaeapm', 'serenrd', 'serenpm', 'davidrd', 'fenrd']
 
 DEBRIDID = { 
 	'resolveurl': {
@@ -123,6 +123,42 @@ DEBRIDID = {
         'default'  : 'premiumize.pin',
         'data'     : ['premiumize.enabled', 'premiumize.pin'],
         'activate' : 'RunPlugin(plugin.video.seren/?action=openSettings)'},
+    'davidrd': {
+        'name'     : 'David RD',
+        'plugin'   : 'plugin.video.david',
+        'saved'    : 'davidrd',
+        'path'     : os.path.join(ADDONS, 'plugin.video.david'),
+        'icon'     : os.path.join(ADDONS, 'plugin.video.david', 'icon.png'),
+        'fanart'   : os.path.join(ADDONS, 'plugin.video.david', 'fanart.jpg'),
+        'file'     : os.path.join(REALFOLD, 'david_rd'),
+        'settings' : os.path.join(ADDOND, 'plugin.video.david', 'settings.xml'),
+        'default'  : 'rd.username',
+        'data'     : ['rd.username', 'rd.token', 'rd.auth', 'rd.client_id', 'rd.refresh', 'rd.secret'],
+        'activate' : 'RunPlugin(plugin://plugin.video.david/?mode=real_debrid.authenticate)'},
+    'davidpm': {
+        'name'     : 'David PM',
+        'plugin'   : 'plugin.video.david',
+        'saved'    : 'davidpm',
+        'path'     : os.path.join(ADDONS, 'plugin.video.david'),
+        'icon'     : os.path.join(ADDONS, 'plugin.video.david', 'icon.png'),
+        'fanart'   : os.path.join(ADDONS, 'plugin.video.david', 'fanart.jpg'),
+        'file'     : os.path.join(REALFOLD, 'david_pm'),
+        'settings' : os.path.join(ADDOND, 'plugin.video.david', 'settings.xml'),
+        'default'  : 'pm.account_id',
+        'data'     : ['pm.account_id', 'pm.token'],
+        'activate' : 'RunPlugin(plugin://plugin.video.david/?mode=premiumize.authenticate)'},
+    'davidad': {
+        'name'     : 'David AD',
+        'plugin'   : 'plugin.video.david',
+        'saved'    : 'davidad',
+        'path'     : os.path.join(ADDONS, 'plugin.video.david'),
+        'icon'     : os.path.join(ADDONS, 'plugin.video.david', 'icon.png'),
+        'fanart'   : os.path.join(ADDONS, 'plugin.video.david', 'fanart.jpg'),
+        'file'     : os.path.join(REALFOLD, 'david_ad'),
+        'settings' : os.path.join(ADDOND, 'plugin.video.david', 'settings.xml'),
+        'default'  : 'ad.account_id',
+        'data'     : ['ad.account_id', 'ad.token'],
+        'activate' : 'RunPlugin(plugin://plugin.video.david/?mode=alldebrid.authenticate)'},
     'fenrd': {
         'name'     : 'Fen RD',
         'plugin'   : 'plugin.video.fen',
@@ -133,8 +169,32 @@ DEBRIDID = {
         'file'     : os.path.join(REALFOLD, 'fen_rd'),
         'settings' : os.path.join(ADDOND, 'plugin.video.fen', 'settings.xml'),
         'default'  : 'rd.username',
-        'data'     : [ 'rd.auth', 'rd.client_id', 'rd.expiry', 'rd.refresh', 'rd.secret', 'rd.username', 'realdebrid.enabled'],
-        'activate' : 'RunPlugin(plugin://plugin.video.fen/?action=authRealDebrid)'}
+        'data'     : ['rd.username', 'rd.token', 'rd.auth', 'rd.client_id', 'rd.refresh', 'rd.secret'],
+        'activate' : 'RunPlugin(plugin://plugin.video.fen/?mode=real_debrid.authenticate)'},
+    'fenpm': {
+        'name'     : 'Fen PM',
+        'plugin'   : 'plugin.video.fen',
+        'saved'    : 'fenpm',
+        'path'     : os.path.join(ADDONS, 'plugin.video.fen'),
+        'icon'     : os.path.join(ADDONS, 'plugin.video.fen', 'icon.png'),
+        'fanart'   : os.path.join(ADDONS, 'plugin.video.fen', 'fanart.png'),
+        'file'     : os.path.join(REALFOLD, 'fen_pm'),
+        'settings' : os.path.join(ADDOND, 'plugin.video.fen', 'settings.xml'),
+        'default'  : 'pm.account_id',
+        'data'     : ['pm.account_id', 'pm.token'],
+        'activate' : 'RunPlugin(plugin://plugin.video.fen/?mode=premiumize.authenticate)'},
+    'fenad': {
+        'name'     : 'Fen AD',
+        'plugin'   : 'plugin.video.fen',
+        'saved'    : 'fenad',
+        'path'     : os.path.join(ADDONS, 'plugin.video.fen'),
+        'icon'     : os.path.join(ADDONS, 'plugin.video.fen', 'icon.png'),
+        'fanart'   : os.path.join(ADDONS, 'plugin.video.fen', 'fanart.png'),
+        'file'     : os.path.join(REALFOLD, 'fen_ad'),
+        'settings' : os.path.join(ADDOND, 'plugin.video.fen', 'settings.xml'),
+        'default'  : 'ad.account_id',
+        'data'     : ['ad.account_id', 'ad.token'],
+        'activate' : 'RunPlugin(plugin://plugin.video.fen/?mode=alldebrid.authenticate)'}
 }
 
 def debridUser(who):

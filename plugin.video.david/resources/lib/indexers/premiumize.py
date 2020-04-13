@@ -16,7 +16,7 @@ __addon__ = xbmcaddon.Addon(id=__addon_id__)
 __handle__ = int(sys.argv[1])
 addon_dir = xbmc.translatePath(__addon__.getAddonInfo('path'))
 icon_directory = get_theme()
-default_pm_icon = os.path.join(icon_directory, 'premiumize.png')
+default_pm_icon = os.path.join(icon_directory, 'tools.png')
 fanart = os.path.join(addon_dir, 'fanart.jpg')
 dialog = xbmcgui.Dialog()
 
