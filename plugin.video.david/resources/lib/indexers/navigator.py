@@ -135,40 +135,40 @@ class Navigator:
         self._add_dir({'mode': 'build_tvshow_list', 'action': 'watched_tvshows', 'foldername': 'David Watched Shows', 'list_name': 'TV Shows Watched'}, '[B]WATCHED : [/B]TV Shows', iconImage='tvshows.png')
         self._end_directory()
 
-#     def my_trakt_content(self):
-#         self._add_dir({'mode': 'navigator.trakt_collection', 'foldername': 'My Trakt Collections', 'list_name': 'Trakt My Collections'}, '[B]TRAKT: [/B]Collections', iconImage='trakt.png')
-#         self._add_dir({'mode': 'navigator.trakt_watchlist', 'foldername': 'My Trakt Watchlists', 'list_name': 'Trakt My Watchlists'}, '[B]TRAKT: [/B]Watchlists', iconImage='trakt.png')
-#         self._add_dir({'mode': 'trakt.get_trakt_my_lists', 'foldername': 'My Trakt Lists', 'list_name': 'Trakt My Lists'}, '[B]TRAKT: [/B]Lists', iconImage='trakt.png')
-#         self._add_dir({'mode': 'trakt.get_trakt_liked_lists', 'foldername': 'My Trakt Liked Lists', 'list_name': 'Trakt My Liked Lists'}, '[B]TRAKT: [/B]Liked Lists', iconImage='trakt.png')
-#         self._add_dir({'mode': 'navigator.trakt_recommendations', 'foldername': 'My Trakt Recommended Lists', 'list_name': 'Trakt My Recommended Lists'}, '[B]TRAKT: [/B]Recommended Lists', iconImage='trakt.png')
-#         self._add_dir({'mode': 'trakt.search_trakt_lists', 'foldername': 'Search Trakt Lists', 'list_name': 'Trakt Search Lists'}, '[B]TRAKT: [/B]Search User Lists', iconImage='search.png')
-#         self._add_dir({'mode': 'trakt.get_trakt_my_calendar', 'foldername': 'TV Show Calendar', 'list_name': 'TV Show Calendar'}, '[B]TRAKT: [/B]TV Show Calendar', iconImage='trakt.png')
-#         self._add_dir({'mode': 'navigator.trakt_widgets', 'foldername': 'Trakt Widgets', 'list_name': 'Trakt Widgets'}, '[B]TRAKT: [/B]Widgets', iconImage='trakt.png')
-#         self._end_directory()
-# 
-#     def trakt_collection(self):
-#         self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_collection', 'foldername': 'My Trakt Movie Collection', 'list_name': 'Movies Trakt Collection'}, '[B]COLLECTION: [/B]Movies', iconImage='movies.png')
-#         self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_collection', 'foldername': 'My Trakt TV Show Collection', 'list_name': 'TV Shows Trakt Collection'}, '[B]COLLECTION: [/B]TV Shows', iconImage='tvshows.png')
-#         self._end_directory()
-# 
-#     def trakt_watchlist(self):
-#         self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_watchlist', 'foldername': 'My Trakt Movie Watchlist', 'list_name': 'Movies Trakt Watchlist'}, '[B]WATCHLIST: [/B]Movies', iconImage='movies.png')
-#         self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_watchlist', 'foldername': 'My Trakt TV Show Watchlist', 'list_name': 'TV Shows Trakt Watchlist'}, '[B]WATCHLIST: [/B]TV Shows', iconImage='tvshows.png')
-#         self._end_directory()
-# 
-#     def trakt_recommendations(self):
-#         self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_recommendations', 'foldername': 'My Trakt Movie Recommendations', 'list_name': 'Trakt My Movie Recommendations'}, '[B]RECOMMENDATIONS: [/B]Movies', iconImage='movies.png')
-#         self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_recommendations', 'foldername': 'My Trakt TV Show Recommendations', 'list_name': 'Trakt My TV Show Recommendations'}, '[B]RECOMMENDATIONS: [/B]TV Shows', iconImage='tvshows.png')
-#         self._end_directory()
-# 
-#     def trakt_widgets(self):
-#         # use 'new_page' to pass the type of list to be processed when using 'trakt_collection_widgets'...
-#         self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_collection_widgets', 'new_page': 'recent', 'foldername': 'Trakt Collection Recently Added Movies', 'list_name': 'Trakt Collection Recently Added Movies'}, '[B]TRAKT WIDGETS: [/B]Collection: Recently Added Movies', iconImage='trakt.png')
-#         self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_collection_widgets', 'new_page': 'random', 'foldername': 'Trakt Collection Random Movies', 'list_name': 'Trakt Collection Random Movies'}, '[B]TRAKT WIDGETS: [/B]Collection: Random Movies', iconImage='trakt.png')
-#         self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_collection_widgets', 'new_page': 'recent', 'foldername': 'Trakt Collection Recently Added TV Shows', 'list_name': 'Trakt Collection Recently Added TV Shows'}, '[B]TRAKT WIDGETS: [/B]Collection: Recently Added TV Shows', iconImage='trakt.png')
-#         self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_collection_widgets', 'new_page': 'random', 'foldername': 'Trakt Collection Random TV Shows', 'list_name': 'Trakt Collection Random TV Shows'}, '[B]TRAKT WIDGETS: [/B]Collection: Random TV Shows', iconImage='trakt.png')
-#         self._add_dir({'mode': 'trakt.get_trakt_my_calendar', 'recently_aired': 'true', 'foldername': 'Trakt Collection Recently Aired Episodes', 'list_name': 'Trakt Collection Recently Aired Episodes'}, '[B]TRAKT WIDGETS: [/B]Collection: Recently Aired Episodes', iconImage='trakt.png')
-#         self._end_directory()
+    def my_trakt_content(self):
+        self._add_dir({'mode': 'navigator.trakt_collection', 'foldername': 'My Trakt Collections', 'list_name': 'Trakt My Collections'}, '[B]TRAKT: [/B]Collections', iconImage='trakt.png')
+        self._add_dir({'mode': 'navigator.trakt_watchlist', 'foldername': 'My Trakt Watchlists', 'list_name': 'Trakt My Watchlists'}, '[B]TRAKT: [/B]Watchlists', iconImage='trakt.png')
+        self._add_dir({'mode': 'trakt.get_trakt_my_lists', 'foldername': 'My Trakt Lists', 'list_name': 'Trakt My Lists'}, '[B]TRAKT: [/B]Lists', iconImage='trakt.png')
+        self._add_dir({'mode': 'trakt.get_trakt_liked_lists', 'foldername': 'My Trakt Liked Lists', 'list_name': 'Trakt My Liked Lists'}, '[B]TRAKT: [/B]Liked Lists', iconImage='trakt.png')
+        self._add_dir({'mode': 'navigator.trakt_recommendations', 'foldername': 'My Trakt Recommended Lists', 'list_name': 'Trakt My Recommended Lists'}, '[B]TRAKT: [/B]Recommended Lists', iconImage='trakt.png')
+        self._add_dir({'mode': 'trakt.search_trakt_lists', 'foldername': 'Search Trakt Lists', 'list_name': 'Trakt Search Lists'}, '[B]TRAKT: [/B]Search User Lists', iconImage='search.png')
+        self._add_dir({'mode': 'trakt.get_trakt_my_calendar', 'foldername': 'TV Show Calendar', 'list_name': 'TV Show Calendar'}, '[B]TRAKT: [/B]TV Show Calendar', iconImage='trakt.png')
+        self._add_dir({'mode': 'navigator.trakt_widgets', 'foldername': 'Trakt Widgets', 'list_name': 'Trakt Widgets'}, '[B]TRAKT: [/B]Widgets', iconImage='trakt.png')
+        self._end_directory()
+
+    def trakt_collection(self):
+        self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_collection', 'foldername': 'My Trakt Movie Collection', 'list_name': 'Movies Trakt Collection'}, '[B]COLLECTION: [/B]Movies', iconImage='movies.png')
+        self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_collection', 'foldername': 'My Trakt TV Show Collection', 'list_name': 'TV Shows Trakt Collection'}, '[B]COLLECTION: [/B]TV Shows', iconImage='tvshows.png')
+        self._end_directory()
+
+    def trakt_watchlist(self):
+        self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_watchlist', 'foldername': 'My Trakt Movie Watchlist', 'list_name': 'Movies Trakt Watchlist'}, '[B]WATCHLIST: [/B]Movies', iconImage='movies.png')
+        self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_watchlist', 'foldername': 'My Trakt TV Show Watchlist', 'list_name': 'TV Shows Trakt Watchlist'}, '[B]WATCHLIST: [/B]TV Shows', iconImage='tvshows.png')
+        self._end_directory()
+
+    def trakt_recommendations(self):
+        self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_recommendations', 'foldername': 'My Trakt Movie Recommendations', 'list_name': 'Trakt My Movie Recommendations'}, '[B]RECOMMENDATIONS: [/B]Movies', iconImage='movies.png')
+        self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_recommendations', 'foldername': 'My Trakt TV Show Recommendations', 'list_name': 'Trakt My TV Show Recommendations'}, '[B]RECOMMENDATIONS: [/B]TV Shows', iconImage='tvshows.png')
+        self._end_directory()
+
+    def trakt_widgets(self):
+        # use 'new_page' to pass the type of list to be processed when using 'trakt_collection_widgets'...
+        self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_collection_widgets', 'new_page': 'recent', 'foldername': 'Trakt Collection Recently Added Movies', 'list_name': 'Trakt Collection Recently Added Movies'}, '[B]TRAKT WIDGETS: [/B]Collection: Recently Added Movies', iconImage='trakt.png')
+        self._add_dir({'mode': 'build_movie_list', 'action': 'trakt_collection_widgets', 'new_page': 'random', 'foldername': 'Trakt Collection Random Movies', 'list_name': 'Trakt Collection Random Movies'}, '[B]TRAKT WIDGETS: [/B]Collection: Random Movies', iconImage='trakt.png')
+        self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_collection_widgets', 'new_page': 'recent', 'foldername': 'Trakt Collection Recently Added TV Shows', 'list_name': 'Trakt Collection Recently Added TV Shows'}, '[B]TRAKT WIDGETS: [/B]Collection: Recently Added TV Shows', iconImage='trakt.png')
+        self._add_dir({'mode': 'build_tvshow_list', 'action': 'trakt_collection_widgets', 'new_page': 'random', 'foldername': 'Trakt Collection Random TV Shows', 'list_name': 'Trakt Collection Random TV Shows'}, '[B]TRAKT WIDGETS: [/B]Collection: Random TV Shows', iconImage='trakt.png')
+        self._add_dir({'mode': 'trakt.get_trakt_my_calendar', 'recently_aired': 'true', 'foldername': 'Trakt Collection Recently Aired Episodes', 'list_name': 'Trakt Collection Recently Aired Episodes'}, '[B]TRAKT WIDGETS: [/B]Collection: Recently Aired Episodes', iconImage='trakt.png')
+        self._end_directory()
 
     def search(self):
         self._add_dir({'mode': 'build_movie_list', 'action': 'tmdb_movies_search', 'query': 'NA', 'foldername': 'Movie Search', 'list_name': 'Search Movies'}, '[B]Search : [/B]Movies', iconImage='search.png')
@@ -181,15 +181,15 @@ class Navigator:
 
     def tools(self):
         self._add_dir({'mode': 'open_settings', 'query': '0.0', 'foldername': 'General', 'list_name': 'Settings General'}, '[B]Settings : [/B]General', iconImage='tools.png')
-        self._add_dir({'mode': 'open_settings', 'query': '1.0', 'foldername': 'Accounts', 'list_name': 'Settings Accounts'}, '[B]Settings : [/B]Accounts', iconImage='tools.png')
-        self._add_dir({'mode': 'open_settings', 'query': '2.0', 'foldername': 'Next Episodes', 'list_name': 'Settings Next Episodes'}, '[B]Settings : [/B]Next Episodes', iconImage='tools.png')
-        self._add_dir({'mode': 'open_settings', 'query': '3.0', 'foldername': 'Trakt', 'list_name': 'Trakt'}, '[B]Settings : [/B]Trakt', iconImage='tools.png')
-        self._add_dir({'mode': 'open_settings', 'query': '4.0', 'foldername': 'Internal Scrapers', 'list_name': 'Settings Internal Scrapers'}, '[B]Settings : [/B]Internal Scrapers', iconImage='tools.png')
-        self._add_dir({'mode': 'open_settings', 'query': '5.0', 'foldername': 'External Scrapers', 'list_name': 'Settings External Scrapers'}, '[B]Settings : [/B]External Scrapers', iconImage='tools.png')
-        self._add_dir({'mode': 'open_settings', 'query': '6.0', 'foldername': 'Results', 'list_name': 'Settings Results'}, '[B]Settings : [/B]Results', iconImage='tools.png')
-        self._add_dir({'mode': 'open_settings', 'query': '7.0', 'foldername': 'Playback', 'list_name': 'Settings Playback'}, '[B]Settings : [/B]Playback', iconImage='tools.png')
-#         self._add_dir({'mode': 'open_settings', 'query': '8.0', 'foldername': 'Subscriptions', 'list_name': 'Settings Subscriptions'}, '[B]Settings : [/B]Subscriptions', iconImage='tools.png')
-#         self._add_dir({'mode': 'open_settings', 'query': '9.0', 'foldername': 'Downloads', 'list_name': 'Settings Downloads'}, '[B]Settings : [/B]Downloads', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '1.0', 'foldername': 'Playback', 'list_name': 'Settings Playback'}, '[B]Settings : [/B]Playback', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '2.0', 'foldername': 'Results', 'list_name': 'Settings Results'}, '[B]Settings : [/B]Results', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '3.0', 'foldername': 'Next Episodes', 'list_name': 'Settings Next Episodes'}, '[B]Settings : [/B]Next Episodes', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '4.0', 'foldername': 'Accounts', 'list_name': 'Settings Accounts'}, '[B]Settings : [/B]Accounts', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '5.0', 'foldername': 'Trakt', 'list_name': 'Trakt'}, '[B]Settings : [/B]Trakt', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '6.0', 'foldername': 'Internal Scrapers', 'list_name': 'Settings Internal Scrapers'}, '[B]Settings : [/B]Internal Scrapers', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '7.0', 'foldername': 'External Scrapers', 'list_name': 'Settings External Scrapers'}, '[B]Settings : [/B]External Scrapers', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '8.0', 'foldername': 'Subscriptions', 'list_name': 'Settings Subscriptions'}, '[B]Settings : [/B]Subscriptions', iconImage='tools.png')
+        self._add_dir({'mode': 'open_settings', 'query': '9.0', 'foldername': 'Downloads', 'list_name': 'Settings Downloads'}, '[B]Settings : [/B]Downloads', iconImage='tools.png')
         display_time = '' if settings.subscription_update() == False else '[COLOR=grey]| Next Update: %s[/COLOR]' % str(__addon__.getSetting('service_time'))
         self._add_dir({'mode': 'navigator.changelogs', 'foldername': 'Changelogs & Log Viewer', 'list_name': 'Tools Changelogs & Log Viewer'}, '[B]David : [/B]Changelogs & Kodi Log Viewer', iconImage='tools.png')
         self._add_dir({'mode': 'navigator.tips', 'foldername': 'Tips for David Use', 'list_name': 'Tips for David Use'}, '[B]David : [/B]Tips for David Use', iconImage='tools.png')

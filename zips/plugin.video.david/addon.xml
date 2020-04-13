@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.david" version="1.0.9" name=" David" provider-name="Judaea">
+<addon id="plugin.video.david" version="1.0.10" name=" David" provider-name="Judaea">
     <requires>
         <import addon="plugin.video.youtube" version="6.4.0" />
         <import addon="script.extendedinfo" version="5.6.0" />
@@ -11,25 +11,31 @@
         <import addon="script.module.resolveurl" version="1.0.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="resources/lib/david.py">
-        <provides>video audio</provides>
+        <provides>video</provides>
     </extension>
     <extension point="xbmc.service" library="resources/lib/services.py" start="startup"/>
     <extension point="xbmc.python.module" library="resources/lib/"/>
     <extension point="xbmc.addon.metadata">
         <summary lang="en">David</summary>
-        <description lang="en">David with OpenScrapers and Library Integration, Movies, TV Shows and TRAKT Support! Kindly note the David addon is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
-        <disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+        <description lang="en">[B]David Movies, TV Shows with Trakt and Library Support[/B][CR][CR]This addon does not form part of the Kodi Media Center. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR][CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
         <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <forum></forum>
         <website></website>
         <source></source>
+        <disclaimer lang="en">The author of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
-        <news>- Update Trakt
+        <news>- Real-Debrid, All Debrid or Premiumize Recommended
+- Add New Episodes to Main Menu For Trakt Progress (Default) or David Progress
+- Add My Movies (Trakt) Menu to Movies Module
+- Add My TV Shows (Trakt) Menu to TV Shows Module
+- Add Trakt Lists, Trakt Liked Lists and Search Trakt User Lists
+- Update Trakt
 - Update Artwork
 - Update Code
-- RealDebrid Recommended
 - OpenScrapers Support
 - VPN Recommended
 - Initial Version 1.0.8 Fen Fork

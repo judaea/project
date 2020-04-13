@@ -20,13 +20,6 @@ class DefaultMenus:
                 "foldername": "TV Shows",
             }, 
 
-#             {
-#                 "iconImage": "trakt.png", 
-#                 "mode": "navigator.my_trakt_content", 
-#                 "name": "My Fen Menu (Trakt)", 
-#                 "foldername": "My Trakt",
-#             }, 
-
             {
                 "iconImage": "trakt.png", 
                 "mode": "navigator.main", 
@@ -42,6 +35,13 @@ class DefaultMenus:
                 "name": "My TV Shows (Trakt)", 
                 "foldername": "My TV Shows Trakt",
             }, 
+
+#             {
+#                 "iconImage": "trakt.png", 
+#                 "mode": "navigator.my_trakt_content", 
+#                 "name": "My Lists & Widgets (Trakt)", 
+#                 "foldername": "My Lists Trakt",
+#             }, 
 
             {
                 "iconImage": "trakt.png", 
@@ -199,7 +199,7 @@ class DefaultMenus:
             }, 
 
             {
-                "name": "Because You Watched...", 
+                "name": "Because You Watched", 
                 "iconImage": "library_update.png", 
                 "foldername": "Because You Watched", 
                 "mode": "navigator.because_you_watched", 
@@ -244,6 +244,13 @@ class DefaultMenus:
                 "foldername": "Recently Added to Kodi Library", 
                 "mode": "build_kodi_library_recently_added", 
                 "db_type": "movies",
+            }, 
+
+            {
+                "iconImage": "trakt.png", 
+                "action": "MovieListTrakt",
+                "name": "My Movies (Trakt)", 
+                "foldername": "My Movies Trakt",
             }, 
 
             {
@@ -293,6 +300,27 @@ class DefaultMenus:
             }, 
 
             {
+                "iconImage": "trakt.png", 
+                "mode": "trakt.get_trakt_my_lists", 
+                "name": "Trakt My Lists", 
+                "foldername": "Trakt My Personal Lists",
+            }, 
+
+            {
+                "iconImage": "trakt.png", 
+                "mode": "trakt.get_trakt_liked_lists", 
+                "name": "Trakt Liked Lists", 
+                "foldername": "Trakt Liked Lists",
+            }, 
+
+            {
+                "iconImage": "trakt.png", 
+                "mode": "trakt.search_trakt_lists", 
+                "name": "Trakt Search User Lists", 
+                "foldername": "Trakt Search Lists",
+            }, 
+
+            {
                 "name": "Trakt Recommendations", 
                 "iconImage": "trakt.png", 
                 "foldername": "Trakt Recommendations", 
@@ -301,19 +329,19 @@ class DefaultMenus:
             }, 
 
             {
-                "foldername": "Watched", 
+                "foldername": "Watched Movies", 
                 "iconImage": "trakt.png", 
                 "mode": "build_movie_list",  
                 "action": "watched_movies", 
-                "name": "Watched",
+                "name": "Watched Movies",
             }, 
 
             {
-                "foldername": "In Progress", 
+                "foldername": "In Progress Movies", 
                 "iconImage": "trakt.png", 
                 "mode": "build_movie_list",  
                 "action": "in_progress_movies", 
-                "name": "In Progress",
+                "name": "In Progress Movies",
             }
 
         ]
@@ -433,7 +461,7 @@ class DefaultMenus:
             }, 
 
             {
-                "name": "Because You Watched...", 
+                "name": "Because You Watched", 
                 "iconImage": "library_update.png", 
                 "foldername": "Because You Watched", 
                 "mode": "navigator.because_you_watched", 
@@ -481,6 +509,13 @@ class DefaultMenus:
             }, 
 
             {
+                "iconImage": "trakt.png", 
+                "action": "TVShowListTrakt",
+                "name": "My TV Shows (Trakt)", 
+                "foldername": "My TV Shows Trakt",
+            }, 
+
+            {
                 "name": "Search", 
                 "iconImage": "search.png", 
                 "foldername": "TV Show Search", 
@@ -512,6 +547,13 @@ class DefaultMenus:
         return [
 
             {
+                "iconImage": "trakt.png", 
+                "mode": "build_next_episode", 
+                "name": "Trakt Progress", 
+                "foldername": "Trakt Progress",
+            },
+
+            {
                 "action": "trakt_collection", 
                 "iconImage": "trakt.png", 
                 "mode": "build_tvshow_list", 
@@ -528,6 +570,34 @@ class DefaultMenus:
             }, 
 
             {
+                "iconImage": "trakt.png", 
+                "mode": "trakt.get_trakt_my_lists", 
+                "name": "Trakt My Lists", 
+                "foldername": "Trakt My Personal Lists",
+            }, 
+
+            {
+                "iconImage": "trakt.png", 
+                "mode": "trakt.get_trakt_liked_lists", 
+                "name": "Trakt Liked Lists", 
+                "foldername": "Trakt Liked Lists",
+            }, 
+
+            {
+                "iconImage": "trakt.png", 
+                "mode": "trakt.search_trakt_lists", 
+                "name": "Trakt Search User Lists", 
+                "foldername": "Trakt Search Lists",
+            }, 
+
+            {
+                "name": "Trakt TV Show Calendar", 
+                "iconImage": "trakt.png", 
+                "foldername": "Trakt TV Show Calendar",  
+                "mode": "trakt.get_trakt_my_calendar", 
+            }, 
+
+            {
                 "name": "Trakt Recommendations", 
                 "iconImage": "trakt.png", 
                 "foldername": "Trakt Recommendations", 
@@ -536,11 +606,11 @@ class DefaultMenus:
             }, 
 
             {
-                "foldername": "Watched", 
+                "foldername": "Watched TV Shows", 
                 "iconImage": "trakt.png", 
                 "mode": "build_tvshow_list",  
                 "action": "watched_tvshows", 
-                "name": "Watched",
+                "name": "Watched TV Shows",
             }, 
 
             {
@@ -556,14 +626,8 @@ class DefaultMenus:
                 "mode": "build_in_progress_episode", 
                 "name": "In Progress Episodes", 
                 "foldername": "In Progress Episodes",
-            }, 
+            } 
 
-            {
-                "iconImage": "trakt.png", 
-                "mode": "build_next_episode", 
-                "name": "New Episodes", 
-                "foldername": "New Episodes",
-            }
 
         ]
 

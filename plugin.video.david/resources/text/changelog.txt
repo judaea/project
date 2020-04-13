@@ -1,12 +1,59 @@
+[B]Updates[/B]
 
-[B]1.0.9[/B]
+[B]April 13, 2020[/B]
+[B]Version 1.0.10[/B]
+- Add New Episodes to Main Menu For Trakt Progress (Default) or David Progress
+- Add My Movies (Trakt) Menu to Movies Module
+- Add My TV Shows (Trakt) Menu to TV Shows Module
+- Add Trakt Lists, Trakt Liked Lists and Search Trakt User Lists
+
+[B]April 12, 2020[/B]
+[B]Version 1.0.9[/B]
 - Update Trakt
 - Update Artwork
 - Update Code
 
-[B]1.0.8[/B]
-- RealDebrid Recommended
+[B]April 11, 2020[/B]
+[B]Version 1.0.8[/B]
+- Real-Debrid, All Debrid or Premiumize Recommended
 - OpenScrapers Support
-- Update Code
 - VPN Recommended
 - Initial Version 1.0.8 Fen Fork
+
+
+[B]How to Add Free Accounts and API Keys[/B]
+
+[B]Trakt Information:[/B]
+- Automatically Track TV Shows and Movies You're Watching
+- Sign up for free at https://trakt.tv/auth/join
+- Authorize your Trakt Account From Main Menu - Click Tools - Click Settings: Accounts
+
+[B]TMDb Information:[/B]
+- Personal API keys provide quicker API responses
+- Sign up for free at https://www.themoviedb.org/account/signup
+- Enter your TMDb API Key From Main Menu - Click Tools - Click Settings: Accounts
+
+[B]How to Authorize Premium Accounts[/B]
+
+[B]Real-Debrid Information:[/B]
+- Real-Debrid is a premium subscription service
+- Sign up at https://www.real-debrid.com
+- From Main Menu - Click Tools - Click Settings: Accounts - Click Authorize Real Debrid
+
+[B]All Debrid Information:[/B]
+- All Debrid is a premium subscription service
+- Sign up at https://www.alldebrid.com
+- From Main Menu - Click Tools - Click Settings: Accounts - Click Authorize All Debrid
+
+[B]Premiumize Information:[/B]
+- Premiumize is a premium subscription service
+- Sign up at https://www.premiumize.me
+- From Main Menu Click Tools - Click Settings: Accounts - Click Authorize Premiumize
+
+[B]Furk Information:[/B]
+- Furk is a premium subscription service
+- From Main Menu - Click Tools - Click Settings: Accounts - Enter Your Login and Password
+
+[B]Easynews Information:[/B]
+- Easynews is a premium subscription service
+- From Main Menu - Click Tools - Click Settings: Accounts - Enter Your Username and Password

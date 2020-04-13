@@ -48,6 +48,93 @@
         <setting id="trakt.subscriptions_show" label="trakt.subscriptions_show" type="text" default="" visible="hidden" />
         <setting id="subscription_timer" label="subscription_timer" type="text" default="24" visible="hidden" />
     </category>
+    <!-- Playback -->
+    <category label="Playback">
+        <setting label="Playback" type="lsep" />
+        <setting id="playback.choice" label="[B]CHOOSE SETTINGS GROUP...[/B]" type="enum" default="0" values="Playback|Subtitles|Indicators" />
+        <setting type="sep" />
+        <!-- Playback -->
+        <setting id="auto_play" type="bool" label="Auto Play First Relevant Result" default="true" visible="eq(-2,0)" />
+        <setting id="autoplay_quality" type="action" label="Limit Quality" default="SD, 720p, 1080p, 4K" action="RunPlugin(plugin://plugin.video.david/?mode=set_quality&amp;quality_setting=autoplay)" visible="eq(-3,0)+eq(-1,true)" subsetting="true" />
+        <setting id="autoplay_hevc" type="labelenum" values="Include|Exclude|Prefer" label="HEVC Files Filter" visible="eq(-4,0)+eq(-2,true)" default="Include" subsetting="true" />
+        <setting id="autoplay_next_episode" type="bool" label="Autoplay Next Episode" visible="eq(-5,0)+eq(-3,true)" default="true" subsetting="true" />
+        <setting id="autoplay_next_check_threshold" type="slider" default="3" range="0,1,10" option="int" visible="eq(-6,0)+eq(-1,true)+eq(-4,true)" label="Episodes Watched Before Still Watching Check (0=Off)" subsetting="true" />
+        <setting id="autoplay_minimal_notifications" type="bool" label="Use Minimal Notifications" visible="eq(-7,0)+eq(-5,true)" default="false" subsetting="true" />
+        <setting id="results_quality" type="action" label="Limit Quality" visible="eq(-8,0)+eq(-6,false)" default="SD, 720p, 1080p, 4K" action="RunPlugin(plugin://plugin.video.david/?mode=set_quality&amp;quality_setting=results)" />
+        <setting id="auto_resume" type="enum" values="Never|Always|Autoplay Only" label="Automatically Resume Playback" default="0" visible="eq(-9,0)" />
+        <!-- Indicators -->
+        <setting id="trakt_indicators_active" type="text" label="trakt_indicators_active" default="false" visible="false" />
+        <setting id="watched_indicators" type="enum" values="David|Trakt" label="Watched Status Provider" default="0" visible="eq(-17,2)+eq(-1,true)" />
+        <setting id="sync_david_watchstatus" type="bool" label="Sync David Watched Info with Trakt Watched Info" default="false" subsetting="true" visible="eq(-18,2)+eq(-2,true)" enable="eq(-1,1)" />
+        <setting id="indicators_amble" label="Authorize Trakt for More options" type="text" default="" visible="eq(-19,2)+eq(-3,false)" enable="false" />
+        <setting id="sync_kodi_library_watchstatus" type="bool" label="Set Resume/Watched in Kodi Library when Watched in David" default="false" visible="eq(-20,2)" />
+        <setting id="resume.threshold" label="Set Resume Point (%)" type="slider" default="2" range="1,1,50" option="int" visible="eq(-21,2)" />
+        <setting id="watched.threshold" label="Set Mark As Watched (%)" type="slider" default="90" range="50,1,99" option="int" visible="eq(-22,2)" />
+        <setting id="nextep.threshold" label="Activate Next Episode (%)" type="slider" default="90" range="50,1,99" option="int" visible="eq(-23,2)" />
+        <!-- Subtitles -->
+        <setting id="subtitle_amble" label="[I]Subtitles Provided By [B]OPENSUBTITLES.ORG[/B][/I]" type="text" default="" visible="eq(-10,1)" enable="false" />
+        <setting id="subtitles.subs_action" type="labelenum" label="Download Subtitles Action" default="Off" values="Auto|Select|Off" visible="eq(-11,1)" />
+        <setting id="subtitles.language" type="select" label="Choose Primary Subtitle Language" values="Afrikaans|Albanian|Arabic|Armenian|Basque|Bengali|Bosnian|Breton|Bulgarian|Burmese|Catalan|Chinese|Croatian|Czech|Danish|Dutch|English|Esperanto|Estonian|Finnish|French|Galician|Georgian|German|Greek|Hebrew|Hindi|Hungarian|Icelandic|Indonesian|Italian|Japanese|Kazakh|Khmer|Korean|Latvian|Lithuanian|Luxembourgish|Macedonian|Malay|Malayalam|Manipuri|Mongolian|Montenegrin|Norwegian|Occitan|Persian|Polish|Portuguese|Portuguese(Brazil)|Romanian|Russian|Serbian|Sinhalese|Slovak|Slovenian|Spanish|Swahili|Swedish|Syriac|Tagalog|Tamil|Telugu|Thai|Turkish|Ukrainian|Urdu" default="English" visible="eq(-12,1)" enable="!eq(-1,Off)" subsetting="true" />
+        <setting id="subtitles.language2" type="select" label="Choose Secondary Subtitle Language" values="None|Afrikaans|Albanian|Arabic|Armenian|Basque|Bengali|Bosnian|Breton|Bulgarian|Burmese|Catalan|Chinese|Croatian|Czech|Danish|Dutch|English|Esperanto|Estonian|Finnish|French|Galician|Georgian|German|Greek|Hebrew|Hindi|Hungarian|Icelandic|Indonesian|Italian|Japanese|Kazakh|Khmer|Korean|Latvian|Lithuanian|Luxembourgish|Macedonian|Malay|Malayalam|Manipuri|Mongolian|Montenegrin|Norwegian|Occitan|Persian|Polish|Portuguese|Portuguese(Brazil)|Romanian|Russian|Serbian|Sinhalese|Slovak|Slovenian|Spanish|Swahili|Swedish|Syriac|Tagalog|Tamil|Telugu|Thai|Turkish|Ukrainian|Urdu" default="None" visible="eq(-13,1)" enable="!eq(-2,Off)" subsetting="true" />
+        <setting id="subtitles.auto_enable" type="bool" label="Force Enable Local Subs" visible="eq(-14,1)" enable="!eq(-3,Off)" default="true" subsetting="true" />
+        <setting id="subtitles.show_notification" type="bool" label="Show Searching Notification" visible="eq(-15,1)" enable="!eq(-4,Off)" default="true" subsetting="true" />
+    </category>
+    <!-- Results -->
+    <category label="Results">
+        <setting label="Results" type="lsep" />
+        <setting id="results.choice" label="[B]CHOOSE SETTINGS GROUP...[/B]" type="enum" default="0" values="Display|Sorting and Filtering|Torrents Sorting &amp; Filtering|Color Highlights" />
+        <setting type="sep" />
+        <!-- Display -->
+        <setting id="scrapers.timeout.1" type="slider" label="Scraper Timeout" default="10" range="10,90" option="int" visible="eq(-2,0)" />
+        <setting id="display_mode" label="Results Display" type="enum" default="0" values="Directory|Very Simple Directory|Dialog" visible="eq(-3,0)" />
+        <setting id="progress.heading" label="Search Dialog Heading" type="enum" default="0" values="Scraper Module|Media Title" visible="eq(-4,0)" />
+        <setting id="highlight.type" label="Highlight Results Based On..." type="enum" default="0" values="Scraper|Quality" visible="eq(-5,0)" />
+        <setting id="results.multiline_label" type="bool" label="Display Results as Multi Line" default="false" visible="eq(-6,0)" enable="eq(-3,0)|eq(-3,2)" />
+        <setting id="results.show_extra_info" type="bool" label="Show Extra Info When Available" default="true" visible="eq(-7,0)" enable="eq(-4,0)|eq(-4,2)" />
+        <setting id="results.show_filenames" type="bool" label="Show Filename When Available" default="true" visible="eq(-8,0)" enable="eq(-5,0)|eq(-5,2)" />
+        <!-- Sorting and Filtering -->
+        <setting id="results.sort_order" label="Results Sorting" type="enum" default="0" values="Quality, Provider|Provider, Quality" visible="eq(-9,1)" />
+        <setting id="internal_scrapers_order" type="action" label="Internal Scrapers Order" default="FILES, FURK, EASYNEWS, CLOUD" action="RunPlugin(plugin://plugin.video.david/?mode=internal_scrapers_order_choice)" visible="eq(-10,1)" />
+        <setting id="include_prerelease_results" type="bool" label="Include Pre-Release Results (CAM/SCR/TELE)" default="true" visible="eq(-11,1)" />
+        <setting id="include_3d_results" type="bool" label="Include 3D Results" default="true" visible="eq(-12,1)" />
+        <setting id="include_nondebrid_results" type="bool" label="Include Non-Debrid Results" default="true" visible="eq(-13,1)" />
+        <!-- Torrents Sorting & Filtering -->
+        <setting id="torrent.sort.them.up" type="bool" label="Sort Torrents to Top" default="false" visible="eq(-14,2)" />
+        <setting id="torrent.sort.size" type="bool" label="Sort Torrents by Size" default="true" visible="eq(-15,2)" />
+        <setting id="torrent.check.cache" type="bool" label="Check Debrid Services for Cached Torrents" default="true" visible="eq(-16,2)" />
+        <setting id="torrent.display.uncached" type="bool" label="Display Uncached Torrents" default="false" subsetting="true" visible="eq(-17,2)" enable="eq(-1,true)" />
+        <setting id="torrent.filter.size" type="bool" label="Filter Torrents by Size [I](Decimals Accepted)[/I]" default="false" visible="eq(-18,2)" />
+        <setting id="torrent.size.minimum.movies" type="text" label="MOVIES: Minimum Size (GB)" default="0" subsetting="true" visible="eq(-19,2)" enable="eq(-1,true)" />
+        <setting id="torrent.size.maximum.movies" type="text" label="MOVIES: Maximum Size (GB)" default="35" subsetting="true" visible="eq(-20,2)" enable="eq(-2,true)" />
+        <setting id="torrent.size.minimum.episodes" type="text" label="EPISODES: Minimum Size (GB)" default="0" subsetting="true" visible="eq(-21,2)" enable="eq(-3,true)" />
+        <setting id="torrent.size.maximum.episodes" type="text" label="EPISODES: Maximum Size (GB)" default="5" subsetting="true" visible="eq(-22,2)" enable="eq(-4,true)" />
+        <!-- Color Highlights -->
+        <setting id="int_dialog_highlight" type="action" label="Internal Scrapers Progress Dialog Color" default="darkgoldenrod" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_dialog_color_choice&amp;setting=internal)" visible="eq(-23,3)" />
+        <setting id="ext_dialog_highlight" type="action" label="External Scrapers Progress Dialog Color" default="dodgerblue" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_dialog_color_choice&amp;setting=external)" visible="eq(-24,3)" />
+        <setting id="secondline.identify" type="action" label="Multi Line Color" default="No Color" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_color_choice&amp;setting=second_line)" visible="eq(-25,3)" />
+        <setting id="scraper_4k_highlight" type="action" label="4K Results Color" default="magenta" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_quality_color_choice&amp;setting=scraper_4k_highlight)" visible="eq(-26,3)" />
+        <setting id="scraper_1080p_highlight" type="action" label="1080P Results Color" default="lawngreen" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_quality_color_choice&amp;setting=scraper_1080p_highlight)" visible="eq(-27,3)" />
+        <setting id="scraper_720p_highlight" type="action" label="720P Results Color" default="gold" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_quality_color_choice&amp;setting=scraper_720p_highlight)" visible="eq(-28,3)" />
+        <setting id="scraper_SD_highlight" type="action" label="SD Results Color" default="lightsaltegray" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_quality_color_choice&amp;setting=scraper_SD_highlight)" visible="eq(-29,3)" />
+    </category>
+    <!-- Next Episodes -->
+    <category label="Next Episodes">
+        <setting label="Next Episodes" type="lsep" />
+        <setting id="next_episodes.choice" label="[B]CHOOSE SETTINGS GROUP...[/B]" type="enum" default="0" values="Content and Sorting|Appearance" />
+        <setting type="sep" />
+        <!-- Content and Sorting -->
+        <setting id="nextep.sort_type" label="Sort Type" type="enum" default="0" values="Recently Watched|Airdate|Title" visible="eq(-2,0)" />
+        <setting id="nextep.sort_order" label="Sort Order" type="enum" default="0" values="Descending|Ascending" visible="eq(-3,0)" />
+        <setting id="nextep.include_unaired" label="Include Unaired Episodes" type="bool" default="true" visible="eq(-4,0)" />
+        <setting id="nextep.include_unwatched" label="Include Trakt Watchlist / TV Show Unwatched" type="bool" default="true" visible="eq(-5,0)" />
+        <setting id="nextep.cache_to_disk" label="Cache To Disc" type="bool" default="false" visible="eq(-6,0)" />
+        <!-- Appearance -->
+        <setting id="nextep.include_airdate" label="Include Airdate in Title" type="bool" default="true" visible="eq(-7,1)" />
+        <setting id="nextep.airdate_format" label="Choose Airdate Format" type="enum" default="2" values="Day-Month-Year|Year-Month-Day|Month-Day-Year" subsetting="true" visible="eq(-8,1)" enable="eq(-1,true)" />
+        <setting id="nextep.airdate_colour" type="action" label="Choose Airdate Color" default="magenta" visible="eq(-9,1)" enable="eq(-2,true)" action="RunPlugin(plugin://plugin.video.david/?mode=next_episode_color_choice&amp;setting=Airdate)" subsetting="true" />
+        <setting id="nextep.unaired_colour" type="action" label="Choose Unaired Color" default="red" visible="eq(-10,1)" action="RunPlugin(plugin://plugin.video.david/?mode=next_episode_color_choice&amp;setting=Unaired)" />
+        <setting id="nextep.unwatched_colour" type="action" label="Choose Unwatched Color" default="darkgoldenrod" visible="eq(-11,1)" action="RunPlugin(plugin://plugin.video.david/?mode=next_episode_color_choice&amp;setting=Unwatched)" />
+    </category>
     <!-- Accounts -->
     <category label="Accounts">
         <setting label="Accounts" type="lsep" />
@@ -88,24 +175,6 @@
         <setting id="open_trakt_de-authenticate" type="action" label="Revoke Trakt Authentication" visible="!eq(-3,)+eq(-28,5)" option="close" action="RunPlugin(plugin://plugin.video.david/?mode=trakt_remove_authentication)" />
         <!-- TMDb -->
         <setting id="tmdb_api" type="text" label="TMDb API Key" default="6e6a68c545dffdce0e054d1060fdd6e0" visible="eq(-29,6)" />
-    </category>
-    <!-- Next Episodes -->
-    <category label="Next Episodes">
-        <setting label="Next Episodes" type="lsep" />
-        <setting id="next_episodes.choice" label="[B]CHOOSE SETTINGS GROUP...[/B]" type="enum" default="0" values="Content and Sorting|Appearance" />
-        <setting type="sep" />
-        <!-- Content and Sorting -->
-        <setting id="nextep.sort_type" label="Sort Type" type="enum" default="0" values="Recently Watched|Airdate|Title" visible="eq(-2,0)" />
-        <setting id="nextep.sort_order" label="Sort Order" type="enum" default="0" values="Descending|Ascending" visible="eq(-3,0)" />
-        <setting id="nextep.include_unaired" label="Include Unaired Episodes" type="bool" default="true" visible="eq(-4,0)" />
-        <setting id="nextep.include_unwatched" label="Include Trakt Watchlist / TV Show Unwatched" type="bool" default="true" visible="eq(-5,0)" />
-        <setting id="nextep.cache_to_disk" label="Cache To Disc" type="bool" default="false" visible="eq(-6,0)" />
-        <!-- Appearance -->
-        <setting id="nextep.include_airdate" label="Include Airdate in Title" type="bool" default="false" visible="eq(-7,1)" />
-        <setting id="nextep.airdate_format" label="Choose Airdate Format" type="enum" default="2" values="Day-Month-Year|Year-Month-Day|Month-Day-Year" subsetting="true" visible="eq(-8,1)" enable="eq(-1,true)" />
-        <setting id="nextep.airdate_colour" type="action" label="Choose Airdate Color" default="magenta" visible="eq(-9,1)" enable="eq(-2,true)" action="RunPlugin(plugin://plugin.video.david/?mode=next_episode_color_choice&amp;setting=Airdate)" subsetting="true" />
-        <setting id="nextep.unaired_colour" type="action" label="Choose Unaired Color" default="red" visible="eq(-10,1)" action="RunPlugin(plugin://plugin.video.david/?mode=next_episode_color_choice&amp;setting=Unaired)" />
-        <setting id="nextep.unwatched_colour" type="action" label="Choose Unwatched Color" default="darkgoldenrod" visible="eq(-11,1)" action="RunPlugin(plugin://plugin.video.david/?mode=next_episode_color_choice&amp;setting=Unwatched)" />
     </category>
     <!-- Trakt -->
     <category label="Trakt">
@@ -215,75 +284,6 @@
         <!-- Torrents" -->
         <setting id="torrent.min.seeders" type="slider" label="Minimum Seeders" default="10" range="1,50" option="int" visible="eq(-11,2)" enable="eq(-12,true)" />
         <setting id="torrent.identify" type="action" label="Choose Torrents Color" default="magenta" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_color_choice&amp;setting=torrent)" visible="eq(-12,2)" enable="eq(-13,true)" />
-    </category>
-    <!-- Results -->
-    <category label="Results">
-        <setting label="Results" type="lsep" />
-        <setting id="results.choice" label="[B]CHOOSE SETTINGS GROUP...[/B]" type="enum" default="0" values="Display|Sorting and Filtering|Torrents Sorting &amp; Filtering|Color Highlights" />
-        <setting type="sep" />
-        <!-- Display -->
-        <setting id="scrapers.timeout.1" type="slider" label="Scraper Timeout" default="30" range="10,90" option="int" visible="eq(-2,0)" />
-        <setting id="display_mode" label="Results Display" type="enum" default="0" values="Directory|Very Simple Directory|Dialog" visible="eq(-3,0)" />
-        <setting id="progress.heading" label="Search Dialog Heading" type="enum" default="0" values="Scraper Module|Media Title" visible="eq(-4,0)" />
-        <setting id="highlight.type" label="Highlight Results Based On..." type="enum" default="0" values="Scraper|Quality" visible="eq(-5,0)" />
-        <setting id="results.multiline_label" type="bool" label="Display Results as Multi Line" default="false" visible="eq(-6,0)" enable="eq(-3,0)|eq(-3,2)" />
-        <setting id="results.show_extra_info" type="bool" label="Show Extra Info When Available" default="true" visible="eq(-7,0)" enable="eq(-4,0)|eq(-4,2)" />
-        <setting id="results.show_filenames" type="bool" label="Show Filename When Available" default="true" visible="eq(-8,0)" enable="eq(-5,0)|eq(-5,2)" />
-        <!-- Sorting and Filtering -->
-        <setting id="results.sort_order" label="Results Sorting" type="enum" default="0" values="Quality, Provider|Provider, Quality" visible="eq(-9,1)" />
-        <setting id="internal_scrapers_order" type="action" label="Internal Scrapers Order" default="FILES, FURK, EASYNEWS, CLOUD" action="RunPlugin(plugin://plugin.video.david/?mode=internal_scrapers_order_choice)" visible="eq(-10,1)" />
-        <setting id="include_prerelease_results" type="bool" label="Include Pre-Release Results (CAM/SCR/TELE)" default="true" visible="eq(-11,1)" />
-        <setting id="include_3d_results" type="bool" label="Include 3D Results" default="true" visible="eq(-12,1)" />
-        <setting id="include_nondebrid_results" type="bool" label="Include Non-Debrid Results" default="true" visible="eq(-13,1)" />
-        <!-- Torrents Sorting & Filtering -->
-        <setting id="torrent.sort.them.up" type="bool" label="Sort Torrents to Top" default="false" visible="eq(-14,2)" />
-        <setting id="torrent.sort.size" type="bool" label="Sort Torrents by Size" default="true" visible="eq(-15,2)" />
-        <setting id="torrent.check.cache" type="bool" label="Check Debrid Services for Cached Torrents" default="true" visible="eq(-16,2)" />
-        <setting id="torrent.display.uncached" type="bool" label="Display Uncached Torrents" default="false" subsetting="true" visible="eq(-17,2)" enable="eq(-1,true)" />
-        <setting id="torrent.filter.size" type="bool" label="Filter Torrents by Size [I](Decimals Accepted)[/I]" default="false" visible="eq(-18,2)" />
-        <setting id="torrent.size.minimum.movies" type="text" label="MOVIES: Minimum Size (GB)" default="0" subsetting="true" visible="eq(-19,2)" enable="eq(-1,true)" />
-        <setting id="torrent.size.maximum.movies" type="text" label="MOVIES: Maximum Size (GB)" default="35" subsetting="true" visible="eq(-20,2)" enable="eq(-2,true)" />
-        <setting id="torrent.size.minimum.episodes" type="text" label="EPISODES: Minimum Size (GB)" default="0" subsetting="true" visible="eq(-21,2)" enable="eq(-3,true)" />
-        <setting id="torrent.size.maximum.episodes" type="text" label="EPISODES: Maximum Size (GB)" default="5" subsetting="true" visible="eq(-22,2)" enable="eq(-4,true)" />
-        <!-- Color Highlights -->
-        <setting id="int_dialog_highlight" type="action" label="Internal Scrapers Progress Dialog Color" default="darkgoldenrod" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_dialog_color_choice&amp;setting=internal)" visible="eq(-23,3)" />
-        <setting id="ext_dialog_highlight" type="action" label="External Scrapers Progress Dialog Color" default="dodgerblue" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_dialog_color_choice&amp;setting=external)" visible="eq(-24,3)" />
-        <setting id="secondline.identify" type="action" label="Multi Line Color" default="No Color" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_color_choice&amp;setting=second_line)" visible="eq(-25,3)" />
-        <setting id="scraper_4k_highlight" type="action" label="4K Results Color" default="magenta" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_quality_color_choice&amp;setting=scraper_4k_highlight)" visible="eq(-26,3)" />
-        <setting id="scraper_1080p_highlight" type="action" label="1080P Results Color" default="lawngreen" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_quality_color_choice&amp;setting=scraper_1080p_highlight)" visible="eq(-27,3)" />
-        <setting id="scraper_720p_highlight" type="action" label="720P Results Color" default="gold" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_quality_color_choice&amp;setting=scraper_720p_highlight)" visible="eq(-28,3)" />
-        <setting id="scraper_SD_highlight" type="action" label="SD Results Color" default="lightsaltegray" action="RunPlugin(plugin://plugin.video.david/?mode=scraper_quality_color_choice&amp;setting=scraper_SD_highlight)" visible="eq(-29,3)" />
-    </category>
-    <!-- Playback -->
-    <category label="Playback">
-        <setting label="Playback" type="lsep" />
-        <setting id="playback.choice" label="[B]CHOOSE SETTINGS GROUP...[/B]" type="enum" default="0" values="Playback|Subtitles|Indicators" />
-        <setting type="sep" />
-        <!-- Playback -->
-        <setting id="auto_play" type="bool" label="Auto Play First Relevant Result" default="true" visible="eq(-2,0)" />
-        <setting id="autoplay_quality" type="action" label="Limit Quality" default="SD, 720p, 1080p, 4K" action="RunPlugin(plugin://plugin.video.david/?mode=set_quality&amp;quality_setting=autoplay)" visible="eq(-3,0)+eq(-1,true)" subsetting="true" />
-        <setting id="autoplay_hevc" type="labelenum" values="Include|Exclude|Prefer" label="HEVC Files Filter" visible="eq(-4,0)+eq(-2,true)" default="Include" subsetting="true" />
-        <setting id="autoplay_next_episode" type="bool" label="Autoplay Next Episode" visible="eq(-5,0)+eq(-3,true)" default="true" subsetting="true" />
-        <setting id="autoplay_next_check_threshold" type="slider" default="3" range="0,1,10" option="int" visible="eq(-6,0)+eq(-1,true)+eq(-4,true)" label="Episodes Watched Before Still Watching Check (0=Off)" subsetting="true" />
-        <setting id="autoplay_minimal_notifications" type="bool" label="Use Minimal Notifications" visible="eq(-7,0)+eq(-5,true)" default="false" subsetting="true" />
-        <setting id="results_quality" type="action" label="Limit Quality" visible="eq(-8,0)+eq(-6,false)" default="SD, 720p, 1080p, 4K" action="RunPlugin(plugin://plugin.video.david/?mode=set_quality&amp;quality_setting=results)" />
-        <setting id="auto_resume" type="enum" values="Never|Always|Autoplay Only" label="Automatically Resume Playback" default="0" visible="eq(-9,0)" />
-        <!-- Subtitles -->
-        <setting id="subtitle_amble" label="[I]Subtitles Provided By [B]OPENSUBTITLES.ORG[/B][/I]" type="text" default="" visible="eq(-10,1)" enable="false" />
-        <setting id="subtitles.subs_action" type="labelenum" label="Download Subtitles Action" default="Off" values="Auto|Select|Off" visible="eq(-11,1)" />
-        <setting id="subtitles.language" type="select" label="Choose Primary Subtitle Language" values="Afrikaans|Albanian|Arabic|Armenian|Basque|Bengali|Bosnian|Breton|Bulgarian|Burmese|Catalan|Chinese|Croatian|Czech|Danish|Dutch|English|Esperanto|Estonian|Finnish|French|Galician|Georgian|German|Greek|Hebrew|Hindi|Hungarian|Icelandic|Indonesian|Italian|Japanese|Kazakh|Khmer|Korean|Latvian|Lithuanian|Luxembourgish|Macedonian|Malay|Malayalam|Manipuri|Mongolian|Montenegrin|Norwegian|Occitan|Persian|Polish|Portuguese|Portuguese(Brazil)|Romanian|Russian|Serbian|Sinhalese|Slovak|Slovenian|Spanish|Swahili|Swedish|Syriac|Tagalog|Tamil|Telugu|Thai|Turkish|Ukrainian|Urdu" default="English" visible="eq(-12,1)" enable="!eq(-1,Off)" subsetting="true" />
-        <setting id="subtitles.language2" type="select" label="Choose Secondary Subtitle Language" values="None|Afrikaans|Albanian|Arabic|Armenian|Basque|Bengali|Bosnian|Breton|Bulgarian|Burmese|Catalan|Chinese|Croatian|Czech|Danish|Dutch|English|Esperanto|Estonian|Finnish|French|Galician|Georgian|German|Greek|Hebrew|Hindi|Hungarian|Icelandic|Indonesian|Italian|Japanese|Kazakh|Khmer|Korean|Latvian|Lithuanian|Luxembourgish|Macedonian|Malay|Malayalam|Manipuri|Mongolian|Montenegrin|Norwegian|Occitan|Persian|Polish|Portuguese|Portuguese(Brazil)|Romanian|Russian|Serbian|Sinhalese|Slovak|Slovenian|Spanish|Swahili|Swedish|Syriac|Tagalog|Tamil|Telugu|Thai|Turkish|Ukrainian|Urdu" default="None" visible="eq(-13,1)" enable="!eq(-2,Off)" subsetting="true" />
-        <setting id="subtitles.auto_enable" type="bool" label="Force Enable Local Subs" visible="eq(-14,1)" enable="!eq(-3,Off)" default="true" subsetting="true" />
-        <setting id="subtitles.show_notification" type="bool" label="Show Searching Notification" visible="eq(-15,1)" enable="!eq(-4,Off)" default="true" subsetting="true" />
-        <!-- Indicators -->
-        <setting id="trakt_indicators_active" type="text" label="trakt_indicators_active" default="false" visible="false" />
-        <setting id="watched_indicators" type="enum" values="David|Trakt" label="Watched Status Provider" default="0" visible="eq(-17,2)+eq(-1,true)" />
-        <setting id="sync_david_watchstatus" type="bool" label="Sync David Watched Info with Trakt Watched Info" default="false" subsetting="true" visible="eq(-18,2)+eq(-2,true)" enable="eq(-1,1)" />
-        <setting id="indicators_amble" label="Authorize Trakt for More options" type="text" default="" visible="eq(-19,2)+eq(-3,false)" enable="false" />
-        <setting id="sync_kodi_library_watchstatus" type="bool" label="Set Resume/Watched in Kodi Library when Watched in David" default="false" visible="eq(-20,2)" />
-        <setting id="resume.threshold" label="Set Resume Point (%)" type="slider" default="2" range="1,1,50" option="int" visible="eq(-21,2)" />
-        <setting id="watched.threshold" label="Set Mark As Watched (%)" type="slider" default="90" range="50,1,99" option="int" visible="eq(-22,2)" />
-        <setting id="nextep.threshold" label="Activate Next Episode (%)" type="slider" default="90" range="50,1,99" option="int" visible="eq(-23,2)" />
     </category>
     <!-- Subscriptions -->
     <category label="Subscriptions">
