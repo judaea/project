@@ -176,7 +176,7 @@ Added Trakt Manager
     </extension>
 </addon>
 
-<addon id="plugin.video.exegesis" version="1.0.0" name=" Exegesis" provider-name="Exegesis">
+<addon id="plugin.video.exegesis" version="1.0.1" name=" Exegesis" provider-name="Exegesis">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.exegesis" />
@@ -206,6 +206,7 @@ Added Trakt Manager
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>- RealDebrid Recommended
+- Fix Trailers
 - Added 24-7 TV Shows
 - Added 24-7 Movies
 - Added Live TV
@@ -615,7 +616,7 @@ Added Trakt Manager
 	</extension>
 </addon>
 
-<addon id="script.module.exegesis" name="Exegesis Module" version="1.0.3" provider-name="Exegesis">
+<addon id="script.module.exegesis" name="Exegesis Module" version="1.0.4" provider-name="Exegesis">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>

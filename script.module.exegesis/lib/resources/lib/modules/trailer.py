@@ -18,6 +18,7 @@
 """
 
 
+import sys
 import base64
 import json
 import random
@@ -31,46 +32,47 @@ from resources.lib.modules import control
 class trailer:
     def __init__(self):
         self.base_link = 'https://www.youtube.com'
-        self.key_link = random.choice(['QUl6YVN5RDd2aFpDLTYta2habTVuYlVyLTZ0Q0JRQnZWcnFkeHNz', 'QUl6YVN5Q2RiNEFNenZpVG0yaHJhSFY3MXo2Nl9HNXBhM2ZvVXd3'])
-        self.key_link = '&key=%s' % base64.urlsafe_b64decode(self.key_link)
+        self.youtube = control.addon('plugin.video.youtube').getSetting('youtube.api.key')
+        self.key_link = random.choice(['QUl6YVN5QTJVQUF5dm1LZnN0ZDA1aU9tLWltckxUejlCZGJ0aGVF', 'QUl6YVN5QTJVQUF5dm1LZnN0ZDA1aU9tLWltckxUejlCZGJ0aGVF'])
+
+        if self.youtube != '':
+            self.key_link = '&key=%s' % self.youtube
+        else:
+            self.key_link = '&key=%s' % base64.urlsafe_b64decode(self.key_link)
         self.search_link = 'https://www.googleapis.com/youtube/v3/search?part=id&type=video&maxResults=5&q=%s' + self.key_link
         self.youtube_watch = 'https://www.youtube.com/watch?v=%s'
 
-    def play(self, name, url=None, windowedtrailer=0):
+
+    def play(self, type='', name='', year='', url='', imdb='', windowedtrailer=0):
         try:
-            url = self.worker(name, url)
+            url = self.worker(type, name, year, url, imdb)
             if not url: return
 
-            title = control.infoLabel('listitem.title')
-            if not title: title = control.infoLabel('listitem.label')
-            icon = control.infoLabel('listitem.icon')
+            title = control.infoLabel('ListItem.Title')
+            if not title: title = control.infoLabel('ListItem.Label')
+            icon = control.infoLabel('ListItem.Icon')
 
-            item = control.item(path=url, iconImage=icon, thumbnailImage=icon)
-            try: item.setArt({'icon': icon})
-            except: pass
-            item.setInfo(type='Video', infoLabels={'title': title})
-            control.player.play(url, item, windowedtrailer)
+            item = control.item(label=title, iconImage=icon, thumbnailImage=icon, path=url)
+            item.setInfo(type="video", infoLabels={'title': title})
+            item.setProperty('IsPlayable', 'true')
+            control.refresh()
+            control.resolve(handle=int(sys.argv[1]), succeeded=True, listitem=item)
             if windowedtrailer == 1:
-                # The call to the play() method is non-blocking. So we delay further script execution to keep the script alive at this spot.
-                # Otherwise this script will continue and probably already be garbage collected by the time the trailer has ended.
-                control.sleep(1000)  # Wait until playback starts. Less than 900ms is too short (on my box). Make it one second.
+                control.sleep(1000)
                 while control.player.isPlayingVideo():
                     control.sleep(1000)
-                # Close the dialog.
-                # Same behaviour as the fullscreenvideo window when :
-                # the media plays to the end,
-                # or the user pressed one of X, ESC, or Backspace keys on the keyboard/remote to stop playback.
-                control.execute("Dialog.Close(%s, true)" % control.getCurrentDialogId)      
+                control.execute("Dialog.Close(%s, true)" % control.getCurrentDialogId)
         except:
             pass
 
-    def worker(self, name, url):
+
+    def worker(self, type, name, year, url, imdb):
         try:
             if url.startswith(self.base_link):
                 url = self.resolve(url)
                 if not url: raise Exception()
                 return url
-            elif not url.startswith('http:'):
+            elif not url.startswith('http'):
                 url = self.youtube_watch % url
                 url = self.resolve(url)
                 if not url: raise Exception()
@@ -80,9 +82,10 @@ class trailer:
         except:
             query = name + ' trailer'
             query = self.search_link % urllib.quote_plus(query)
-            return self.search(query)
+            return self.search(query, type, name, year, imdb)
 
-    def search(self, url):
+
+    def search(self, url, type, name, year, imdb):
         try:
             apiLang = control.apiLanguage().get('youtube', 'en')
 
@@ -100,6 +103,7 @@ class trailer:
                     return url
         except:
             return
+
 
     def resolve(self, url):
         try:

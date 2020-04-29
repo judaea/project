@@ -1,4 +1,7 @@
 
+[B]1.0.4[/B]
+- Fix Trailers
+
 [B]1.0.3[/B]
 - Fix Episodes
 

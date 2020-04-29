@@ -1,4 +1,7 @@
 
+[B]1.0.1[/B]
+- Fix Trailers
+
 [B]1.0.0[/B]
 - RealDebrid Recommended
 - Added 24-7 TV Shows

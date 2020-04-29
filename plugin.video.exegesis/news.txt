@@ -1,5 +1,9 @@
 [B]Updates[/B]
 
+[B]April 29, 2020[/B]
+[B]Version 1.0.1[/B]
+- Fix Trailers
+
 [B]October 29, 2019[/B]
 [B]Version 1.0.0[/B]
 - RealDebrid Recommended

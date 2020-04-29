@@ -391,7 +391,7 @@ elif action == 'tvPlaycount':
 
 elif action == 'trailer':
     from resources.lib.modules import trailer
-    trailer.trailer().play(name, url, windowedtrailer)
+    trailer.trailer().play(type, name, year, url, imdb, windowedtrailer)
 
 elif action == 'traktManager':
     from resources.lib.modules import trakt
