@@ -1093,7 +1093,7 @@ class tvshows:
 
                 cm = []
 
-                cm.append(('Trailer', 'RunPlugin(%s?action=trailercm&name=%s)' % (sysaddon, sysname)))
+                #cm.append(('Trailer', 'RunPlugin(%s?action=trailercm&name=%s)' % (sysaddon, sysname)))
 
                 cm.append((queueMenu, 'RunPlugin(%s?action=queueItem)' % sysaddon))
 

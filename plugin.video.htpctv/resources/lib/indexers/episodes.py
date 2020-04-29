@@ -485,7 +485,7 @@ class seasons:
 
                 cm = []
 
-                cm.append(('Trailer', 'RunPlugin(%s?action=trailer&name=%s)' % (sysaddon, sysname)))
+                #cm.append(('Trailer', 'RunPlugin(%s?action=trailer&name=%s)' % (sysaddon, sysname)))
 
                 cm.append((playRandom, 'RunPlugin(%s?action=random&rtype=episode&tvshowtitle=%s&year=%s&imdb=%s&tvdb=%s&season=%s)' % (sysaddon, urllib.quote_plus(systitle), urllib.quote_plus(year), urllib.quote_plus(imdb), urllib.quote_plus(tvdb), urllib.quote_plus(season))))
 
@@ -1484,7 +1484,7 @@ class episodes:
 
                 cm = []
 
-                cm.append(('Trailer', 'RunPlugin(%s?action=trailer&name=%s)' % (sysaddon, systvshowtitle)))
+                #cm.append(('Trailer', 'RunPlugin(%s?action=trailer&name=%s)' % (sysaddon, systvshowtitle)))
 
                 cm.append((queueMenu, 'RunPlugin(%s?action=queueItem)' % sysaddon))
 

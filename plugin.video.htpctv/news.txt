@@ -1,5 +1,10 @@
 [B]Updates[/B]
 
+[B]April 29, 2020[/B]
+[B]Version 4.1.45[/B]
+- Fix Trailers
+- Remove Trailers from Context Menu
+
 [B]November 26, 2019[/B]
 [B]Version 4.1.44[/B]
 - Fix Episodes TVDb

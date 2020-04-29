@@ -1,4 +1,8 @@
 
+[B]4.1.45[/B]
+- Fix Trailers
+- Remove Trailers from Context Menu
+
 [B]4.1.44[/B]
 - Fix Episodes TVDb
 

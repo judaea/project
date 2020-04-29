@@ -317,7 +317,7 @@ Added Trakt Manager
 	</extension>
 </addon>
 
-<addon id="plugin.video.htpctv" version="4.1.44" name=" htpcTV" provider-name="HTMC">
+<addon id="plugin.video.htpctv" version="4.1.45" name=" htpcTV" provider-name="Judaea">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="plugin.video.youtube" version="6.4.0" />
@@ -343,6 +343,8 @@ Added Trakt Manager
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>- RealDebrid Recommended
+- Fix Trailers
+- Remove Trailers from Context Menu
 - Fix Episodes TVDb
 - Fix Trakt Progress TVDb
 - Fix TVDb

@@ -104,6 +104,9 @@ except:
 
 fanart = params.get('fanart')
 
+windowedtrailer = params.get('windowedtrailer')
+windowedtrailer = int(windowedtrailer) if windowedtrailer in ("0","1") else 0
+
 
 if action == None:
     from resources.lib.indexers import navigator
@@ -397,11 +400,11 @@ elif action == 'tvPlaycount':
 
 elif action == 'trailer':
     from resources.lib.modules import trailer
-    trailer.trailer().play(name, url)
+    trailer.trailer().play(type, name, year, url, imdb, windowedtrailer)
 
-elif action == 'trailercm':
-    from resources.lib.modules import trailercm
-    trailercm.trailercm().play(name, url)
+# elif action == 'trailercm':
+#     from resources.lib.modules import trailercm
+#     trailercm.trailercm().play(name, url)
 
 elif action == 'traktManager':
     from resources.lib.modules import trakt
