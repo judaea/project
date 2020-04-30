@@ -1,6 +1,19 @@
 <xml>
 
 <item>
+<title>The 100</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt2661044</imdb>
+<tvdb>268592</tvdb>
+<tvshowtitle>The 100</tvshowtitle>
+<year>2014</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/268592-9.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/268592-5.jpg</fanart>
+</item>
+
+<item>
 <title>A Million Little Things</title>
 <meta>
 <content>tvtuner</content>
@@ -63,6 +76,19 @@
 </meta>
 <thumbnail>http://thetvdb.com/banners/_cache/posters/81189-10.jpg</thumbnail>
 <fanart>https://www.thetvdb.com/banners/fanart/original/81189-5.jpg</fanart>
+</item>
+
+<item>
+<title>Bull</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt5827228</imdb>
+<tvdb>311945</tvdb>
+<tvshowtitle>Bull</tvshowtitle>
+<year>2016</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/311945-3.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/311945-3.jpg</fanart>
 </item>
 
 <item>
@@ -219,6 +245,19 @@
 </meta>
 <thumbnail>http://thetvdb.com/banners/_cache/posters/5bb93633f1c48.jpg</thumbnail>
 <fanart>https://www.thetvdb.com/banners/fanart/original/5b2a485a487de.jpg</fanart>
+</item>
+
+<item>
+<title>Nurse Jackie</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt1190689</imdb>
+<tvdb>95731</tvdb>
+<tvshowtitle>Nurse Jackie</tvshowtitle>
+<year>2009</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/95731-3.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/95731-6.jpg</fanart>
 </item>
 
 <item>
@@ -440,6 +479,19 @@
 </meta>
 <thumbnail>http://thetvdb.com/banners/_cache/posters/153021-31.jpg</thumbnail>
 <fanart>https://www.thetvdb.com/banners/fanart/original/153021-11.jpg</fanart>
+</item>
+
+<item>
+<title>Weeds</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0439100</imdb>
+<tvdb>74845</tvdb>
+<tvshowtitle>Weeds</tvshowtitle>
+<year>2005</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/74845-3.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/74845-9.jpg</fanart>
 </item>
 
 <item>

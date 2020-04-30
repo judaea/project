@@ -40,6 +40,32 @@
 </item>
 
 <item>
+<title>The Goldbergs</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt2712740</imdb>
+<tvdb>269653</tvdb>
+<tvshowtitle>The Goldbergs</tvshowtitle>
+<year>2013</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/269653-6.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/269653-3.jpg</fanart>
+</item>
+
+<item>
+<title>How I Met Your Mother</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt0460649</imdb>
+<tvdb>75760</tvdb>
+<tvshowtitle>How I Met Your Mother</tvshowtitle>
+<year>2005</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/75760-29.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/75760-59.jpg</fanart>
+</item>
+
+<item>
 <title>The King of Queens</title>
 <meta>
 <content>tvtuner</content>
@@ -63,6 +89,19 @@
 </meta>
 <thumbnail>http://thetvdb.com/banners/_cache/posters/248834-8.jpg</thumbnail>
 <fanart>https://www.thetvdb.com/banners/fanart/original/248834-10.jpg</fanart>
+</item>
+
+<item>
+<title>Modern Family</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt1442437</imdb>
+<tvdb>95011</tvdb>
+<tvshowtitle>Modern Family</tvshowtitle>
+<year>2009</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/95011-3.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/95011-23.jpg</fanart>
 </item>
 
 <item>
@@ -115,19 +154,6 @@
 </meta>
 <thumbnail>http://thetvdb.com/banners/_cache/posters/95761-3.jpg</thumbnail>
 <fanart>https://www.thetvdb.com/banners/fanart/original/95761-3.jpg</fanart>
-</item>
-
-<item>
-<title>30 Rock</title>
-<meta>
-<content>tvtuner</content>
-<imdb>tt0496424</imdb>
-<tvdb>79488</tvdb>
-<tvshowtitle>30 Rock</tvshowtitle>
-<year>2006</year>
-</meta>
-<thumbnail>http://thetvdb.com/banners/_cache/posters/79488-12.jpg</thumbnail>
-<fanart>https://www.thetvdb.com/banners/fanart/original/79488-11.jpg</fanart>
 </item>
 
 <item>
@@ -204,8 +230,8 @@
 <tvshowtitle>Cheers</tvshowtitle>
 <year>1989</year>
 </meta>
-<thumbnail>http://thetvdb.com/banners/_cache/posters/76905-1.jpg</thumbnail>
-<fanart>https://www.thetvdb.com/banners/fanart/original/76905-2.jpg</fanart>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/76905-3.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/76905-3.jpg</fanart>
 </item>
 
 <item>
@@ -245,6 +271,19 @@
 </meta>
 <thumbnail>http://thetvdb.com/banners/_cache/posters/79168-27.jpg</thumbnail>
 <fanart>https://www.thetvdb.com/banners/fanart/original/79168-6.jpg</fanart>
+</item>
+
+<item>
+<title>The Goldbergs</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt2712740</imdb>
+<tvdb>269653</tvdb>
+<tvshowtitle>The Goldbergs</tvshowtitle>
+<year>2013</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/269653-6.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/269653-3.jpg</fanart>
 </item>
 
 <item>
@@ -361,7 +400,7 @@
 <year>2009</year>
 </meta>
 <thumbnail>http://thetvdb.com/banners/_cache/posters/95011-3.jpg</thumbnail>
-<fanart>https://www.thetvdb.com/banners/fanart/original/95011-42.jpg</fanart>
+<fanart>https://www.thetvdb.com/banners/fanart/original/95011-23.jpg</fanart>
 </item>
 
 <item>
@@ -417,6 +456,19 @@
 </item>
 
 <item>
+<title>Schooled</title>
+<meta>
+<content>tvtuner</content>
+<imdb>tt6546758</imdb>
+<tvdb>352016</tvdb>
+<tvshowtitle>Schooled</tvshowtitle>
+<year>2019</year>
+</meta>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/5c2a376ec53f3.jpg</thumbnail>
+<fanart>https://www.thetvdb.com/banners/fanart/original/5c688db11a272.jpg</fanart>
+</item>
+
+<item>
 <title>Seinfeld</title>
 <meta>
 <content>tvtuner</content>
@@ -466,19 +518,6 @@
 </meta>
 <thumbnail>http://thetvdb.com/banners/_cache/posters/72227-17.jpg</thumbnail>
 <fanart>https://www.thetvdb.com/banners/fanart/original/72227-1.jpg</fanart>
-</item>
-
-<item>
-<title>Who's the Boss</title>
-<meta>
-<content>tvtuner</content>
-<imdb>tt0086827</imdb>
-<tvdb>76587</tvdb>
-<tvshowtitle>Who's the Boss</tvshowtitle>
-<year>1984</year>
-</meta>
-<thumbnail>http://thetvdb.com/banners/_cache/posters/76587-1.jpg</thumbnail>
-<fanart>https://www.thetvdb.com/banners/fanart/original/76587-1.jpg</fanart>
 </item>
 
 <item>
