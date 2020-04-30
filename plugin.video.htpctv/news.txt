@@ -1,5 +1,9 @@
 [B]Updates[/B]
 
+[B]April 30, 2020[/B]
+[B]Version 4.1.46[/B]
+- Fix Episodes Out of Order
+
 [B]April 29, 2020[/B]
 [B]Version 4.1.45[/B]
 - Fix Trailers

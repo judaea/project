@@ -176,7 +176,7 @@ Added Trakt Manager
     </extension>
 </addon>
 
-<addon id="plugin.video.exegesis" version="1.0.1" name=" Exegesis" provider-name="Exegesis">
+<addon id="plugin.video.exegesis" version="1.0.2" name=" Exegesis" provider-name="Judaea">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.exegesis" />
@@ -206,6 +206,7 @@ Added Trakt Manager
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>- RealDebrid Recommended
+- Fix Episodes Out of Order
 - Fix Trailers
 - Added 24-7 TV Shows
 - Added 24-7 Movies
@@ -318,7 +319,7 @@ Added Trakt Manager
 	</extension>
 </addon>
 
-<addon id="plugin.video.htpctv" version="4.1.45" name=" htpcTV" provider-name="Judaea">
+<addon id="plugin.video.htpctv" version="4.1.46" name=" htpcTV" provider-name="Judaea">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="plugin.video.youtube" version="6.4.0" />
@@ -344,6 +345,7 @@ Added Trakt Manager
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>- RealDebrid Recommended
+- Fix Episodes Out of Order
 - Fix Trailers
 - Remove Trailers from Context Menu
 - Fix Episodes TVDb
@@ -616,7 +618,7 @@ Added Trakt Manager
 	</extension>
 </addon>
 
-<addon id="script.module.exegesis" name="Exegesis Module" version="1.0.4" provider-name="Exegesis">
+<addon id="script.module.exegesis" name="Exegesis Module" version="1.0.5" provider-name="Judaea">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>

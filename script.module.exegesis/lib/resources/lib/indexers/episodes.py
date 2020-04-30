@@ -29,7 +29,7 @@ from resources.lib.modules import workers
 from resources.lib.modules import views
 from resources.lib.modules import utils
 
-import os,sys,re,json,zipfile,StringIO,urllib,urllib2,urlparse,datetime
+import os,sys,re,json,zipfile,StringIO,urllib,urllib2,urlparse,datetime,requests
 
 params = dict(urlparse.parse_qsl(sys.argv[2].replace('?',''))) if len(sys.argv) > 1 else dict()
 
@@ -102,7 +102,8 @@ class seasons:
             if tvdb == '0' and not imdb == '0':
                 url = self.tvdb_by_imdb % imdb
 
-                result = client.request(url, timeout='10')
+                #result = client.request(url, timeout='10')
+                result = requests.get(url).content
 
                 try: tvdb = client.parseDOM(result, 'seriesid')[0]
                 except: tvdb = '0'
@@ -120,7 +121,8 @@ class seasons:
 
                 years = [str(year), str(int(year)+1), str(int(year)-1)]
 
-                tvdb = client.request(url, timeout='10')
+                #tvdb = client.request(url, timeout='10')
+                tvdb = requests.get(url).content
                 tvdb = re.sub(r'[^\x00-\x7F]+', '', tvdb)
                 tvdb = client.replaceHTMLCodes(tvdb)
                 tvdb = client.parseDOM(tvdb, 'Series')
@@ -139,10 +141,14 @@ class seasons:
             if tvdb == '0': return
 
             url = self.tvdb_info_link % (tvdb, 'en')
-            data = urllib2.urlopen(url, timeout=30).read()
 
-            zip = zipfile.ZipFile(StringIO.StringIO(data))
-            result = zip.read('%s.xml' % 'en')
+            #data = urllib2.urlopen(url, timeout=30).read()
+            #zip = zipfile.ZipFile(StringIO.StringIO(data))
+            data = requests.get(url)
+            zip = zipfile.ZipFile(StringIO.StringIO(data.content))
+
+            #result = zip.read('%s.xml' % 'en')
+            result = zip.read('en.xml')
             artwork = zip.read('banners.xml')
 
             zip.close()
@@ -154,18 +160,27 @@ class seasons:
                 tvdb = str(dupe[0]).encode('utf-8')
 
                 url = self.tvdb_info_link % (tvdb, 'en')
-                data = urllib2.urlopen(url, timeout=30).read()
 
-                zip = zipfile.ZipFile(StringIO.StringIO(data))
-                result = zip.read('%s.xml' % 'en')
+                #data = urllib2.urlopen(url, timeout=30).read()
+                #zip = zipfile.ZipFile(StringIO.StringIO(data))
+
+                data = requests.get(url)
+                zip = zipfile.ZipFile(StringIO.StringIO(data.content))
+
+                #result = zip.read('%s.xml' % 'en')
+                result = zip.read('en.xml')
                 artwork = zip.read('banners.xml')
                 zip.close()
 
             if not lang == 'en':
                 url = self.tvdb_info_link % (tvdb, lang)
-                data = urllib2.urlopen(url, timeout=30).read()
 
-                zip = zipfile.ZipFile(StringIO.StringIO(data))
+                #data = urllib2.urlopen(url, timeout=30).read()
+                #zip = zipfile.ZipFile(StringIO.StringIO(data))
+
+                data = requests.get(url)
+                zip = zipfile.ZipFile(StringIO.StringIO(data.content))
+
                 result2 = zip.read('%s.xml' % lang)
                 zip.close()
             else:
@@ -183,8 +198,12 @@ class seasons:
             item = result[0] ; item2 = result2[0]
 
             episodes = [i for i in result if '<EpisodeNumber>' in i]
-            episodes = [i for i in episodes if not '<SeasonNumber>0</SeasonNumber>' in i]
-            episodes = [i for i in episodes if not '<EpisodeNumber>0</EpisodeNumber>' in i]
+
+            if control.setting('tv.specials') == 'true':
+                episodes = [i for i in episodes]
+            else:
+                episodes = [i for i in episodes if not '<SeasonNumber>0</SeasonNumber>' in i]
+                episodes = [i for i in episodes if not '<EpisodeNumber>0</EpisodeNumber>' in i]
 
             seasons = [i for i in episodes if '<EpisodeNumber>1</EpisodeNumber>' in i]
 
@@ -408,6 +427,8 @@ class seasons:
                 except: pass
 
                 self.list.append({'title': title, 'label': label, 'season': season, 'episode': episode, 'tvshowtitle': tvshowtitle, 'year': year, 'premiered': premiered, 'status': status, 'studio': studio, 'genre': genre, 'duration': duration, 'rating': rating, 'votes': votes, 'mpaa': mpaa, 'director': director, 'writer': writer, 'cast': cast, 'plot': episodeplot, 'imdb': imdb, 'tvdb': tvdb, 'poster': poster, 'banner': banner, 'fanart': fanart, 'thumb': thumb, 'unaired': unaired})
+                self.list = sorted(self.list, key=lambda k: (int(k['season']), int(k['episode'])))
+
             except:
                 pass
 
@@ -891,9 +912,13 @@ class episodes:
 
             try:
                 url = self.tvdb_info_link % (i['tvdb'], lang)
-                data = urllib2.urlopen(url, timeout=10).read()
 
-                zip = zipfile.ZipFile(StringIO.StringIO(data))
+                #data = urllib2.urlopen(url, timeout=10).read()
+                #zip = zipfile.ZipFile(StringIO.StringIO(data))
+
+                data = requests.get(url)
+                zip = zipfile.ZipFile(StringIO.StringIO(data.content))
+
                 result = zip.read('%s.xml' % lang)
                 artwork = zip.read('banners.xml')
                 zip.close()
@@ -1093,9 +1118,13 @@ class episodes:
 
             try:
                 url = self.tvdb_info_link % (i['tvdb'], lang)
-                data = urllib2.urlopen(url, timeout=10).read()
 
-                zip = zipfile.ZipFile(StringIO.StringIO(data))
+                #data = urllib2.urlopen(url, timeout=10).read()
+                #zip = zipfile.ZipFile(StringIO.StringIO(data))
+
+                data = requests.get(url)
+                zip = zipfile.ZipFile(StringIO.StringIO(data.content))
+
                 result = zip.read('%s.xml' % lang)
                 artwork = zip.read('banners.xml')
                 zip.close()
@@ -1124,6 +1153,9 @@ class episodes:
                 season = client.parseDOM(item, 'SeasonNumber')[0]
                 season = '%01d' % int(season)
                 season = season.encode('utf-8')
+
+                if int(season) == 0:
+                    raise Exception()
 
                 episode = client.parseDOM(item, 'EpisodeNumber')[0]
                 episode = re.sub('[^0-9]', '', '%01d' % int(episode))

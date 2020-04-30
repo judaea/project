@@ -1,4 +1,7 @@
 
+[B]4.1.46[/B]
+- Fix Episodes Out of Order
+
 [B]4.1.45[/B]
 - Fix Trailers
 - Remove Trailers from Context Menu

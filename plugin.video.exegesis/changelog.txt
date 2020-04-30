@@ -1,4 +1,7 @@
 
+[B]1.0.2[/B]
+- Fix Episodes Out of Order
+
 [B]1.0.1[/B]
 - Fix Trailers
 
