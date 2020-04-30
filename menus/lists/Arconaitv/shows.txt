@@ -345,7 +345,7 @@
 </item>
 
 <item>
-    <title>My name is Eral</title>
+    <title>My name is Earl</title>
     <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=118</link>
     <thumbnail>https://www.arconaitv.us/uploads/streams/5a0375d99997c_earl2.jpg</thumbnail>
     <fanart></fanart>

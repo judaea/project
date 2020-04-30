@@ -243,7 +243,7 @@
 <tvshowtitle>Friends</tvshowtitle>
 <year>1994</year>
 </meta>
-<thumbnail>http://thetvdb.com/banners/_cache/posters/79168-3.jpg</thumbnail>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/79168-27.jpg</thumbnail>
 <fanart>https://www.thetvdb.com/banners/fanart/original/79168-6.jpg</fanart>
 </item>
 
@@ -360,7 +360,7 @@
 <tvshowtitle>Modern Family</tvshowtitle>
 <year>2009</year>
 </meta>
-<thumbnail>http://thetvdb.com/banners/_cache/posters/95011-21.jpg</thumbnail>
+<thumbnail>http://thetvdb.com/banners/_cache/posters/95011-3.jpg</thumbnail>
 <fanart>https://www.thetvdb.com/banners/fanart/original/95011-42.jpg</fanart>
 </item>
 
