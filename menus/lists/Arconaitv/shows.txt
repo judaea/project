@@ -9,14 +9,6 @@
 </item>
 
 <item>
-    <title>Everybody Loves Raymond</title>
-    <link>https://www.arconaitv.us/stream.php?id=230</link>
-    <thumbnail>http://thetvdb.com/banners/_cache/posters/73663-4.jpg</thumbnail>
-    <fanart></fanart>
-    <content></content>
-</item>
-
-<item>
     <title>Adult Swim</title>
     <link>plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=https://www.arconaitv.us/stream.php?id=4</link>
     <thumbnail>https://www.arconaitv.us/uploads/streams/592c15b2bce8b_adultswim2.jpg</thumbnail>
