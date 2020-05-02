@@ -53,20 +53,24 @@ class navigator:
             self.addDirectoryItem(32001, 'movieNavigator', 'movies.png', 'DefaultMovies.png')
         if self.getMenuEnabled('navi.tvShows') == True:
             self.addDirectoryItem(32002, 'tvNavigator', 'tvshows.png', 'DefaultTVShows.png')
+        if self.getMenuEnabled('navi.movies247') == True:
+            self.addDirectoryItem('24-7 Movies', 'movies247Navigator', 'movies-247.png', 'DefaultTVShows.png')
         if self.getMenuEnabled('navi.tvShows247') == True:
             self.addDirectoryItem('24-7 TV Shows', 'tv247Navigator', 'tvshows-247.png', 'DefaultTVShows.png')
-        if self.getMenuEnabled('navi.movies247') == True:
-            self.addDirectoryItem('24-7 Movies', 'movies247Navigator', 'movies.png', 'DefaultTVShows.png')
         if self.getMenuEnabled('navi.liveTv') == True:
-            self.addDirectoryItem('Live TV', 'iptvNavigator', 'channels.png', 'DefaultTVShows.png')
-        if self.getMenuEnabled('navi.music') == True:
-            self.addDirectoryItem('Music', 'musicNavigator', 'music.png', 'DefaultTVShows.png')
-        if self.getMenuEnabled('navi.adult') == True:
-            self.addDirectoryItem('Adult', 'adultNavigator', 'userlists.png', 'DefaultTVShows.png')
+            self.addDirectoryItem('Live TV Channels', 'iptvNavigator', 'livetv.png', 'DefaultTVShows.png')
 
-        if not control.setting('lists.widget') == '0':
-            self.addDirectoryItem(32003, 'mymovieNavigator', 'mymovies.png', 'DefaultVideoPlaylists.png')
-            self.addDirectoryItem(32004, 'mytvNavigator', 'mytvshows.png', 'DefaultVideoPlaylists.png')
+#         if self.getMenuEnabled('navi.music') == True:
+#             self.addDirectoryItem('Music', 'musicNavigator', 'music.png', 'DefaultTVShows.png')
+
+        if self.getMenuEnabled('navi.movieWidget') == True:
+            self.addDirectoryItem('My Movies (Trakt)', 'mymovieNavigator', 'mymovies.png', 'DefaultVideoPlaylists.png')
+#         if not control.setting('lists.widget') == '0':
+#             self.addDirectoryItem(32003, 'mymovieNavigator', 'mymovies.png', 'DefaultVideoPlaylists.png')
+
+        if self.getMenuEnabled('navi.tvWidget') == True:
+            self.addDirectoryItem('My TV Shows (Trakt)', 'mytvNavigator', 'mytvshows.png', 'DefaultVideoPlaylists.png')
+#             self.addDirectoryItem(32004, 'mytvNavigator', 'mytvshows.png', 'DefaultVideoPlaylists.png')
 
         if not control.setting('movie.widget') == '0':
             self.addDirectoryItem(32005, 'movieWidget', 'latest-movies.png', 'DefaultRecentlyAddedMovies.png')
@@ -76,13 +80,17 @@ class navigator:
 
 #         self.addDirectoryItem(32007, 'channels', 'channels.png', 'DefaultMovies.png')
 
-        self.addDirectoryItem(32008, 'toolNavigator', 'tools.png', 'DefaultAddonProgram.png')
-
         downloads = True if control.setting('downloads') == 'true' and (len(control.listDir(control.setting('movie.download.path'))[0]) > 0 or len(control.listDir(control.setting('tv.download.path'))[0]) > 0) else False
         if downloads == True:
             self.addDirectoryItem(32009, 'downloadNavigator', 'downloads.png', 'DefaultFolder.png')
 
-        self.addDirectoryItem(32010, 'searchNavigator', 'search.png', 'DefaultFolder.png')
+        if self.getMenuEnabled('navi.search') == True:
+            self.addDirectoryItem('Search', 'searchNavigator', 'search.png', 'DefaultFolder.png')
+
+        if self.getMenuEnabled('navi.adult') == True:
+            self.addDirectoryItem('Adult', 'adultNavigator', 'userlists.png', 'DefaultTVShows.png')
+
+        self.addDirectoryItem(32008, 'toolNavigator', 'tools.png', 'DefaultAddonProgram.png')
 
         self.endDirectory()
 
@@ -259,28 +267,28 @@ class navigator:
         self.endDirectory()
 
 
-    def tv247(self):
-        self.addDirectoryItem('24-7 TV Shows', 'tv247Navigator', 'tvshows-247.png', 'DefaultTVShows.png')
-
-        self.endDirectory()
-
-
     def movies247(self):
         self.addDirectoryItem('24-7 Movies', 'movies247Navigator', 'tvshows-247.png', 'DefaultTVShows.png')
 
         self.endDirectory()
 
 
+    def tv247(self):
+        self.addDirectoryItem('24-7 TV Shows', 'tv247Navigator', 'tvshows-247.png', 'DefaultTVShows.png')
+
+        self.endDirectory()
+
+
     def iptv(self):
-        self.addDirectoryItem('Live TV', 'iptvNavigator', 'channels.png', 'DefaultTVShows.png')
+        self.addDirectoryItem('Live TV Channels', 'iptvNavigator', 'channels.png', 'DefaultTVShows.png')
 
         self.endDirectory()
 
 
-    def music(self):
-        self.addDirectoryItem('Music', 'musicNavigator', 'music.png', 'DefaultTVShows.png')
-
-        self.endDirectory()
+#     def music(self):
+#         self.addDirectoryItem('Music', 'musicNavigator', 'music.png', 'DefaultTVShows.png')
+# 
+#         self.endDirectory()
 
 
     def adult(self):

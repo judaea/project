@@ -1,5 +1,10 @@
 [B]Updates[/B]
 
+[B]May 1, 2020[/B]
+[B]Version 1.0.3[/B]
+- Add New Art
+- Fix 24-7 Shows, 24-7 Movies and Live TV
+
 [B]April 30, 2020[/B]
 [B]Version 1.0.2[/B]
 - Fix Episodes Out of Order

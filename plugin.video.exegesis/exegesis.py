@@ -69,21 +69,21 @@ if action == None:
     cache.cache_version_check()
     navigator.navigator().root()
 
-if action == 'tv247Navigator':
-    from resources.lib.indexers import iptv
-    iptv.indexer().rootTv247()
-
-if action == 'movies247Navigator':
-    from resources.lib.indexers import iptv
-    iptv.indexer().rootMovies247()
-
-if action == 'iptvNavigator':
-    from resources.lib.indexers import iptv
-    iptv.indexer().rootIptv()
-
-if action == 'musicNavigator':
-    from resources.lib.indexers import iptv
-    iptv.indexer().rootMusic()
+# if action == 'tv247Navigator':
+#     from resources.lib.indexers import iptv
+#     iptv.indexer().rootTv247()
+# 
+# if action == 'movies247Navigator':
+#     from resources.lib.indexers import iptv
+#     iptv.indexer().rootMovies247()
+# 
+# if action == 'iptvNavigator':
+#     from resources.lib.indexers import iptv
+#     iptv.indexer().rootIptv()
+# 
+# if action == 'musicNavigator':
+#     from resources.lib.indexers import iptv
+#     iptv.indexer().rootMusic()
 
 if action == 'adultNavigator':
     from resources.lib.indexers import iptv
@@ -124,6 +124,26 @@ elif action == 'play':
     else:
         from resources.lib.modules import sources
         sources.sources().play(title, year, imdb, tvdb, season, episode, tvshowtitle, premiered, meta, select)
+
+elif action == 'arconaitvMenu':
+    from resources.lib.indexers import arconaitv
+    arconaitv.arconaitv().listCategories()
+
+elif action == 'iptvNavigator':
+    from resources.lib.indexers import arconaitv
+    arconaitv.arconaitv().iptvChannels()
+
+elif action == 'tv247Navigator':
+    from resources.lib.indexers import arconaitv
+    arconaitv.arconaitv().Tv247()
+
+elif action == 'movies247Navigator':
+    from resources.lib.indexers import arconaitv
+    arconaitv.arconaitv().Movies247()
+
+elif action == 'randomNavigator':
+    from resources.lib.indexers import arconaitv
+    arconaitv.arconaitv().playRandom(params['selection'])
 
 elif action == 'newsNavigator':
     from resources.lib.indexers import navigator

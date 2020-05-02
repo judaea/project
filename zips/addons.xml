@@ -1,104 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="context.judaea" version="1.0.1" name="Judaea - Global Context Menu Items" provider-name="Judaea">
-	<requires>
-		<import addon="xbmc.python" version="2.23.0" />
-	</requires>
-	<extension point="kodi.context.item">
-        <menu id="kodi.core.main">
-			<item library="quickResume.py">
-				<label>Quick Resume Show</label>
-				<visible>String.StartsWith(ListItem.path,plugin://plugin.video.judaea/)+String.IsEqual(ListItem.dbtype,tvshow)</visible>
-			</item>
-            <item library="shuffle.py">
-                <label>Shuffle Play</label>
-                <visible>String.StartsWith(ListItem.path,plugin://plugin.video.judaea/)+[String.IsEqual(ListItem.dbtype,tvshow)|String.IsEqual(ListItem.dbtype,episode)]</visible>
-            </item>
-			<item library="playFromRandomPoint.py">
-                <label>Play From Random Episode</label>
-                <visible>String.StartsWith(ListItem.path,plugin://plugin.video.judaea/)+String.IsEqual(ListItem.dbtype,tvshow)</visible>
-            </item>
-			<item library="rescrape.py">
-                <label>Rescrape Item</label>
-                <visible>String.StartsWith(ListItem.path,plugin://plugin.video.judaea/)+[String.IsEqual(ListItem.dbtype,episode)|String.IsEqual(ListItem.dbtype,movie)]</visible>
-            </item>
-			<item library="sourceSelect.py">
-                <label>Source Select</label>
-                <visible>String.StartsWith(ListItem.path,plugin://plugin.video.judaea/)+[String.IsEqual(ListItem.dbtype,episode)|String.IsEqual(ListItem.dbtype,movie)]</visible>
-            </item>
-			<item library="findSimilar.py">
-                <label>Find Similar</label>
-                <visible>String.StartsWith(ListItem.path,plugin://plugin.video.judaea/)+[String.IsEqual(ListItem.dbtype,tvshow)|String.IsEqual(ListItem.dbtype,movie)]</visible>
-            </item>
-			<item library="browseShow.py">
-                <label>Browse Show</label>
-                <visible>String.StartsWith(ListItem.path,plugin://plugin.video.judaea/)+[String.IsEqual(ListItem.dbtype,episode)|String.IsEqual(ListItem.dbtype,tvshow)]</visible>
-            </item>
-			<item library="browseSeason.py">
-				<label>Browse Season</label>
-				<visible>String.StartsWith(ListItem.path,plugin://plugin.video.judaea/)+String.IsEqual(ListItem.dbtype,episode)</visible>
-			</item>
-			<item library="traktManager.py">
-				<label>Trakt Manager</label>
-				<visible>String.StartsWith(ListItem.path,plugin://plugin.video.judaea/)+[String.IsEqual(ListItem.dbtype,episode)|String.IsEqual(ListItem.dbtype,tvshow)|String.IsEqual(ListItem.dbtype,season)|String.IsEqual(ListItem.dbtype,movie)]</visible>
-			</item>
-        </menu>
-    </extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Judaea - This Addon is currently in beta. Please be aware there may be bugs present</summary>
-		<description lang="en">Adds Global Contextual Menu Items for Judaea menu items throughout Kodi
-		</description>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<forum></forum>
-		<website></website>
-		<source></source>
-		<disclaimer lang="en"></disclaimer>
-		<assets>
-			<icon>icon.png.png</icon>
-			<fanart>fanart.png</fanart>
-		</assets>
-		<news>
-Changelog 1.0.4:
-Remove plugin.video.judaea Dependency
-Added Quick Resume option
-Added Play From Random Episode option
-
-Changelog 1.0.3:
-Updated artwork to match Judaea
-
-Changelog 1.0.2:
-Fixed Re-scrape item not working on smartplay items
-Fixed Source Select not working on smartplay items
-Fixed shuffle play for episode items
-
-Changelog 1.0.1:
-Trakt Manager now supports new Judaea URL format
-
-Changelog 1.0.0:
-Support for Judaea 1.0.0
-
-Changelog 0.8:
-Fixed missing season number
-
-Changelog 0.7
-Updated Trakt Manager to support Seasons
-
-Changelog Version 0.5:
-Fixed Source Select (Changed built-in function to PlayMedia)
-
-Changelog Version 0.4:
-Trakt Manager now available for season objects
-
-Changelog Version 0.3:
-Fixed Shuffle play on continue watching items
-Added Browse Show for TV show items
-Removed Torrent File Select - Moved to internal judaea Menus only
-Added Trakt Manager
-		</news>
-	</extension>
-</addon>
-
 <addon id="plugin.program.htmcwizard" name="HTMC Wizard" version="1.0.18" provider-name="HTMC">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -112,24 +13,6 @@ Added Trakt Manager
     <description lang="en">HTMC Wizard offers many maintenance features, selective add-on data saving, and automated build installs.</description>
     <platform>all</platform>
   </extension>
-</addon>
-
-<addon id="plugin.video.arconaitv" version="1.0.0" name="ArconaiTV" provider-name="Alberto_Posadas, HTMC">
-<requires>
-  <import addon="xbmc.python" version="2.24.0"/>
-  <import addon="script.module.arconaitv" version="1.0.0"/>
-</requires>
-<extension point="xbmc.python.pluginsource" library="arconaitv.py">
-  <provides>video</provides>
-</extension>
-<extension point="xbmc.addon.metadata">
-  <summary lang="en">ArconaiTV Kodi Plugin</summary>
-  <description>Play 24/7 Streams of Popular TV Shows, Movies by Genre and TV from ArconaiTV Content in Kodi
-  </description>
-  <assets>
-    <icon>icon.png</icon>
-  </assets>
-</extension>
 </addon>
 
 <addon id="plugin.video.david" version="1.0.10" name=" David" provider-name="Judaea">
@@ -176,7 +59,7 @@ Added Trakt Manager
     </extension>
 </addon>
 
-<addon id="plugin.video.exegesis" version="1.0.2" name=" Exegesis" provider-name="Judaea">
+<addon id="plugin.video.exegesis" version="1.0.3" name=" Exegesis" provider-name="Judaea">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
 		<import addon="script.module.exegesis" />
@@ -184,9 +67,10 @@ Added Trakt Manager
 		<import addon="script.module.requests" />
 		<import addon="script.module.metahandler" />
 		<import addon="plugin.video.youtube" />
-		<import addon="plugin.video.SportsDevil" />
 		<import addon="script.extendedinfo" />
 		<import addon="script.module.openscrapers" />
+		<import addon="script.module.beautifulsoup4" />
+		<import addon="script.module.js2py" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="exegesis.py">
 		<provides>video</provides>
@@ -194,7 +78,7 @@ Added Trakt Manager
 	<extension point="xbmc.service" library="service.py" start="startup" />
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Exegesis</summary>
-		<description lang="en">[B]Exegesis Movies, TV Shows, 2-47 TV Shows, 2-47 Movies, Music and Live TV. Trakt and Library Support[/B][CR][CR]This addon does not form part of the Kodi Media Center. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR][CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
+		<description lang="en">[B]Exegesis Movies, TV Shows, 2-47 TV Shows, 2-47 Movies and Live TV. Trakt and Library Support[/B][CR][CR]This addon does not form part of the Kodi Media Center. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR][CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
 		<forum></forum>
@@ -206,6 +90,8 @@ Added Trakt Manager
 			<fanart>fanart.jpg</fanart>
 		</assets>
 		<news>- RealDebrid Recommended
+- Add New Art
+- Fix 24-7 Shows, 24-7 Movies and Live TV
 - Fix Episodes Out of Order
 - Fix Trailers
 - Added 24-7 TV Shows
@@ -383,40 +269,6 @@ Added Trakt Manager
 	</extension>
 </addon>
 
-<addon id="plugin.video.judaea" version="1.0.3" name=" Judaea" provider-name="Judaea">
-	<requires>
-		<import addon="xbmc.python" version="2.25.0" />
-		<import addon="script.module.requests" version="2.19.1" />
-		<import addon="script.module.beautifulsoup4" version="4.5.3"/>
-		<import addon="plugin.video.youtube" version="6.2.0"/>
-		<import addon="script.module.addon.signals" version="0.0.1"/>
-		<import addon="script.module.dateutil" version="2.7.3"/>
-        <import addon="context.judaea" version="1.0.1"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="judaea.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.service" library="service.py" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Judaea</summary>
-		<description lang="en">[B]Movies, TV Shows, Trakt Support. Netflix Style Random or Shuffle Auto Play TV Show Integration.[/B][CR][CR]This addon does not form part of the Kodi Media Center. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR][CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<forum></forum>
-		<website></website>
-		<source></source>
-		<disclaimer lang="en">The author of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.png</fanart>
-		</assets>
-		<news>
-- Fix Local Torrent Clear Cache
-- RealDebrid, AllDebrid or Premiumize Subscription Required
-		</news>
-	</extension>
-</addon>
-
 <addon id="plugin.video.metaq" version="1.0.3" name=" MetaQ" provider-name="OpenELEQ, Midraal, HTMC">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
@@ -471,35 +323,6 @@ Added Trakt Manager
 			<fanart>fanart.jpg</fanart>
 		</assets>
 	</extension>
-</addon>
-
-<addon
-  id="plugin.video.SportsDevil"
-  version="2018.09.20"
-  name="SportsDevil"
-  provider-name="SportsDevil">
-  <requires>
-   <import addon="xbmc.python" version="2.14.0"/>
-   <import addon="script.module.dateutil" />
-   <import addon="script.module.simplejson" />
-   <import addon="script.module.six" />
-   <import addon="script.module.requests" />
-   <import addon="plugin.video.f4mTester" />
-   <import addon="script.module.slproxy" />
-  </requires>
-  <extension
-    point="xbmc.python.pluginsource"
-    library="default.py">
-   <provides>video</provides>
-  </extension>
-  <!-- <extension point="xbmc.service" library="service/streamlink_proxy.py" /> -->
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">SportsDevil</summary>
-    <description lang="en">[I]There can only be one.[/I][CR][CR]Unofficial Kodi Addon.</description>
-    <disclaimer lang="en">There can only be one.</disclaimer>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <platform>all</platform>
-  </extension>
 </addon>
 
 <addon id="repository.htmc" name="HTMC Repository" version="1.0.4" provider-name="HTMC">
@@ -605,20 +428,7 @@ Added Trakt Manager
 	</extension>
 </addon>
 
-<addon id="script.module.arconaitv" name="ArconaiTV Common Libraries" version="1.0.0" provider-name="HTMC">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en">Collection of modules used by ArconaiTV</summary>
-		<description lang="en">Collection of modules used by ArconaiTV. Fork of muckys common</description>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-	</extension>
-</addon>
-
-<addon id="script.module.exegesis" name="Exegesis Module" version="1.0.5" provider-name="Judaea">
+<addon id="script.module.exegesis" name="Exegesis Module" version="1.0.6" provider-name="Judaea">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0" />
 	</requires>

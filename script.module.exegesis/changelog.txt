@@ -1,4 +1,7 @@
 
+[B]1.0.6[/B]
+- Fix 24-7 Shows, 24-7 Movies and Live TV
+
 [B]1.0.5[/B]
 - Fix Episodes Out of Order
 

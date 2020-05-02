@@ -14,56 +14,56 @@ class indexer:
         self.list = [] ; self.hash = []
 
 
-    def rootIptv(self):
-        try:
-            regex.clear()
-            url = 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2p1ZGFlYS9wcm9qZWN0L21hc3Rlci9tZW51cy9saXN0cy9pcHR2LnR4dA=='.decode('base64')
-            self.list = self.noname_list(url)
-            for i in self.list:
-                i.update({'content': 'addons'})
-            self.addDirectory(self.list)
-            return self.list
-        except:
-            pass
-
-
-    def rootTv247(self):
-        try:
-            regex.clear()
-            url = 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2p1ZGFlYS9wcm9qZWN0L21hc3Rlci9tZW51cy9saXN0cy9BcmNvbmFpdHYvc2hvd3MudHh0'.decode('base64')
-            self.list = self.noname_list(url)
-            for i in self.list:
-                i.update({'content': 'addons'})
-            self.addDirectory(self.list)
-            return self.list
-        except:
-            pass
-
-
-    def rootMovies247(self):
-        try:
-            regex.clear()
-            url = 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2p1ZGFlYS9wcm9qZWN0L21hc3Rlci9tZW51cy9saXN0cy9BcmNvbmFpdHYvbW92aWVzLnR4dA=='.decode('base64')
-            self.list = self.noname_list(url)
-            for i in self.list:
-                i.update({'content': 'addons'})
-            self.addDirectory(self.list)
-            return self.list
-        except:
-            pass
-
-
-    def rootMusic(self):
-        try:
-            regex.clear()
-            url = 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2p1ZGFlYS9wcm9qZWN0L21hc3Rlci9tZW51cy9saXN0cy9tdXNpYy50eHQ='.decode('base64')
-            self.list = self.noname_list(url)
-            for i in self.list:
-                i.update({'content': 'addons'})
-            self.addDirectory(self.list)
-            return self.list
-        except:
-            pass
+#     def rootIptv(self):
+#         try:
+#             regex.clear()
+#             url = 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2p1ZGFlYS9wcm9qZWN0L21hc3Rlci9tZW51cy9saXN0cy9pcHR2LnR4dA=='.decode('base64')
+#             self.list = self.noname_list(url)
+#             for i in self.list:
+#                 i.update({'content': 'addons'})
+#             self.addDirectory(self.list)
+#             return self.list
+#         except:
+#             pass
+# 
+# 
+#     def rootTv247(self):
+#         try:
+#             regex.clear()
+#             url = 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2p1ZGFlYS9wcm9qZWN0L21hc3Rlci9tZW51cy9saXN0cy9BcmNvbmFpdHYvc2hvd3MudHh0'.decode('base64')
+#             self.list = self.noname_list(url)
+#             for i in self.list:
+#                 i.update({'content': 'addons'})
+#             self.addDirectory(self.list)
+#             return self.list
+#         except:
+#             pass
+# 
+# 
+#     def rootMovies247(self):
+#         try:
+#             regex.clear()
+#             url = 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2p1ZGFlYS9wcm9qZWN0L21hc3Rlci9tZW51cy9saXN0cy9BcmNvbmFpdHYvbW92aWVzLnR4dA=='.decode('base64')
+#             self.list = self.noname_list(url)
+#             for i in self.list:
+#                 i.update({'content': 'addons'})
+#             self.addDirectory(self.list)
+#             return self.list
+#         except:
+#             pass
+# 
+# 
+#     def rootMusic(self):
+#         try:
+#             regex.clear()
+#             url = 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2p1ZGFlYS9wcm9qZWN0L21hc3Rlci9tZW51cy9saXN0cy9tdXNpYy50eHQ='.decode('base64')
+#             self.list = self.noname_list(url)
+#             for i in self.list:
+#                 i.update({'content': 'addons'})
+#             self.addDirectory(self.list)
+#             return self.list
+#         except:
+#             pass
 
 
     def rootAdult(self):

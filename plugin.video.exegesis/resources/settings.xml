@@ -23,7 +23,7 @@
         <setting id="tv.widget.alt" type="enum" label="32325" lvalues="32302|32326|32327|32328" default="2" visible="!eq(-11,)" />  
         <setting id="tv.widget" type="enum" label="32325" lvalues="32302|32326" default="1" visible="eq(-12,)" />
         <setting id="prgr.sortorder" type="enum" label="32584" lvalues="32585|32586" default="1" visible="!eq(-13,)" />
-        <setting id="lists.widget" type="enum" label="32329" lvalues="32302|32301" default="1" />
+<!--         <setting id="lists.widget" type="enum" label="32329" lvalues="32302|32301" default="1" /> -->
         <setting type="sep" />
         <setting type="lsep" label="Auto Trakt Collections Syncing" />
         <setting id="autoTraktOnStart" type="bool" label="Sync on Kodi Start" default="False" />
@@ -73,10 +73,13 @@
         <setting type="lsep" label="Main Menu" />
         <setting id="navi.movies" type="bool" label="Movies" default="true" />
         <setting id="navi.tvShows" type="bool" label="TV Shows" default="true" />
-        <setting id="navi.tvShows247" type="bool" label="24-7 TV Shows" default="true" />
         <setting id="navi.movies247" type="bool" label="24-7 Movies" default="true" />
-        <setting id="navi.liveTv" type="bool" label="Live TV" default="true" />
-        <setting id="navi.music" type="bool" label="Music" default="true" />
+        <setting id="navi.tvShows247" type="bool" label="24-7 TV Shows" default="true" />
+        <setting id="navi.liveTv" type="bool" label="Live TV Channels" default="true" />
+        <setting id="navi.movieWidget" type="bool" label="My Movies (Trakt)" default="true" />
+        <setting id="navi.tvWidget" type="bool" label="My TV Shows (Trakt)" default="true" />
+        <setting id="navi.search" type="bool" label="Search" default="true" />
+<!--         <setting id="navi.music" type="bool" label="Music" default="true" /> -->
         <setting id="navi.adult" type="bool" label="Adult" default="false" />
     </category>
     <category label="32330">
