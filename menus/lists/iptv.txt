@@ -1,12 +1,6 @@
 <xml>
 
 <dir>
-    <title>Cable TV</title>
-    <link>https://raw.githubusercontent.com/judaea/project/master/menus/lists/Arconaitv/cable.txt</link>
-    <thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/channels.png</thumbnail>
-</dir>
-
-<dir>
     <title>Stratus TV</title>
     <link>https://pastebin.com/raw/4cQ9mj8X</link>
     <thumbnail>https://raw.githubusercontent.com/judaea/project/master/menus/lists/channels.png</thumbnail>
