@@ -10,6 +10,7 @@
 		<import addon="script.extendedinfo" />
 		<import addon="script.module.openscrapers" />
 		<import addon="script.module.beautifulsoup4" />
+		<import addon="script.module.js2py" />
 	</requires>
 	<extension point="xbmc.python.pluginsource" library="exegesis.py">
 		<provides>video</provides>
