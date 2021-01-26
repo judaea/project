@@ -59,54 +59,6 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.exegesis" version="1.0.3" name=" Exegesis" provider-name="Judaea">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0" />
-		<import addon="script.module.exegesis" />
-		<import addon="script.module.resolveurl" />
-		<import addon="script.module.requests" />
-		<import addon="script.module.metahandler" />
-		<import addon="plugin.video.youtube" />
-		<import addon="script.extendedinfo" />
-		<import addon="script.module.openscrapers" />
-		<import addon="script.module.beautifulsoup4" />
-		<import addon="script.module.js2py" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="exegesis.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.service" library="service.py" start="startup" />
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Exegesis</summary>
-		<description lang="en">[B]Exegesis Movies, TV Shows, 2-47 TV Shows, 2-47 Movies and Live TV. Trakt and Library Support[/B][CR][CR]This addon does not form part of the Kodi Media Center. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.[CR][CR]The author does not host any of the content in this addon and takes no responsibility for content found.</description>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<forum></forum>
-		<website></website>
-		<source></source>
-		<disclaimer lang="en">The author of this addon does not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-		<news>- RealDebrid Recommended
-- Add New Art
-- Fix 24-7 Shows, 24-7 Movies and Live TV
-- Fix Episodes Out of Order
-- Fix Trailers
-- Added 24-7 TV Shows
-- Added 24-7 Movies
-- Added Live TV
-- Added Music Collections
-- Added Movie Collections to Movies
-- Added OpenScrapers Support
-- Update Code
-- VPN Recommended
-- Initial Version 1.0.0 Covenant Fork
-</news>
-	</extension>
-</addon>
-
 <addon id="plugin.video.htmc247" version="1.0.15" name=" htmc247" provider-name="HTMC">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
@@ -415,17 +367,6 @@
 		<summary>Metadata for the HTMC Addons</summary>
 		<description>Metadata for HTMC are maintained separately to make distribution of the addon itself easier/faster.</description>
 		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="script.module.exegesis" name="Exegesis Module" version="1.0.6" provider-name="Judaea">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-	</requires>
-	<extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-		<platform>all</platform>
-		<summary lang="en">Exegesis</summary>
 	</extension>
 </addon>
 
